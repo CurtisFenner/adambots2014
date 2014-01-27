@@ -1,0 +1,544 @@
+/**************************************
+			GENERIC ELEMENTS
+***************************************/
+body {
+	min-width: 1200px;
+	/* Was 494949, considered "bland" "too light" */
+	background-color: #111;
+	font-family: "Roboto Condensed";
+	margin: 0px;
+	/*Optional page fadein*/
+	animation: fadein .25s;
+	-moz-animation: fadein .25s;
+	-webkit-animation: fadein .25s;
+	-o-animation: fadein .25s;
+    
+    /*background-image: url('../res/img/noise.png');*/
+	background-image:url("../res/img/noisy.png");
+}
+
+em:after {
+	/* fixes slant overlapping letters on condensed font*/
+	content: " ";
+}
+
+a {
+	text-decoration:none;
+}
+
+/**************************************
+			  MAIN LAYOUT
+***************************************/
+
+.pagewidth {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	position:relative;
+}
+
+
+/**************************************
+		      PAGE LAYOUT
+***************************************/
+
+
+#leftcol {
+	width:594px;
+	background-image:url("../res/img/noisy.png");
+	padding:20px;
+}
+
+#rightcolbg {
+	position:absolute;
+	right:0px;
+	top:0px;
+	height:100%;
+	width:320px;
+	background-image:url("../res/img/noisy.png");
+}
+#rightcol {
+	padding:20px;
+	overflow:hidden;
+}
+
+#twocolumns {
+	position:relative;
+	width:960px;
+	margin:auto;
+	background-image:url("../res/img/twocol.png");
+	margin-top:6px;
+}
+
+#rightcolatom {
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	width:320px;
+	height:540px;
+	background-image:url("../res/img/atomright.png");
+}
+
+.spacer {
+	clear:both;
+}
+
+/**************************************
+		         GEARS
+***************************************/
+
+#gears {
+	background:#111;
+}
+
+#gearscontainer {
+	position:absolute;
+	margin:0px;
+	width:600px;
+	height:300px;
+	z-index:-5;
+	top:0px;
+}
+
+#gearscover {
+	background:url("../res/img/noisy.png");
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+}
+
+/**************************************
+		   IMAGE GALLERY
+***************************************/
+
+#gallerybox {
+	height:400px;
+	position:relative;
+	width:960px;
+	margin:auto;
+    overflow: hidden;
+	box-shadow:0px 0px 5px 5px rgba(0,0,0,.5);
+	margin-top:20px;
+}
+
+#galleryleft,#galleryright {
+	height:100%;
+	position:absolute;
+	width:100%;
+	top:0px;
+	background-size: 100%;
+	background-repeat:no-repeat;
+}
+
+#gallerybuttonleft, #gallerybuttonright {
+	position:absolute;
+	top:180px;
+	cursor:pointer;
+
+	width:0px;
+	height:0px;
+
+	border-top:29px solid transparent;
+	border-bottom:29px solid transparent;
+}
+
+#gallerybuttonleft {
+	left:20px;
+	border-left:0px solid black;
+	border-right:50px solid rgba(255,255,255,.3);
+}
+
+#gallerybuttonleft:hover {
+	border-right:50px solid rgba(255,255,255,.5);
+}
+
+#gallerybuttonright {
+	right:20px;
+	border-right:0px solid black;
+	border-left:50px solid rgba(255,255,255,.3);
+}
+
+#gallerybuttonright:hover {
+	border-left:50px solid rgba(255,255,255,.5);
+}
+
+.gallerytitle {
+	font-size:40px;
+	top:20px;
+}
+
+.gallerytext {
+	font-size:24px;
+	top:80px;
+}
+
+.gallerytext,.gallerytitle {
+	left:100px;
+	right:100px;
+	position:absolute;
+	text-shadow: 0px 0px 10px black;
+	color:white;
+	text-align:center;
+}
+
+
+
+/**************************************
+			  BACKGROUND
+***************************************/
+
+#gears {
+	width: 600px;
+	height: 300px;
+	left: 0;
+	top: 0;
+	position: absolute;
+	z-index: -5;
+}
+/**************************************
+			  HEADER CSS
+***************************************/
+
+#head {
+	height: 120px;
+	margin: 25px;
+	margin-left: 50px;
+}
+#atom {
+	height: inherit;
+	position: relative;
+	float: left;
+}
+#name {
+	float: left;
+	color: #eee;
+	font-family: "SF Sports Night NS";
+	font-size: 70px;
+	padding-top: 35px;
+	padding-left: 40px;
+}
+#social {
+	height: inherit;
+	margin: 40px;
+	position: relative;
+	float: right;
+}
+#social a {
+	margin: 5px;
+}
+#social img {
+	height: 25px;
+	padding: 10px;
+	transition: 0.2s ease-in;
+	transition: 0.2s ease-out;
+	-webkit-transition: 0.15s ease-in;
+	-webkit-transition: 0.15s ease-out;
+	-moz-transition: 0.15s ease-in;
+	-moz-transition: 0.15s ease-out;
+	-o-transition: 0.15s ease-in;
+	-o-transition: 0.15s ease-out;
+	border:none;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+#social img:hover {
+	/*background: #ffd802;*/
+	background: rgba(238, 238, 238, .064);
+	-moz-border-radius: 10px;
+	border-radius: 5px;
+}
+
+
+/**************************************
+			  FOOTER CSS
+***************************************/
+#footer {
+	margin-top:6px;
+	position:relative;text-align:center;width:100%;height:200px;background: url('../res/img/noisy.png'),url('../res/img/footerGrad.png');
+}
+#footercontainer {
+	top:50px;position:relative;font-size:12px;color:#444;margin:auto;text-align:center; width:950px;
+}
+
+#footerjustify {
+	padding:0;margin:0;text-align:justify;
+}
+
+/**************************************
+			 CONTENT CSS
+***************************************/
+
+#content {
+	clear: both;
+	position: relative;
+	margin: auto;
+	width: auto;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+/**************************************
+			 DROPDOWN CSS
+***************************************/
+
+/*
+Bar containing menu items.
+*/
+
+#dropdown {
+	position: relative;
+	left: 0px;
+	right: 0px;
+	height: 50px;
+	padding-left: 20px;
+	line-height: 50px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+/*
+Menu items in bar
+*/
+
+#dropdown nav {
+	display: inline-block;
+	position: relative;
+	height: 50px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-weight: 700;
+	font-size: 22px;
+	color: #eee;
+	cursor: pointer;
+	transition: 0.2s ease-in;
+	transition: 0.2s ease-out;
+	-webkit-transition: 0.2s ease-in;
+	-webkit-transition: 0.2s ease-out;
+	-moz-transition: 0.2s ease-in;
+	-moz-transition: 0.2s ease-out;
+	-o-transition: 0.2s ease-in;
+	-o-transition: 0.2s ease-out;
+}
+#dropdown nav:hover {
+	background: rgba(238, 238, 238, .064);
+}
+/*
+Element covering background of #dropdown.
+*/
+
+#dropdownbackground {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	left: 0px;
+}
+/*
+Where the navigation elements are stored on the page.
+*/
+
+#dropdown nav ul {
+	display: none;
+}
+/*
+Div containing #below for the purpose of resizing up and down.
+*/
+
+#belowbox {
+	position: relative;
+	overflow: hidden;
+	background: #ffd802;
+	/*box-shadow: inset 0px 66px 10px -55px #333, inset 0px -30px 30px -15px #353535;*/
+}
+/*
+Div containing navigation links in two UL's, ul.left and ul.right.
+*/
+
+#below {
+	position: relative;
+	color: white;
+}
+/*
+All navigation maps
+*/
+
+#below ul {
+	width: 400px;
+	position: relative;
+	list-style-type: none;
+	animation: fadein .5s;
+	-moz-animation: fadein .5s;
+	-webkit-animation: fadein .5s;
+	-o-animation: fadein .5s;
+}
+/*
+Navigation map in the left side
+*/
+
+#below ul.left {
+	float: left;
+}
+/*
+Navigation map on the right side
+*/
+
+#below ul.right {
+	float: left;
+}
+/*
+The navigation headings in the dropdown box.
+*/
+
+#below ul li h3 {
+	width: 100%;
+	border-bottom: 1px solid #111;
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+/*
+Lines in navigation.
+*/
+
+#below ul li {
+	color: #111;
+	position: relative;
+	line-height: 35px;
+	font-weight: bold;
+	overflow: hidden;
+}
+/*
+Descriptions in navigation.
+*/
+
+#below ul li span {
+	color: #111;
+	top: 0px;
+	font-weight: normal;
+    position: absolute;
+    right: 0;
+}
+/*
+Anchors in navigation
+*/
+
+#below ul li a {
+	color: #111;
+	text-decoration: none;
+	-webkit-animation: fadein 0.5s;
+	animation: fadein 0.5s;
+}
+
+
+/**************************************
+			   PANEL CSS
+***************************************/
+/*
+Triple panel display above footer
+*/
+
+.panel {
+	position:absolute;
+	background:#FAFAFA;
+	background-image:url("../res/img/noisy.png");
+	box-shadow:0px 0px 5px 5px rgba(0,0,0,.45);
+}
+
+#panelgrid {
+	overflow:hidden;
+	left:0px;
+	right:0px;
+	position:relative;
+	height:400px;
+}
+
+#panelgrid .pagewidth {
+	height:400px;
+}
+
+#panelgrid .pagewidth > div {
+	top:0px;
+	left:0px;
+	width:320px;
+	height:400px;
+	background:#FFF;
+	text-align:justify;
+	position:absolute;
+}
+
+#panelgrid h3 {
+	margin: 20px;
+	border-bottom: 3px solid #0056A3;
+}
+
+#panelgrid a {
+	color:#0066B3;
+}
+
+.centerpanel {
+	top:0px;
+	background:#EEE;
+	box-shadow: none;
+}
+
+/**************************************
+		      BODY CARDS
+***************************************/
+#teaminfo {
+    width: 960px;
+    margin: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px;
+    background-color: #ffd802;
+}
+
+/**************************************
+		  SLIDING ANIMATION
+***************************************/
+/*
+Holds sliding descriptions
+*/
+
+#slide_container {
+	overflow: hidden;
+	width: inherit;
+}
+/* Define CSS fade-in */
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@-moz-keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@-webkit-keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@-o-keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

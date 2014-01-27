@@ -1,0 +1,1 @@
+<?php // required but empty ?>
