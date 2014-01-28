@@ -37,6 +37,9 @@ a {
 	position:relative;
 }
 
+.pagewidth p {
+	margin-bottom:5px;
+}
 
 /**************************************
 		      PAGE LAYOUT
