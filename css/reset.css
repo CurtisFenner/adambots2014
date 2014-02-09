@@ -1,5 +1,9 @@
 /* v1.0 | 20080212 */
 
+p {
+	text-align:justify;
+}
+
 html, div, span, applet, object, iframe,
 p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
