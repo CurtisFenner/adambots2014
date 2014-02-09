@@ -14,11 +14,14 @@ $add_script = array();
 ?>
 <?php get_header(); ?>
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		<div id="pagehead" class="pagehead_aboutus">
-				<?php dynamic_sidebar('About Submenu') ?>
-		</div>
 		<div class="page_shadowline"></div>
 		<div class="pagewidth">
+			<div id="pagetype" style="background-color:#205A8C;">About the AdamBots<br>
+				<?php dynamic_sidebar('About Submenu') ?>
+				<div class="background">
+					<img src="http://adambots.com/logos/png/yellowBG_small.png" height="60">
+				</div>
+			</div>
 			<div id="twocolumns">
 				<?php 
 					$edit_attr = array(

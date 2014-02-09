@@ -24,6 +24,7 @@ em:after {
 
 a {
 	text-decoration:none;
+	color:#3069b0;
 }
 
 /**************************************
@@ -31,6 +32,7 @@ a {
 ***************************************/
 
 .pagewidth {
+	margin-top:6px;
 	width: 960px;
 	margin-left: auto;
 	margin-right: auto;
@@ -38,13 +40,65 @@ a {
 }
 
 .pagewidth p {
-	margin-bottom:5px;
+	padding-top:8px;
+	padding-bottom:8px;
 }
 
 /**************************************
 		      PAGE LAYOUT
 ***************************************/
 
+img.alignright {
+	margin:2em;
+	margin-right:0px;
+	float:right;
+}
+
+#pagetype .background {
+	position:absolute;
+	top:10px;
+	width:300px;
+	right:0px;
+	height:60px;
+	text-align:right;
+	margin-right:10px;
+}
+
+#pagetype .subnav, #pagetype .subnav * {
+	display:inline-block;
+	padding:0;
+	margin:0;
+}
+
+#pagetype .subnav li {
+	margin-right:10px;
+	font-weight:normal;
+}
+
+#pagetype .subnav .current-menu-item {
+	font-weight:bold;
+}
+
+#pagetype .subnav a {
+	color:white;
+	font-size:16px;
+}
+
+/*
+The bar between the navbar and the page.
+*/
+#pagetype {
+	position:relative;
+	height:80px;
+	line-height:40px;
+	background-image:url("../res/img/noisy.png");
+	padding-left:20px;
+	color:white;
+	font-weight:bold;
+	font-size:24px;
+
+	box-shadow:inset 0px -30px 30px -30px rgba(0,0,0,0.75);
+}
 
 #leftcol {
 	width:594px;
@@ -304,10 +358,10 @@ Bar containing menu items.
 	-ms-user-select: none;
 	user-select: none;
 }
-/*
-Menu items in bar
-*/
 
+/*
+Menu tabs in starting bar
+*/
 #dropdown nav {
 	display: inline-block;
 	position: relative;
@@ -326,14 +380,16 @@ Menu items in bar
 	-moz-transition: 0.2s ease-out;
 	-o-transition: 0.2s ease-in;
 	-o-transition: 0.2s ease-out;
+	text-shadow:1.5px 1.5px 0px black;
 }
+
 #dropdown nav:hover {
 	background: rgba(238, 238, 238, .064);
 }
+
 /*
 Element covering background of #dropdown.
 */
-
 #dropdownbackground {
 	position: absolute;
 	top: 0px;
@@ -341,35 +397,35 @@ Element covering background of #dropdown.
 	right: 0px;
 	left: 0px;
 }
+
 /*
 Where the navigation elements are stored on the page.
 */
-
 #dropdown nav ul {
 	display: none;
 }
+
 /*
 Div containing #below for the purpose of resizing up and down.
 */
-
 #belowbox {
 	position: relative;
 	overflow: hidden;
 	background: #ffd802;
 	/*box-shadow: inset 0px 66px 10px -55px #333, inset 0px -30px 30px -15px #353535;*/
 }
+
 /*
 Div containing navigation links in two UL's, ul.left and ul.right.
 */
-
 #below {
 	position: relative;
 	color: white;
 }
+
 /*
 All navigation maps
 */
-
 #below ul {
 	width: 400px;
 	position: relative;
@@ -379,34 +435,35 @@ All navigation maps
 	-webkit-animation: fadein .5s;
 	-o-animation: fadein .5s;
 }
+
 /*
 Navigation map in the left side
 */
-
 #below ul.left {
 	float: left;
 }
+
+
 /*
 Navigation map on the right side
 */
-
 #below ul.right {
 	float: left;
 }
+
 /*
 The navigation headings in the dropdown box.
 */
-
 #below ul li h3 {
 	width: 100%;
 	border-bottom: 1px solid #111;
 	margin-top: 0px;
 	margin-bottom: 5px;
 }
+
 /*
 Lines in navigation.
 */
-
 #below ul li {
 	color: #111;
 	position: relative;
@@ -414,10 +471,10 @@ Lines in navigation.
 	font-weight: bold;
 	overflow: hidden;
 }
+
 /*
 Descriptions in navigation.
 */
-
 #below ul li span {
 	color: #111;
 	top: 0px;
@@ -425,10 +482,10 @@ Descriptions in navigation.
     position: absolute;
     right: 0;
 }
-/*
-Anchors in navigation
-*/
 
+/*
+Anchors in navigation: things inside below box
+*/
 #below ul li a {
 	color: #111;
 	text-decoration: none;

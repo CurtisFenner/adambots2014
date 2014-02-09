@@ -14,11 +14,12 @@ for (var i = 0; i < links.length; i++) {
 				below.style.display = "block";
 				for (var j = 0; j < links.length; j++) {
 					links[j].style.background = "";
-					links[j].style.color = "rgba(238,238,238,1)";
+					links[j].style.color = "rgb(238,238,238)";
 				}
 				try {
-					el.style.background = "rgba(255,216,2,1)"; //Throws an error in IE8
-					el.style.color = "rgba(17,17,17,1)"
+					el.style.background = "rgb(255,216,2)"; //Throws an error in IE8
+					el.style.color = "rgb(17,17,17)"
+					el.style.textShadow = "none";
 				} catch (e) {}
 				active = el;
 				clearBelow();
@@ -32,7 +33,8 @@ for (var i = 0; i < links.length; i++) {
 				//below.style.display = "none";
 				for (var j = 0; j < links.length; j++) {
 					links[j].style.background = "";
-					links[j].style.color = "rgba(238,238,238,1)";
+					links[j].style.color = "rgb(238,238,238)";
+					links[j].style.textShadow = "1px 1px 0px black";
 				}
 				active = null;
 			}
