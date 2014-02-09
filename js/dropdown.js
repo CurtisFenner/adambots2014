@@ -13,11 +13,13 @@ for (var i = 0; i < links.length; i++) {
 				//Open tab
 				below.style.display = "block";
 				for (var j = 0; j < links.length; j++) {
-					links[j].style.background = "";
+					links[j].style.backgroundColor = "";
+					links[j].style.backgroundImage = "";
 					links[j].style.color = "rgb(238,238,238)";
 				}
 				try {
-					el.style.background = "rgb(255,216,2)"; //Throws an error in IE8
+					el.style.backgroundColor = "rgb(255,216,2)"; //Throws an error in IE8
+					el.style.backgroundImage = 'url("http://localhost/wordpress/wp-content/themes/adambots2014/res/img/noisy.png")';
 					el.style.color = "rgb(17,17,17)"
 					el.style.textShadow = "none";
 				} catch (e) {}

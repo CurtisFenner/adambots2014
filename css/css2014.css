@@ -49,9 +49,36 @@ a {
 ***************************************/
 
 img.alignright {
-	margin:2em;
+	margin:1.5em;
 	margin-right:0px;
 	float:right;
+}
+
+img.alignleft {
+	margin:0.5em;
+	margin-left:0px;
+	margin-top:6px;
+	float:left;
+}
+
+/*
+The bar between the navbar and the page.
+*/
+#pagetype {
+	padding-top:5px;
+	position:relative;
+	height:80px;
+	line-height:30px;
+	background-image:url("../res/img/noisy.png");
+	padding-left:20px;
+	color:white;
+	font-weight:bold;
+	font-size:24px;
+
+	box-shadow:inset 0px -30px 30px -30px rgba(0,0,0,0.75);
+
+	text-shadow: 0px 1px 0px black,-1px 0px 0px black,1px 0px 0px black,0px -1px 0px black
+	;
 }
 
 #pagetype .background {
@@ -84,20 +111,9 @@ img.alignright {
 	font-size:16px;
 }
 
-/*
-The bar between the navbar and the page.
-*/
-#pagetype {
-	position:relative;
-	height:80px;
+#pagetype h2 {
 	line-height:40px;
-	background-image:url("../res/img/noisy.png");
-	padding-left:20px;
-	color:white;
-	font-weight:bold;
-	font-size:24px;
-
-	box-shadow:inset 0px -30px 30px -30px rgba(0,0,0,0.75);
+	margin:0px;
 }
 
 #leftcol {
@@ -411,7 +427,8 @@ Div containing #below for the purpose of resizing up and down.
 #belowbox {
 	position: relative;
 	overflow: hidden;
-	background: #ffd802;
+	background-color: #ffd802;
+	background-image:url("../res/img/noisy.png");
 	/*box-shadow: inset 0px 66px 10px -55px #333, inset 0px -30px 30px -15px #353535;*/
 }
 
@@ -543,6 +560,14 @@ Triple panel display above footer
 	top:0px;
 	background:#EEE;
 	box-shadow: none;
+}
+
+/**************************************
+		  NEXTGEN GALLERY MODS
+***************************************/
+
+img.ngg-singlepic  {
+	outline:1px solid #AAA !important;
 }
 
 /**************************************

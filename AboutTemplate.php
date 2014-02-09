@@ -16,7 +16,7 @@ $add_script = array();
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<div class="page_shadowline"></div>
 		<div class="pagewidth">
-			<div id="pagetype" style="background-color:#205A8C;">About the AdamBots<br>
+			<div id="pagetype" style="background-color:#FFD802;"><h2>About the AdamBots</h2><!-- #205A8C is FIRST blue -->
 				<?php dynamic_sidebar('About Submenu') ?>
 				<div class="background">
 					<img src="http://adambots.com/logos/png/yellowBG_small.png" height="60">
