@@ -4,7 +4,7 @@
 body {
 	min-width: 1200px;
 	/* Was 494949, considered "bland" "too light" */
-	background-color: #111;
+	background-color: #252525;
 	font-family: "Roboto Condensed";
 	margin: 0px;
 	/*Optional page fadein*/
@@ -76,9 +76,9 @@ The bar between the navbar and the page.
 	font-size:24px;
 
 	box-shadow:inset 0px -30px 30px -30px rgba(0,0,0,0.75);
-
-	text-shadow: 0px 1px 0px black,-1px 0px 0px black,1px 0px 0px black,0px -1px 0px black
-	;
+    /*-webkit-text-stroke-width: 1px;*/
+    /*-webkit-text-stroke-color: black;*/
+	text-shadow: 0px 1px 0px black,-1px 0px 0px black,1px 0px 0px black,0px -1px 0px black;
 }
 
 #pagetype .background {
@@ -161,7 +161,8 @@ The bar between the navbar and the page.
 ***************************************/
 
 #gears {
-	background:#111;
+	background:#252525;
+    background:url("<?php bloginfo('template_directory'); ?>/img/res/noisy.png");
 }
 
 #gearscontainer {
@@ -174,12 +175,12 @@ The bar between the navbar and the page.
 }
 
 #gearscover {
-	background:url("../res/img/noisy.png");
+	/*background:url("../res/img/noisy.png");
 	position:absolute;
 	left:0;
 	top:0;
 	width:100%;
-	height:100%;
+	height:100%;*/
 }
 
 /**************************************
@@ -191,12 +192,13 @@ The bar between the navbar and the page.
 	position:relative;
 	width:960px;
 	margin:auto;
-    overflow: hidden;
-	box-shadow:0px 0px 5px 5px rgba(0,0,0,.5);
+    overflow:hidden;
+	/*box-shadow:0px 0px 1px 5px rgba(0,0,0,.5);*/
 	margin-top:20px;
+    font-style: bold;
 }
 
-#galleryleft,#galleryright {
+#galleryleft, #galleryright {
 	height:100%;
 	position:absolute;
 	width:100%;
@@ -283,14 +285,6 @@ The bar between the navbar and the page.
 	height: inherit;
 	position: relative;
 	float: left;
-}
-#name {
-	float: left;
-	color: #eee;
-	font-family: "SF Sports Night NS";
-	font-size: 70px;
-	padding-top: 35px;
-	padding-left: 40px;
 }
 #social {
 	height: inherit;
@@ -522,7 +516,6 @@ Triple panel display above footer
 	position:absolute;
 	background:#FAFAFA;
 	background-image:url("../res/img/noisy.png");
-	box-shadow:0px 0px 5px 5px rgba(0,0,0,.45);
 }
 
 #panelgrid {
@@ -574,7 +567,7 @@ img.ngg-singlepic  {
 		      BODY CARDS
 ***************************************/
 #teaminfo {
-    width: 960px;
+    width: 910px;
     margin: 50px;
     margin-left: auto;
     margin-right: auto;
@@ -593,6 +586,11 @@ Holds sliding descriptions
 	overflow: hidden;
 	width: inherit;
 }
+
+
+/**************************************
+		     PAGE ANIMATION
+***************************************/
 /* Define CSS fade-in */
 
 @keyframes fadein {
