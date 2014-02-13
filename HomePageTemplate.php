@@ -18,7 +18,7 @@ get_header();
 			<div id="gallerybuttonright">    
 			</div>
 		</div>
-		<script src="js/gallery.js" type="text/javascript"></script>
+		<script src="<?php bloginfo('template_directory'); ?>/js/gallery.js" type="text/javascript"></script>
 		<div id="teaminfo">
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis convallis velit, eget imperdiet enim. In accumsan vel diam at imperdiet. Cras elementum diam venenatis pellentesque elementum. Nunc at est egestas, ornare neque ut, egestas quam. Duis dui massa, venenatis ac neque a, porttitor sollicitudin ante. Nulla convallis lobortis leo, sed euismod velit congue sit amet. Sed volutpat risus in dui ultrices luctus ut sed sapien. Donec pretium pulvinar dictum. Aliquam mauris massa, rhoncus a lacinia sit amet, vestibulum sed purus. Donec at diam mi. Duis sit amet pretium justo. Praesent quis ipsum dolor. Aliquam fermentum odio ante, vitae rhoncus turpis ultrices sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus porta, nulla sed tincidunt egestas, dolor tortor aliquam elit, eu luctus arcu nisi eget nisl. Sed ut fermentum turpis.</p>
@@ -34,15 +34,15 @@ get_header();
 		</div>
 		<div class="pagewidth" style="position:relative;height:420px">
 			<div class="panel" style="width:314px;height:372px;left:0;top:0;">
-				<img style="width:300px;margin:7px;" width=300 src="FIRST%20Logo.png" alt="FIRST Logo">
+				<img style="width:300px;margin:7px;" width=300 src="<?php bloginfo('template_directory'); ?>/res/img/first_logo.png" alt="FIRST Logo">
 				<h3 style="margin:15px;text-align:justify;border-bottom:3px solid #0066B3"><a href="#" style="color:#0066B3;font-weight:bold;"><em>For Inspiration and Recognition of Science and Technology</em></a></h3>
 			</div>
 			<div class="panel" style="width:314px;height:372px;left:323px;top:0;">
-				<img style="width:300px;margin:7px;margin-top:43px;margin-bottom:64px" width=300 src="Aerial Assist Logo Cropped.png" alt="Aerial Assist Logo">
+				<img style="width:300px;margin:7px;margin-top:43px;margin-bottom:64px" width=300 src="<?php bloginfo('template_directory'); ?>/res/img/aerial_assist.png" alt="Aerial Assist Logo">
 				<h3 style="margin:15px;text-align:justify;border-bottom:3px solid #0066B3"><a href="#" style="color:#0066B3;font-weight:bold;"><em>Aerial Assist: The 2014 FIRST Robotics Challenge</em></a></h3>
 			</div>
 			<div class="panel" style="width:314px;height:372px;left:646px;top:0;">
-				<img style="width:300px;margin:7px;" src="sponsors.png" alt="Our Sponsors: General Motors, SAIC, Plex Systems, Magna, and The Chrysler Foundation">
+				<img style="width:300px;margin:7px;" src="<?php bloginfo('template_directory'); ?>/res/img/sponsors.png" alt="Our Sponsors: General Motors, SAIC, Plex Systems, Magna, and The Chrysler Foundation">
 				<h3 style="margin:15px;text-align:justify;border-bottom:3px solid #0066B3"><a href="#" style="color:#0066B3;font-weight:bold;"><em>Our Sponsors:<br><span style="margin-left:15px;">Thank you so much!</span></em></a></h3>
 			</div>
 		</div>

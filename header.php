@@ -20,8 +20,9 @@
     </div>
 	<script src='<?php bloginfo('template_directory'); ?>/js/gears.js'></script>
 	<div id="head">
-		<img id="atom" src="<?php bloginfo('template_directory'); ?>/res/img/flat_yellow_wo_bg_Square.png" alt="AdamBots Atom">
-		<a id="name">AdamBots</a>
+		<a id="atom" href="#">
+            <img id="atom" src="<?php bloginfo('template_directory'); ?>/res/img/flat_round_atom_w_text.png" alt="AdamBots.com">
+        </a>
 		<div id="social">
 			<a href="#facebook"><img src="<?php bloginfo('template_directory'); ?>/res/img/social/facebook.png" alt="Like us on Facebook"></a>
 			<a href="#Instagram"><img src="<?php bloginfo('template_directory'); ?>/res/img/social/instagram.png" alt="Find us on Instagram"></a>

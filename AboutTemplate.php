@@ -19,7 +19,7 @@ $add_script = array();
 			<div id="pagetype" style="background-color:#FFD802;"><h2>About the AdamBots</h2><!-- #205A8C is FIRST blue -->
 				<?php dynamic_sidebar('About Submenu') ?>
 				<div class="background">
-					<img src="http://adambots.com/logos/png/yellowBG_small.png" height="60">
+					<img src="http://adambots.com/logos/png/yellowBG_medium.png" height="60">
 				</div>
 			</div>
 			<div id="twocolumns">
