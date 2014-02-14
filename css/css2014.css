@@ -188,9 +188,9 @@ The bar between the navbar and the page.
 ***************************************/
 
 #gallerybox {
-	height:400px;
+	height:500px;
 	position:relative;
-	width:960px;
+	width:100%;
 	margin:auto;
     overflow:hidden;
 	/*box-shadow:0px 0px 1px 5px rgba(0,0,0,.5);*/
@@ -240,22 +240,22 @@ The bar between the navbar and the page.
 }
 
 .gallerytitle {
-	font-size:40px;
-	top:20px;
+	font-size:30px;
+    bottom: 75px;
 }
 
 .gallerytext {
-	font-size:24px;
-	top:80px;
+	font-size:20px;
+    bottom: 25px;
 }
 
 .gallerytext,.gallerytitle {
 	left:100px;
-	right:100px;
+	right:50px;
 	position:absolute;
-	text-shadow: 0px 0px 10px black;
+	text-shadow: 0px 0px 20px black;
 	color:white;
-	text-align:center;
+    text-align: right;
 }
 
 
@@ -566,13 +566,36 @@ img.ngg-singlepic  {
 /**************************************
 		      BODY CARDS
 ***************************************/
-#teaminfo {
-    width: 910px;
-    margin: 50px;
+#bodycards {
+    max-width: 960px;
     margin-left: auto;
     margin-right: auto;
+    paddin: 0;
+    display: block;
+}
+
+#teaminfo {
+    width: 535px;
     padding: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
     background-color: #ffd802;
+    float: left;
+}
+
+.twitter-timeline {
+    width: 300px;
+    height: 500px;
+    padding: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    float: right;
+    background-color: #eee;
+	background-image:url("../res/img/noisy.png");
+}
+
+.clear {
+    clear: both;
 }
 
 /**************************************
