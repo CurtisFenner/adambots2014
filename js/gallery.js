@@ -4,15 +4,15 @@ var gx = 0;
 var tgx = 0;
 
 var gallery = [
-{url:"http://www.adambots.com/wp-content/gallery/2013-palmetto-regional/dsc05322.jpg",
+{url:"http://www.adambots.com/wp-content/gallery/2013-palmetto-regional/dsc05249.jpg",
 title:"2013 Palmetto Regional Champions!",
 text:"The AdamBots were champions at the Palmetto regional in Myrtle Beach, South Carolina with FRC team 11, MORT, and FRC team 2187, Team Volt."
 },
-{url:"http://www.adambots.com/wp-content/uploads/2011/01/AdamBots-Team-Picture2013v2-570x302.jpg",
+{url:"https://scontent-b-iad.xx.fbcdn.net/hphotos-prn2/t31/1403082_527097967380821_1931756996_o.jpg",
 title:"The 2014 AdamBots FRC Team",
 text:"Our team of seventy students from Rochester Adams and Stoney Creek High Schools"
 },
-{url:"../res/img/team.jpg",title:"WOW",text:"SO DOGE"}
+{url:"https://scontent-a-iad.xx.fbcdn.net/hphotos-ash3/t1/941703_443991249024827_1714696335_n.jpg",title:"WOW",text:"SO DOGE"}
 ];
 
 gx = -gallery.length * 1000;
