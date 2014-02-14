@@ -15,7 +15,8 @@
 
 <body>
     <div id="gearscontainer">
-        <canvas id="gears" width="1200" height="600"></canvas>
+        <canvas id="gears1" width="400" height="400"></canvas>
+        <canvas id="gears2" width="520" height="520"></canvas>
         <div id="gearscover"></div>
     </div>
 	<script src='<?php bloginfo('template_directory'); ?>/js/gears.js'></script>
