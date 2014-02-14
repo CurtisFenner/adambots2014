@@ -27,6 +27,10 @@ a {
 	color:#3069b0;
 }
 
+.clear {
+    clear: both;
+}
+
 /**************************************
 			  MAIN LAYOUT
 ***************************************/
@@ -188,7 +192,7 @@ The bar between the navbar and the page.
 ***************************************/
 
 #gallerybox {
-	height:500px;
+    height:500px;
 	position:relative;
 	width:100%;
 	margin:auto;
@@ -196,6 +200,7 @@ The bar between the navbar and the page.
 	/*box-shadow:0px 0px 1px 5px rgba(0,0,0,.5);*/
 	margin-top:20px;
     font-style: bold;
+    box-shadow: 0 0 10px #000;
 }
 
 #galleryleft, #galleryright {
@@ -424,6 +429,7 @@ Div containing #below for the purpose of resizing up and down.
 	background-color: #ffd802;
 	background-image:url("../res/img/noisy.png");
 	/*box-shadow: inset 0px 66px 10px -55px #333, inset 0px -30px 30px -15px #353535;*/
+    box-shadow: inset 0 -3px 0 #9a8000;
 }
 
 /*
@@ -514,8 +520,10 @@ Triple panel display above footer
 
 .panel {
 	position:absolute;
+    margin-top: 5px;
 	background:#FAFAFA;
 	background-image:url("../res/img/noisy.png");
+    box-shadow: 0 0 10px #000;
 }
 
 #panelgrid {
@@ -570,32 +578,31 @@ img.ngg-singlepic  {
     max-width: 960px;
     margin-left: auto;
     margin-right: auto;
-    paddin: 0;
-    display: block;
+    padding: 0px;
+    margin-top: 25px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 10px #000;
 }
 
 #teaminfo {
-    width: 535px;
+    width: 560px;
     padding: 25px;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    paddin-bottom: 0;
     background-color: #ffd802;
     float: left;
 }
 
 .twitter-timeline {
     width: 300px;
-    height: 500px;
+    height: 100%;
     padding: 25px;
-    margin-top: 25px;
-    margin-bottom: 25px;
     float: right;
     background-color: #eee;
 	background-image:url("../res/img/noisy.png");
-}
-
-.clear {
-    clear: both;
+    position: absolute;
+    right: 0;
+    box-shadow: inset 10px 0 10px -10px #000;
 }
 
 /**************************************
