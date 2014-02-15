@@ -191,8 +191,15 @@ The bar between the navbar and the page.
 		   IMAGE GALLERY
 ***************************************/
 
+#gallerholder {
+    position:relative;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
 #gallerybox {
-    height:500px;
 	position:relative;
 	width:100%;
 	margin:auto;
@@ -201,6 +208,12 @@ The bar between the navbar and the page.
 	margin-top:20px;
     font-style: bold;
     box-shadow: 0 0 10px #000;
+}
+
+#gallerybox:before{
+    content: "";
+	display: block;
+	padding-top: 35%;
 }
 
 #galleryleft, #galleryright {
