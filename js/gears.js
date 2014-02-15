@@ -1,10 +1,10 @@
 var gearContext1 = gears1.getContext("2d");
 var gearContext2 = gears2.getContext("2d");
 
-gears1.style.left = "49px";
-gears1.style.top = "49px";
-gears2.style.left = "218px";
-gears2.style.top = "-76px";
+gears1.style.left = "43px";
+gears1.style.top = "43px";
+gears2.style.left = "212px";
+gears2.style.top = "-82px";
 
 var roundy = true;	//can be disabled. marks gears thinner, sharper
 
@@ -25,16 +25,21 @@ Right gear:
 */
 
 function drawGears() {
-	gearContext1.clearRect(0,0,400,400);
-	gearContext2.clearRect(0,0,520,520);
+	gearContext1.clearRect(0,0,424,424);
+	gearContext2.clearRect(0,0,544,544);
+	gearContext1.fillStyle = "#353535";
+	gearContext2.fillStyle = "#353535";
 	gear(100,70,0,-.5, 0.515, gearContext1 );
 	gear(130,100,0,.5,0, gearContext2 );
 }
 
 setInterval(drawGears,30);
 
-var google = new Image();
-google.src = "https://www.google.com/images/srpr/logo11w.png";
+var noiseImg = new Image();
+noiseImg.onload = function() {
+	noiseImg.ready = true;
+}
+noiseImg.src = "http://localhost/wordpress/wp-content/themes/adambots2014/res/img/noisy.png";
 
 function gear(r1,r2,w,m,off , c) {
 	c.beginPath();
@@ -44,7 +49,7 @@ function gear(r1,r2,w,m,off , c) {
 	g = g / 6; //to stop at (pi/8,pi/8)
 	c.save();
 	c.scale(2,2);
-	c.translate(r1,r1);
+	c.translate(r1+6,r1+6);
 	c.rotate(g);
 	c.moveTo(0,0);
 	for (var i = 0; i <= 4 * 8; i++) {
@@ -75,8 +80,12 @@ function gear(r1,r2,w,m,off , c) {
 
 	var op = c.globalCompositeOperation;
 	c.globalCompositeOperation = "source-atop";
-	//if (google.ready)
-	//c.drawImage(google,0,0);
+	if (noiseImg.ready) {
+		c.drawImage(noiseImg,0,0);
+		c.drawImage(noiseImg,-300,0);
+		c.drawImage(noiseImg,-300,-300);
+		c.drawImage(noiseImg,0,-300);
+	}
 	c.restore();
 
 }
