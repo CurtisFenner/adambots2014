@@ -191,8 +191,15 @@ The bar between the navbar and the page.
 		   IMAGE GALLERY
 ***************************************/
 
+#gallerholder {
+    position:relative;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
 #gallerybox {
-    height:500px;
 	position:relative;
 	width:100%;
 	margin:auto;
@@ -201,6 +208,12 @@ The bar between the navbar and the page.
 	margin-top:20px;
     font-style: bold;
     box-shadow: 0 0 10px #000;
+}
+
+#gallerybox:before{
+    content: "";
+	display: block;
+	padding-top: 35%;
 }
 
 #galleryleft, #galleryright {
@@ -460,7 +473,6 @@ Navigation map in the left side
 	float: left;
 }
 
-
 /*
 Navigation map on the right side
 */
@@ -572,6 +584,24 @@ img.ngg-singlepic  {
 }
 
 /**************************************
+		  NEXTGEN GALLERY MODS
+***************************************/
+
+#countdown {
+    max-width:930px;
+    margin-left:auto;
+    margin-right:auto;
+    padding:15px;
+    padding-left:auto;
+    padding-right:auto;
+    font-weight:bold;
+    color:#eee;
+    height:42px;
+    line-height:42px;
+    font-size:16px;
+}
+
+/**************************************
 		      BODY CARDS
 ***************************************/
 #bodycards {
@@ -579,7 +609,6 @@ img.ngg-singlepic  {
     margin-left: auto;
     margin-right: auto;
     padding: 0px;
-    margin-top: 25px;
     overflow: hidden;
     position: relative;
     box-shadow: 0 0 10px #000;
@@ -598,7 +627,7 @@ img.ngg-singlepic  {
     height: 100%;
     padding: 25px;
     float: right;
-    background-color: #eee;
+    background-color: #000;
 	background-image:url("../res/img/noisy.png");
     position: absolute;
     right: 0;

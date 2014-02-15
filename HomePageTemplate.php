@@ -1,4 +1,5 @@
 <?php /* Template Name: HomePage */ get_header(); ?>
+<div id="gallerholder">
 <div id="gallerybox">
     <div id="galleryleft">
         <h3 class="gallerytitle">2013 Palmetto Regional Champions!</h3>
@@ -14,6 +15,10 @@
     </div>
 </div>
 <script src="<?php bloginfo('template_directory'); ?>/js/gallery.js" type="text/javascript"></script>
+</div>
+
+<div id="countdown"></div>
+<script src='<?php bloginfo('template_directory'); ?>/js/countdown.js'></script>
 
 <div id="bodycards">
     <div id="teaminfo">
@@ -30,7 +35,7 @@
 
     </div>
 
-    <a class="twitter-timeline" href="https://twitter.com/AdamBots" data-theme="light" data-link-color="#e0bb00" data-chrome="noscrollbar nofooter noborders transparent" aria-polite="polite" data-widget-id="434172184005578752">Tweets by @AdamBots</a>
+    <a class="twitter-timeline" href="https://twitter.com/AdamBots" data-theme="dark" data-link-color="#e0bb00" data-chrome="noscrollbar nofooter noborders transparent" aria-polite="polite" data-widget-id="434172184005578752">Tweets by @AdamBots</a>
     <div class="clear"></div>
 </div>
 
