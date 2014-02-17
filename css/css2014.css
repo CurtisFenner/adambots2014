@@ -206,7 +206,7 @@ The bar between the navbar and the page.
 
 #gallerybox {
 	position:relative;
-	width:100%;
+	width:960px;
 	margin:auto;
     overflow:hidden;
 	/*box-shadow:0px 0px 1px 5px rgba(0,0,0,.5);*/
