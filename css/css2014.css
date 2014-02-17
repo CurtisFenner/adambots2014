@@ -203,11 +203,11 @@ The bar between the navbar and the page.
 	bottom: 0;
 	right: 0;
     
-    animation-timing-function:cubic-bezier(.30, 0, 0, 1);
+    /*animation-timing-function:cubic-bezier(.30, 0, 0, 1);
     animation: slidein .75s;
 	-moz-animation: slidein .75s;
 	-webkit-animation: slidein .75s;
-	-o-animation: slidein .75s;
+	-o-animation: slidein .75s;*/
 }
 
 #gallerybox {
@@ -610,11 +610,11 @@ img.ngg-singlepic  {
     line-height:42px;
     font-size:16px;
     
-    animation-timing-function:cubic-bezier(.42, 0, .06, 1);
+    /*animation-timing-function:cubic-bezier(.42, 0, .06, 1);
     animation: slidein 1s;
 	-moz-animation: slidein 1s;
 	-webkit-animation: slidein 1s;
-	-o-animation: slidein 1s;
+	-o-animation: slidein 1s;*/
 }
 
 /**************************************
@@ -629,11 +629,11 @@ img.ngg-singlepic  {
     position: relative;
     box-shadow: 0 0 10px #000;
     
-    animation-timing-function:cubic-bezier(.30, 0, 0, 1);
+    /*animation-timing-function:cubic-bezier(.30, 0, 0, 1);
     animation: slidein 1.25s;
 	-moz-animation: slidein 1.25s;
 	-webkit-animation: slidein 1.25s;
-	-o-animation: slidein 1.25s;
+	-o-animation: slidein 1.25s;*/
 }
 
 #teaminfo {
@@ -652,7 +652,6 @@ img.ngg-singlepic  {
     background-color: #111;
 	background-image:url("../res/img/noisy.png");
     position: absolute;
-    right: 0;
     box-shadow: inset 10px 0 10px -10px #000;
 }
 
