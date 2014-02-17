@@ -232,7 +232,7 @@ The bar between the navbar and the page.
 
 #gallerybuttonleft, #gallerybuttonright {
 	position:absolute;
-	top:180px;
+	top:35%;
 	cursor:pointer;
 
 	width:0px;
