@@ -51,6 +51,8 @@ var dend = 0;
 var dtime = 0;
 var droph = 0;
 
+var pheight = -1;
+
 function dropper() {
 	var t = belowpos.offsetTop;
 	if (!active) {
@@ -67,15 +69,19 @@ function dropper() {
 	if (Math.abs(droph - dend) < 1.5) {
 			droph = dend;
 	}
-	belowbox.style.height = Math.floor(droph) + "px";
-
-	if (window.requestAnimationFrame) {
-		requestAnimationFrame(dropper);
+	var newHeight = Math.floor(droph);
+	if (pheight !== newHeight) {
+		belowbox.style.height = newHeight + "px";
+		pheight = newHeight;
 	}
+
+	//if (window.requestAnimationFrame) {
+	//	requestAnimationFrame(dropper);
+	//}
 }
 
-if (!!!window.requestAnimationFrame) {
-	setInterval(dropper,1000/60);
-} else {
-	dropper();
-}
+//if (!!!window.requestAnimationFrame) {
+	setInterval(dropper,1000/30);
+//} else {
+//	dropper();
+//}

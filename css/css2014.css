@@ -164,18 +164,23 @@ The bar between the navbar and the page.
 		         GEARS
 ***************************************/
 
-#gears {
-	background:#252525;
-    background:url("<?php bloginfo('template_directory'); ?>/img/res/noisy.png");
-}
-
 #gearscontainer {
 	position:absolute;
 	margin:0px;
-	width:600px;
-	height:300px;
 	z-index:-5;
 	top:0px;
+}
+
+#gearscontainer canvas {
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+#gears1 {
+	width:212px;
+}
+#gears2 {
+	width:272px;
 }
 
 #gearscover {
@@ -201,7 +206,7 @@ The bar between the navbar and the page.
 
 #gallerybox {
 	position:relative;
-	width:100%;
+	width:960px;
 	margin:auto;
     overflow:hidden;
 	/*box-shadow:0px 0px 1px 5px rgba(0,0,0,.5);*/

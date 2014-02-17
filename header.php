@@ -16,7 +16,8 @@
 
 <body>
     <div id="gearscontainer">
-        <canvas id="gears" width="1200" height="600"></canvas>
+        <canvas id="gears1" width="424" height="424"></canvas>
+        <canvas id="gears2" width="544" height="544"></canvas>
         <div id="gearscover"></div>
     </div>
 	<script src='<?php bloginfo('template_directory'); ?>/js/gears.js'></script>
@@ -25,10 +26,10 @@
             <img id="atom" src="<?php bloginfo('template_directory'); ?>/res/img/flat_round_atom_w_text.png" alt="AdamBots.com">
         </a>
 		<div id="social">
-			<a href="#facebook"><img src="<?php bloginfo('template_directory'); ?>/res/img/social/facebook.png" alt="Like us on Facebook"></a>
-			<a href="#Instagram"><img src="<?php bloginfo('template_directory'); ?>/res/img/social/instagram.png" alt="Find us on Instagram"></a>
-			<a href="#Twitter"><img src="<?php bloginfo('template_directory'); ?>/res/img/social/twitter.png" alt="Follow us on Twitter"></a>
-			<a href="#YouTube"><img src="<?php bloginfo('template_directory'); ?>/res/img/social/youtube.png" alt="Subscribe to us on YouTube"></a>
+			<a href="https://www.facebook.com/AdamBots"><img src="<?php bloginfo('template_directory'); ?>/res/img/social/facebook.png" alt="Like us on Facebook"></a>
+			<a href="http://instagram.com/adambots245"><img src="<?php bloginfo('template_directory'); ?>/res/img/social/instagram.png" alt="Find us on Instagram"></a>
+			<a href="https://twitter.com/adambots"><img src="<?php bloginfo('template_directory'); ?>/res/img/social/twitter.png" alt="Follow us on Twitter"></a>
+			<a href="http://www.youtube.com/user/Adambots"><img src="<?php bloginfo('template_directory'); ?>/res/img/social/youtube.png" alt="Subscribe to us on YouTube"></a>
 		</div>
 	</div>
 	
