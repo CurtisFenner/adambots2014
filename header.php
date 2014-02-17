@@ -22,7 +22,7 @@
     </div>
 	<script src='<?php bloginfo('template_directory'); ?>/js/gears.js'></script>
 	<div id="head">
-		<a id="atom" href="#">
+		<a id="atom" href="<?php echo home_url(); ?>">
             <img id="atom" src="<?php bloginfo('template_directory'); ?>/res/img/flat_round_atom_w_text.png" alt="AdamBots.com">
         </a>
 		<div id="social">
