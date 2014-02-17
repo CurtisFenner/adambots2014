@@ -655,6 +655,20 @@ img.ngg-singlepic  {
     box-shadow: inset 10px 0 10px -10px #000;
 }
 
+#seasoncard {
+    max-width:630px;
+    padding-top: 5px;
+    padding-left:25px;
+    font-weight:bold;
+    color:#222;
+    height:42px;
+    line-height:42px;
+    font-size:16px;
+    background-color: #eee;
+	background-image:url("../res/img/noisy.png");
+    box-shadow: inset -4px 4px 4px #494949;
+}
+
 /**************************************
 		  SLIDING ANIMATION
 ***************************************/

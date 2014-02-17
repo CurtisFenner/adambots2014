@@ -30,6 +30,10 @@
 
     <a class="twitter-timeline" href="https://twitter.com/AdamBots" data-theme="dark" data-link-color="#e0bb00" data-chrome="noscrollbar nofooter noborders transparent" aria-polite="polite" data-widget-id="434172184005578752">Tweets by @AdamBots</a>
     <div class="clear"></div>
+
+<div id="seasoncard">
+    Currrent Season: <a href="#2014game">2014 <em>FIRST</em> Game</a> | <a href="#blog">Team Blog</a> | <a href="#media">Media</a>
+</div>
 </div>
 
 <div class="pagewidth" style="position:relative;height:420px;top:0;">
