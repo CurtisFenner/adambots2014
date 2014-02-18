@@ -17,10 +17,10 @@
 <script src="<?php bloginfo('template_directory'); ?>/js/gallery.js" type="text/javascript"></script>
 </div>
 
-<div id="countdown"></div>
+<div id="countdown" class="css-transitions-only-after-page-load css-ignore-parent"></div>
 <script src='<?php bloginfo('template_directory'); ?>/js/countdown.js'></script>
 
-<div id="bodycards">
+<div id="bodycards" class="css-transitions-only-after-page-load">
     <div id="teaminfo">
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis convallis velit, eget imperdiet enim. In accumsan vel diam at imperdiet. Cras elementum diam venenatis pellentesque elementum. Nunc at est egestas, ornare neque ut, egestas quam. Duis dui massa, venenatis ac neque a, porttitor sollicitudin ante. Nulla convallis lobortis leo, sed euismod velit congue sit amet. Sed volutpat risus in dui ultrices luctus ut sed sapien. Donec pretium pulvinar dictum. Aliquam mauris massa, rhoncus a lacinia sit amet, vestibulum sed purus. Donec at diam mi. Duis sit amet pretium justo. Praesent quis ipsum dolor. Aliquam fermentum odio ante, vitae rhoncus turpis ultrices sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus porta, nulla sed tincidunt egestas, dolor tortor aliquam elit, eu luctus arcu nisi eget nisl. Sed ut fermentum turpis.</p>
@@ -28,7 +28,7 @@
             Aliquam vel nisi nunc. Donec pretium nulla in turpis vehicula, et aliquet erat suscipit. Ut dictum vulputate cursus. Nam quis nisi in ipsum varius dignissim ac eget dui. Duis leo nunc, lacinia et gravida aliquet, convallis ac tortor. Quisque eu lectus nisl. Phasellus dapibus at ipsum ut tincidunt. Integer varius, lectus et egestas egestas, lectus enim molestie odio, id bibendum erat ipsum sit amet tellus. Nam rutrum facilisis magna eget dapibus. Vestibulum ac justo a risus pretium dignissim. Pellentesque at imperdiet augue. Vivamus sapien tortor, tristique id tristique vel, elementum ac augue.</p>
     </div>
 
-    <a class="twitter-timeline" href="https://twitter.com/AdamBots" data-theme="dark" data-link-color="#e0bb00" data-chrome="noscrollbar nofooter noborders transparent" aria-polite="polite" data-widget-id="434172184005578752">Tweets by @AdamBots</a>
+    <a class="twitter-timeline" href="https://twitter.com/AdamBots" data-theme="dark" data-link-color="#e0bb00" data-chrome="nofooter noborders transparent" aria-polite="polite" data-widget-id="434172184005578752"></a>
     <div class="clear"></div>
 
 <div id="seasoncard">
