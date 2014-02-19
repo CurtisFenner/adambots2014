@@ -33,7 +33,7 @@ function drawGears() {
 	gear(130,100,0,.5,0, gearContext2 );
 }
 
-setInterval(drawGears,30);
+setTimeout( function() { setInterval(drawGears, 30) }, 2000);
 
 var noiseImg = new Image();
 noiseImg.onload = function() {
@@ -89,5 +89,3 @@ function gear(r1,r2,w,m,off , c) {
 	c.restore();
 
 }
-
-drawGears();
