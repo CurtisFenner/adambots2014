@@ -174,6 +174,16 @@ The bar between the navbar and the page.
 	margin:0px;
 	z-index:-5;
 	top:0px;
+    
+    animation: fadein .5s;
+	-moz-animation: fadein .5s;
+	-webkit-animation: fadein .5s;
+	-o-animation: fadein .5s;
+    
+    animation-delay: 1.5s;
+    -moz-animation-delay: 1.5s;
+    -webkit-animation-delay: 1.5s;
+    -o-animation-delay: 1.5s;
 }
 
 #gearscontainer canvas {
