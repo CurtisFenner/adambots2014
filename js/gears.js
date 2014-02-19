@@ -33,6 +33,7 @@ function drawGears() {
 	gear(130,100,0,.5,0, gearContext2 );
 }
 
+/* wait until slidein finishes to increase smoothness */
 setTimeout( function() { setInterval(drawGears, 30) }, 2000);
 
 var noiseImg = new Image();
@@ -87,3 +88,4 @@ function gear(r1,r2,w,m,off , c) {
 		c.drawImage(noiseImg,0,-300);
 	}
 	c.restore();
+}
