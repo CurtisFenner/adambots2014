@@ -87,5 +87,3 @@ function gear(r1,r2,w,m,off , c) {
 		c.drawImage(noiseImg,0,-300);
 	}
 	c.restore();
-
-}
