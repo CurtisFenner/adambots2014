@@ -34,7 +34,7 @@ function drawGears() {
 }
 
 /* wait until slidein finishes to increase smoothness */
-setTimeout( function() { setInterval(drawGears, 30) }, 2000);
+setTimeout( function() { setInterval(drawGears, 35) }, 1500);
 
 var noiseImg = new Image();
 noiseImg.onload = function() {
