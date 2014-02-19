@@ -32,5 +32,7 @@ function updateCountdown() {
     }
 	
 }
-updateCountdown();
-setInterval(updateCountdown,200);
+setTimeout(function() {
+    updateCountdown();
+    setInterval(updateCountdown,200);
+}, 1500);
