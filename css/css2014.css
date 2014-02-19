@@ -559,43 +559,19 @@ Triple panel display above footer
     box-shadow: 0 0 10px #000;
 }
 
-#panelgrid {
-	overflow:hidden;
-	left:0px;
-	right:0px;
+#panelcontainer {
+    margin-top:6px;
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
 	position:relative;
-	height:400px;
+    
+    animation-timing-function:cubic-bezier(.30, 0, 0, 1);
+    animation: slidein 1.5s;
+	-moz-animation: slidein 1.5s;
+	-webkit-animation: slidein 1.5s;
+	-o-animation: slidein 1.5s;
 }
-
-#panelgrid .pagewidth {
-	height:400px;
-}
-
-#panelgrid .pagewidth > div {
-	top:0px;
-	left:0px;
-	width:320px;
-	height:400px;
-	background:#FFF;
-	text-align:justify;
-	position:absolute;
-}
-
-#panelgrid h3 {
-	margin: 20px;
-	border-bottom: 3px solid #0056A3;
-}
-
-#panelgrid a {
-	color:#0066B3;
-}
-
-.centerpanel {
-	top:0px;
-	background:#EEE;
-	box-shadow: none;
-}
-
 /**************************************
 		  NEXTGEN GALLERY MODS
 ***************************************/

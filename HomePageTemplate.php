@@ -36,7 +36,7 @@
 </div>
 </div>
 
-<div class="pagewidth" style="position:relative;height:420px;top:0;">
+<div id="panelcontainer" style="position:relative;height:420px;top:0;">
     <div class="panel" style="width:314px;height:372px;left:0;top:0;">
         <img style="width:300px;margin:7px;" width=300 src="<?php bloginfo('template_directory'); ?>/res/img/first_logo.png" alt="FIRST Logo">
         <h3 style="margin:15px;text-align:justify;border-bottom:3px solid #0066B3">
