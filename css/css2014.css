@@ -4,15 +4,14 @@
 body {
 	min-width: 1200px;
 	/* Was 494949, considered "bland" "too light" */
-	background-color: #111;
+	background-color: #252525;
 	font-family: "Roboto Condensed";
 	margin: 0px;
 	/*Optional page fadein*/
-	animation: fadein .25s;
-	-moz-animation: fadein .25s;
-	-webkit-animation: fadein .25s;
-	-o-animation: fadein .25s;
-    
+	animation: fadein .75s;
+	-moz-animation: fadein .75s;
+	-webkit-animation: fadein .75s;
+	-o-animation: fadein .75s;
     /*background-image: url('../res/img/noise.png');*/
 	background-image:url("../res/img/noisy.png");
 }
@@ -27,6 +26,10 @@ a {
 	color:#3069b0;
 }
 
+.clear {
+    clear: both;
+}
+
 /**************************************
 			  MAIN LAYOUT
 ***************************************/
@@ -37,6 +40,12 @@ a {
 	margin-left: auto;
 	margin-right: auto;
 	position:relative;
+    
+    animation-timing-function:cubic-bezier(.30, 0, 0, 1);
+    animation: slidein .75s;
+	-moz-animation: slidein .75s;
+	-webkit-animation: slidein .75s;
+	-o-animation: slidein .75s;
 }
 
 .pagewidth p {
@@ -76,9 +85,9 @@ The bar between the navbar and the page.
 	font-size:24px;
 
 	box-shadow:inset 0px -30px 30px -30px rgba(0,0,0,0.75);
-
-	text-shadow: 0px 1px 0px black,-1px 0px 0px black,1px 0px 0px black,0px -1px 0px black
-	;
+    /*-webkit-text-stroke-width: 1px;*/
+    /*-webkit-text-stroke-color: black;*/
+	text-shadow: 0px 1px 0px black,-1px 0px 0px black,1px 0px 0px black,0px -1px 0px black;
 }
 
 #pagetype .background {
@@ -160,43 +169,61 @@ The bar between the navbar and the page.
 		         GEARS
 ***************************************/
 
-#gears {
-	background:#111;
-}
-
 #gearscontainer {
 	position:absolute;
 	margin:0px;
-	width:600px;
-	height:300px;
 	z-index:-5;
 	top:0px;
 }
 
-#gearscover {
-	background:url("../res/img/noisy.png");
+#gearscontainer canvas {
 	position:absolute;
-	left:0;
-	top:0;
-	width:100%;
-	height:100%;
+	top:0px;
+	left:0px;
+}
+#gears1 {
+	width:212px;
+}
+#gears2 {
+	width:272px;
 }
 
 /**************************************
 		   IMAGE GALLERY
 ***************************************/
 
+#gallerholder {
+    position:relative;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+    
+    animation-timing-function:cubic-bezier(.30, 0, 0, 1);
+    animation: slidein 1s;
+	-moz-animation: slidein 1s;
+	-webkit-animation: slidein 1s;
+	-o-animation: slidein 1s;
+}
+
 #gallerybox {
-	height:400px;
 	position:relative;
 	width:960px;
 	margin:auto;
-    overflow: hidden;
-	box-shadow:0px 0px 5px 5px rgba(0,0,0,.5);
+    overflow:hidden;
+	/*box-shadow:0px 0px 1px 5px rgba(0,0,0,.5);*/
 	margin-top:20px;
+    font-style: bold;
+    box-shadow: 0 0 10px #000;
 }
 
-#galleryleft,#galleryright {
+#gallerybox:before{
+    content: "";
+	display: block;
+	padding-top: 45%;
+}
+
+#galleryleft, #galleryright {
 	height:100%;
 	position:absolute;
 	width:100%;
@@ -207,7 +234,7 @@ The bar between the navbar and the page.
 
 #gallerybuttonleft, #gallerybuttonright {
 	position:absolute;
-	top:180px;
+	top:35%;
 	cursor:pointer;
 
 	width:0px;
@@ -237,26 +264,26 @@ The bar between the navbar and the page.
 	border-left:50px solid rgba(255,255,255,.5);
 }
 
-.gallerytitle {
-	font-size:40px;
-	top:20px;
-}
-
 .gallerytext {
-	font-size:24px;
-	top:80px;
+    position: absolute;
+	font-size:20px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: rgba(34,34,34,.75);
+    background-image:url('../res/img/noisy.png');
+    text-align: right;
+    color: #eee;
+    text-shadow: 0 0 5px #000;
 }
 
-.gallerytext,.gallerytitle {
-	left:100px;
-	right:100px;
-	position:absolute;
-	text-shadow: 0px 0px 10px black;
-	color:white;
-	text-align:center;
+.gallerytext:first-line {
+	font-size:30px;
+    bottom: 75px;
 }
-
-
 
 /**************************************
 			  BACKGROUND
@@ -283,14 +310,6 @@ The bar between the navbar and the page.
 	height: inherit;
 	position: relative;
 	float: left;
-}
-#name {
-	float: left;
-	color: #eee;
-	font-family: "SF Sports Night NS";
-	font-size: 70px;
-	padding-top: 35px;
-	padding-left: 40px;
 }
 #social {
 	height: inherit;
@@ -329,7 +348,11 @@ The bar between the navbar and the page.
 ***************************************/
 #footer {
 	margin-top:6px;
-	position:relative;text-align:center;width:100%;height:200px;background: url('../res/img/noisy.png'),url('../res/img/footerGrad.png');
+	position:relative;
+    text-align:center;
+    width:100%;
+    height:200px;
+    background: url('../res/img/noisy.png'),url('../res/img/footerGrad.png');
 }
 #footercontainer {
 	top:50px;position:relative;font-size:12px;color:#444;margin:auto;text-align:center; width:950px;
@@ -430,6 +453,7 @@ Div containing #below for the purpose of resizing up and down.
 	background-color: #ffd802;
 	background-image:url("../res/img/noisy.png");
 	/*box-shadow: inset 0px 66px 10px -55px #333, inset 0px -30px 30px -15px #353535;*/
+    box-shadow: inset 0 -3px 0 #9a8000;
 }
 
 /*
@@ -459,7 +483,6 @@ Navigation map in the left side
 #below ul.left {
 	float: left;
 }
-
 
 /*
 Navigation map on the right side
@@ -520,9 +543,10 @@ Triple panel display above footer
 
 .panel {
 	position:absolute;
+    margin-top: 5px;
 	background:#FAFAFA;
 	background-image:url("../res/img/noisy.png");
-	box-shadow:0px 0px 5px 5px rgba(0,0,0,.45);
+    box-shadow: 0 0 10px #000;
 }
 
 #panelgrid {
@@ -571,15 +595,82 @@ img.ngg-singlepic  {
 }
 
 /**************************************
+		  NEXTGEN GALLERY MODS
+***************************************/
+#countdown.css-ignore-parent {
+    max-width:930px;
+    margin-left:auto;
+    margin-right:auto;
+    padding:15px;
+    padding-left:auto;
+    padding-right:auto;
+    font-weight:bold;
+    color:#eee;
+    height:42px;
+    line-height:42px;
+    font-size:16px;
+    
+    animation: fadein 1.25s;
+	-moz-animation: fadein 1.25s;
+	-webkit-animation: fadein 1.25s;
+	-o-animation: fadein 1.25s;
+    
+    animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+    -o-animation-delay: 1s;
+}
+
+/**************************************
 		      BODY CARDS
 ***************************************/
-#teaminfo {
-    width: 960px;
-    margin: 50px;
+#bodycards {
+    max-width: 960px;
     margin-left: auto;
     margin-right: auto;
+    padding: 0px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 10px #000;
+    
+    animation-timing-function:cubic-bezier(.30, 0, 0, 1);
+    animation: slidein 1.25s;
+	-moz-animation: slidein 1.25s;
+	-webkit-animation: slidein 1.25s;
+	-o-animation: slidein 1.25s;
+}
+
+#teaminfo {
+    width: 560px;
     padding: 25px;
+    paddin-bottom: 0;
     background-color: #ffd802;
+    float: left;
+}
+
+.twitter-timeline {
+    width: 300px;
+    height: 100%;
+    padding: 25px;
+    float: right;
+    background-color: #111;
+	background-image:url("../res/img/noisy.png");
+    position: absolute;
+    box-shadow: inset 10px 0 10px -10px #000;
+}
+
+#seasoncard {
+    max-width:630px;
+    padding-top: 5px;
+    padding-left:25px;
+    font-weight:bold;
+    color:#222;
+    height:42px;
+    line-height:42px;
+    font-size:16px;
+    background-color: #eee;
+	background-image:url("../res/img/noisy.png");
+    box-shadow: inset -4px 4px 4px #494949;
 }
 
 /**************************************
@@ -589,41 +680,85 @@ img.ngg-singlepic  {
 Holds sliding descriptions
 */
 
-#slide_container {
+.slide_container {
 	overflow: hidden;
 	width: inherit;
 }
+
+
+/**************************************
+		     PAGE ANIMATION
+***************************************/
 /* Define CSS fade-in */
 
 @keyframes fadein {
 	from {
 		opacity: 0;
-	}
-	to {
+	} to {
 		opacity: 1;
 	}
 }
 @-moz-keyframes fadein {
 	from {
 		opacity: 0;
-	}
-	to {
+	} to {
 		opacity: 1;
 	}
 }
 @-webkit-keyframes fadein {
 	from {
 		opacity: 0;
-	}
-	to {
+	} to {
 		opacity: 1;
 	}
 }
 @-o-keyframes fadein {
 	from {
 		opacity: 0;
-	}
-	to {
+	} to {
 		opacity: 1;
 	}
+}
+
+@keyframes slidein {
+    from{
+        left:-100%;
+    } to {
+        left:0;
+    }
+}
+@-moz-keyframes slidein {
+    from{
+        left:-100%;
+    } to {
+        left:0;
+    }
+}
+@-webkit-keyframes slidein {
+    from{
+        left:-100%;
+    } to {
+        left:0;
+    }
+}
+@-o-keyframes slidein {
+    from{
+        left:-100%;
+    } to {
+        left:0;
+    }
+}
+
+/**************************************
+        PAGE ANIMATION TIMEOUT
+***************************************/
+.css-transitions-only-after-page-load * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+.css-ignore-parent * {
+    
 }

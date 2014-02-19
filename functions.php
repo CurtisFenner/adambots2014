@@ -10,7 +10,10 @@ function shortcode_right($atts, $content=null){
 add_shortcode('right','shortcode_right');
 
 
-
+function shortcode_bigdivider($atts, $content=null) {
+	return '<div style="opacity:0.3;width:100%;height:40px;background:url(\'' . get_bloginfo('template_directory') .  '/res/img/Divider Glow.png\');margin-top:20px;margin-bottom:20px"></div>';
+}
+add_shortcode('bigdivider','shortcode_bigdivider');
 
 
 
