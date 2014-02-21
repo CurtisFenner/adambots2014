@@ -8,51 +8,49 @@
 					<ul>
 						<li>
 							<h3>All About Us</h3>
-							<li>
-								<a href="#">About Us</a>
-								<span>A summary of who we are</span>
-							</li>
-							<li>
-								<a href="#">Awards</a>
-								<span>The AdamBots' recognition in the competition</span>
-							</li>
-							<li>
-								<a href="#">Team Recognition</a>
-								<span>The AdamBots in our community</span>
-							</li>
-							<li>
-								<a href="#">Team History</a>
-								<span>The fully history of the AdamBots</span>
-							</li>
-							<li>
-								<a href="#">AdamBots Outreach</a>
-								<span>How we give back to our community</span>
-							</li>
-							<li>
-								<a href="#">Subteams</a>
-								<span>The structure of our team</span>
-							</li>
+						<li>
+							<a href="#">About Us</a>
+							<span>A summary of who we are</span>
+						</li>
+						<li>
+							<a href="#">Awards</a>
+							<span>The AdamBots' recognition in the competition</span>
+						</li>
+						<li>
+							<a href="#">Team Recognition</a>
+							<span>The AdamBots in our community</span>
+						</li>
+						<li>
+							<a href="#">Team History</a>
+							<span>The fully history of the AdamBots</span>
+						</li>
+						<li>
+							<a href="#">AdamBots Outreach</a>
+							<span>How we give back to our community</span>
+						</li>
+						<li>
+							<a href="#">Subteams</a>
+							<span>The structure of our team</span>
 						</li>
 					</ul>
 					<ul>
 						<li>
 							<h3>Our People</h3>
-							<li>
-								<a href="#">Our Students</a>
-								<span>Meet the AdamBots</span>
-							</li>
-							<li>
-								<a href="#">Our Mentors</a>
-								<span>Meet our inspirers, teachers, mentors, and guides</span>
-							</li>
-							<li>
-								<a href="#">Our Alumni</a>
-								<span>Meet the students touched by the AdamBots</span>
-							</li>
-							<li>
-								<a href="#">Our Sponsors</a>
-								<span>Meet the people who make everything possible</span>
-							</li>
+						<li>
+							<a href="#">Our Students</a>
+							<span>Meet the AdamBots</span>
+						</li>
+						<li>
+							<a href="#">Our Mentors</a>
+							<span>Meet our inspirers, teachers, mentors, and guides</span>
+						</li>
+						<li>
+							<a href="#">Our Alumni</a>
+							<span>Meet the students touched by the AdamBots</span>
+						</li>
+						<li>
+							<a href="#">Our Sponsors</a>
+							<span>Meet the people who make everything possible</span>
 						</li>
 					</ul>
 				</nav>
@@ -60,30 +58,29 @@
 					<em>FIRST</em>
 					<ul>
 						<li>
-							<h3>
-								<em>FIRST - FRC</em>Team 245</h3>
-							<li>
-								<a href="#">About FIRST</a>
-								<span>All about our main competition and program</span>
-							</li>
-							<li>
-								<a href="#">The 2014 Game and Our Robot</a>
-								<span>Read about how we play</span>
-							</li>
+							<h3><em>FIRST - FRC</em>Team 245</h3>
+						<li>
+							<a href="#">About FIRST</a>
+							<span>All about our main competition and program</span>
+						</li>
+						<li>
+							<a href="#">The 2014 Game and Our Robot</a>
+							<span>Read about how we play</span>
+						</li>
 					</ul>
 					<ul>
 						<li>
 							<h3>Archive</h3>
-							<li>
-								<a href="#">Past Years</a>
-								<span>Read information about prior robots and competitions</span>
-							</li>
-							<li>
-								<h3>Also check out..</h3>
-								<li>
-									<a href="#">FIRST Media</a>
-									<span>Pictures and videos from our
-										<em>FIRST</em>season</span>
+						<li>
+							<a href="#">Past Years</a>
+							<span>Read information about prior robots and competitions</span>
+						<li>
+							<h3>Also check out..</h3>
+						<li>
+							<a href="#">FIRST Media</a>
+							<span>Pictures and videos from our
+								<em>FIRST</em>season
+							</span>
 					</ul>
 
 				</nav>
@@ -94,11 +91,11 @@
 							<h3>
 								<em>Oakland County Competitive Robotics Association</em>
 							</h3>
-							<li>
-								<a href="#">
-									<em>OCCRA</em>
-								</a>
-								<span>Read about our fall competition season</span>
+						<li>
+							<a href="#">
+								<em>OCCRA</em>
+							</a>
+							<span>Read about our fall competition season</span>
 					</ul>
 					<ul>
 						<li>
