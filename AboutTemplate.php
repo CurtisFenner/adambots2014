@@ -18,11 +18,9 @@ $add_script = array();
 		<div class="pagewidth">
 			<div id="pagetype" style="background-color:#FFD802;"><h2>About the AdamBots</h2><!-- #205A8C is FIRST blue -->
 				<?php dynamic_sidebar('About Submenu') ?>
-				<div class="background">
-					<img src="http://adambots.com/logos/png/yellowBG_medium.png" height="60">
-				</div>
+				<div class="background"></div>
 			</div>
-			<div id="twocolumns">
+			<div class="twocolumns">
 				<?php 
 					$edit_attr = array(
 						'alt' => get_the_title(),
