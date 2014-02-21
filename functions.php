@@ -11,7 +11,7 @@ add_shortcode('right','shortcode_right');
 
 
 function shortcode_bigdivider($atts, $content=null) {
-	return '<div style="opacity:0.3;width:100%;height:40px;background:url(\'' . get_bloginfo('template_directory') .  '/res/img/Divider Glow.png\');margin-top:20px;margin-bottom:20px"></div>';
+	return '<div style="margin-top:30px;margin-bottom:20px;margin-left:-20px;margin-right:-20px;position:relative;background-color:#252525;background-image:url(\''.get_bloginfo("template_directory").'/res/img/noisy.png\');height:6px;"></div>';
 }
 add_shortcode('bigdivider','shortcode_bigdivider');
 
