@@ -88,6 +88,12 @@ The bar between the navbar and the page.
     /*-webkit-text-stroke-width: 1px;*/
     /*-webkit-text-stroke-color: black;*/
 	text-shadow: 0px 1px 0px black,-1px 0px 0px black,1px 0px 0px black,0px -1px 0px black;
+    
+    animation-timing-function:cubic-bezier(.30, 0, 0, 1);
+    animation: slidein 1s;
+	-moz-animation: slidein 1s;
+	-webkit-animation: slidein 1s;
+	-o-animation: slidein 1s;
 }
 
 #pagetype .background {
@@ -104,6 +110,7 @@ The bar between the navbar and the page.
 	display:inline-block;
 	padding:0;
 	margin:0;
+    right:0 !important;
 }
 
 #pagetype .subnav li {
@@ -144,12 +151,18 @@ The bar between the navbar and the page.
 	overflow:hidden;
 }
 
-#twocolumns {
+.twocolumns {
 	position:relative;
 	width:960px;
 	margin:auto;
 	background-image:url("../res/img/twocol.png");
 	margin-top:6px;
+    
+    animation-timing-function:cubic-bezier(.30, 0, 0, 1);
+    animation: slidein 1.25s;
+	-moz-animation: slidein 1.25s;
+	-webkit-animation: slidein 1.25s;
+	-o-animation: slidein 1.25s;
 }
 
 #rightcolatom {
@@ -223,7 +236,6 @@ The bar between the navbar and the page.
     overflow:hidden;
 	/*box-shadow:0px 0px 1px 5px rgba(0,0,0,.5);*/
 	margin-top:20px;
-    font-style: bold;
     box-shadow: 0 0 10px #000;
 }
 
@@ -400,12 +412,14 @@ Bar containing menu items.
 	height: 50px;
 	padding-left: 20px;
 	line-height: 50px;
+    /* invalid CSS, doesn't appear to do anything?
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+    */
 }
 
 /*
@@ -560,12 +574,6 @@ Triple panel display above footer
 }
 
 #panelcontainer {
-    margin-top:6px;
-	width: 960px;
-	margin-left: auto;
-	margin-right: auto;
-	position:relative;
-    
     animation-timing-function:cubic-bezier(.30, 0, 0, 1);
     animation: slidein 1.5s;
 	-moz-animation: slidein 1.5s;
@@ -583,13 +591,10 @@ img.ngg-singlepic  {
 /**************************************
 		  NEXTGEN GALLERY MODS
 ***************************************/
-#countdown.css-ignore-parent {
+#countdown {
     max-width:930px;
     margin-left:auto;
     margin-right:auto;
-    padding:15px;
-    padding-left:auto;
-    padding-right:auto;
     font-weight:bold;
     color:#eee;
     height:42px;
@@ -615,8 +620,8 @@ img.ngg-singlepic  {
     margin-left: auto;
     margin-right: auto;
     padding: 0px;
-    overflow: hidden;
     position: relative;
+    overflow: hidden;
     box-shadow: 0 0 10px #000;
     
     animation-timing-function:cubic-bezier(.30, 0, 0, 1);
@@ -628,25 +633,30 @@ img.ngg-singlepic  {
 
 #teaminfo {
     width: 560px;
+    height:100%;
     padding: 25px;
-    paddin-bottom: 0;
+    padding-bottom: 0;
     background-color: #ffd802;
     float: left;
 }
 
-.twitter-timeline {
+#twitter {
     width: 300px;
-    height: 100%;
-    padding: 25px;
+    padding-left:25px;
+    padding-right:25px;
+    position:absolute;
     float: right;
-    background-color: #111;
+    right:0;
+    background-color: #444;
 	background-image:url("../res/img/noisy.png");
-    position: absolute;
     box-shadow: inset 10px 0 10px -10px #000;
 }
 
+.twitter-timeline {
+}
+
 #seasoncard {
-    max-width:630px;
+    max-width:585px;
     padding-top: 5px;
     padding-left:25px;
     font-weight:bold;
@@ -656,7 +666,7 @@ img.ngg-singlepic  {
     font-size:16px;
     background-color: #eee;
 	background-image:url("../res/img/noisy.png");
-    box-shadow: inset -4px 4px 4px #494949;
+    box-shadow: inset 0 8px 4px -4px #494949;
 }
 
 /**************************************
@@ -714,37 +724,26 @@ Holds sliding descriptions
     }
 }
 @-moz-keyframes slidein {
-    from{
-        left:-100%;
-    } to {
-        left:0;
+    from {
+        left: -100%;
+    }
+    to {
+        left: 0;
     }
 }
 @-webkit-keyframes slidein {
-    from{
-        left:-100%;
-    } to {
-        left:0;
+    from {
+        left: -100%;
+    }
+    to {
+        left: 0;
     }
 }
 @-o-keyframes slidein {
-    from{
-        left:-100%;
-    } to {
-        left:0;
+    from {
+        left: -100%;
     }
-}
-
-/**************************************
-        PAGE ANIMATION TIMEOUT
-***************************************/
-.css-transitions-only-after-page-load * {
-  -webkit-transition: none !important;
-  -moz-transition: none !important;
-  -ms-transition: none !important;
-  -o-transition: none !important;
-}
-
-.css-ignore-parent * {
-    
+    to {
+        left: 0;
+    }
 }
