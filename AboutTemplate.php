@@ -17,8 +17,8 @@ $add_script = array();
 		<div class="page_shadowline"></div>
 		<div class="pagewidth">
 			<div id="pagetype" style="background-color:#FFD802;"><h2>About the AdamBots</h2><!-- #205A8C is FIRST blue -->
+				<div class="background"><img src="http://adambots.com/logos/png/yellowBG_small.png" height="60"></div>
 				<?php dynamic_sidebar('About Submenu') ?>
-				<div class="background"></div>
 			</div>
 			<div class="twocolumns">
 				<?php 

@@ -111,7 +111,9 @@ The bar between the navbar and the page.
 	padding:0;
 	margin:0;
     right:0 !important;
+    position:relative;
 }
+
 
 #pagetype .subnav li {
 	margin-right:10px;
