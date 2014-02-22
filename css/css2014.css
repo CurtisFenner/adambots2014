@@ -134,21 +134,17 @@ The bar between the navbar and the page.
 
 #leftcol {
 	width:594px;
-	background-image:url("../res/img/noisy.png");
 	padding:20px;
+	float:left;
 }
 
-#rightcolbg {
-	position:absolute;
+#rightcol {
 	right:0px;
 	top:0px;
 	height:100%;
-	width:320px;
-	background-image:url("../res/img/noisy.png");
-}
-#rightcol {
+	width:280px;
 	padding:20px;
-	overflow:hidden;
+	float:right;
 }
 
 .twocolumns {
@@ -167,7 +163,7 @@ The bar between the navbar and the page.
 
 #rightcolatom {
 	position:absolute;
-	left:0px;
+	right:0px;
 	bottom:0px;
 	width:320px;
 	height:540px;

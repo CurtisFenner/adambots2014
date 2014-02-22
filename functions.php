@@ -5,7 +5,7 @@ function shortcode_left($atts, $content=null){
 add_shortcode('left','shortcode_left');
 
 function shortcode_right($atts, $content=null){
-   return '<div id="rightcolbg"><div id="rightcol">' . do_shortcode($content) . '</div><div id="rightcolatom"></div></div>';
+   return '<div id="rightcolatom"></div><div id="rightcol">' . do_shortcode($content) . '</div><div class="clear"></div>';
 }
 add_shortcode('right','shortcode_right');
 
