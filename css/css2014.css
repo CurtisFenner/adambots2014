@@ -145,6 +145,9 @@ The bar between the navbar and the page.
 	width:280px;
 	padding:20px;
 	float:right;
+	background-position:right bottom;
+	background-image:url("../res/img/atomright.png");
+	background-repeat:no-repeat;
 }
 
 .twocolumns {
@@ -159,15 +162,6 @@ The bar between the navbar and the page.
 	-moz-animation: slidein 1.25s;
 	-webkit-animation: slidein 1.25s;
 	-o-animation: slidein 1.25s;
-}
-
-#rightcolatom {
-	position:absolute;
-	right:0px;
-	bottom:0px;
-	width:320px;
-	height:540px;
-	background-image:url("../res/img/atomright.png");
 }
 
 .spacer {
