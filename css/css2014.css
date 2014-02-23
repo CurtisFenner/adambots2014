@@ -1,3 +1,32 @@
+/*
+Doge stuff. DO NOT UNCOMMENT.
+* {
+
+	font-family:"Comic Sans MS" !important;
+	color:orange !important;
+	text-shadow:none !important;
+	font-size:90%;
+	text-transform: lowercase !important;
+	text-align:center !important;
+	line-height:110%;
+}
+
+*:nth-of-type(3n):before {
+	content:"so ";
+}
+*:nth-of-type(3n+1):before {
+	content:"very ";
+}
+*:nth-of-type(3n+2):before {
+	content:"much ";
+}
+
+body {
+	font-size:40px !important;
+}
+*/
+
+
 /**************************************
 			GENERIC ELEMENTS
 ***************************************/
