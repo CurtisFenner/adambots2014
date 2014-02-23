@@ -31,7 +31,7 @@
             <strong>Team 245</strong>, the
             <strong>AdamBots</strong>, is a robotics team with students from
             <strong>Rochester Adams and Stoney Creek High Schools</strong>in
-            <strong>Rochester Hills, Michigan</strong>. We are a year round team competing in two competitions each year,
+            <strong>Rochester Hills, Michigan</strong>. We are a year round team competing in two competition seasons each year,
             <strong>
                 <em>
                     <a href="first" title="For the Inspiration of Science and Technology">FIRST</a>
