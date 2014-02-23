@@ -128,10 +128,10 @@ The bar between the navbar and the page.
 	font-weight:bold;
 	font-size:24px;
 
-	box-shadow:inset 0px -30px 30px -30px rgba(0,0,0,0.75);
-    /*-webkit-text-stroke-width: 1px;*/
-    /*-webkit-text-stroke-color: black;*/
-	/*text-shadow: 0px 1px 0px black,-1px 0px 0px black,1px 0px 0px black,0px -1px 0px black;*/
+	/*box-shadow:inset 0px -30px 30px -30px rgba(0,0,0,0.75);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+	text-shadow: 0px 1px 0px black,-1px 0px 0px black,1px 0px 0px black,0px -1px 0px black;*/
     
     animation-timing-function:cubic-bezier(.30, 0, 0, 1);
     animation: slidein 1s;
@@ -160,7 +160,8 @@ The bar between the navbar and the page.
 
 
 #pagetype .subnav li {
-	margin-right:10px;
+	padding-left:10px;
+	padding-right:10px;
 	font-weight:normal;
 }
 
@@ -169,8 +170,8 @@ The bar between the navbar and the page.
 }
 
 #pagetype .subnav a {
-	color:white;
-	font-size:16px;
+	color:#FFF;
+	font-size:20px;
 }
 
 #pagetype h2 {
