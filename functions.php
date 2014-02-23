@@ -1,6 +1,6 @@
 <?php
 function shortcode_left($atts, $content=null){
-   return '<div id="leftcol">' . do_shortcode($content) . '</div>';
+   return '<div id=twocolumnbackground></div><div id="leftcol">' . do_shortcode($content) . '</div>';
 }
 add_shortcode('left','shortcode_left');
 

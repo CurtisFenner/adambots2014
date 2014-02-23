@@ -176,9 +176,16 @@ The bar between the navbar and the page.
 	width:280px;
 	padding:20px;
 	float:right;
-	background-position:right bottom;
+}
+
+#twocolumnbackground {
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	width:320px;
+	height:540px;
 	background-image:url("../res/img/atomright.png");
-	background-repeat:no-repeat;
+
 }
 
 .twocolumns {
