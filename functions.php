@@ -1,17 +1,17 @@
 <?php
 function shortcode_left($atts, $content=null){
-   return '<div id="leftcol">' . do_shortcode($content) . '</div>';
+   return '<div class="twocolumns"><div id=twocolumnbackground></div><div id="leftcol">' . do_shortcode($content) . '</div>';
 }
 add_shortcode('left','shortcode_left');
 
 function shortcode_right($atts, $content=null){
-   return '<div id="rightcolbg"><div id="rightcol">' . do_shortcode($content) . '</div><div id="rightcolatom"></div></div>';
+   return '<div id="rightcol">' . do_shortcode($content) . '</div><div class="clear"></div></div>';
 }
 add_shortcode('right','shortcode_right');
 
 
 function shortcode_bigdivider($atts, $content=null) {
-	return '<div style="opacity:0.3;width:100%;height:40px;background:url(\'' . get_bloginfo('template_directory') .  '/res/img/Divider Glow.png\');margin-top:20px;margin-bottom:20px"></div>';
+	return '<hr/>';
 }
 add_shortcode('bigdivider','shortcode_bigdivider');
 
@@ -43,12 +43,13 @@ if (!function_exists('pristine_register_menus')) {
 
 
 if ( function_exists('register_sidebar') ) {
+
 	$args = array(
-	'name' => 'Default Sidebar',
-	'before_widget' => '<div class="sidebar-box">',
-	'after_widget' => '</div>',
-	'before_title' => '<h4>',
-	'after_title' => '</h4>');
+	'name' => 'Dropdown Content',
+	'before_widget' => '',
+	'after_widget' => '',
+	'before_title' => '',
+	'after_title' => '');
 
 	register_sidebar($args);
 		

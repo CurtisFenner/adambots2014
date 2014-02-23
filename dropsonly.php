@@ -1,13 +1,19 @@
-		<div id="dropdown">
-			<span id="dropdownbackground"></span>
-			<div class="pagewidth">
+<?php
+/*
+Template Name: Drops Only
+*/
 
 
 
-<nav style="width:32px;text-align:center;vertical-align:baseline;">
-<a href="http://adambots.com/"><img style="vertical-align:baseline;" src="<?php bloginfo('template_directory'); ?>/res/img/home.png" height=33></a>
-</nav>
+?>
 
+<!doctype html>
+<html>
+<head>
+	<title>Drops Only
+		</title>
+</head>
+<body>
 <?php
 
 	function startsWith($haystack, $needle)
@@ -52,11 +58,11 @@
 			//An entry.
 			$data = explode("|",$line);
 			if (count($data) < 3) {
-				$us = explode(' ',trim($data[0]));
+				$us = explode(' ',$data[0]);
 				$us = $us[count($us)-1];
-				echo '<li><a href="' . site_url() . '/' . trim($us) . '">' . $data[0] . '</a><span>' . $data[1] . '</span>';
+				echo '<li><a href="' . site_url() . '/' . $us . '">' . $data[0] . '</a><span>' . $data[1] . '</span>';
 			} else {
-				echo '<li><a href="' . site_url() . '/' . trim($data[1]) . '">' . $data[0] . '</a><span>' . $data[2] . '</span>';
+				echo '<li><a href="' . site_url() . '/' . $data[1] . '">' . $data[0] . '</a><span>' . $data[2] . '</span>';
 			}
 		}
 	}
@@ -64,32 +70,4 @@
 		echo "</nav>";
 	}
 	?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-			</div>
-			<!-- <- .pagewidth -->
-
-		</div>
-		<div id="belowbox">
-			<div class="pagewidth">
-				<div id="below">
-				</div>
-			</div>
-			<div id="belowpos"></div>
-		</div>
-		<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/dropdown.js"></script>
+</body>

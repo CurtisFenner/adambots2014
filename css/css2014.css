@@ -1,3 +1,32 @@
+/*
+Doge stuff. DO NOT UNCOMMENT.
+* {
+
+	font-family:"Comic Sans MS" !important;
+	color:orange !important;
+	text-shadow:none !important;
+	font-size:90%;
+	text-transform: lowercase !important;
+	text-align:center !important;
+	line-height:110%;
+}
+
+*:nth-of-type(3n):before {
+	content:"so ";
+}
+*:nth-of-type(3n+1):before {
+	content:"very ";
+}
+*:nth-of-type(3n+2):before {
+	content:"much ";
+}
+
+body {
+	font-size:40px !important;
+}
+*/
+
+
 /**************************************
 			GENERIC ELEMENTS
 ***************************************/
@@ -16,10 +45,7 @@ body {
 	background-image:url("../res/img/noisy.png");
 }
 
-em:after {
-	/* fixes slant overlapping letters on condensed font*/
-	content: " ";
-}
+
 
 a {
 	text-decoration:none;
@@ -28,6 +54,21 @@ a {
 
 .clear {
     clear: both;
+}
+
+hr {
+	height:6px;
+	margin:0;
+	margin-left:-20px;
+	margin-right:-20px;
+	padding:0;
+	position:relative;
+	background:#F00;
+	background-color:#252525;
+	background-image:url("http://localhost/wordpress/wp-content/themes/adambots2014/res/img/noisy.png");
+	border: none;
+	margin-top:30px;
+	margin-bottom:20px;
 }
 
 /**************************************
@@ -82,7 +123,7 @@ The bar between the navbar and the page.
 	line-height:30px;
 	background-image:url("../res/img/noisy.png");
 	padding-left:20px;
-	color:white;
+	color:#111;
 	font-weight:bold;
 	font-size:24px;
 
@@ -107,11 +148,20 @@ The bar between the navbar and the page.
 	padding:0;
 	margin:0;
     right:0 !important;
+    position:relative;
 }
 
-#pagetype .subnav li {
-	margin-right:10px;
+
+#pagetype .subnav li a {
+	padding-left:7px;
+	padding-right:7px;
 	font-weight:normal;
+}
+
+#pagetype .subnav li:hover {
+	background:rgba(255,255,255,0.35);
+	border-radius:3px;
+	cursor:pointer;
 }
 
 #pagetype .subnav .current-menu-item {
@@ -119,8 +169,8 @@ The bar between the navbar and the page.
 }
 
 #pagetype .subnav a {
-	color:white;
-	font-size:16px;
+	color:#FFF;
+	font-size:20px;
 }
 
 #pagetype h2 {
@@ -130,21 +180,27 @@ The bar between the navbar and the page.
 
 #leftcol {
 	width:594px;
-	background-image:url("../res/img/noisy.png");
 	padding:20px;
+	float:left;
 }
 
-#rightcolbg {
-	position:absolute;
+#rightcol {
 	right:0px;
 	top:0px;
 	height:100%;
-	width:320px;
-	background-image:url("../res/img/noisy.png");
-}
-#rightcol {
+	width:280px;
 	padding:20px;
-	overflow:hidden;
+	float:right;
+}
+
+#twocolumnbackground {
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	width:320px;
+	height:540px;
+	background-image:url("../res/img/atomright.png");
+
 }
 
 .twocolumns {
@@ -153,15 +209,6 @@ The bar between the navbar and the page.
 	margin:auto;
 	background-image:url("../res/img/twocol.png");
 	margin-top:6px;
-}
-
-#rightcolatom {
-	position:absolute;
-	left:0px;
-	bottom:0px;
-	width:320px;
-	height:540px;
-	background-image:url("../res/img/atomright.png");
 }
 
 .spacer {
@@ -322,11 +369,7 @@ The bar between the navbar and the page.
 	margin: 25px;
 	margin-left: 50px;
 }
-#atom {
-	height: inherit;
-	position: relative;
-	float: left;
-}
+
 #social {
 	height: inherit;
 	margin: 40px;
@@ -578,9 +621,7 @@ Triple panel display above footer
 		  NEXTGEN GALLERY MODS
 ***************************************/
 
-img.ngg-singlepic  {
-	outline:1px solid #AAA !important;
-}
+
 
 /**************************************
 		  NEXTGEN GALLERY MODS
@@ -637,7 +678,7 @@ img.ngg-singlepic  {
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 25px;
-    padding-bottom: 42px;
+    padding-bottom: 25px;
     text-align:justify;
     font-size:17px;
     line-height: 25px;
