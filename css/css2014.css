@@ -127,10 +127,8 @@ The bar between the navbar and the page.
 	font-weight:bold;
 	font-size:24px;
 
-	box-shadow:inset 0px -30px 30px -30px rgba(0,0,0,0.75);
     /*-webkit-text-stroke-width: 1px;*/
     /*-webkit-text-stroke-color: black;*/
-	text-shadow: 0px 1px 0px black,-1px 0px 0px black,1px 0px 0px black,0px -1px 0px black;
 }
 
 #pagetype .background {
