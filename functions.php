@@ -44,6 +44,7 @@ if (!function_exists('pristine_register_menus')) {
 
 
 if ( function_exists('register_sidebar') ) {
+
 	$args = array(
 	'name' => 'Default Sidebar',
 	'before_widget' => '<div class="sidebar-box">',

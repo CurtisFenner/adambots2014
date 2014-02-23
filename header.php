@@ -22,8 +22,8 @@
     </div>
 	<script src='<?php bloginfo('template_directory'); ?>/js/gears.js'></script>
 	<div id="head">
-		<a id="atom" href="<?php echo home_url(); ?>">
-            <img id="atom" src="<?php bloginfo('template_directory'); ?>/res/img/flat_round_atom_w_text.png" alt="AdamBots.com">
+		<a href="<?php echo home_url(); ?>">
+            <img height=120 src="<?php bloginfo('template_directory'); ?>/res/img/flat_round_atom_w_text.png" alt="AdamBots.com">
         </a>
 		<div id="social">
 			<a href="https://www.facebook.com/AdamBots"><img src="<?php bloginfo('template_directory'); ?>/res/img/social/facebook.png" alt="Like us on Facebook"></a>
