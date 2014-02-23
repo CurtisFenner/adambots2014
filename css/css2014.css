@@ -45,9 +45,13 @@ body {
 	background-image:url("../res/img/noisy.png");
 }
 
-em:after {
-	/* fixes slant overlapping letters on condensed font*/
-	content: " ";
+em {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	background: transparent;
 }
 
 a {
