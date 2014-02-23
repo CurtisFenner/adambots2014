@@ -375,11 +375,7 @@ The bar between the navbar and the page.
 	margin: 25px;
 	margin-left: 50px;
 }
-#atom {
-	height: inherit;
-	position: relative;
-	float: left;
-}
+
 #social {
 	height: inherit;
 	margin: 40px;

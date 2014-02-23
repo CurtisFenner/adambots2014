@@ -43,12 +43,13 @@ if (!function_exists('pristine_register_menus')) {
 
 
 if ( function_exists('register_sidebar') ) {
+
 	$args = array(
-	'name' => 'Default Sidebar',
-	'before_widget' => '<div class="sidebar-box">',
-	'after_widget' => '</div>',
-	'before_title' => '<h4>',
-	'after_title' => '</h4>');
+	'name' => 'Dropdown Content',
+	'before_widget' => '',
+	'after_widget' => '',
+	'before_title' => '',
+	'after_title' => '');
 
 	register_sidebar($args);
 		

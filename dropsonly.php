@@ -1,11 +1,19 @@
-		<div id="dropdown">
-			<span id="dropdownbackground"></span>
-			<div class="pagewidth">
+<?php
+/*
+Template Name: Drops Only
+*/
 
 
 
+?>
 
-
+<!doctype html>
+<html>
+<head>
+	<title>Drops Only
+		</title>
+</head>
+<body>
 <?php
 
 	function startsWith($haystack, $needle)
@@ -62,32 +70,4 @@
 		echo "</nav>";
 	}
 	?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-			</div>
-			<!-- <- .pagewidth -->
-
-		</div>
-		<div id="belowbox">
-			<div class="pagewidth">
-				<div id="below">
-				</div>
-			</div>
-			<div id="belowpos"></div>
-		</div>
-		<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/dropdown.js"></script>
+</body>
