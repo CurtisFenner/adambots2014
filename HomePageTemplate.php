@@ -29,8 +29,7 @@
     </div>
 
     <div id="twitter">
-        <div id="twitter-head"></div>
-        <a class="twitter-timeline" href="https://twitter.com/AdamBots" data-theme="dark" data-link-color="#e0bb00" data-chrome="nofooter noborders transparent" aria-polite="polite" data-widget-id="434172184005578752"></a>
+        <a class="twitter-timeline" href="https://twitter.com/AdamBots" data-theme="dark" data-link-color="#e0bb00" data-tweet-limit="3" data-chrome="nofooter noborders transparent" aria-polite="polite" data-widget-id="434172184005578752"></a>
     </div>
     <div class="clear"></div>
 
