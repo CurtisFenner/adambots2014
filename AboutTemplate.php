@@ -16,7 +16,13 @@ $add_script = array();
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<div class="page_shadowline"></div>
 		<div class="pagewidth">
-			<div id="pagetype" style="background-color:#FFD802;"><h2>About the AdamBots</h2><!-- #205A8C is FIRST blue -->
+			<div id="pagetype" style="background-color:#FFD802;">
+				<h2 style="padding:0">
+					About the
+						<div style="display:inline-block;padding:0;margin:0;height:40px;">
+							<img style="margin:0" height="28" src="<?php bloginfo("template_directory")?>/res/img/adambots_text_outlined.png"/>
+						</div>
+				</h2><!-- #205A8C is FIRST blue -->
 				<div class="background"><img src="http://adambots.com/logos/png/yellowBG_small.png" height="60"></div>
 				<?php dynamic_sidebar('About Submenu') ?>
 			</div>
