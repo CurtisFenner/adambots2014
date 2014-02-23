@@ -30,6 +30,21 @@ a {
     clear: both;
 }
 
+hr {
+	height:6px;
+	margin:0;
+	margin-left:-20px;
+	margin-right:-20px;
+	padding:0;
+	position:relative;
+	background:#F00;
+	background-color:#252525;
+	background-image:url("http://localhost/wordpress/wp-content/themes/adambots2014/res/img/noisy.png");
+	border: none;
+	margin-top:30px;
+	margin-bottom:20px;
+}
+
 /**************************************
 			  MAIN LAYOUT
 ***************************************/
