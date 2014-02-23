@@ -159,10 +159,16 @@ The bar between the navbar and the page.
 }
 
 
-#pagetype .subnav li {
-	padding-left:10px;
-	padding-right:10px;
+#pagetype .subnav li a {
+	padding-left:7px;
+	padding-right:7px;
 	font-weight:normal;
+}
+
+#pagetype .subnav li:hover {
+	background:rgba(255,255,255,0.35);
+	border-radius:3px;
+	cursor:pointer;
 }
 
 #pagetype .subnav .current-menu-item {
