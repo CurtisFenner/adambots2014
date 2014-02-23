@@ -22,22 +22,40 @@
 
 <div id="bodycards">
     <div id="teaminfo">
+        <div id="teamatom"><img src="<?php bloginfo('template_directory'); ?>/res/img/flat_round_atom_w_text.png" alt="The AdamBots"></div>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis convallis velit, eget imperdiet enim. In accumsan vel diam at imperdiet. Cras elementum diam venenatis pellentesque elementum. Nunc at est egestas, ornare neque ut, egestas quam. Duis dui massa, venenatis ac neque a, porttitor sollicitudin ante. Nulla convallis lobortis leo, sed euismod velit congue sit amet. Sed volutpat risus in dui ultrices luctus ut sed sapien. Donec pretium pulvinar dictum. Aliquam mauris massa, rhoncus a lacinia sit amet, vestibulum sed purus. Donec at diam mi. Duis sit amet pretium justo. Praesent quis ipsum dolor. Aliquam fermentum odio ante, vitae rhoncus turpis ultrices sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus porta, nulla sed tincidunt egestas, dolor tortor aliquam elit, eu luctus arcu nisi eget nisl. Sed ut fermentum turpis.</p>
-        <p>
-            Aliquam vel nisi nunc. Donec pretium nulla in turpis vehicula, et aliquet erat suscipit. Ut dictum vulputate cursus. Nam quis nisi in ipsum varius dignissim ac eget dui. Duis leo nunc, lacinia et gravida aliquet, convallis ac tortor. Quisque eu lectus nisl. Phasellus dapibus at ipsum ut tincidunt. Integer varius, lectus et egestas egestas, lectus enim molestie odio, id bibendum erat ipsum sit amet tellus. Nam rutrum facilisis magna eget dapibus. Vestibulum ac justo a risus pretium dignissim. Pellentesque at imperdiet augue. Vivamus sapien tortor, tristique id tristique vel, elementum ac augue.</p>
+            <strong>Team 245</strong>, the
+            <strong>AdamBots</strong>, is a robotics team with students from
+            <strong>Rochester Adams and Stoney Creek High Schools</strong> in
+            <strong>Rochester Hills, Michigan</strong>. We are a year round team competing in two competitions each year,
+            <strong>
+                <em>
+                    <a href="first" title="For the Inspiration of Science and Technology">FIRST</a>
+                </em>
+            </strong>and
+            <strong>
+                <em>
+                    <a href="occra" title="Oakland County Competitive Robotics Association">OCCRA</a>
+                </em>
+            </strong>. Since our rookie year, 1999, we have been providing an inspiring learning environment that fosters growth and appreciation of math, science, and technology &#8230;
+            <strong>
+                <em>
+                    <a href="about">Read More</a>
+                </em>
+            </strong>
+        </p>
     </div>
 
     <div id="twitter">
-        <a class="twitter-timeline" href="https://twitter.com/AdamBots" data-theme="dark" data-link-color="#e0bb00" data-tweet-limit="3" data-chrome="nofooter noborders transparent" aria-polite="polite" data-widget-id="434172184005578752"></a>
+        <a class="twitter-timeline" href="https://twitter.com/AdamBots" data-theme="dark" data-link-color="#e0bb00" data-tweet-limit="3" data-chrome="nofooter noborders transparent"  data-widget-id="434172184005578752"></a>
     </div>
     <div class="clear"></div>
 
     <div id="seasoncard">
         Currrent Season:
         <a href="#2014game">2014
-            <em>FIRST</em>Game</a>|
-        <a href="#blog">Team Blog</a>|
+            <em>FIRST</em>Game</a>/
+        <a href="#blog">Team Blog</a>/
         <a href="#media">Media</a>
     </div>
 </div>
