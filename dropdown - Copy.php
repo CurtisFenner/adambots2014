@@ -1,59 +1,31 @@
+Tab:The AdamBots
+
+Title:All About Us
+About Us|about|A summary of who we are
+Awards|The AdamBot's recognition at the competition
+Team Recognition|team-recognition|The AdamBots in our Community
+Team History|about/team-history|The full history of the AdamBots
+Adambots Outreach|team-outreach|How we give to our community
+Subteams|about/sub-teams|The structure of our team
+
+Title:Our People
+Our Sponsors|Meet the people who make everything possible
+Our Students|Meet the AdamBots
+Our Mentors|Meet our inspirers, teachers, mentors, and guides
+Our Alumni|Meet the students touched by our <em>FRC</em> Team
+
+Tab:<em>FIRST</em>
+
+Title:<em>FIRST - FRC</em> Team 245
+About <em>FIRST</em>|All about our main competition and program
+The 2014 Game and Our Robot|2014-game-and-robot|Read about how we play
+
+
+
 		<div id="dropdown">
 			<span id="dropdownbackground"></span>
 			<div class="pagewidth">
-                <nav>
-					<span>The AdamBots
-						<em></em>
-					</span>
-					<ul>
-						<li>
-							<h3>All About Us</h3>
-						<li>
-							<a href="#">About Us</a>
-							<span>A summary of who we are</span>
-						</li>
-						<li>
-							<a href="#">Awards</a>
-							<span>The AdamBots' recognition in the competition</span>
-						</li>
-						<li>
-							<a href="#">Team Recognition</a>
-							<span>The AdamBots in our community</span>
-						</li>
-						<li>
-							<a href="#">Team History</a>
-							<span>The fully history of the AdamBots</span>
-						</li>
-						<li>
-							<a href="#">AdamBots Outreach</a>
-							<span>How we give back to our community</span>
-						</li>
-						<li>
-							<a href="#">Subteams</a>
-							<span>The structure of our team</span>
-						</li>
-					</ul>
-					<ul>
-						<li>
-							<h3>Our People</h3>
-						<li>
-							<a href="#">Our Students</a>
-							<span>Meet the AdamBots</span>
-						</li>
-						<li>
-							<a href="#">Our Mentors</a>
-							<span>Meet our inspirers, teachers, mentors, and guides</span>
-						</li>
-						<li>
-							<a href="#">Our Alumni</a>
-							<span>Meet the students touched by the AdamBots</span>
-						</li>
-						<li>
-							<a href="#">Our Sponsors</a>
-							<span>Meet the people who make everything possible</span>
-						</li>
-					</ul>
-				</nav>
+
 				<nav>
 					<em>FIRST</em>
 					<ul>
@@ -260,3 +232,114 @@
 			<div id="belowpos"></div>
 		</div>
 		<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/dropdown.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		                <nav>
+					<span>The AdamBots
+						<em></em>
+					</span>
+					<ul>
+						<li>
+							<h3>All About Us</h3>
+						<li>
+							<a href="#">About Us</a>
+							<span>A summary of who we are</span>
+						</li>
+						<li>
+							<a href="#">Awards</a>
+							<span>The AdamBots' recognition in the competition</span>
+						</li>
+						<li>
+							<a href="#">Team Recognition</a>
+							<span>The AdamBots in our community</span>
+						</li>
+						<li>
+							<a href="#">Team History</a>
+							<span>The fully history of the AdamBots</span>
+						</li>
+						<li>
+							<a href="#">AdamBots Outreach</a>
+							<span>How we give back to our community</span>
+						</li>
+						<li>
+							<a href="#">Subteams</a>
+							<span>The structure of our team</span>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<h3>Our People</h3>
+						<li>
+							<a href="#">Our Students</a>
+							<span>Meet the AdamBots</span>
+						</li>
+						<li>
+							<a href="#">Our Mentors</a>
+							<span>Meet our inspirers, teachers, mentors, and guides</span>
+						</li>
+						<li>
+							<a href="#">Our Alumni</a>
+							<span>Meet the students touched by the AdamBots</span>
+						</li>
+						<li>
+							<a href="#">Our Sponsors</a>
+							<span>Meet the people who make everything possible</span>
+						</li>
+					</ul>
+				</nav>

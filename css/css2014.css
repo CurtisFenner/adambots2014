@@ -726,7 +726,7 @@ Triple panel display above footer
     -o-transform: translateY(-50%);
 }
 
-#seasoncard {
+.display_current {
     max-width:585px;
     height:45px;
     padding-left:25px;
@@ -738,7 +738,7 @@ Triple panel display above footer
     bottom: 0;
 }
 
-#seasoncard a {
+.display_current a {
     padding-left: 5px;
     padding-right: 5px;
     color: #ffd802;

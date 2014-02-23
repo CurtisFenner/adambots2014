@@ -27,34 +27,10 @@
         <div id="teamatom">
             <img src="<?php bloginfo('template_directory'); ?>/res/img/dark_round_atom_w_text.png" alt="The AdamBots">
         </div>
-        <p>
-            <strong>Team 245</strong>, the
-            <strong>AdamBots</strong>, is a robotics team with students from
-            <strong>Rochester Adams and Stoney Creek High Schools</strong>in
-            <strong>Rochester Hills, Michigan</strong>. We are a year round team competing in two competition seasons each year,
-            <strong>
-                <em>
-                    <a href="first" title="For the Inspiration of Science and Technology">FIRST</a>
-                </em>
-            </strong>and
-            <strong>
-                <em>
-                    <a href="occra" title="Oakland County Competitive Robotics Association">OCCRA</a>
-                </em>
-            </strong>. Since our rookie year, 1999, we have been providing an inspiring learning environment that fosters growth and appreciation of math, science, and technology &#8230;
-            <strong>
-                <em>
-                    <a href="about">Read More</a>
-                </em>
-            </strong>
-        </p>
-        <div id="seasoncard">
-            Currrent Season:
-            <a href="#2014game">2014
-                <em>FIRST</em>Game</a>/
-            <a href="#blog">Team Blog</a>/
-            <a href="#media">Media</a>
-        </div>
+        <?php
+        dynamic_sidebar("Display Infotext");
+        ?>
+        <!-- REMEMBER TO USE SEASON CARD INSTEAD IN WIDGET, DISPLAY INFOTEXT -->
     </div>
 
     <div id="twitter">

@@ -43,15 +43,6 @@ if (!function_exists('pristine_register_menus')) {
 
 
 if ( function_exists('register_sidebar') ) {
-
-	$args = array(
-	'name' => 'Dropdown Content',
-	'before_widget' => '',
-	'after_widget' => '',
-	'before_title' => '',
-	'after_title' => '');
-
-	register_sidebar($args);
 		
 	$args = array(
 		'name'          => 'Display Infotext',
@@ -205,6 +196,15 @@ if ( function_exists('register_sidebar') ) {
 
 	register_sidebar($args);
 	
+
+	$args = array(
+	'name' => 'Dropdown Content',
+	'before_widget' => '',
+	'after_widget' => '',
+	'before_title' => '',
+	'after_title' => '');
+
+	register_sidebar($args);
 	
 }
 
