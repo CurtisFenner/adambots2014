@@ -5,7 +5,7 @@
 
 
 <nav style="width:32px;text-align:center;vertical-align:baseline;">
-<a href="http://google.com/"><img style="vertical-align:baseline;" src="<?php bloginfo('template_directory'); ?>/res/img/home.png" height=33></a>
+<a href="http://adambots.com/"><img style="vertical-align:baseline;" src="<?php bloginfo('template_directory'); ?>/res/img/home.png" height=33></a>
 </nav>
 
 <?php
