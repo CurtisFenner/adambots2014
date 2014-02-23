@@ -50,7 +50,7 @@
 			//An entry.
 			$data = explode("|",$line);
 			if (count($data) < 3) {
-				$us = explode(' ',$data[0]);
+				$us = explode(' ',trim($data[0]));
 				$us = $us[count($us)-1];
 				echo '<li><a href="' . site_url() . '/' . $us . '">' . $data[0] . '</a><span>' . $data[1] . '</span>';
 			} else {
