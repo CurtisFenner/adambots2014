@@ -52,9 +52,9 @@
 			if (count($data) < 3) {
 				$us = explode(' ',trim($data[0]));
 				$us = $us[count($us)-1];
-				echo '<li><a href="' . site_url() . '/' . $us . '">' . $data[0] . '</a><span>' . $data[1] . '</span>';
+				echo '<li><a href="' . site_url() . '/' . trim($us) . '">' . $data[0] . '</a><span>' . $data[1] . '</span>';
 			} else {
-				echo '<li><a href="' . site_url() . '/' . $data[1] . '">' . $data[0] . '</a><span>' . $data[2] . '</span>';
+				echo '<li><a href="' . site_url() . '/' . trim($data[1]) . '">' . $data[0] . '</a><span>' . $data[2] . '</span>';
 			}
 		}
 	}

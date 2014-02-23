@@ -2,7 +2,6 @@
 ?>
 <!doctype html>
 <html>
-
 <head>
 	<meta charset="UTF-8">
 	<title>AdamBots FRC &amp; OCCRA Team 245</title>
@@ -13,6 +12,16 @@
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:400,300,700' rel='stylesheet' type='text/css'>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <script src='<?php bloginfo('template_directory'); ?>/js/twitter.js'></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-852318-3', 'adambots.com');
+  ga('send', 'pageview');
+
+</script>
 </head>
 
 <body>
