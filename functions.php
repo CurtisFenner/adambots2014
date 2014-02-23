@@ -1,18 +1,17 @@
 <?php
 function shortcode_left($atts, $content=null){
-   return '<div id=twocolumnbackground></div><div id="leftcol">' . do_shortcode($content) . '</div>';
+   return '<div class="twocolumns"><div id=twocolumnbackground></div><div id="leftcol">' . do_shortcode($content) . '</div>';
 }
 add_shortcode('left','shortcode_left');
 
 function shortcode_right($atts, $content=null){
-   return '<div id="rightcol">' . do_shortcode($content) . '</div><div class="clear"></div>';
+   return '<div id="rightcol">' . do_shortcode($content) . '</div><div class="clear"></div></div>';
 }
 add_shortcode('right','shortcode_right');
 
 
 function shortcode_bigdivider($atts, $content=null) {
 	return '<hr/>';
-	//return '<div style="margin-top:30px;margin-bottom:20px;margin-left:-20px;margin-right:-20px;position:relative;background-color:#252525;background-image:url(\''.get_bloginfo("template_directory").'/res/img/noisy.png\');height:6px;"></div>';
 }
 add_shortcode('bigdivider','shortcode_bigdivider');
 

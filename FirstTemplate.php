@@ -43,7 +43,6 @@ $add_script = array();
 				<?php else: ?>
 					<!-- no posts found -->
 				<?php endif; ?>
-				<div class="spacer"></div>
 			</div>
 		</div>
 	</div>
