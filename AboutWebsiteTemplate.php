@@ -14,7 +14,6 @@ $add_script = array();
 ?>
 <?php get_header(); ?>
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		<div class="page_shadowline"></div>
 		<div class="pagewidth">
 			<div id="pagetype" style="background-color:#5A5A5A;">
 				<h2 style="padding:0;color:#FFF;height:40px;">
