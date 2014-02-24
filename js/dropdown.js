@@ -26,9 +26,11 @@ for (var i = 0; i < links.length; i++) {
 				active = el;
 				clearBelow();
 				var uls = el.getElementsByTagName("ul");
-				below.innerHTML = "<ul class='left'>" + uls[0].innerHTML + "</ul>";
-				if (uls.length > 1)
-					below.innerHTML += "<ul class='right'>" + uls[1].innerHTML + "<ul>";
+				below.innerHTML = "";
+				for (var i = 0; i < uls.length; i++) {
+					var cname = (i >= uls.length / 2) ? "right" : "left";
+					below.innerHTML += "<ul class='" + cname + "'>" + uls[i].innerHTML + "</ul>";
+				}
 				below.innerHTML += "<div style='clear:both;'></div>";
 			} else {
 				//Close tab
