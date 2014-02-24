@@ -16,7 +16,7 @@ $add_script = array();
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<div class="page_shadowline"></div>
 		<div class="pagewidth">
-			<div id="pagetype" style="background-color:#FFD802;">
+			<div id="pagetype" style="background-color:#FFD802;" class="blacktext">
 				<h2 style="padding:0">
 					About the
 						<div style="display:inline-block;padding:0;margin:0;height:40px;">

@@ -162,7 +162,11 @@ The bar between the navbar and the page.
 	cursor:pointer;
 }
 
-#pagetype .subnav .current-menu-item {
+#pagetype.blacktext a {
+	color:black !important;
+}
+
+#pagetype .subnav li.current-menu-item a {
 	font-weight:bold;
 }
 
