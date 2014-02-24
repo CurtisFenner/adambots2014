@@ -1,5 +1,4 @@
-<div id="homepage">
-    <?php /* Template Name: HomePage */ get_header(); ?>
+<?php /* Template Name: HomePage */ get_header(); ?>
 </div>
 <div id="gallerholder">
     <div id="gallerybox">

@@ -60,8 +60,11 @@
 			}
 		}
 	}
+	if ($ulopen) {
+		echo '</ul>';
+	}
 	if ($navopen) {
-		echo "</nav>";
+		echo '</nav>';
 	}
 	?>
 
