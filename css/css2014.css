@@ -337,7 +337,6 @@ The bar between the navbar and the page.
     padding-left: 100px;
     padding-right: 100px;
     background-color: rgba(34,34,34,.75);
-    background-image:url('../res/img/noisy.png');
     text-align: right;
     color: #eee;
     text-shadow: 0 0 5px #000;
@@ -608,6 +607,11 @@ Triple panel display above footer
 	background:#EEE;
 	background-image:url("../res/img/noisy.png");
     box-shadow: 0 0 10px #000;
+    padding-top: 25px;
+}
+
+.panel a h3 {
+    font-size: 20px;
 }
 
 #panelcontainer {

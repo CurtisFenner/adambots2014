@@ -64,25 +64,25 @@
 </div>
 
 <div class="pagewidth" id="panelcontainer" style="position:relative;height:420px;top:0;">
-    <div class="panel" style="width:314px;height:372px;left:0;top:0;">
+    <div class="panel" style="width:314px;height:325px;left:0;top:0;text-align:center;">
         <a href="http://www.usfirst.org">
-            <img style="width:300px;margin:7px;" width=300 src="<?php bloginfo('template_directory'); ?>/res/img/first_logo.png" alt="FIRST Logo">
+            <img style="width:250px;margin:7px;" src="<?php bloginfo('template_directory'); ?>/res/img/first_logo.png" alt="FIRST Logo">
             <h3 style="margin:15px;text-align:justify;border-bottom:3px solid #0066B3">
                 <em>For Inspiration and Recognition of Science and Technology</em>
             </h3>
         </a>
     </div>
-    <div class="panel" style="width:314px;height:372px;left:323px;top:0;">
+    <div class="panel" style="width:314px;height:325px;left:323px;top:0;text-align:center;">
         <a href="<?php echo home_url(); ?>/first/2014-game-and-robot/">
-            <img style="width:300px;margin:7px;margin-top:43px;margin-bottom:64px" width=300 src="<?php bloginfo('template_directory'); ?>/res/img/aerial_assist.png" alt="Aerial Assist Logo">
+            <img style="width:250px;margin:7px;margin-top:46px;margin-bottom:46px" src="<?php bloginfo('template_directory'); ?>/res/img/aerial_assist.png" alt="Aerial Assist Logo">
             <h3 style="margin:15px;text-align:justify;border-bottom:3px solid #0066B3">
                 <em>Aerial Assist: The 2014 FIRST Robotics Challenge</em>
             </h3>
         </a>
     </div>
-    <div class="panel" style="width:314px;height:372px;left:646px;top:0;">
+    <div class="panel" style="width:314px;height:325px;left:646px;top:0;text-align:center;">
         <a href="<?php echo home_url(); ?>/about/sponsors/">
-            <img style="width:300px;margin:7px;" src="<?php bloginfo('template_directory'); ?>/res/img/sponsors.png" alt="Our Sponsors: General Motors, SAIC, Plex Systems, Magna, and The Chrysler Foundation">
+            <img style="width:250px;margin:7px;" src="<?php bloginfo('template_directory'); ?>/res/img/sponsors.png" alt="Our Sponsors: General Motors, SAIC, Plex Systems, Magna, and The Chrysler Foundation">
             <h3 style="margin:15px;text-align:justify;border-bottom:3px solid #0066B3">
                 <em>Our Sponsors:
                     <br>
