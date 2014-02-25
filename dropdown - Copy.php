@@ -26,66 +26,25 @@ Past Years|first/archive|Information about prior robots and competitions
 Title:Also check out...
 <em>FIRST</em> Media|media-gallery/first-pictures|Pictures and videos from our <em>FIRST</em> season
 
+Tab:<em>OCCRA</em>
+Title:<em>Oakland County Competitive Robotics Association</em>
+OCCRA|Read about our fall competition season
 
+Title:Also check out...
+<em>OCCRA</em> Media|media-gallery/occra-pictures/|Pictures and videos from the competition
+
+Tab:Photo and Video
+Title:<em>FIRST</em> Photo and Video
+2014: Aerial Assist|media-gallery/first-pictures/2014-first-robotics-pictures/
+2013: Ultimate Ascent
 
 		<div id="dropdown">
 			<span id="dropdownbackground"></span>
 			<div class="pagewidth">
 
-				<nav>
-					<em>FIRST</em>
-					<ul>
-						<li>
-							<h3><em>FIRST - FRC</em>Team 245</h3>
-						<li>
-							<a href="#">About FIRST</a>
-							<span>All about our main competition and program</span>
-						</li>
-						<li>
-							<a href="#">The 2014 Game and Our Robot</a>
-							<span>Read about how we play</span>
-						</li>
-					</ul>
-					<ul>
-						<li>
-							<h3>Archive</h3>
-						<li>
-							<a href="#">Past Years</a>
-							<span>Read information about prior robots and competitions</span>
-						<li>
-							<h3>Also check out..</h3>
-						<li>
-							<a href="#">FIRST Media</a>
-							<span>Pictures and videos from our
-								<em>FIRST</em>season
-							</span>
-					</ul>
 
-				</nav>
-				<nav>
-					<em>OCCRA</em>
-					<ul>
-						<li>
-							<h3>
-								<em>Oakland County Competitive Robotics Association</em>
-							</h3>
-						<li>
-							<a href="#">
-								<em>OCCRA</em>
-							</a>
-							<span>Read about our fall competition season</span>
-					</ul>
-					<ul>
-						<li>
-							<h3>Also check out..</h3>
-							<li>
-								<a href="#">
-									<em>OCCRA</em>Media</a>
-								<span>Pictures and videos from the competition</span>
 
-					</ul>
 
-				</nav>
 				<nav>Photo and Video
 					<em></em>
 					<ul>
@@ -99,7 +58,7 @@ Title:Also check out...
 									<a href="#">2012: Rebound Rumble</a>
 									<span>Pictures and videos from the 2012 season</span>
 									<li>
-										<a href="#">2012: LogoMotion</a>
+										<a href="#">2011: LogoMotion</a>
 										<span>Pictures and videos from the 2011 season</span>
 										<li>
 											<a href="#">
@@ -225,6 +184,80 @@ Title:Also check out...
 					</ul>
 
 				</nav>
+
+
+				<nav>
+					<em>OCCRA</em>
+					<ul>
+						<li>
+							<h3>
+								<em>Oakland County Competitive Robotics Association</em>
+							</h3>
+						<li>
+							<a href="#">
+								<em>OCCRA</em>
+							</a>
+							<span>Read about our fall competition season</span>
+					</ul>
+					<ul>
+						<li>
+							<h3>Also check out..</h3>
+							<li>
+								<a href="#">
+									<em>OCCRA</em>Media</a>
+								<span>Pictures and videos from the competition</span>
+
+					</ul>
+
+				</nav>
+
+								<nav>
+					<em>FIRST</em>
+					<ul>
+						<li>
+							<h3><em>FIRST - FRC</em>Team 245</h3>
+						<li>
+							<a href="#">About FIRST</a>
+							<span>All about our main competition and program</span>
+						</li>
+						<li>
+							<a href="#">The 2014 Game and Our Robot</a>
+							<span>Read about how we play</span>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<h3>Archive</h3>
+						<li>
+							<a href="#">Past Years</a>
+							<span>Read information about prior robots and competitions</span>
+						<li>
+							<h3>Also check out..</h3>
+						<li>
+							<a href="#">FIRST Media</a>
+							<span>Pictures and videos from our
+								<em>FIRST</em>season
+							</span>
+					</ul>
+
+				</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 			</div>
 			<!-- <- .pagewidth -->
