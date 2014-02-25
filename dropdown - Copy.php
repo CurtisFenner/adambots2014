@@ -17,8 +17,14 @@ Our Alumni|Meet the students touched by our <em>FRC</em> Team
 Tab:<em>FIRST</em>
 
 Title:<em>FIRST - FRC</em> Team 245
-About <em>FIRST</em>|All about our main competition and program
+About <em>FIRST</em>|first|All about our main competition and program
 The 2014 Game and Our Robot|2014-game-and-robot|Read about how we play
+
+Title:Archive
+Past Years|first/archive|Information about prior robots and competitions
+
+Title:Also check out...
+<em>FIRST</em> Media|media-gallery/first-pictures|Pictures and videos from our <em>FIRST</em> season
 
 
 
