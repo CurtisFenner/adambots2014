@@ -39,6 +39,9 @@
 			<a href="http://instagram.com/adambots245"><img src="<?php bloginfo('template_directory'); ?>/res/img/social/instagram.png" alt="Find us on Instagram"></a>
 			<a href="https://twitter.com/adambots"><img src="<?php bloginfo('template_directory'); ?>/res/img/social/twitter.png" alt="Follow us on Twitter"></a>
 			<a href="http://www.youtube.com/user/Adambots"><img src="<?php bloginfo('template_directory'); ?>/res/img/social/youtube.png" alt="Subscribe to us on YouTube"></a>
+			<br>
+			<a href="http://www.adambots.com/about/team-outreach/relay-for-life-2012/"><img src="<?php bloginfo('template_directory'); ?>/res/img/relay.png" alt="Relay For Life"></a>
+			<a href="google">Calendar</a>
 		</div>
 	</div>
 	
