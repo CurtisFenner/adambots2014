@@ -193,6 +193,7 @@ The bar between the navbar and the page.
 	width:280px;
 	padding:20px;
 	float:right;
+	position:relative;
 }
 
 #twocolumnbackground {
