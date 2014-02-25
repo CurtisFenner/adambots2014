@@ -17,13 +17,14 @@ $add_script = array();
 		<div class="page_shadowline"></div>
 		<div class="pagewidth">
 			<div id="pagetype" style="background-color:#FFD802;" class="blacktext">
-				<h2 style="padding:0">
+				<div style="font-size:1.5em;line-height:40px;">
 					About the
 						<div style="display:inline-block;padding:0;margin:0;height:40px;">
-							<img style="margin:0" height="28" src="<?php bloginfo("template_directory")?>/res/img/adambots_text_outlined.png"/>
+							<img style="margin:0" height="28" alt="AdamBots" src="<?php bloginfo("template_directory")?>/res/img/adambots_text_outlined.png"/>
 						</div>
-				</h2><!-- #205A8C is FIRST blue -->
-				<div class="background"><img src="http://adambots.com/logos/png/yellowBG_small.png" height="60"></div>
+					</div>
+				<!-- #205A8C is FIRST blue -->
+				<div class="background"><img src="http://adambots.com/logos/png/yellowBG_small.png" alt="AdamBots Team 245" height="60"></div>
 				<?php dynamic_sidebar('About Submenu') ?>
 			</div>
 			<div class="twocolumns">
