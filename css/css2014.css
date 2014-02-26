@@ -71,6 +71,11 @@ hr {
 	margin-bottom:20px;
 }
 
+.dim {
+	opacity:0.8;
+	font-size:80%;
+}
+
 /**************************************
 			  MAIN LAYOUT
 ***************************************/
@@ -203,7 +208,15 @@ The bar between the navbar and the page.
 	width:320px;
 	height:540px;
 	background-image:url("../res/img/atomright.png");
+}
 
+#onecolumnbackground {
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	width:320px;
+	height:540px;
+	background-image:url("../res/img/atomleft.png");
 }
 
 .twocolumns {
@@ -212,6 +225,16 @@ The bar between the navbar and the page.
 	margin:auto;
 	background-image:url("../res/img/twocol.png");
 	margin-top:6px;
+}
+
+.onecolumn {
+	position:relative;
+	width:920px;
+	margin:auto;
+	margin-top:6px;
+	background-color:white;
+	background-image:url("../res/img/noisy.png");
+	padding:20px;
 }
 
 .spacer {

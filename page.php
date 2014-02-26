@@ -1,46 +1,16 @@
 <?php get_header(); ?>
 <div class="pagewidth">
-
+	<!-- A pagetype here might be a good idea but would not contain subnav, like LamBot page -->
 	<div class="twocolumns">
 		<div id="twocolumnbackground"></div>
 		<div id="leftcol">
-			<?php while ( have_posts() ) : the_post(); echo "HI!"; ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
-			<div id="pagetitle">
-				<h1><?php the_title(); ?></h1>
-				<?php
-				$sub_links = get_post_meta(get_the_ID(),'sub-links',true);
-				$sub_links = explode(',',$sub_links);
-				
-				if(!empty($sub_links)) {
-					?>
-					<div class="subnav">
-						<ul>						
-							<?php
-							foreach($sub_links as $sub_link) {
-								echo "<li>$sub_link</li>";
-							}
-							?>
-						</ul>
-					</div>										
-					<?php
-				}
-				?> 
-			</div>
-			<?php 
-			$edit_attr = array(
-				'alt' => get_the_title(),
-				'title' => '',
-				'class' => 'floatright'
-				);
-
-			$post_image = get_the_post_thumbnail($post->ID,'pristine-custom-image-medium1', $edit_attr);					
-			if(!empty($post_image)) {
-				echo $post_image;
-			}
-
-			the_content();
-			endwhile; ?>
+					<h1><a href="<?php  the_permalink(); ?>"><?php the_title(); ?></a></h1>
+					<p>Written by <?php the_author_link(); ?> on <?php the_date(); ?></p>
+					<?php the_excerpt(); ?>
+					<hr>
+			<?php endwhile; ?>
 
 	</div>
 	<div id="rightcol">
@@ -51,3 +21,6 @@
 </div>
 </div>
 <?php get_footer(); ?>
+
+
+<!-- OH MY GOODNESS I MESSED THIS UP -->
