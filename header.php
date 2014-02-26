@@ -22,6 +22,12 @@
   ga('send', 'pageview');
 
 </script>
+
+<style>
+
+</style>
+
+
 </head>
 
 <body>
@@ -40,8 +46,10 @@
 			<a href="https://twitter.com/adambots"><img src="<?php bloginfo('template_directory'); ?>/res/img/social/twitter.png" alt="Follow us on Twitter"></a>
 			<a href="http://www.youtube.com/user/Adambots"><img src="<?php bloginfo('template_directory'); ?>/res/img/social/youtube.png" alt="Subscribe to us on YouTube"></a>
 			<br>
-			<a href="http://www.adambots.com/about/team-outreach/relay-for-life-2012/"><img src="<?php bloginfo('template_directory'); ?>/res/img/relay.png" alt="Relay For Life"></a>
-			<a href="google">Calendar</a>
+			<div class="button" style="background:#EFA0DF;color:#CE73BC;"><a href="#">Relay For Life</a></div>
+			<div class="button" style="background:#5780C2;color:#244C92;"><a href="#">FRC 3478 LamBot</a></div> <br>
+			<div class="button" style="background:#EFC700;color:#E2B900;"><a href="#">Team Calendar</a></div>
+			<div class="button" style="background:#555;color:#333;"><a href="#">FTC 5183 Vikings</a></div>
 		</div>
 	</div>
 	
