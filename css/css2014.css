@@ -376,7 +376,7 @@ The bar between the navbar and the page.
 	display:inline-block;
 	color:white;
 	font-weight:bold;
-	border-radius:3px;
+	border-radius:4px;
 	height:30px;
 	line-height:30px;
 	text-align:center;
@@ -384,8 +384,13 @@ The bar between the navbar and the page.
 	position:relative;
 	font-size:15px;
 	overflow:hidden;
-	box-shadow:inset 0px -5px 30px -0px ;
+	box-shadow:inset 0px -5px 30px 0px;
 }
+
+.button:active {
+	box-shadow:inset 0px 5px 30px 0px;
+}
+
 #social .button a {
 	margin:0px;
 	color:white;

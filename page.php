@@ -19,10 +19,9 @@
 					</div>										
 					<?php
 				}
-			?>
-
+			?> 
 		</div>
-		<div id="content">
+		<div class="pagewidth">
 			<div class="left">
 				<?php 
 					$edit_attr = array(
@@ -50,6 +49,5 @@
 		<div class="right">
 			<?php get_sidebar(); ?>
 		</div>
-		<div class="spacer"></div>
 	</div>
 <?php get_footer(); ?>

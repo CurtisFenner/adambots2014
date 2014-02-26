@@ -26,7 +26,7 @@ $add_script = array();
 				<div class="background"><img src="http://adambots.com/logos/png/yellowBG_small.png" alt="AdamBots Team 245" height="60"></div>
 				<?php dynamic_sidebar('About Submenu') ?>
 			</div>
-			<div class="twocolumns">
+			<div class="twocolumns"> <!-- This actually doesn't really belong here but apparently doesn't hurt. -->
 				<?php 
 					$edit_attr = array(
 						'alt' => get_the_title(),
