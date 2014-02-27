@@ -22,12 +22,6 @@
   ga('send', 'pageview');
 
 </script>
-
-<style>
-
-</style>
-
-
 </head>
 
 <body>
