@@ -25,7 +25,7 @@ $add_script = array();
 
 
 		<div class="twocolumns">
-			<div id="twocolumnbackground"></div>
+			<div id="atomrightcontainer"><div id="twocolumnbackground"></div></div>
 			<div id="leftcol">
 				<?php while ( have_posts() ) : the_post(); ?>
 					<h1><a href="<?php  the_permalink(); ?>"><?php the_title(); ?></a></h1>

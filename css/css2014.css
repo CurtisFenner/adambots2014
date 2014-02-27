@@ -201,6 +201,15 @@ The bar between the navbar and the page.
 	position:relative;
 }
 
+#atomrightcontainer {
+	position:absolute;
+	right:0;
+	top:0;
+	bottom:0;
+	left:0;
+	overflow:hidden;
+}
+
 #twocolumnbackground {
 	position:absolute;
 	right:0px;
