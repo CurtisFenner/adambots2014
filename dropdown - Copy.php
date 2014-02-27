@@ -35,8 +35,10 @@ Title:Also check out...
 
 Tab:Photo and Video
 Title:<em>FIRST</em> Photo and Video
-2014: Aerial Assist|media-gallery/first-pictures/2014-first-robotics-pictures/
-2013: Ultimate Ascent
+2014: Aerial Assist|media-gallery/first-pictures/2014-first-robotics-pictures/|Pictures &amp; videos from the 2014 season
+2013: Ultimate Ascent|media-gallery/first-pictures/2013-first-robotics-pictures/|Pictures &amp; videos from the 2013 season
+<em>FIRST</em> Media Archive|media-gallery/firstpictures/|Pictures and videos from past seasons
+
 
 		<div id="dropdown">
 			<span id="dropdownbackground"></span>

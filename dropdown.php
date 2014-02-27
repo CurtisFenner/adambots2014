@@ -3,10 +3,23 @@
 			<div class="pagewidth">
 
 
+<!--
 
-<nav style="width:50px;text-align:center;vertical-align:baseline;position:relative;padding:0px;">
+<nav style="width:50px;text-align:center;vertical-align:baseline;position:relative;padding:0px;overflow:hidden;">
 <a href="http://adambots.com/" style="position:absolute;left:0px;top:0px;width:50px;height:50px;"><img style="vertical-align:baseline;margin-top:8px;" alt="Home" src="<?php bloginfo('template_directory'); ?>/res/img/home.png" height=33></a>
-</nav><?php
+<span><em></em>
+</span>
+</nav>
+
+-->
+
+<nav style="color: rgb(238, 238, 238); text-shadow: black 1px 1px 0px; width:50px;height:50px; position:relative;padding:0px;text-align:center;">
+	<a href="http://www.adambots.com/" style="left:0px;top:0px;width:50px;height:50px;display:inline-block;margin:0px;padding:0px;">
+		<span><img alt="Home" src="<?php bloginfo('template_directory'); ?>/res/img/home.png" height=33><em></em></span>
+	</a>
+</nav>
+
+<?php
 
 	function startsWith($haystack, $needle)
 	{
