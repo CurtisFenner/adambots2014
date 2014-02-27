@@ -30,6 +30,7 @@
 	dynamic_sidebar('Dropdown Content');
 	$str = ob_get_contents();
 	ob_end_clean();
+	echo "<!--" . $str . "-->";
 	$str = str_replace('<div class="textwidget">','',$str);
 	$str = str_replace('</div>','',$str);
 	$lines = explode("\n",$str);
