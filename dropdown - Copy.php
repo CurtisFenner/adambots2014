@@ -65,7 +65,8 @@ Follow us on Twitter|http://twitter.com/adambots/|
 Like us on Facebook|http://www.facebook.com/AdamBots|
 Visit us on YouTube|http://www.youtube.com/user/Adambots/|Keep up with weekly build video updates
 
-Title:
+Title:Contact Us
+Contact Us|contact-us|Have a question or comment? Leave it here
 
 
 
