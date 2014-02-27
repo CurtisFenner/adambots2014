@@ -34,10 +34,30 @@ Title:Also check out...
 <em>OCCRA</em> Media|media-gallery/occra-pictures/|Pictures and videos from the competition
 
 Tab:Photo and Video
+
 Title:<em>FIRST</em> Photo and Video
 2014: Aerial Assist|media-gallery/first-pictures/2014-first-robotics-pictures/|Pictures &amp; videos from the 2014 season
 2013: Ultimate Ascent|media-gallery/first-pictures/2013-first-robotics-pictures/|Pictures &amp; videos from the 2013 season
 <em>FIRST</em> Media Archive|media-gallery/firstpictures/|Pictures and videos from past seasons
+
+Title:Outreach Events
+2013 Outreach Events|media-gallery/outreach/2013-outreach-pictures/|
+2012 Outreach Events|media-gallery/outreach/2012-outreach-pictures/|
+Outreach Archive|media-gallery/outreach/|View media from past years
+
+Title:<em>OCCRA</em> Photo and Video
+2013: Gridlock|media-gallery/occra-pictures/2013-occra-robotics-pictures|Pictures and videos from the 2013 season
+2012: Goal Roll|media-gallery/occra-pictures/2012-occra|Pictures and videos from the 2013 season
+<em>OCCRA</em> Media Archive|media-gallery/occra-pictures|Pictures and videos from past years
+
+Title:Offseason Events
+Our 2013 Offseason|media-gallery/off-season-events/2013-off-season-pictures|
+Our 2012 Offseason|media-gallery/off-season-events/2012-off-season-pictures|
+Off Season Archive|media-gallery/off-season-events/|
+
+Title:Animation
+Animation Page|media-gallery/animation|Resources and videos from our animation team
+
 
 
 		<div id="dropdown">
@@ -47,74 +67,7 @@ Title:<em>FIRST</em> Photo and Video
 
 
 
-				<nav>Photo and Video
-					<em></em>
-					<ul>
-						<li>
-							<h3>
-								<em>FIRST</em>Photo and Video</h3>
-							<li>
-								<a href="#">2013: Ultimate Ascent</a>
-								<span>Pictures and videos from the 2013 season</span>
-								<li>
-									<a href="#">2012: Rebound Rumble</a>
-									<span>Pictures and videos from the 2012 season</span>
-									<li>
-										<a href="#">2011: LogoMotion</a>
-										<span>Pictures and videos from the 2011 season</span>
-										<li>
-											<a href="#">
-												<em>FIRST</em>Media Archive</a>
-											<span>Pictures and videos from past seasons</span>
 
-											<li>
-												<h3>Outreach Events</h3>
-												<li>
-													<a href="#">2013 Outreach Events</a>
-													<span></span>
-													<li>
-														<a href="#">2012 Outreach Events</a>
-														<span></span>
-														<li>
-															<a href="#">Outreach Archive</a>
-															<span>View media from past years</span>
-					</ul>
-					<ul>
-						<li>
-							<h3>
-								<em>OCCRA</em>Photo and Video</h3>
-							<li>
-								<a href="#">2013: Gridlock</a>
-								<span>Pictures and videos from the 2013 season</span>
-								<li>
-									<a href="#">2012: Goal Roll</a>
-									<span>Pictures and videos from the 2012 season</span>
-									<li>
-										<a href="#">2013: Tic-Tac-Stack</a>
-										<span>Pictures and videos from the 2011 season</span>
-										<li>
-											<a href="#">
-												<em>OCCRA</em>Media Archive</a>
-											<span>Pictures and videos from past seasons</span>
-
-											<li>
-												<h3>Offseason</h3>
-												<li>
-													<a href="#">Our 2013 Offseason</a>
-													<li>
-														<a href="#">Our 2012 Offseason</a>
-														<li>
-															<a href="#">Offseason Archive</a>
-
-															<li>
-																<h3>Animation</h3>
-																<li>
-																	<a href="#">Animation Page</a>
-																	<span>Resources and videos from our animation team</span>
-					</ul>
-
-
-				</nav>
 				<nav>Team Press
 					<em></em>
 					<ul>
@@ -252,7 +205,74 @@ Title:<em>FIRST</em> Photo and Video
 
 
 
+				<nav>Photo and Video
+					<em></em>
+					<ul>
+						<li>
+							<h3>
+								<em>FIRST</em>Photo and Video</h3>
+							<li>
+								<a href="#">2013: Ultimate Ascent</a>
+								<span>Pictures and videos from the 2013 season</span>
+								<li>
+									<a href="#">2012: Rebound Rumble</a>
+									<span>Pictures and videos from the 2012 season</span>
+									<li>
+										<a href="#">2011: LogoMotion</a>
+										<span>Pictures and videos from the 2011 season</span>
+										<li>
+											<a href="#">
+												<em>FIRST</em>Media Archive</a>
+											<span>Pictures and videos from past seasons</span>
 
+											<li>
+												<h3>Outreach Events</h3>
+												<li>
+													<a href="#">2013 Outreach Events</a>
+													<span></span>
+													<li>
+														<a href="#">2012 Outreach Events</a>
+														<span></span>
+														<li>
+															<a href="#">Outreach Archive</a>
+															<span>View media from past years</span>
+					</ul>
+					<ul>
+						<li>
+							<h3>
+								<em>OCCRA</em>Photo and Video</h3>
+							<li>
+								<a href="#">2013: Gridlock</a>
+								<span>Pictures and videos from the 2013 season</span>
+								<li>
+									<a href="#">2012: Goal Roll</a>
+									<span>Pictures and videos from the 2012 season</span>
+									<li>
+										<a href="#">2013: Tic-Tac-Stack</a>
+										<span>Pictures and videos from the 2011 season</span>
+										<li>
+											<a href="#">
+												<em>OCCRA</em>Media Archive</a>
+											<span>Pictures and videos from past seasons</span>
+
+											<li>
+												<h3>Offseason</h3>
+												<li>
+													<a href="#">Our 2013 Offseason</a>
+													<li>
+														<a href="#">Our 2012 Offseason</a>
+														<li>
+															<a href="#">Offseason Archive</a>
+
+															<li>
+																<h3>Animation</h3>
+																<li>
+																	<a href="#">Animation Page</a>
+																	<span>Resources and videos from our animation team</span>
+					</ul>
+
+
+				</nav>
 
 
 
