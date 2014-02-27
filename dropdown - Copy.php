@@ -68,7 +68,20 @@ Visit us on YouTube|http://www.youtube.com/user/Adambots/|Keep up with weekly bu
 Title:Contact Us
 Contact Us|contact-us|Have a question or comment? Leave it here
 
+Tab:Resources
 
+Title:AdamBots Resources
+AdamBots Award Submissions|resources/award-submissions|Our past submissions
+AdamBots Business Plan|resources/business-plan|Our award-winning business plan
+Safety|resources/safety-card|Read about some of our safety policies
+AdamBots Logo|resources/adambots-logo|Download versions of our logo
+Programming|resources/programming|Code and resources from our programming team
+Scouting Programs|http://www.adambots.com/scouting/|Real-time OPR &amp; other data for <em>FRC</em>
+
+Title:Helpful Things
+Helpful Documents|resources/helpful-documents|Information about competing
+Helpful Links|resources/helpful-links|Links to other sites with information about <em>FIRST</em>
+Creating a <em>FIRST</em> Team Site|resources/creating-a-first-team-website|An overview of making a website
 
 		<div id="dropdown">
 			<span id="dropdownbackground"></span>
@@ -77,30 +90,6 @@ Contact Us|contact-us|Have a question or comment? Leave it here
 
 
 
-
-				<nav>Team Press
-					<em></em>
-					<ul>
-						<li>
-							<h3>Team Press</h3>
-							<li>
-								<a href="#">AdamBots Blog</a>
-								<span>Read news about build and competitions</span>
-								<li>
-									<a href="http://twitter.com/adambots/">Follow us on Twitter</a>
-									<li>
-										<a href="https://www.facebook.com/AdamBots">Like us on Facebook</a>
-										<li>
-											<a href="http://www.youtube.com/user/Adambots">Visit us on YouTube</a>
-											<span>Keep up with weekly build video updates</span>
-					</ul>
-					<ul>
-						<li>
-							<h3>Contact Us</h3>
-							<li>
-								<a href="#">Contact Us</a>
-								<span>Have a question or comment? Leave it here</span>
-					</ul>
 
 
 
@@ -149,6 +138,40 @@ Contact Us|contact-us|Have a question or comment? Leave it here
 					</ul>
 
 				</nav>
+
+
+
+
+				<nav>Team Press
+					<em></em>
+					<ul>
+						<li>
+							<h3>Team Press</h3>
+							<li>
+								<a href="#">AdamBots Blog</a>
+								<span>Read news about build and competitions</span>
+								<li>
+									<a href="http://twitter.com/adambots/">Follow us on Twitter</a>
+									<li>
+										<a href="https://www.facebook.com/AdamBots">Like us on Facebook</a>
+										<li>
+											<a href="http://www.youtube.com/user/Adambots">Visit us on YouTube</a>
+											<span>Keep up with weekly build video updates</span>
+					</ul>
+					<ul>
+						<li>
+							<h3>Contact Us</h3>
+							<li>
+								<a href="#">Contact Us</a>
+								<span>Have a question or comment? Leave it here</span>
+					</ul>
+
+
+
+
+
+
+
 
 
 				<nav>
