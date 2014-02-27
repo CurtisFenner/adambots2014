@@ -189,6 +189,7 @@ The bar between the navbar and the page.
 	width:594px;
 	padding:20px;
 	float:left;
+	position:relative;
 }
 
 #rightcol {
