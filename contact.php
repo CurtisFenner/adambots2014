@@ -107,7 +107,7 @@ textarea {
 								if (!debounce) {
 									r.onreadystatechange = onrespond;
 									//r.open("POST","http://www.adambots.com/wp-content/themes/adambots2014/send.php");
-									r.open("POST","/wordpress/wp-content/themes/adambots2014/send.php");
+									r.open("POST","/wp-content/themes/adambots2014/send.php");
 									r.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 									r.send("name=" + encodeURIComponent(name_in.value) + "&email=" + encodeURIComponent(email_in.value) +"&comment=" + encodeURIComponent(msg_in.value));
 									debounce = true;
