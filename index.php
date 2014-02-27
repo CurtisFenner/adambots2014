@@ -19,6 +19,7 @@ $add_script = array();
 				<h2 style="padding:0;color:#FFF;height:40px;">
 					AdamBots Blog
 				</h2>
+				<span style="color:white;">News and everything AdamBots</span>
 				<div class="background"><img src="http://adambots.com/logos/png/yellowBG_small.png" height="60"></div>
 			</div>
 

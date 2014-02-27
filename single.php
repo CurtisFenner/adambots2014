@@ -14,17 +14,14 @@ $add_script = array();
 <?php get_header(); ?>
 	<?php the_post(); ?>
 		<div class="pagewidth">
-			<div id="pagetype" style="background-color:#FFD802;" class="blacktext">
-				<div style="font-size:1.5em;line-height:40px;">
-					About the
-						<div style="display:inline-block;padding:0;margin:0;height:40px;">
-							<img style="margin:0" height="28" alt="AdamBots" src="<?php bloginfo("template_directory")?>/res/img/adambots_text_outlined.png"/>
-						</div>
-					</div>
-				<!-- #205A8C is FIRST blue -->
-				<div class="background"><img src="http://adambots.com/logos/png/yellowBG_small.png" alt="AdamBots Team 245" height="60"></div>
-				<?php dynamic_sidebar('About Submenu') ?>
-			</div> <!-- pagetype -->
+			<div id="pagetype" style="background-color:#5A5A5A;">
+				<h2 style="padding:0;color:#FFF;height:40px;">
+					AdamBots Blog
+				</h2>
+				<span style="color:white;">News and everything AdamBots</span>
+				<div class="background"><img src="http://adambots.com/logos/png/yellowBG_small.png" height="60"></div>
+			</div>
+			
 			<div class="onecolumn">
 
 		<div id="onecolumnbackground"></div>
