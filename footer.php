@@ -18,8 +18,7 @@
 			<img src="http://www.adambots.com/wp-content/themes/adambotsv6/images/websiteawards/11alamo.jpg" alt="Website Award 2011, Alamo Regional">
 			<img src="http://www.adambots.com/wp-content/themes/adambotsv6/images/websiteawards/09kettering.jpg" alt="Website Award 2009, Kettering District">
 			<img src="http://www.adambots.com/wp-content/themes/adambotsv6/images/websiteawards/08detroit.jpg" alt="Website Award 2008, Detroit Regional">
-			<img src="http://www.adambots.com/wp-content/themes/adambotsv6/images/websiteawards/08greatlakes.jpg" alt="Website Award 2008, Great Lakes Regional">
-			<br><br>
+			<img src="http://www.adambots.com/wp-content/themes/adambotsv6/images/websiteawards/08greatlakes.jpg" alt="Website Award 2008, Great Lakes Regional"><br><br>
 			This website is W3 standards-compliant. <a href="about-this-website">Read more at About Our Website.</a><br>
 			<a href="http://validator.w3.org/check?uri=referer"><strong>Valid HTML 5</strong></a>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
