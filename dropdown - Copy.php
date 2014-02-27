@@ -58,6 +58,15 @@ Off Season Archive|media-gallery/off-season-events/|
 Title:Animation
 Animation Page|media-gallery/animation|Resources and videos from our animation team
 
+Tab:Team Press
+Title:Team Press
+AdamBots Blog|team-blog|Read news about build and competitions
+Follow us on Twitter|http://twitter.com/adambots/|
+Like us on Facebook|http://www.facebook.com/AdamBots|
+Visit us on YouTube|http://www.youtube.com/user/Adambots/|Keep up with weekly build video updates
+
+Title:
+
 
 
 		<div id="dropdown">
