@@ -4,11 +4,9 @@
 
 
 
-<nav style="width:32px;text-align:center;vertical-align:baseline;">
-<a href="http://adambots.com/"><img style="vertical-align:baseline;" alt="Home" src="<?php bloginfo('template_directory'); ?>/res/img/home.png" height=33></a>
-</nav>
-
-<?php
+<nav style="width:50px;text-align:center;vertical-align:baseline;position:relative;padding:0px;">
+<a href="http://adambots.com/" style="position:absolute;left:0px;top:0px;width:50px;height:50px;"><img style="vertical-align:baseline;margin-top:8px;" alt="Home" src="<?php bloginfo('template_directory'); ?>/res/img/home.png" height=33></a>
+</nav><?php
 
 	function startsWith($haystack, $needle)
 	{
