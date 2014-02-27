@@ -47,6 +47,16 @@ if (!function_exists('pristine_register_menus')) {
 
 
 if ( function_exists('register_sidebar') ) {
+
+		$args = array(
+		'name'          => 'Blog Sidebar',
+		'id'            => 'blog-sidebar',
+		'before_widget' => '<div class="display_infotext">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>' );
+
+	register_sidebar($args);
 		
 	$args = array(
 		'name'          => 'Display Infotext',
