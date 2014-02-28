@@ -19,7 +19,7 @@ for (var i = 0; i < links.length; i++) {
 				}
 				try {
 					el.style.backgroundColor = "rgb(255,216,2)"; //Throws an error in IE8
-					el.style.backgroundImage = 'url("http://localhost/wordpress/wp-content/themes/adambots2014/res/img/noisy.png")';
+					el.style.backgroundImage = 'url("/wp-content/themes/adambots2014/res/img/noisy.png")';
 					el.style.color = "rgb(17,17,17)"
 					el.style.textShadow = "none";
 				} catch (e) {}

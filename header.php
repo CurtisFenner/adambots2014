@@ -32,13 +32,19 @@
 	<script src='<?php bloginfo('template_directory'); ?>/js/gears.js'></script>
 	<div id="head">
 		<a href="<?php echo home_url(); ?>">
-            <img height=120 src="<?php bloginfo('template_directory'); ?>/res/img/flat_round_atom_w_text.png" alt="AdamBots.com">
+            <img height=120 src="<?php bloginfo('template_directory'); ?>/res/img/flat_round_atom_improved.png" alt="AdamBots.com">
         </a>
 		<div id="social">
 			<a href="https://www.facebook.com/AdamBots"><img src="<?php bloginfo('template_directory'); ?>/res/img/social/facebook.png" alt="Like us on Facebook"></a>
 			<a href="http://instagram.com/adambots245"><img src="<?php bloginfo('template_directory'); ?>/res/img/social/instagram.png" alt="Find us on Instagram"></a>
 			<a href="https://twitter.com/adambots"><img src="<?php bloginfo('template_directory'); ?>/res/img/social/twitter.png" alt="Follow us on Twitter"></a>
 			<a href="http://www.youtube.com/user/Adambots"><img src="<?php bloginfo('template_directory'); ?>/res/img/social/youtube.png" alt="Subscribe to us on YouTube"></a>
+			<a href="http://www.adambots.com/contact-us"><img src="<?php bloginfo('template_directory'); ?>/res/img/social/cont.png" alt="Contact Us"></a>
+			<br>
+			<div class="button" style="background:#EFA0DF;color:#CE73BC;"><a href="/about/team-outreach/relay-for-life-2012/">Relay For Life</a></div>
+			<div class="button" style="background:#5780C2;color:#244C92;"><a href="/about/team-outreach/team-lambot-3478/">FRC 3478 LamBot</a></div> <br>
+			<div class="button" style="background:#FFD802;color:#D2A900;"><a href="/team-member-section/">Team Calendar</a></div>
+			<div class="button" style="background:#5A6;color:#151;"><a href="/about/team-outreach/vikings-5183/">FTC 5183 Vikings</a></div>
 		</div>
 	</div>
 	

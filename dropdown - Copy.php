@@ -26,13 +26,180 @@ Past Years|first/archive|Information about prior robots and competitions
 Title:Also check out...
 <em>FIRST</em> Media|media-gallery/first-pictures|Pictures and videos from our <em>FIRST</em> season
 
+Tab:<em>OCCRA</em>
+Title:<em>Oakland County Competitive Robotics Association</em>
+OCCRA|Read about our fall competition season
 
+Title:Also check out...
+<em>OCCRA</em> Media|media-gallery/occra-pictures/|Pictures and videos from the competition
+
+Tab:Photo and Video
+
+Title:<em>FIRST</em> Photo and Video
+2014: Aerial Assist|media-gallery/first-pictures/2014-first-robotics-pictures/|Pictures &amp; videos from the 2014 season
+2013: Ultimate Ascent|media-gallery/first-pictures/2013-first-robotics-pictures/|Pictures &amp; videos from the 2013 season
+<em>FIRST</em> Media Archive|media-gallery/firstpictures/|Pictures and videos from past seasons
+
+Title:Outreach Events
+2013 Outreach Events|media-gallery/outreach/2013-outreach-pictures/|
+2012 Outreach Events|media-gallery/outreach/2012-outreach-pictures/|
+Outreach Archive|media-gallery/outreach/|View media from past years
+
+Title:<em>OCCRA</em> Photo and Video
+2013: Gridlock|media-gallery/occra-pictures/2013-occra-robotics-pictures|Pictures and videos from the 2013 season
+2012: Goal Roll|media-gallery/occra-pictures/2012-occra|Pictures and videos from the 2013 season
+<em>OCCRA</em> Media Archive|media-gallery/occra-pictures|Pictures and videos from past years
+
+Title:Offseason Events
+Our 2013 Offseason|media-gallery/off-season-events/2013-off-season-pictures|
+Our 2012 Offseason|media-gallery/off-season-events/2012-off-season-pictures|
+Off Season Archive|media-gallery/off-season-events/|
+
+Title:Animation
+Animation Page|media-gallery/animation|Resources and videos from our animation team
+
+Tab:Team Press
+Title:Team Press
+AdamBots Blog|team-blog|Read news about build and competitions
+Follow us on Twitter|http://twitter.com/adambots/|
+Like us on Facebook|http://www.facebook.com/AdamBots|
+Visit us on YouTube|http://www.youtube.com/user/Adambots/|Keep up with weekly build video updates
+
+Title:Contact Us
+Contact Us|contact-us|Have a question or comment? Leave it here
+
+Tab:Resources
+
+Title:AdamBots Resources
+AdamBots Award Submissions|resources/award-submissions|Our past submissions
+AdamBots Business Plan|resources/business-plan|Our award-winning business plan
+Safety|resources/safety-card|Read about some of our safety policies
+AdamBots Logo|resources/adambots-logo|Download versions of our logo
+Programming|resources/programming|Code and resources from our programming team
+Scouting Programs|http://www.adambots.com/scouting/|Real-time OPR &amp; other data for <em>FRC</em>
+
+Title:Helpful Things
+Helpful Documents|resources/helpful-documents|Information about competing
+Helpful Links|resources/helpful-links|Links to other sites with information about <em>FIRST</em>
+Creating a <em>FIRST</em> Team Site|resources/creating-a-first-team-website|An overview of making a website
 
 		<div id="dropdown">
 			<span id="dropdownbackground"></span>
 			<div class="pagewidth">
 
+
+
+
+
+
+
+				</nav>
+				<nav>Resources
+					<em></em>
+					<ul>
+						<li>
+							<h3>AdamBots Resources</h3>
+
+							<li>
+								<a href="#">AdamBots Award Submissions</a>
+								<span>Our past submissions</span>
+								<li>
+									<a href="#">AdamBots Business Plan</a>
+									<span>Our award winning business plan</span>
+									<li>
+										<a href="#">Pit Pass &amp; Safety Card</a>
+										<span>Read about some of our safety policies</span>
+										<li>
+											<a href="#">AdamBots Logo</a>
+											<span>Download capriciously hi-res versions of our logo</span>
+											<li>
+												<a href="#">Programming</a>
+												<span>Code and resources from our programming team</span>
+												<li>
+													<a href="#">Automated Scouting</a>
+													<span>Real-time OPR and other data for FRC</span>
+					</ul>
+					<ul>
+						<li>
+							<h3>Helpful Things</h3>
+							<li>
+								<a href="#">Helpful Documents</a>
+								<span>Documents giving information about competing</span>
+								<li>
+									<a href="#">Helpful Links</a>
+									<span>Links to other sites with information about
+										<em>FIRST</em>
+									</span>
+									<li>
+										<a href="#">Creating a Website for
+											<em>FIRST</em>
+										</a>
+										<span>An overview of making a website</span>
+					</ul>
+
+				</nav>
+
+
+
+
+				<nav>Team Press
+					<em></em>
+					<ul>
+						<li>
+							<h3>Team Press</h3>
+							<li>
+								<a href="#">AdamBots Blog</a>
+								<span>Read news about build and competitions</span>
+								<li>
+									<a href="http://twitter.com/adambots/">Follow us on Twitter</a>
+									<li>
+										<a href="https://www.facebook.com/AdamBots">Like us on Facebook</a>
+										<li>
+											<a href="http://www.youtube.com/user/Adambots">Visit us on YouTube</a>
+											<span>Keep up with weekly build video updates</span>
+					</ul>
+					<ul>
+						<li>
+							<h3>Contact Us</h3>
+							<li>
+								<a href="#">Contact Us</a>
+								<span>Have a question or comment? Leave it here</span>
+					</ul>
+
+
+
+
+
+
+
+
+
 				<nav>
+					<em>OCCRA</em>
+					<ul>
+						<li>
+							<h3>
+								<em>Oakland County Competitive Robotics Association</em>
+							</h3>
+						<li>
+							<a href="#">
+								<em>OCCRA</em>
+							</a>
+							<span>Read about our fall competition season</span>
+					</ul>
+					<ul>
+						<li>
+							<h3>Also check out..</h3>
+							<li>
+								<a href="#">
+									<em>OCCRA</em>Media</a>
+								<span>Pictures and videos from the competition</span>
+
+					</ul>
+
+				</nav>
+
+								<nav>
 					<em>FIRST</em>
 					<ul>
 						<li>
@@ -62,30 +229,15 @@ Title:Also check out...
 					</ul>
 
 				</nav>
-				<nav>
-					<em>OCCRA</em>
-					<ul>
-						<li>
-							<h3>
-								<em>Oakland County Competitive Robotics Association</em>
-							</h3>
-						<li>
-							<a href="#">
-								<em>OCCRA</em>
-							</a>
-							<span>Read about our fall competition season</span>
-					</ul>
-					<ul>
-						<li>
-							<h3>Also check out..</h3>
-							<li>
-								<a href="#">
-									<em>OCCRA</em>Media</a>
-								<span>Pictures and videos from the competition</span>
 
-					</ul>
 
-				</nav>
+
+
+
+
+
+
+
 				<nav>Photo and Video
 					<em></em>
 					<ul>
@@ -99,7 +251,7 @@ Title:Also check out...
 									<a href="#">2012: Rebound Rumble</a>
 									<span>Pictures and videos from the 2012 season</span>
 									<li>
-										<a href="#">2012: LogoMotion</a>
+										<a href="#">2011: LogoMotion</a>
 										<span>Pictures and videos from the 2011 season</span>
 										<li>
 											<a href="#">
@@ -154,77 +306,13 @@ Title:Also check out...
 
 
 				</nav>
-				<nav>Team Press
-					<em></em>
-					<ul>
-						<li>
-							<h3>Team Press</h3>
-							<li>
-								<a href="#">AdamBots Blog</a>
-								<span>Read news about build and competitions</span>
-								<li>
-									<a href="http://twitter.com/adambots/">Follow us on Twitter</a>
-									<li>
-										<a href="https://www.facebook.com/AdamBots">Like us on Facebook</a>
-										<li>
-											<a href="http://www.youtube.com/user/Adambots">Visit us on YouTube</a>
-											<span>Keep up with weekly build video updates</span>
-					</ul>
-					<ul>
-						<li>
-							<h3>Contact Us</h3>
-							<li>
-								<a href="#">Contact Us</a>
-								<span>Have a question or comment? Leave it here</span>
-					</ul>
 
 
 
-				</nav>
-				<nav>Resources
-					<em></em>
-					<ul>
-						<li>
-							<h3>AdamBots Resources</h3>
 
-							<li>
-								<a href="#">AdamBots Award Submissions</a>
-								<span>Our past submissions</span>
-								<li>
-									<a href="#">AdamBots Business Plan</a>
-									<span>Our award winning business plan</span>
-									<li>
-										<a href="#">Pit Pass &amp; Safety Card</a>
-										<span>Read about some of our safety policies</span>
-										<li>
-											<a href="#">AdamBots Logo</a>
-											<span>Download capriciously hi-res versions of our logo</span>
-											<li>
-												<a href="#">Programming</a>
-												<span>Code and resources from our programming team</span>
-												<li>
-													<a href="#">Automated Scouting</a>
-													<span>Real-time OPR and other data for FRC</span>
-					</ul>
-					<ul>
-						<li>
-							<h3>Helpful Things</h3>
-							<li>
-								<a href="#">Helpful Documents</a>
-								<span>Documents giving information about competing</span>
-								<li>
-									<a href="#">Helpful Links</a>
-									<span>Links to other sites with information about
-										<em>FIRST</em>
-									</span>
-									<li>
-										<a href="#">Creating a Website for
-											<em>FIRST</em>
-										</a>
-										<span>An overview of making a website</span>
-					</ul>
 
-				</nav>
+
+
 
 			</div>
 			<!-- <- .pagewidth -->

@@ -40,7 +40,7 @@ var noiseImg = new Image();
 noiseImg.onload = function() {
 	noiseImg.ready = true;
 }
-noiseImg.src = "http://localhost/wordpress/wp-content/themes/adambots2014/res/img/noisy.png";
+noiseImg.src = "http://www.adambots.com/wp-content/themes/adambots2014/res/img/noisy.png";
 
 function gear(r1,r2,w,m,off , c) {
 	c.beginPath();

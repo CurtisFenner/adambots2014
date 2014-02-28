@@ -3,9 +3,20 @@
 			<div class="pagewidth">
 
 
+<!--
 
-<nav style="width:32px;text-align:center;vertical-align:baseline;">
-<a href="http://adambots.com/"><img style="vertical-align:baseline;" alt="Home" src="<?php bloginfo('template_directory'); ?>/res/img/home.png" height=33></a>
+<nav style="width:50px;text-align:center;vertical-align:baseline;position:relative;padding:0px;overflow:hidden;">
+<a href="http://adambots.com/" style="position:absolute;left:0px;top:0px;width:50px;height:50px;"><img style="vertical-align:baseline;margin-top:8px;" alt="Home" src="<?php bloginfo('template_directory'); ?>/res/img/home.png" height=33></a>
+<span><em></em>
+</span>
+</nav>
+
+-->
+
+<nav style="color: rgb(238, 238, 238); text-shadow: black 1px 1px 0px; width:50px;height:50px; position:relative;padding:0px;text-align:center;">
+	<a href="http://www.adambots.com/" style="left:0px;top:0px;width:50px;height:50px;display:inline-block;margin:0px;padding:0px;">
+		<span><img alt="Home" src="<?php bloginfo('template_directory'); ?>/res/img/home.png" height=33><em></em></span>
+	</a>
 </nav>
 
 <?php
@@ -19,6 +30,7 @@
 	dynamic_sidebar('Dropdown Content');
 	$str = ob_get_contents();
 	ob_end_clean();
+	echo "<!--" . $str . "-->";
 	$str = str_replace('<div class="textwidget">','',$str);
 	$str = str_replace('</div>','',$str);
 	$lines = explode("\n",$str);
@@ -54,9 +66,17 @@
 			if (count($data) < 3) {
 				$us = explode(' ',trim($data[0]));
 				$us = $us[count($us)-1];
-				echo '<li><a href="' . site_url() . '/' . trim($us) . '">' . $data[0] . '</a><span>' . $data[1] . '</span>';
+				$url = trim($us);
+				if (strpos($url,":") === FALSE) {
+					$url = site_url() . '/' . $url;
+				}
+				echo '<li><a href="' . $url . '">' . $data[0] . '</a><span>' . $data[1] . '</span>';
 			} else {
-				echo '<li><a href="' . site_url() . '/' . trim($data[1]) . '">' . $data[0] . '</a><span>' . $data[2] . '</span>';
+				$url = trim($data[1]);
+				if (strpos($url,":") === FALSE) {
+					$url = site_url() . '/' . $url;
+				}
+				echo '<li><a href="' . $url . '">' . $data[0] . '</a><span>' . $data[2] . '</span>';
 			}
 		}
 	}
