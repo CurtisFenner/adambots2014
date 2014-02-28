@@ -1,5 +1,0 @@
-<?php
-/*
-Template Name: Resources
-*/
-?>

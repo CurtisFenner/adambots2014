@@ -71,6 +71,11 @@ hr {
 	margin-bottom:20px;
 }
 
+.dim {
+	opacity:0.8;
+	font-size:80%;
+}
+
 /**************************************
 			  MAIN LAYOUT
 ***************************************/
@@ -184,6 +189,7 @@ The bar between the navbar and the page.
 	width:594px;
 	padding:20px;
 	float:left;
+	position:relative;
 }
 
 #rightcol {
@@ -193,6 +199,16 @@ The bar between the navbar and the page.
 	width:280px;
 	padding:20px;
 	float:right;
+	position:relative;
+}
+
+#atomrightcontainer {
+	position:absolute;
+	right:0;
+	top:0;
+	bottom:0;
+	left:0;
+	overflow:hidden;
 }
 
 #twocolumnbackground {
@@ -202,7 +218,15 @@ The bar between the navbar and the page.
 	width:320px;
 	height:540px;
 	background-image:url("../res/img/atomright.png");
+}
 
+#onecolumnbackground {
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	width:320px;
+	height:540px;
+	background-image:url("../res/img/atomleft.png");
 }
 
 .twocolumns {
@@ -211,6 +235,16 @@ The bar between the navbar and the page.
 	margin:auto;
 	background-image:url("../res/img/twocol.png");
 	margin-top:6px;
+}
+
+.onecolumn {
+	position:relative;
+	width:920px;
+	margin:auto;
+	margin-top:6px;
+	background-color:white;
+	background-image:url("../res/img/noisy.png");
+	padding:20px;
 }
 
 .spacer {
@@ -369,6 +403,32 @@ The bar between the navbar and the page.
 	height: 120px;
 	margin: 25px;
 	margin-left: 50px;
+}
+
+.button {
+	display:inline-block;
+	color:white;
+	font-weight:bold;
+	border-radius:2px;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	width:151px;
+	position:relative;
+	font-size:15px;
+	overflow:hidden;
+	box-shadow:inset 0px -5px 30px 0px;
+}
+
+.button:active {
+	box-shadow:inset 0px 5px 30px 0px;
+}
+
+#social .button a {
+	margin:0px;
+	color:white;
+	position:absolute;
+	left:0;right:0;top:0;bottom:0;
 }
 
 #social {
@@ -776,41 +836,11 @@ Holds sliding descriptions
 		opacity: 1;
 	}
 }
-@-moz-keyframes fadein {
-	from {
-		opacity: 0;
-	} to {
-		opacity: 1;
-	}
-}
-@-webkit-keyframes fadein {
-	from {
-		opacity: 0;
-	} to {
-		opacity: 1;
-	}
-}
-@-o-keyframes fadein {
-	from {
-		opacity: 0;
-	} to {
-		opacity: 1;
-	}
-}
-
 @keyframes slidein {
     from{
         left:-100%;
     } to {
         left:0;
-    }
-}
-@-moz-keyframes slidein {
-    from {
-        left: -100%;
-    }
-    to {
-        left: 0;
     }
 }
 @-webkit-keyframes slidein {
@@ -821,11 +851,10 @@ Holds sliding descriptions
         left: 0;
     }
 }
-@-o-keyframes slidein {
-    from {
-        left: -100%;
-    }
-    to {
-        left: 0;
-    }
+@-webkit-keyframes fadein {
+	from {
+		opacity: 0;
+	} to {
+		opacity: 1;
+	}
 }

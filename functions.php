@@ -1,13 +1,17 @@
 <?php
+
+
+
+
 function shortcode_left($atts, $content=null){
-   return '<div class="twocolumns"><div id=twocolumnbackground></div><div id="leftcol">' . do_shortcode($content) . '</div>';
+   return '<div class="twocolumns"><div id="atomrightcontainer"><div id="twocolumnbackground"></div></div><div id="leftcol">' . do_shortcode($content) . '</div>';
 }
-add_shortcode('left','shortcode_left');
+//add_shortcode('left','shortcode_left');
 
 function shortcode_right($atts, $content=null){
    return '<div id="rightcol">' . do_shortcode($content) . '</div><div class="clear"></div></div>';
 }
-add_shortcode('right','shortcode_right');
+//add_shortcode('right','shortcode_right');
 
 
 function shortcode_bigdivider($atts, $content=null) {
@@ -43,6 +47,16 @@ if (!function_exists('pristine_register_menus')) {
 
 
 if ( function_exists('register_sidebar') ) {
+
+		$args = array(
+		'name'          => 'Blog Sidebar',
+		'id'            => 'blog-sidebar',
+		'before_widget' => '<div class="display_infotext">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>' );
+
+	register_sidebar($args);
 		
 	$args = array(
 		'name'          => 'Display Infotext',
@@ -284,6 +298,27 @@ add_filter('page_css_class', 'my_css_attributes_filter', 100, 1);
 
 
 
+
+function pre_process_shortcode($content) {
+    global $shortcode_tags;
+ 
+    // Backup current registered shortcodes and clear them all out
+    $orig_shortcode_tags = $shortcode_tags;
+    $shortcode_tags = array();
+ 
+        add_shortcode("left","shortcode_left");
+        add_shortcode("right","shortcode_right");
+ 
+    // Do the shortcode (only the one above is registered)
+    $content = do_shortcode($content);
+ 
+    // Put the original shortcodes back
+    $shortcode_tags = $orig_shortcode_tags;
+ 
+    return $content;
+}
+ 
+add_filter('the_content', 'pre_process_shortcode', 7);
 
 
 

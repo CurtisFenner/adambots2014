@@ -12,7 +12,7 @@ text:"2013 Palmetto Regional Champions!<br>The AdamBots were champions at the Pa
 title:"",
 text:"The 2014 AdamBots FRC Team<br>Our team of seventy students from Rochester Adams and Stoney Creek High Schools"
 },
-{url:"https://scontent-a-iad.xx.fbcdn.net/hphotos-ash3/t1/941703_443991249024827_1714696335_n.jpg",title:"",text:"WOW<br>SO DOGE"}
+{url:"https://scontent-a-iad.xx.fbcdn.net/hphotos-ash3/t1/941703_443991249024827_1714696335_n.jpg",title:"",text:"Meeting with Team Lambot in 2012"}
 ];
 
 gx = -gallery.length * 1000;
