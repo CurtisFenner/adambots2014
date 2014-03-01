@@ -27,6 +27,12 @@ body {
 */
 
 
+#twitter {
+	overflow-y:scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
+
 /**************************************
 			GENERIC ELEMENTS
 ***************************************/
@@ -786,11 +792,6 @@ Triple panel display above footer
 
 .twitter-timeline {
     position: relative;
-	top: 50%;
-	transform: translateY(-50%);
-    -mox-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
 }
 
 .display_current {
