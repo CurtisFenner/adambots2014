@@ -22,6 +22,33 @@
   ga('send', 'pageview');
 
 </script>
+
+<style>
+/* External Link? */
+
+a[href^="http"] {
+line-height:100%;
+}
+
+/*a[href^="http"]:after {
+text-decoration:underline;
+content:"↗";
+}*/
+
+#social a:after {
+display:none;
+}
+
+a[href*="adambots.com"] {
+line-height:100%;
+}
+
+a[href*="adambots.com"]:after {
+display:none;
+}
+
+</style>
+
 </head>
 
 <body>
@@ -44,7 +71,7 @@
 			<div class="button" style="background:#EFA0DF;color:#CE73BC;"><a href="/about/team-outreach/relay-for-life-2012/">Relay For Life</a></div>
 			<div class="button" style="background:#5780C2;color:#244C92;"><a href="/about/team-outreach/team-lambot-3478/">FRC 3478 LamBot</a></div> <br>
 			<div class="button" style="background:#FFD802;color:#D2A900;"><a href="/team-member-section/">Team Calendar</a></div>
-			<div class="button" style="background:#5A6;color:#151;"><a href="/about/team-outreach/vikings-5183/">FTC 5183 Vikings</a></div>
+			<div class="button" style="background:#5A6;color:#151;"><a href="/about/team-outreach/vikings-5183/">FTC 5381 Vikings</a></div>
 		</div>
 	</div>
 	

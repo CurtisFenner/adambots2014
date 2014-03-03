@@ -17,9 +17,14 @@ $add_script = array();
 		<div class="page_shadowline"></div>
 		<div class="pagewidth">
 			<div id="pagetype" style="background-color:#0166B3;">
+
+				<div style="font-size:1.5em;line-height:40px;">
+					Resources
+				<span style="font-size:16px;">Helpful Sections for the <em>FIRST</em> Community</span>
+				</div><!--
 				<h2 style="padding:0;color:#FFF;height:40px;">
 					<em>FIRST</em> <span style="font-size:16px">For Inspiration and Recognition of Science and Technology</span>
-				</h2>
+				</h2>-->
 				<div class="background"><img src="http://adambots.com/logos/png/yellowBG_small.png" height="60" alt="AdamBots Team 245"></div>
 				<?php dynamic_sidebar('FIRST Submenu') ?>
 			</div>

@@ -15,13 +15,10 @@ $add_script = array();
 <?php get_header(); ?>
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<div class="pagewidth">
-			<div id="pagetype" style="background-color:#22CC55;" class="blacktext">
-				<div style="font-size:1.5em;line-height:40px;">
-					Resources
-				<span style="font-size:16px;">Helpful Sections for the <em>FIRST</em> Community</span>
-				</div>
-				<!-- #205A8C is FIRST blue -->
-				<div class="background"><img src="http://adambots.com/logos/png/yellowBG_small.png" alt="AdamBots Team 245" height="60"></div>
+			<div id="pagetype" style="height:110px;background-color:#829F4C;">
+				<h2 style="padding:0;color:#FFF;height:40px;">
+					<em>Resources</em> <span style="font-size:16px">Helpful Sections for the <em>FIRST&nbsp;</em> Community</span>
+				</h2>
 				<?php dynamic_sidebar('Resources Submenu') ?>
 			</div>
 			<div class="twocolumns"> <!-- This actually doesn't really belong here but apparently doesn't hurt. -->
