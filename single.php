@@ -19,7 +19,7 @@ $add_script = array();
 					AdamBots Blog
 				</h2>
 				<span style="color:white;">News and everything AdamBots</span>
-				<div class="background"><img src="http://adambots.com/logos/png/yellowBG_small.png" height="60"></div>
+				<div class="background"><img src="<?php bloginfo('template_directory'); ?>/res/img/navBarAtom.png" height="60"></div>
 			</div>
 			
 			<div class="onecolumn">
