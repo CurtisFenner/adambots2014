@@ -3,11 +3,11 @@
 			<div class="pagewidth">
 
 
-<nav style="color: rgb(238, 238, 238); text-shadow: black 1px 1px 0px; width:50px;height:50px; position:relative;padding:0px;text-align:center;">
+<div class="navtab" style="color: rgb(238, 238, 238); text-shadow: black 1px 1px 0px; width:50px;height:50px; position:relative;padding:0px;text-align:center;">
 	<a href="http://www.adambots.com/" style="left:0px;top:0px;width:50px;height:50px;display:inline-block;margin:0px;padding:0px;">
 		<span><img style="position:relative;top:8px;" alt="Home" src="<?php bloginfo('template_directory'); ?>/res/img/roundhome.png" height=33><em></em></span>
 	</a>
-</nav><?php
+</div><?php
 
 	function startsWith($haystack, $needle)
 	{
@@ -32,12 +32,13 @@
 				echo '</ul>';
 			}
 			if ($navopen) {
-				echo "</nav>";
+				echo "</div>";
 			}
-			echo "<nav>";
+			echo "<div class=\"navtab\">";
 			$navopen = true;
 			$ulopen = false;
-			echo "<span>" . substr($line, 4) . '<em></em></span>';
+			$place = explode("|",substr($line,4));
+			echo "<span><a href='" . $place[1] . "'>" . $place[0] . '</a><em></em></span>';
 			$use = true;
 		}
 		if (startsWith($line,"Title:")) {
@@ -72,7 +73,7 @@
 		echo '</ul>';
 	}
 	if ($navopen) {
-		echo '</nav>';
+		echo '</div>';
 	}
 	?>
 

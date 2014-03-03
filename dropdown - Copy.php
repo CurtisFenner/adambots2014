@@ -1,4 +1,4 @@
-Tab:The AdamBots
+Tab:The AdamBots|/about
 
 Title:All About Us
 About Us|about|A summary of who we are
@@ -14,31 +14,31 @@ Our Students|Meet the AdamBots
 Our Mentors|Meet our inspirers, teachers, mentors, and guides
 Our Alumni|Meet the students touched by our <em>FRC</em> Team
 
-Tab:<em>FIRST</em>
+Tab:<em>FIRST&nbsp;</em>|/first
 
-Title:<em>FIRST - FRC</em> Team 245
-About <em>FIRST</em>|first|All about our main competition and program
+Title:<em>FIRST - FRC&nbsp;</em> Team 245
+About <em>FIRST&nbsp;</em>|first|All about our main competition and program
 The 2014 Game and Our Robot|2014-game-and-robot|Read about how we play
 
 Title:Archive
 Past Years|first/archive|Information about prior robots and competitions
 
 Title:Also check out...
-<em>FIRST</em> Media|media-gallery/first-pictures|Pictures and videos from our <em>FIRST</em> season
+<em>FIRST&nbsp;</em> Media|media-gallery/first-pictures|Pictures and videos from our <em>FIRST</em>&nbsp; season
 
-Tab:<em>OCCRA</em>
+Tab:<em>OCCRA&nbsp;</em>|/occra
 Title:<em>Oakland County Competitive Robotics Association</em>
 OCCRA|Read about our fall competition season
 
 Title:Also check out...
-<em>OCCRA</em> Media|media-gallery/occra-pictures/|Pictures and videos from the competition
+<em>OCCRA</em>&nbsp; Media|media-gallery/occra-pictures/|Pictures and videos from the competition
 
-Tab:Photo and Video
+Tab:Photo and Video|/media-gallery
 
-Title:<em>FIRST</em> Photo and Video
+Title:<em>FIRST</em>&nbsp; Photo and Video
 2014: Aerial Assist|media-gallery/first-pictures/2014-first-robotics-pictures/|Pictures &amp; videos from the 2014 season
 2013: Ultimate Ascent|media-gallery/first-pictures/2013-first-robotics-pictures/|Pictures &amp; videos from the 2013 season
-<em>FIRST</em> Media Archive|media-gallery/firstpictures/|Pictures and videos from past seasons
+<em>FIRST</em>&nbsp; Media Archive|media-gallery/first-pictures/|Pictures and videos from past seasons
 
 Title:Outreach Events
 2013 Outreach Events|media-gallery/outreach/2013-outreach-pictures/|
@@ -48,17 +48,17 @@ Outreach Archive|media-gallery/outreach/|View media from past years
 Title:<em>OCCRA</em> Photo and Video
 2013: Gridlock|media-gallery/occra-pictures/2013-occra-robotics-pictures|Pictures and videos from the 2013 season
 2012: Goal Roll|media-gallery/occra-pictures/2012-occra|Pictures and videos from the 2013 season
-<em>OCCRA</em> Media Archive|media-gallery/occra-pictures|Pictures and videos from past years
+<em>OCCRA</em>&nbsp; Media Archive|media-gallery/occra-pictures|Pictures and videos from past years
 
 Title:Offseason Events
 Our 2013 Offseason|media-gallery/off-season-events/2013-off-season-pictures|
-Our 2012 Offseason|media-gallery/off-season-events/2012-off-season-pictures|
+Our 2012 Offseason|media-gallery/off-season-events/2012-off-season-events|
 Off Season Archive|media-gallery/off-season-events/|
 
 Title:Animation
 Animation Page|media-gallery/animation|Resources and videos from our animation team
 
-Tab:Team Press
+Tab:Team Press|/team-blog
 Title:Team Press
 AdamBots Blog|team-blog|Read news about build and competitions
 Follow us on Twitter|http://twitter.com/adambots/|
@@ -68,7 +68,7 @@ Visit us on YouTube|http://www.youtube.com/user/Adambots/|Keep up with weekly bu
 Title:Contact Us
 Contact Us|contact-us|Have a question or comment? Leave it here
 
-Tab:Resources
+Tab:Resources|/resources/resources-overview
 
 Title:AdamBots Resources
 AdamBots Award Submissions|resources/award-submissions|Our past submissions
@@ -76,12 +76,12 @@ AdamBots Business Plan|resources/business-plan|Our award-winning business plan
 Safety|resources/safety-card|Read about some of our safety policies
 AdamBots Logo|resources/adambots-logo|Download versions of our logo
 Programming|resources/programming|Code and resources from our programming team
-Scouting Programs|http://www.adambots.com/scouting/|Real-time OPR &amp; other data for <em>FRC</em>
+Scouting Programs|http://www.adambots.com/scouting/|Real-time OPR &amp; other data for <em>FRC</em>&nbsp;
 
 Title:Helpful Things
 Helpful Documents|resources/helpful-documents|Information about competing
-Helpful Links|resources/helpful-links|Links to other sites with information about <em>FIRST</em>
-Creating a <em>FIRST</em> Team Site|resources/creating-a-first-team-website|An overview of making a website
+Helpful Links|resources/helpful-links|Links to other sites with information about <em>FIRST</em>&nbsp;
+Creating a <em>FIRST</em>&nbsp; Team Site|resources/creating-a-first-team-website|An overview of making a website
 
 		<div id="dropdown">
 			<span id="dropdownbackground"></span>

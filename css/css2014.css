@@ -528,7 +528,7 @@ Bar containing menu items.
 /*
 Menu tabs in starting bar
 */
-#dropdown nav {
+#dropdown .navtab {
 	display: inline-block;
 	position: relative;
 	height: 50px;
@@ -549,7 +549,14 @@ Menu tabs in starting bar
 	text-shadow:1.5px 1.5px 0px black;
 }
 
-#dropdown nav:hover {
+/*
+Noscript fallback!
+*/
+#dropdown .navtab a {
+	color:white;
+}
+
+#dropdown .navtab:hover {
 	background: rgba(238, 238, 238, .064);
 }
 
@@ -567,7 +574,7 @@ Element covering background of #dropdown.
 /*
 Where the navigation elements are stored on the page.
 */
-#dropdown nav ul {
+#dropdown .navtab ul {
 	display: none;
 }
 
