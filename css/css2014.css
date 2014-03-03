@@ -27,6 +27,12 @@ body {
 */
 
 
+#twitter {
+	overflow-y:scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
+
 /**************************************
 			GENERIC ELEMENTS
 ***************************************/
@@ -522,7 +528,7 @@ Bar containing menu items.
 /*
 Menu tabs in starting bar
 */
-#dropdown nav {
+#dropdown .navtab {
 	display: inline-block;
 	position: relative;
 	height: 50px;
@@ -543,7 +549,14 @@ Menu tabs in starting bar
 	text-shadow:1.5px 1.5px 0px black;
 }
 
-#dropdown nav:hover {
+/*
+Noscript fallback!
+*/
+#dropdown .navtab a {
+	color:white;
+}
+
+#dropdown .navtab:hover {
 	background: rgba(238, 238, 238, .064);
 }
 
@@ -561,7 +574,7 @@ Element covering background of #dropdown.
 /*
 Where the navigation elements are stored on the page.
 */
-#dropdown nav ul {
+#dropdown .navtab ul {
 	display: none;
 }
 
@@ -786,11 +799,6 @@ Triple panel display above footer
 
 .twitter-timeline {
     position: relative;
-	top: 50%;
-	transform: translateY(-50%);
-    -mox-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
 }
 
 .display_current {

@@ -1,4 +1,4 @@
-var links = dropdown.getElementsByTagName("nav");
+var links = dropdown.getElementsByClassName("navtab");
 var active = null;
 
 
@@ -8,6 +8,10 @@ function clearBelow() {
 
 for (var i = 0; i < links.length; i++) {
 	(function(el) {
+		var atag = el.getElementsByTagName("a")[0].innerHTML;
+		var remainder = el.innerHTML;
+		remainder = remainder.substring(remainder.indexOf("</a>")+4);
+		el.innerHTML = atag + remainder;
 		el.onclick = function() {
 			if (active != el) {
 				//Open tab
