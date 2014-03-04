@@ -23,7 +23,7 @@ $add_script = array();
 						</div>
 					</div>
 				<!-- #205A8C is FIRST blue -->
-				<div class="background"><img src="http://adambots.com/logos/png/yellowBG_small.png" alt="AdamBots Team 245" height="60"></div>
+				<div class="background"><img style="margin:-10px;margin-right:4px;" src="<?php bloginfo("template_directory")?>/res/img/navAtomThin.png" alt="AdamBots Team 245" height="85"></div>
 				<?php dynamic_sidebar('About Submenu') ?>
 			</div>
 			<div class="twocolumns"> <!-- This actually doesn't really belong here but apparently doesn't hurt. -->
