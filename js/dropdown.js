@@ -11,7 +11,9 @@ for (var i = 0; i < links.length; i++) {
 		var atag = el.getElementsByTagName("a")[0].innerHTML;
 		var remainder = el.innerHTML;
 		remainder = remainder.substring(remainder.indexOf("</a>")+4);
-		el.innerHTML = atag + remainder;
+		if (i != 0) {
+			el.innerHTML = atag + remainder;
+		}
 		el.onclick = function() {
 			if (active != el) {
 				//Open tab
