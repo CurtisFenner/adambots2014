@@ -20,7 +20,7 @@ $add_script = array();
 
 				<div style="font-size:1.5em;line-height:40px;">
 					<em>FIRST</em>
-				<span style="font-size:16px;"><em>For Inspiration and Recognition of Science and Technology</span>
+				<span style="font-size:16px;"><em>For Inspiration and Recognition of Science and Technology</em></span>
 				</div><!--
 				<h2 style="padding:0;color:#FFF;height:40px;">
 					<em>FIRST</em> <span style="font-size:16px">For Inspiration and Recognition of Science and Technology</span>
