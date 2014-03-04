@@ -19,8 +19,8 @@ $add_script = array();
 			<div id="pagetype" style="background-color:#0166B3;">
 
 				<div style="font-size:1.5em;line-height:40px;">
-					Resources
-				<span style="font-size:16px;">Helpful Sections for the <em>FIRST</em> Community</span>
+					<em>FIRST</em>
+				<span style="font-size:16px;"><em>For Inspiration and Recognition of Science and Technology</span>
 				</div><!--
 				<h2 style="padding:0;color:#FFF;height:40px;">
 					<em>FIRST</em> <span style="font-size:16px">For Inspiration and Recognition of Science and Technology</span>
