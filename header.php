@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/css2014.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/fonts.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/reset.css">
-	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:400,300,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700%7CRoboto:400,300,700' rel='stylesheet' type='text/css'>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <script src='<?php bloginfo('template_directory'); ?>/js/twitter.js'></script>
     <script>

@@ -1,4 +1,4 @@
-		<div id="dropdown">
+		<div id="dropdown" class="nosel">
 			<span id="dropdownbackground"></span>
 			<div class="pagewidth">
 

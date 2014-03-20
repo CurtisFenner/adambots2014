@@ -1,6 +1,6 @@
 <?php /* Template Name: HomePage */ get_header(); ?>
 </div>
-<div id="gallerholder">
+<div id="gallerholder" class="nosel">
     <div id="gallerybox">
         <div id="galleryleft">
             <h3 class="gallerytitle">2013 Palmetto Regional Champions!</h3>
@@ -16,6 +16,28 @@
         </div>
     </div>
     <script src="<?php bloginfo('template_directory'); ?>/js/gallery.js" type="text/javascript"></script>
+<script>
+/*
+/////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////  GALLERY HERE  ///////////////////////////////////////
+*/
+gallery = [
+{
+url:"http://www.adambots.com/wp-content/uploads/2014/03/occrafoundation.png",
+title:"",
+text:"2013 <em>OCCRA</em> Foundation Award Winners, the AdamBots<br>at the 2013 <em>OCCRA</em> banquet."
+},
+{url:"http://www.adambots.com/wp-content/gallery/2013-palmetto-regional/dsc05249.jpg",
+title:"",
+text:"2013 Palmetto Regional Champions!<br>The AdamBots were champions at the Palmetto regional in Myrtle Beach, South Carolina with FRC team 11, MORT, and FRC team 2187, Team Volt."
+},
+{url:"https://scontent-b-iad.xx.fbcdn.net/hphotos-prn2/t31/1403082_527097967380821_1931756996_o.jpg",
+title:"",
+text:"The 2014 AdamBots FRC Team<br>Our team of seventy students from Rochester Adams and Stoney Creek High Schools"
+},
+{url:"https://scontent-a-iad.xx.fbcdn.net/hphotos-ash3/t1/941703_443991249024827_1714696335_n.jpg",title:"",text:"Meeting with Team Lambot in 2012"}
+];
+</script>
 </div>
 
 <div id="countdown" class="pagewidth"></div>
