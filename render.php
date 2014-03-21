@@ -223,112 +223,6 @@ void main(void) {
 <script src="/render/matrices.js"></script>
 <script>
 
-var alumRequest = new XMLHttpRequest();
-alumRequest.open("GET","/render/aluminumMesh.obj",false);
-alumRequest.send();
-
-
-var shooterRequest = new XMLHttpRequest();
-shooterRequest.open("GET","/render/shooterMesh.obj",false);
-shooterRequest.send();
-
-
-var blackRequest = new XMLHttpRequest();
-blackRequest.open("GET","/render/blackMesh.obj",false);
-blackRequest.send();
-
-
-
-var verts = [];
-var facein = [];
-var faces = [];
-var norms = [];
-var mats = [];
-
-var lines = alumRequest.responseText.split("\n");
-for (var i = 0; i < lines.length; i++) {
-	lines[i] = lines[i].split(" ");
-}
-for (var i = 0; i < lines.length; i++) {
-	var line = lines[i];
-	if (line[0] == "v") {
-		verts.push([line[1],line[2],line[3]]);
-		mats.push(0);
-	}
-	if (line[0] == "f") {
-		faces.push([verts[line[1]-1],verts[line[2]-1],verts[line[3]-1]]);
-		facein.push([line[1]-1,line[2]-1,line[3]-1]);
-	}
-}
-var vertexShift = verts.length;
-var lines = shooterRequest.responseText.split("\n");
-for (var i = 0; i < lines.length; i++) {
-	lines[i] = lines[i].split(" ");
-}
-for (var i = 0; i < lines.length; i++) {
-	var line = lines[i];
-	if (line[0] == "v") {
-		verts.push([line[1],line[2],line[3]]);
-		mats.push(1);
-	}
-	if (line[0] == "f") {
-		faces.push([verts[line[1]-1+vertexShift],verts[line[2]-1+vertexShift],verts[line[3]-1+vertexShift]]);
-		facein.push([line[1]-1 + vertexShift,line[2]-1 + vertexShift,line[3]-1 + vertexShift]);
-	}
-}
-var vertexShift = verts.length;
-var lines = blackRequest.responseText.split("\n");
-for (var i = 0; i < lines.length; i++) {
-	lines[i] = lines[i].split(" ");
-}
-for (var i = 0; i < lines.length; i++) {
-	var line = lines[i];
-	if (line[0] == "v") {
-		verts.push([line[1],line[2],line[3]]);
-		mats.push(2);
-	}
-	if (line[0] == "f") {
-		faces.push([verts[line[1]-1+vertexShift],verts[line[2]-1+vertexShift],verts[line[3]-1+vertexShift]]);
-		facein.push([line[1]-1 + vertexShift,line[2]-1 + vertexShift,line[3]-1 + vertexShift]);
-	}
-}
-
-var mins = [verts[0][0],verts[0][1],verts[0][2]];
-var maxs = [verts[0][0],verts[0][1],verts[0][2]];
-for (var i = 0; i < verts.length; i++) {
-	for (var j = 0; j < 3; j++) {
-		mins[j] = Math.min(mins[j],verts[i][j]);
-		maxs[j] = Math.max(maxs[j],verts[i][j]);
-	}
-}
-// center it, kay
-for (var i = 0; i < verts.length; i++) {
-	for (var j = 0; j < 3; j++) {
-		verts[i][j] -= (mins[j] + maxs[j]) / 2;
-	}
-}
-//var mins = [verts[0][0],verts[0][1],verts[0][2]];
-//var maxs = [verts[0][0],verts[0][1],verts[0][2]];
-for (var i = 0; i < verts.length; i++) {
-	for (var j = 0; j < 3; j++) {
-		//mins[j] = Math.min(mins[j],verts[i][j]);
-		//maxs[j] = Math.max(maxs[j],verts[i][j]);
-	}
-}
-
-var usedBy = [];
-var cornerNorm = [];
-var triNorm = [];
-for (var i = 0; i < verts.length; i++) {
-	usedBy[i] = [];
-}
-for (var i = 0; i < faces.length; i++) {
-	usedBy[facein[i][0]].push(i);
-	usedBy[facein[i][1]].push(i);
-	usedBy[facein[i][2]].push(i);
-	triNorm[i] = matrix.triangleNormal(faces[i][0],faces[i][1],faces[i][2]);
-}
-
 function sign(x) {
 	if (x == 0) {
 		return 0;
@@ -339,36 +233,175 @@ function sign(x) {
 	return -1;
 }
 
-for (var i = 0; i < faces.length; i++) {
-	cornerNorm[i] = [[0,0,0],[0,0,0],[0,0,0]];
-	for (var j = 0; j < 3; j++) { // j indexes the corner
-		var involved = usedBy[facein[i][j]];
-		var count = 0;
-		var myNorm = triNorm[i];
-		var resNorm = [0,0,0];
-		for (var k = 0; k < involved.length; k++) {
-			var thatTriangle = involved[k];
-			var thatNormal = triNorm[thatTriangle];
-			var dotted = matrix.dot(thatNormal,myNorm);
-			if (dotted > 0.9) {
-				count++;
-				resNorm[0] += thatNormal[0];
-				resNorm[1] += thatNormal[1];
-				resNorm[2] += thatNormal[2];
-			}
-			if (dotted < -0.9) {
-				count++;
-				resNorm[0] -= thatNormal[0];
-				resNorm[1] -= thatNormal[1];
-				resNorm[2] -= thatNormal[2];
-			}
+
+
+/*var alumRequest = new XMLHttpRequest();
+alumRequest.open("GET","/render/aluminumMesh.obj",false);
+alumRequest.send();
+
+var shooterRequest = new XMLHttpRequest();
+shooterRequest.open("GET","/render/shooterMesh.obj",false);
+shooterRequest.send();
+
+var blackRequest = new XMLHttpRequest();
+blackRequest.open("GET","/render/blackMesh.obj",false);
+blackRequest.send(); */
+
+var verts = [];
+var facein = [];
+var faces = [];
+var norms = [];
+var mats = [];
+var usedBy = [];
+var cornerNorm = [];
+var triNorm = [];
+
+function centerModel() {
+	var mins = [verts[0][0],verts[0][1],verts[0][2]];
+	var maxs = [verts[0][0],verts[0][1],verts[0][2]];
+	for (var i = 0; i < verts.length; i++) {
+		for (var j = 0; j < 3; j++) {
+			mins[j] = Math.min(mins[j],verts[i][j]);
+			maxs[j] = Math.max(maxs[j],verts[i][j]);
 		}
-		resNorm[0] /= count;
-		resNorm[1] /= count;
-		resNorm[2] /= count;
-		cornerNorm[i][j] = resNorm;
+	}
+	// center it, kay
+	for (var i = 0; i < verts.length; i++) {
+		for (var j = 0; j < 3; j++) {
+			verts[i][j] -= (mins[j] + maxs[j]) / 2;
+		}
 	}
 }
+
+function processMesh(request,material) {
+	var vertexShift = verts.length;
+	var lines = request.responseText.split("\n");
+	for (var i = 0; i < lines.length; i++) {
+		lines[i] = lines[i].split(" ");
+	}
+	for (var i = 0; i < lines.length; i++) {
+		var line = lines[i];
+		if (line[0] == "v") {
+			verts.push([line[1],line[2],line[3]]);
+			mats.push(material);
+		}
+		if (line[0] == "f") {
+			faces.push([verts[line[1]-1+vertexShift],verts[line[2]-1+vertexShift],verts[line[3]-1+vertexShift]]);
+			facein.push([line[1]-1 + vertexShift,line[2]-1 + vertexShift,line[3]-1 + vertexShift]);
+		}
+	}
+}
+
+var WAITING = 0;
+
+function retrieveMesh(url,material) {
+	WAITING++;
+	var r = new XMLHttpRequest();
+	r.open("GET",url,true);
+	r.onreadystatechange = function() {
+		if (r.readyState == 4) {
+			WAITING--;
+			processMesh(r,material);
+			if (WAITING == 0) {
+				centerModel();
+				generate();
+			}
+		}
+	}
+	r.send();
+}
+
+
+function generateNormals() {
+	for (var i = 0; i < verts.length; i++) {
+		usedBy[i] = [];
+	}
+	for (var i = 0; i < faces.length; i++) {
+		usedBy[facein[i][0]].push(i);
+		usedBy[facein[i][1]].push(i);
+		usedBy[facein[i][2]].push(i);
+		triNorm[i] = matrix.triangleNormal(faces[i][0],faces[i][1],faces[i][2]);
+	}
+	for (var i = 0; i < faces.length; i++) {
+		cornerNorm[i] = [[0,0,0],[0,0,0],[0,0,0]];
+		for (var j = 0; j < 3; j++) { // j indexes the corner
+			var involved = usedBy[facein[i][j]];
+			var count = 0;
+			var myNorm = triNorm[i];
+			var resNorm = [0,0,0];
+			for (var k = 0; k < involved.length; k++) {
+				var thatTriangle = involved[k];
+				var thatNormal = triNorm[thatTriangle];
+				var dotted = matrix.dot(thatNormal,myNorm);
+				if (dotted > 0.9) {
+					count++;
+					resNorm[0] += thatNormal[0];
+					resNorm[1] += thatNormal[1];
+					resNorm[2] += thatNormal[2];
+				}
+				if (dotted < -0.9) {
+					count++;
+					resNorm[0] -= thatNormal[0];
+					resNorm[1] -= thatNormal[1];
+					resNorm[2] -= thatNormal[2];
+				}
+			}
+			resNorm[0] /= count;
+			resNorm[1] /= count;
+			resNorm[2] /= count;
+			cornerNorm[i][j] = resNorm;
+		}
+	}
+}
+
+function generate() {
+	generateNormals();
+	var r = [];
+	for (var i = 0; i < faces.length; i++) {
+		r.push(faces[i][0]);
+		r.push(faces[i][1]);
+		r.push(faces[i][2]);
+		matFinal.push(mats[facein[i][0]]);
+		matFinal.push(mats[facein[i][1]]);
+		matFinal.push(mats[facein[i][2]]);
+		texs.push();
+		var n = matrix.triangleNormal(faces[i][0],faces[i][1],faces[i][2]);
+		norms.push(cornerNorm[i][0]);
+		norms.push(cornerNorm[i][1]);
+		norms.push(cornerNorm[i][2]);
+		//norms.push(n);
+		//norms.push(n);
+	}
+	for (var i = 0; i < matFinal.length; i++) {
+		texs[i] = valFor(matFinal[i]);
+		switch (matFinal[i]) {
+			case 0:
+				matFinal[i] = [0,0,0];
+				break;
+			case 1:
+				matFinal[i] = [0.5,0,0];
+				break;
+			case 2:
+				matFinal[i] = [0,0.5,0];
+				break;
+				case 3:
+				matFinal[i] = [0.5,0.5,0];
+				break;
+		}
+	}
+	gl.staticAttribute("pos",r);
+	gl.staticAttribute("norm",norms);
+	gl.staticAttribute("matPos",matFinal);
+	gl.staticAttribute("textureProp",texs);
+
+	begin();
+}
+
+retrieveMesh("/render/aluminumMesh.obj",0);
+retrieveMesh("/render/shooterMesh.obj",1);
+retrieveMesh("/render/blackMesh.obj",2);
+
+
 
 var texs = [];
 
@@ -406,46 +439,7 @@ function valFor(c) {
 	}
 }
 
-var r = [];
-for (var i = 0; i < faces.length; i++) {
-	r.push(faces[i][0]);
-	r.push(faces[i][1]);
-	r.push(faces[i][2]);
-	matFinal.push(mats[facein[i][0]]);
-	matFinal.push(mats[facein[i][1]]);
-	matFinal.push(mats[facein[i][2]]);
-	texs.push();
-	var n = matrix.triangleNormal(faces[i][0],faces[i][1],faces[i][2]);
-	norms.push(cornerNorm[i][0]);
-	norms.push(cornerNorm[i][1]);
-	norms.push(cornerNorm[i][2]);
-	//norms.push(n);
-	//norms.push(n);
-}
 
-for (var i = 0; i < matFinal.length; i++) {
-	texs[i] = valFor(matFinal[i]);
-	switch (matFinal[i]) {
-		case 0:
-			matFinal[i] = [0,0,0];
-			break;
-		case 1:
-			matFinal[i] = [0.5,0,0];
-			break;
-		case 2:
-			matFinal[i] = [0,0.5,0];
-			break;
-		case 3:
-			matFinal[i] = [0.5,0.5,0];
-			break;
-	}
-}
-
-
-gl.staticAttribute("pos",r);
-gl.staticAttribute("norm",norms);
-gl.staticAttribute("matPos",matFinal);
-gl.staticAttribute("textureProp",texs);
 
 var t = 0;
 
@@ -510,17 +504,21 @@ function loop() {
 }
 
 var gtex;
-
+var texloaded = false;
 function begin() {
+	if (!texloaded) {
+		setTimeout(begin,10);
+		return;
+	}
 	gtex = gl.createTexture(tex,0,"material");
 	setInterval(loop,20);
 }
 var tex = new Image();
-tex.src = "/render/combination.png";
+tex.src = "http://www.adambots.com/wp-content/uploads/2014/03/Swatch.png";
 
 
 
-tex.onload = begin;
+tex.onload = function(){texloaded = true;};
 </script>
 
 
