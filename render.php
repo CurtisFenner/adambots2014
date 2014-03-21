@@ -469,9 +469,28 @@ function move(e) {
 	mousey = nmousey;
 }
 document.onmousemove = move;
+document.ontouchmove = function(t) {
+	if (t && t.touches && t.touches[0])
+		move(t.touches[0]);
+	if (mousedown)
+		t.preventDefault();
+}
+
 function mouseDown() {
 	mousedown = true;
 }
+canvas.onclick = function() {};
+
+canvas.ontouchstart = function(e) {
+	mousedown = true;
+	e.preventDefault()
+}
+canvas.ontouchcancel = canvas.ontouchend = function(e) {
+	if (mousedown)
+		e.preventDefault()
+	mousedown = false;
+}
+
 canvas.onmousedown = mouseDown;
 function mouseUp() {
 	mousedown = false;
