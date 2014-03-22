@@ -396,7 +396,7 @@ function generate() {
 				matFinal[i] = [1/3,1/3,0];
 				break;
 			case 4:
-				matFinal[i] = [0,2/3,0];
+				matFinal[i] = [2/3,0,0];
 				break;
 		}
 	}
@@ -415,6 +415,7 @@ retrieveMesh("/render/aluminum.boj",0);
 retrieveMesh("/render/yellow.boj",1);
 retrieveMesh("/render/black.boj",2);
 retrieveMesh("/render/white.boj",3);
+retrieveMesh("/render/blue.boj",4);
 
 
 
