@@ -273,6 +273,48 @@ function centerModel() {
 	}
 }
 
+function binaryMesh(r,m) {
+	//The first 255 are redundant so we can skip them
+	var s = r.responseText.substring(256);
+	//The very first are the number
+	//  0    -- 1100  ONE
+	// -100  -- 1300  TWO
+	// -400  -- 400   THREE
+	var vshift = verts.length;
+
+	var vertices = s.substring(0,2);
+	vertices = convert(vertices);
+	s = s.substring(2);
+	for (var i = 0; i < s.length; i+=6) {
+		if (i/6 < vertices) {
+			var xyz = s.substr(i,6);
+			var x = xyz.substr(0,2);
+			var y = xyz.substr(2,2);
+			var z = xyz.substr(4,2);
+			x = convert(x) / 256 / 256;
+			y = convert(y) / 256 / 256;
+			z = convert(z) / 256 / 256;
+			x = x * 1100 - 0;
+			y = y * 1400 - 100;
+			z = z * 800 - 400;
+			verts.push([x,y,z]);
+			mats.push(m);
+		} else {
+			var xyz = s.substr(i,6);
+			var x = convert(xyz.substr(0,2));
+			var y = convert(xyz.substr(2,2));
+			var z = convert(xyz.substr(4,2));
+			var face = [x - 1 + vshift,y - 1 + vshift,z - 1 + vshift];
+			facein.push(face);
+			faces.push([verts[face[0]] , verts[face[1]] , verts[face[2]] ]);
+		}
+	}
+}
+
+function convert(a) {
+	return (a.charCodeAt(0) & 0xff) + (a.charCodeAt(1) & 0xff)*256;
+}
+
 function processMesh(request,material) {
 	var vertexShift = verts.length;
 	var lines = request.responseText.split("\n");
@@ -298,10 +340,11 @@ function retrieveMesh(url,material) {
 	WAITING++;
 	var r = new XMLHttpRequest();
 	r.open("GET",url,true);
+	r.overrideMimeType('text/plain; charset=x-user-defined');
 	r.onreadystatechange = function() {
 		if (r.readyState == 4) {
 			WAITING--;
-			processMesh(r,material);
+			binaryMesh(r,material);
 			if (WAITING == 0) {
 				centerModel();
 				generate();
@@ -397,9 +440,14 @@ function generate() {
 	begin();
 }
 
-retrieveMesh("/render/aluminumMesh.obj",0);
+/*retrieveMesh("/render/aluminumMesh.obj",0);
 retrieveMesh("/render/shooterMesh.obj",1);
-retrieveMesh("/render/blackMesh.obj",2);
+retrieveMesh("/render/blackMesh.obj",2);*/
+retrieveMesh("/render/aluminum.boj",0);
+retrieveMesh("/render/yellow.boj",1);
+retrieveMesh("/render/black.boj",2);
+retrieveMesh("/render/white.boj",3);
+
 
 
 
@@ -533,7 +581,8 @@ function begin() {
 	setInterval(loop,20);
 }
 var tex = new Image();
-tex.src = "http://www.adambots.com/wp-content/uploads/2014/03/Swatch.png";
+tex.src = "/render/combination.png";
+//tex.src = "http://www.adambots.com/wp-content/uploads/2014/03/Swatch.png";
 
 
 
