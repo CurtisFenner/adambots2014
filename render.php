@@ -111,41 +111,6 @@ vec3 cut(vec4 p) {
 }
 
 
-vec3 illuminationMetal(vec3 lightDir) {
-	vec3 view_dir = cut(rotsi * vec4(0.0,0.0,1.0,0.0));
-	vec3 r = brownian(position);
-	vec3 bumpedNormal = normal + r * 0.125;
-	float lambert = 0.5 * pow(max(0.0,dot(bumpedNormal + r * 0.45,lightDir)),0.8);
-	vec3 reflected = reflect(lightDir, normal);
-	float specular = max(0.0, -dot(reflected,view_dir) * step(0.0,dot(lightDir, bumpedNormal)) );
-	float shimmer = pow(specular * noise(position * 2.0).x,3.0);
-	specular = pow(specular, 10.0) / 3.0;
-	return lambert * vec3(0.95,0.95,1.0) + (specular + shimmer) * vec3(1.0,1.0,1.0);
-}
-
-vec3 illuminationPlastic(vec3 lightDir) {
-	vec3 view_dir = cut(rotsi * vec4(0.0,0.0,1.0,0.0));
-	float lambert = 0.5 * pow(max(0.0,dot(normal,lightDir)),0.8);
-	vec3 reflected = reflect(lightDir, normal);
-	float specular = max(0.0, -dot(reflected,view_dir) * step(0.0,dot(lightDir, normal)) );
-	specular = pow(specular, 100.0) * 3.0;
-	return lambert * vec3(1.0,0.81,0.038) * 1.7 + specular * vec3(1.0,1.0,1.0);
-}
-
-vec3 illuminationRubber(vec3 lightDir) { // needs work
-	vec3 view_dir = cut(rotsi * vec4(0.0,0.0,1.0,0.0));
-	float lambert = pow(max(0.0,dot(normal,lightDir) - 0.3),2.0) + 0.02;
-	vec3 reflected = reflect(lightDir, normal);
-	float specular = max(0.0, -dot(reflected,view_dir) * step(0.0,dot(lightDir, normal)) );
-	specular = pow(specular, 100.0) / 2.0;
-	return lambert * vec3(0.3,0.3,0.3) + specular * vec3(1.0,1.0,1.0);
-}
-
-vec3 illuminationBands(vec3 lightDir) { // needs work
-	vec3 view_dir = cut(rotsi * vec4(0.0,0.0,1.0,0.0));
-	float lambert = pow(max(0.0,dot(normal,lightDir)),2.0);
-	return lambert * vec3(1.5,1.0,0.5);
-}
 
 // black: 9, 13
 // yellow 4, 10
@@ -176,7 +141,7 @@ void main(void) {
 	ty /= m;
 	tx = (tx * 0.96 + 1.0) / 2.0;
 	ty = (ty * 0.96 + 1.0) / 2.0;
-	vec3 col = texture2D(material,vec2(tx,ty)/2.0 + matOffset).rgb;
+	vec3 col = texture2D(material,vec2(tx,ty)/3.0 + matOffset).rgb;
 	gl_FragColor = vec4(col,1.0);
 }
 
@@ -422,13 +387,16 @@ function generate() {
 				matFinal[i] = [0,0,0];
 				break;
 			case 1:
-				matFinal[i] = [0.5,0,0];
+				matFinal[i] = [1/3,0,0];
 				break;
 			case 2:
-				matFinal[i] = [0,0.5,0];
+				matFinal[i] = [0,1/3,0];
 				break;
-				case 3:
-				matFinal[i] = [0.5,0.5,0];
+			case 3:
+				matFinal[i] = [1/3,1/3,0];
+				break;
+			case 4:
+				matFinal[i] = [0,2/3,0];
 				break;
 		}
 	}
@@ -483,6 +451,7 @@ function valFor(c) {
 		return [100,0,20,0]
 		case 2:
 		case 3:
+		case 4:
 		return [40,0.1,9,0.1]
 	}
 }
