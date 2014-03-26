@@ -55,7 +55,7 @@ $add_script = array();
 
 
 <script src="/render/pleasant.js"></script>
-<script type="shader" id="fragment">
+<script type="text/shader" id="fragment">
 
 precision mediump float;
 uniform mat4 rots;
@@ -134,6 +134,11 @@ void main(void) {
 
 	vec3 scaler = abs(noise(position / scratchScale)) * scratchStrength + vec3(1.0,1.0,1.0);
 	vec3 snormal = (rots * vec4(normal,0.0)).xyz + noise(position / noiseScale *  scaler) * noiseStrength;
+
+	if (snormal.z < 0.0) {
+		discard;
+	}
+
 	float tx = snormal.x;
 	float ty = snormal.y;
 	float m = max(1.0, sqrt(tx*tx + ty*ty));
@@ -146,7 +151,7 @@ void main(void) {
 }
 
 </script>
-<script type="shader" id="vertex">
+<script type="text/shader" id="vertex">
 
 uniform float zoom;
 
@@ -169,6 +174,7 @@ attribute vec3 matPos;
 attribute vec4 textureProp;
 
 uniform mat4 rots;
+uniform float fog;
 
 void main(void) {
 	//Somewhere add in perspective
@@ -181,7 +187,7 @@ void main(void) {
 	vec4 tpos = rots * vec4(pos,1.0);
 	position = pos;
 
-	gl_Position = vec4(tpos.x / 1000.0 * zoom, tpos.y / 1000.0 * zoom, tpos.z / 2000.0, tpos.z / 5000.0 + 0.6);
+	gl_Position = vec4(tpos.x / 1000.0 * zoom, tpos.y / 1000.0 * zoom, tpos.z / 2000.0 + fog, tpos.z / 5000.0 + 0.6);
 }
 
 </script>
@@ -362,9 +368,12 @@ function generateNormals() {
 	}
 }
 
+var VERTICES;
+
 function generate() {
 	generateNormals();
 	var r = [];
+	VERTICES = r;
 	for (var i = 0; i < faces.length; i++) {
 		r.push(faces[i][0]);
 		r.push(faces[i][1]);
@@ -400,10 +409,7 @@ function generate() {
 				break;
 		}
 	}
-	gl.staticAttribute("pos",r);
-	gl.staticAttribute("norm",norms);
-	gl.staticAttribute("matPos",matFinal);
-	gl.staticAttribute("textureProp",texs);
+
 
 	begin();
 }
@@ -416,17 +422,12 @@ retrieveMesh("/render/yellow.boj",1);
 retrieveMesh("/render/black.boj",2);
 retrieveMesh("/render/white.boj",3);
 retrieveMesh("/render/blue.boj",4);
+retrieveMesh("/render/elec.boj",1);
 
 
 
 
 var texs = [];
-
-
-var gl = pleasantry(canvas);
-gl.vertexSource(vertex.innerHTML);
-gl.fragmentSource(fragment.innerHTML);
-gl.attributes(["pos","norm","matPos","textureProp"]);
 
 var matFinal = [];
 
@@ -494,12 +495,18 @@ document.ontouchmove = function(t) {
 		t.preventDefault();
 }
 
+var rotating = true;
+
 function mouseDown() {
 	mousedown = true;
+	rotating = false;
 }
 canvas.onclick = function() {};
 
 canvas.ontouchstart = function(e) {
+	if (e && e.touches && e.touches[0]) {
+		move(e.touches[0]);
+	}
 	mousedown = true;
 	e.preventDefault()
 }
@@ -521,13 +528,17 @@ res = null;
 var zoomAmt = 0.7;
 
 function loop() {
+	var fog = 0;//Math.sin( (new Date()).getTime() / 1000.0 );
 	if (!mousedown) {
 		dx -= vx;
 		dy -= vy;
 	}
 	vx *= 0.9;
 	vy *= 0.9;
-	dx = (dx + Math.PI * 2 * 100) % ( Math.PI * 2 * 100)
+	dx = (dx + Math.PI * 2 * 100) % ( Math.PI * 2 * 100);
+	if (rotating) {
+		dx+=0.25;
+	}
 	dy = Math.min(50, Math.max(-160,dy));
 	t += 0.01;
 	var r = matrix.identity(4);
@@ -537,16 +548,26 @@ function loop() {
 	gl.uniformFloat("zoom",zoomAmt);
 	gl.uniformMat4("rots",r);
 	gl.uniformMat4("rotsi",matrix.invert4(r));
+	gl.uniformFloat("fog",fog);
 	gl.triangleList("pos");
 }
 
 var gtex;
 var texloaded = false;
+var gl;
 function begin() {
 	if (!texloaded) {
 		setTimeout(begin,10);
 		return;
 	}
+	gl = pleasantry(canvas);
+	gl.vertexSource(vertex.innerHTML);
+	gl.fragmentSource(fragment.innerHTML);
+	gl.attributes(["pos","norm","matPos","textureProp"]);
+	gl.staticAttribute("pos",VERTICES);
+	gl.staticAttribute("norm",norms);
+	gl.staticAttribute("matPos",matFinal);
+	gl.staticAttribute("textureProp",texs);
 	gtex = gl.createTexture(tex,0,"material");
 	setInterval(loop,20);
 }
