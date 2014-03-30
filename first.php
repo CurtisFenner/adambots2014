@@ -20,7 +20,7 @@ $add_script = array();
 					<em>FIRST</em>
 					<span style="vertical-align:baseline;font-size:50%;line-height:50%;"><em>For Inspiration and Recognition of Science and Technology</em></span>
 				</div>
-				<div class="background"><img src="http://adambots.com/logos/png/yellowBG_small.png" height="60" alt="AdamBots Team 245"></div>
+				<div class="background"><img src="<?php bloginfo('template_directory'); ?>/res/img/firstmono.png" height="60" alt="FIRST logo"></div>
 				<?php dynamic_sidebar('FIRST Submenu') ?>
 			</div>
 			<div class="twocolumns">
