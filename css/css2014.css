@@ -1,3 +1,44 @@
+/*
+Doge stuff. DO NOT UNCOMMENT.
+* {
+
+	font-family:"Comic Sans MS" !important;
+	color:orange !important;
+	text-shadow:none !important;
+	font-size:90%;
+	text-transform: lowercase !important;
+	text-align:center !important;
+	line-height:110%;
+}
+
+*:nth-of-type(3n):before {
+	content:"so ";
+}
+*:nth-of-type(3n+1):before {
+	content:"very ";
+}
+*:nth-of-type(3n+2):before {
+	content:"much ";
+}
+
+body {
+	font-size:40px !important;
+}
+*/
+
+.nosel {
+    -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+    -moz-user-select: none; /* mozilla browsers */
+    -khtml-user-select: none; /* webkit (konqueror) browsers */
+    -ms-user-select: none; /* IE10+ */
+}
+
+#twitter {
+	overflow-y:scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
+
 /**************************************
 			GENERIC ELEMENTS
 ***************************************/
@@ -8,18 +49,15 @@ body {
 	font-family: "Roboto Condensed";
 	margin: 0px;
 	/*Optional page fadein*/
-	animation: fadein .75s;
+	/*animation: fadein .75s;
 	-moz-animation: fadein .75s;
 	-webkit-animation: fadein .75s;
-	-o-animation: fadein .75s;
+	-o-animation: fadein .75s;*/
     /*background-image: url('../res/img/noise.png');*/
 	background-image:url("../res/img/noisy.png");
 }
 
-em:after {
-	/* fixes slant overlapping letters on condensed font*/
-	content: " ";
-}
+
 
 a {
 	text-decoration:none;
@@ -28,6 +66,26 @@ a {
 
 .clear {
     clear: both;
+}
+
+hr {
+	height:6px;
+	margin:0;
+	margin-left:-20px;
+	margin-right:-20px;
+	padding:0;
+	position:relative;
+	background:#F00;
+	background-color:#252525;
+	background-image:url("http://localhost/wordpress/wp-content/themes/adambots2014/res/img/noisy.png");
+	border: none;
+	margin-top:30px;
+	margin-bottom:20px;
+}
+
+.dim {
+	opacity:0.8;
+	font-size:80%;
 }
 
 /**************************************
@@ -40,7 +98,9 @@ a {
 	margin-left: auto;
 	margin-right: auto;
 	position:relative;
-    
+}
+
+#homepage .pagewidth {
     animation-timing-function:cubic-bezier(.30, 0, 0, 1);
     animation: slidein .75s;
 	-moz-animation: slidein .75s;
@@ -80,14 +140,12 @@ The bar between the navbar and the page.
 	line-height:30px;
 	background-image:url("../res/img/noisy.png");
 	padding-left:20px;
-	color:white;
+	color:#111;
 	font-weight:bold;
 	font-size:24px;
 
-	box-shadow:inset 0px -30px 30px -30px rgba(0,0,0,0.75);
     /*-webkit-text-stroke-width: 1px;*/
     /*-webkit-text-stroke-color: black;*/
-	text-shadow: 0px 1px 0px black,-1px 0px 0px black,1px 0px 0px black,0px -1px 0px black;
 }
 
 #pagetype .background {
@@ -104,19 +162,33 @@ The bar between the navbar and the page.
 	display:inline-block;
 	padding:0;
 	margin:0;
+    right:0 !important;
+    position:relative;
 }
 
-#pagetype .subnav li {
-	margin-right:10px;
+
+#pagetype .subnav li a {
+	padding-left:7px;
+	padding-right:7px;
 	font-weight:normal;
 }
 
-#pagetype .subnav .current-menu-item {
+#pagetype .subnav li:hover {
+	background:rgba(255,255,255,0.35);
+	border-radius:3px;
+	cursor:pointer;
+}
+
+#pagetype.blacktext a {
+	color:black !important;
+}
+
+#pagetype .subnav li.current-menu-item a {
 	font-weight:bold;
 }
 
 #pagetype .subnav a {
-	color:white;
+	color:#FFF;
 	font-size:16px;
 }
 
@@ -127,24 +199,49 @@ The bar between the navbar and the page.
 
 #leftcol {
 	width:594px;
-	background-image:url("../res/img/noisy.png");
 	padding:20px;
+	float:left;
+	position:relative;
 }
 
-#rightcolbg {
-	position:absolute;
+#rightcol {
 	right:0px;
 	top:0px;
 	height:100%;
-	width:320px;
-	background-image:url("../res/img/noisy.png");
-}
-#rightcol {
+	width:280px;
 	padding:20px;
+	float:right;
+	position:relative;
+}
+
+#atomrightcontainer {
+	position:absolute;
+	right:0;
+	top:0;
+	bottom:0;
+	left:0;
 	overflow:hidden;
 }
 
-#twocolumns {
+#twocolumnbackground {
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	width:320px;
+	height:540px;
+	background-image:url("../res/img/atomright.png");
+}
+
+#onecolumnbackground {
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	width:320px;
+	height:540px;
+	background-image:url("../res/img/atomleft.png");
+}
+
+.twocolumns {
 	position:relative;
 	width:960px;
 	margin:auto;
@@ -152,13 +249,14 @@ The bar between the navbar and the page.
 	margin-top:6px;
 }
 
-#rightcolatom {
-	position:absolute;
-	left:0px;
-	bottom:0px;
-	width:320px;
-	height:540px;
-	background-image:url("../res/img/atomright.png");
+.onecolumn {
+	position:relative;
+	width:920px;
+	margin:auto;
+	margin-top:6px;
+	background-color:white;
+	background-image:url("../res/img/noisy.png");
+	padding:20px;
 }
 
 .spacer {
@@ -175,10 +273,10 @@ The bar between the navbar and the page.
 	z-index:-5;
 	top:0px;
     
-    animation: fadein .5s;
-	-moz-animation: fadein .5s;
-	-webkit-animation: fadein .5s;
-	-o-animation: fadein .5s;
+    animation: fadein .75s;
+	-moz-animation: fadein .75s;
+	-webkit-animation: fadein .75s;
+	-o-animation: fadein .75s;
     
     animation-delay: 1.5s;
     -moz-animation-delay: 1.5s;
@@ -223,7 +321,6 @@ The bar between the navbar and the page.
     overflow:hidden;
 	/*box-shadow:0px 0px 1px 5px rgba(0,0,0,.5);*/
 	margin-top:20px;
-    font-style: bold;
     box-shadow: 0 0 10px #000;
 }
 
@@ -243,8 +340,12 @@ The bar between the navbar and the page.
 }
 
 #gallerybuttonleft, #gallerybuttonright {
-	position:absolute;
-	top:35%;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+    -mox-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
 	cursor:pointer;
 
 	width:0px;
@@ -281,10 +382,9 @@ The bar between the navbar and the page.
     left: 0;
     right: 0;
     padding: 25px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
     background-color: rgba(34,34,34,.75);
-    background-image:url('../res/img/noisy.png');
     text-align: right;
     color: #eee;
     text-shadow: 0 0 5px #000;
@@ -316,11 +416,33 @@ The bar between the navbar and the page.
 	margin: 25px;
 	margin-left: 50px;
 }
-#atom {
-	height: inherit;
-	position: relative;
-	float: left;
+
+.button {
+	display:inline-block;
+	color:white;
+	font-weight:bold;
+	border-radius:2px;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	width:151px;
+	position:relative;
+	font-size:15px;
+	overflow:hidden;
+	box-shadow:inset 0px -5px 30px 0px;
 }
+
+.button:active {
+	box-shadow:inset 0px 5px 30px 0px;
+}
+
+#social .button a {
+	margin:0px;
+	color:white;
+	position:absolute;
+	left:0;right:0;top:0;bottom:0;
+}
+
 #social {
 	height: inherit;
 	margin: 40px;
@@ -361,11 +483,10 @@ The bar between the navbar and the page.
 	position:relative;
     text-align:center;
     width:100%;
-    height:200px;
+    height:300px;
     background: url('../res/img/noisy.png'),url('../res/img/footerGrad.png');
-}
-#footercontainer {
-	top:50px;position:relative;font-size:12px;color:#444;margin:auto;text-align:center; width:950px;
+    font-size:12px;
+    color:#444;
 }
 
 #footerjustify {
@@ -400,18 +521,20 @@ Bar containing menu items.
 	height: 50px;
 	padding-left: 20px;
 	line-height: 50px;
+    /* invalid CSS, doesn't appear to do anything?
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+    */
 }
 
 /*
 Menu tabs in starting bar
 */
-#dropdown nav {
+#dropdown .navtab {
 	display: inline-block;
 	position: relative;
 	height: 50px;
@@ -432,7 +555,14 @@ Menu tabs in starting bar
 	text-shadow:1.5px 1.5px 0px black;
 }
 
-#dropdown nav:hover {
+/*
+Noscript fallback!
+*/
+#dropdown .navtab a {
+	color:white;
+}
+
+#dropdown .navtab:hover {
 	background: rgba(238, 238, 238, .064);
 }
 
@@ -450,7 +580,7 @@ Element covering background of #dropdown.
 /*
 Where the navigation elements are stored on the page.
 */
-#dropdown nav ul {
+#dropdown .navtab ul {
 	display: none;
 }
 
@@ -554,18 +684,17 @@ Triple panel display above footer
 .panel {
 	position:absolute;
     margin-top: 5px;
-	background:#FAFAFA;
+	background:#EEE;
 	background-image:url("../res/img/noisy.png");
     box-shadow: 0 0 10px #000;
+    padding-top: 25px;
+}
+
+.panel a h3 {
+    font-size: 20px;
 }
 
 #panelcontainer {
-    margin-top:6px;
-	width: 960px;
-	margin-left: auto;
-	margin-right: auto;
-	position:relative;
-    
     animation-timing-function:cubic-bezier(.30, 0, 0, 1);
     animation: slidein 1.5s;
 	-moz-animation: slidein 1.5s;
@@ -576,30 +705,25 @@ Triple panel display above footer
 		  NEXTGEN GALLERY MODS
 ***************************************/
 
-img.ngg-singlepic  {
-	outline:1px solid #AAA !important;
-}
+
 
 /**************************************
 		  NEXTGEN GALLERY MODS
 ***************************************/
-#countdown.css-ignore-parent {
+#countdown {
     max-width:930px;
     margin-left:auto;
     margin-right:auto;
-    padding:15px;
-    padding-left:auto;
-    padding-right:auto;
     font-weight:bold;
     color:#eee;
-    height:42px;
-    line-height:42px;
-    font-size:16px;
+    height:60px;
+    line-height:60px;
+    font-size:18px;
     
-    animation: fadein .5s;
-	-moz-animation: fadein .5s;
-	-webkit-animation: fadein .5s;
-	-o-animation: fadein .5s;
+    animation: fadein .75s;
+	-moz-animation: fadein .75s;
+	-webkit-animation: fadein .75s;
+	-o-animation: fadein .75s;
     
     animation-delay: 1.5s;
     -moz-animation-delay: 1.5s;
@@ -612,12 +736,11 @@ img.ngg-singlepic  {
 ***************************************/
 #bodycards {
     max-width: 960px;
+    height: 375px;
     margin-left: auto;
     margin-right: auto;
     padding: 0px;
-    overflow: hidden;
     position: relative;
-    box-shadow: 0 0 10px #000;
     
     animation-timing-function:cubic-bezier(.30, 0, 0, 1);
     animation: slidein 1.25s;
@@ -627,36 +750,79 @@ img.ngg-singlepic  {
 }
 
 #teaminfo {
-    width: 560px;
-    padding: 25px;
-    paddin-bottom: 0;
+    width: 610px;
+    height: 375px;
     background-color: #ffd802;
     float: left;
+    background-image:url("../res/img/noisy.png");
+    box-shadow: 0 0 10px #000;
+}
+
+#teaminfo p {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align:justify;
+    font-size:17px;
+    line-height: 25px;
+}
+
+#teaminfo p strong {
+    font-size: 18px;
+}
+
+#teaminfo strong em a {
+    color: #494949;
+}
+
+#teamatom {
+    padding-top: 25px;
+    width: 610px;
+    text-align:center;
+}
+
+#teaminfo img {
+    position: relative;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    height:80px;
+}
+
+#twitter {
+    width: 290px;
+    height: 100%;
+    padding-left:25px;
+    padding-right:25px;
+    position:absolute;
+    float: right;
+    right:0;
+    background-color: #444;
+	background-image:url("../res/img/noisy.png");
+    box-shadow: 0 0 10px #000;
 }
 
 .twitter-timeline {
-    width: 300px;
-    height: 100%;
-    padding: 25px;
-    float: right;
-    background-color: #111;
-	background-image:url("../res/img/noisy.png");
-    position: absolute;
-    box-shadow: inset 10px 0 10px -10px #000;
+    position: relative;
 }
 
-#seasoncard {
-    max-width:630px;
-    padding-top: 5px;
+.display_current {
+    max-width:585px;
+    height:45px;
     padding-left:25px;
     font-weight:bold;
-    color:#222;
-    height:42px;
+    color:#eee;
     line-height:42px;
     font-size:16px;
-    background-color: #eee;
-	background-image:url("../res/img/noisy.png");
-    box-shadow: inset -4px 4px 4px #494949;
+    background-color: #222;
+    bottom: 0;
+}
+
+.display_current a {
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #ffd802;
 }
 
 /**************************************
@@ -684,28 +850,6 @@ Holds sliding descriptions
 		opacity: 1;
 	}
 }
-@-moz-keyframes fadein {
-	from {
-		opacity: 0;
-	} to {
-		opacity: 1;
-	}
-}
-@-webkit-keyframes fadein {
-	from {
-		opacity: 0;
-	} to {
-		opacity: 1;
-	}
-}
-@-o-keyframes fadein {
-	from {
-		opacity: 0;
-	} to {
-		opacity: 1;
-	}
-}
-
 @keyframes slidein {
     from{
         left:-100%;
@@ -713,38 +857,18 @@ Holds sliding descriptions
         left:0;
     }
 }
-@-moz-keyframes slidein {
-    from{
-        left:-100%;
-    } to {
-        left:0;
-    }
-}
 @-webkit-keyframes slidein {
-    from{
-        left:-100%;
-    } to {
-        left:0;
+    from {
+        left: -100%;
+    }
+    to {
+        left: 0;
     }
 }
-@-o-keyframes slidein {
-    from{
-        left:-100%;
-    } to {
-        left:0;
-    }
-}
-
-/**************************************
-        PAGE ANIMATION TIMEOUT
-***************************************/
-.css-transitions-only-after-page-load * {
-  -webkit-transition: none !important;
-  -moz-transition: none !important;
-  -ms-transition: none !important;
-  -o-transition: none !important;
-}
-
-.css-ignore-parent * {
-    
+@-webkit-keyframes fadein {
+	from {
+		opacity: 0;
+	} to {
+		opacity: 1;
+	}
 }
