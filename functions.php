@@ -1,17 +1,21 @@
 <?php
+
+
+
+
 function shortcode_left($atts, $content=null){
-   return '<div id="leftcol">' . do_shortcode($content) . '</div>';
+   return '<div class="twocolumns"><div id="atomrightcontainer"><div id="twocolumnbackground"></div></div><div id="leftcol">' . do_shortcode($content) . '</div>';
 }
-add_shortcode('left','shortcode_left');
+//add_shortcode('left','shortcode_left');
 
 function shortcode_right($atts, $content=null){
-   return '<div id="rightcolbg"><div id="rightcol">' . do_shortcode($content) . '</div><div id="rightcolatom"></div></div>';
+   return '<div id="rightcol">' . do_shortcode($content) . '</div><div class="clear"></div></div>';
 }
-add_shortcode('right','shortcode_right');
+//add_shortcode('right','shortcode_right');
 
 
 function shortcode_bigdivider($atts, $content=null) {
-	return '<div style="opacity:0.3;width:100%;height:40px;background:url(\'' . get_bloginfo('template_directory') .  '/res/img/Divider Glow.png\');margin-top:20px;margin-bottom:20px"></div>';
+	return '<hr/>';
 }
 add_shortcode('bigdivider','shortcode_bigdivider');
 
@@ -43,12 +47,14 @@ if (!function_exists('pristine_register_menus')) {
 
 
 if ( function_exists('register_sidebar') ) {
-	$args = array(
-	'name' => 'Default Sidebar',
-	'before_widget' => '<div class="sidebar-box">',
-	'after_widget' => '</div>',
-	'before_title' => '<h4>',
-	'after_title' => '</h4>');
+
+		$args = array(
+		'name'          => 'Blog Sidebar',
+		'id'            => 'blog-sidebar',
+		'before_widget' => '<div class="display_infotext">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>' );
 
 	register_sidebar($args);
 		
@@ -204,6 +210,15 @@ if ( function_exists('register_sidebar') ) {
 
 	register_sidebar($args);
 	
+
+	$args = array(
+	'name' => 'Dropdown Content',
+	'before_widget' => '',
+	'after_widget' => '',
+	'before_title' => '',
+	'after_title' => '');
+
+	register_sidebar($args);
 	
 }
 
@@ -283,6 +298,27 @@ add_filter('page_css_class', 'my_css_attributes_filter', 100, 1);
 
 
 
+
+function pre_process_shortcode($content) {
+    global $shortcode_tags;
+ 
+    // Backup current registered shortcodes and clear them all out
+    $orig_shortcode_tags = $shortcode_tags;
+    $shortcode_tags = array();
+ 
+        add_shortcode("left","shortcode_left");
+        add_shortcode("right","shortcode_right");
+ 
+    // Do the shortcode (only the one above is registered)
+    $content = do_shortcode($content);
+ 
+    // Put the original shortcodes back
+    $shortcode_tags = $orig_shortcode_tags;
+ 
+    return $content;
+}
+ 
+add_filter('the_content', 'pre_process_shortcode', 7);
 
 
 

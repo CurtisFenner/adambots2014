@@ -3,25 +3,18 @@
 var gx = 0;
 var tgx = 0;
 
-var gallery = [
-{url:"http://www.adambots.com/wp-content/gallery/2013-palmetto-regional/dsc05249.jpg",
-title:"",
-text:"2013 Palmetto Regional Champions!<br>The AdamBots were champions at the Palmetto regional in Myrtle Beach, South Carolina with FRC team 11, MORT, and FRC team 2187, Team Volt."
-},
-{url:"https://scontent-b-iad.xx.fbcdn.net/hphotos-prn2/t31/1403082_527097967380821_1931756996_o.jpg",
-title:"",
-text:"The 2014 AdamBots FRC Team<br>Our team of seventy students from Rochester Adams and Stoney Creek High Schools"
-},
-{url:"https://scontent-a-iad.xx.fbcdn.net/hphotos-ash3/t1/941703_443991249024827_1714696335_n.jpg",title:"",text:"WOW<br>SO DOGE"}
-];
+var gallery = [];
 
-gx = -gallery.length * 1000;
+gx = 1000;
 tgx = gx;
 
 var pgx = -19;
 
 function galleryupdate() {
-	gx = gx * 0.7 + 0.3 * tgx;
+	if (document.getElementsByClassName("gallerytext").length < 1) {
+		return;
+	}
+	gx = gx * 0.6 + 0.4 * tgx;
 	if (Math.abs(gx) < .001) {
 		gx = 0.001;
 	}
@@ -38,15 +31,19 @@ function galleryupdate() {
 	}
 }
 
-setInterval(galleryupdate,1000/60);
+setInterval(galleryupdate,1000/30);
 
 function manageGalleryItem(element,x) {
-	var xmod = -x % 1;
+	var xmod = -(x % 1);
 	if (xmod < 0)
 		xmod = 1 + x;
 
-	var index = x - xmod;
+	var index = x - (x % 1 + 1) % 1;
 	index = ( gallery.length + index % gallery.length ) % gallery.length;
+
+	if (!gallery[index]) {
+		return;
+	}
 	//element.getElementsByClassName("galleryimage")[0].src = gallery[index].url;
 	var style = "url('" + gallery[index].url + "')";
 	element.style.backgroundImage = style;

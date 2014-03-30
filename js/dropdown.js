@@ -1,4 +1,4 @@
-var links = dropdown.getElementsByTagName("nav");
+var links = dropdown.getElementsByClassName("navtab");
 var active = null;
 
 
@@ -8,6 +8,12 @@ function clearBelow() {
 
 for (var i = 0; i < links.length; i++) {
 	(function(el) {
+		var atag = el.getElementsByTagName("a")[0].innerHTML;
+		var remainder = el.innerHTML;
+		remainder = remainder.substring(remainder.indexOf("</a>")+4);
+		if (i != 0) {
+			el.innerHTML = atag + remainder;
+		}
 		el.onclick = function() {
 			if (active != el) {
 				//Open tab
@@ -19,16 +25,18 @@ for (var i = 0; i < links.length; i++) {
 				}
 				try {
 					el.style.backgroundColor = "rgb(255,216,2)"; //Throws an error in IE8
-					el.style.backgroundImage = 'url("http://localhost/wordpress/wp-content/themes/adambots2014/res/img/noisy.png")';
+					el.style.backgroundImage = 'url("/wp-content/themes/adambots2014/res/img/noisy.png")';
 					el.style.color = "rgb(17,17,17)"
 					el.style.textShadow = "none";
 				} catch (e) {}
 				active = el;
 				clearBelow();
 				var uls = el.getElementsByTagName("ul");
-				below.innerHTML = "<ul class='left'>" + uls[0].innerHTML + "</ul>";
-				if (uls.length > 1)
-					below.innerHTML += "<ul class='right'>" + uls[1].innerHTML + "<ul>";
+				below.innerHTML = "";
+				for (var i = 0; i < uls.length; i++) {
+					var cname = (i >= uls.length / 2) ? "right" : "left";
+					below.innerHTML += "<ul class='" + cname + "'>" + uls[i].innerHTML + "</ul>";
+				}
 				below.innerHTML += "<div style='clear:both;'></div>";
 			} else {
 				//Close tab
