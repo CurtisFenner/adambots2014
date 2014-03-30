@@ -1,12 +1,21 @@
+"use strict";
+
 (function() {
 	var gearContext1 = gears1.getContext("2d");
 	var gearContext2 = gears2.getContext("2d");
 
+    var retina = window.devicePixelRatio > 1;
+    
+    if (!retina) {
+            gears1.width = "212";
+            gears2.width = "272";
+    }
+    
 	gears1.style.left = "43px";
 	gears1.style.top = "43px";
 	gears2.style.left = "212px";
 	gears2.style.top = "-82px";
-
+    
 	var roundy = true;	//can be disabled. marks gears thinner, sharper
 
 	/*
@@ -26,9 +35,14 @@
 	*/
 
 	function drawGears() {
-		gearContext1.clearRect(0,0,424,424);
-		gearContext2.clearRect(0,0,544,544);
-		gearContext1.fillStyle = "#353535";
+        if (retina) {
+            gearContext1.clearRect(0,0,424,424);
+            gearContext2.clearRect(0,0,544,544);
+        } else {
+            gearContext1.clearRect(0,0,212,212);
+            gearContext2.clearRect(0,0,272,272);
+        }
+        gearContext1.fillStyle = "#353535";
 		gearContext2.fillStyle = "#353535";
 		gear(100,70,0,-.5, 0.515, gearContext1 );
 		gear(130,100,0,.5,0, gearContext2 );
@@ -50,7 +64,9 @@
 		g = g +  Math.sin(g); //stops at n pi , n pi. So we need to divide by 8.
 		g = g / 6; //to stop at (pi/8,pi/8)
 		c.save();
-		c.scale(2,2);
+        if (retina) {
+            c.scale(2,2);
+        }
 		c.translate(r1+6,r1+6);
 		c.rotate(g);
 		c.moveTo(0,0);
