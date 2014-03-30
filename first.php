@@ -18,7 +18,7 @@ $add_script = array();
 			<div id="pagetype" style="background-color:#0166B3;">
 				<div style="font-size:1.5em;line-height:40px;">
 					<em>FIRST</em>
-					<span style="font-size:16px;"><em>For Inspiration and Recognition of Science and Technology</em></span>
+					<span style="vertical-align:baseline;font-size:50%;line-height:50%;"><em>For Inspiration and Recognition of Science and Technology</em></span>
 				</div>
 				<div class="background"><img src="http://adambots.com/logos/png/yellowBG_small.png" height="60" alt="AdamBots Team 245"></div>
 				<?php dynamic_sidebar('FIRST Submenu') ?>
