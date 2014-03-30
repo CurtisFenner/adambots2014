@@ -20,35 +20,35 @@ $add_script = array();
 				<h2 style="padding:0;color:#FFF;height:40px;">
 					Photo and Video
 				</h2>
-				<div class="background"><img src="http://adambots.com/logos/png/yellowBG_small.png" height="60"></div>
+				<div class="background"><img style="margin:-10px;margin-right:4px;" src="<?php bloginfo("template_directory")?>/res/img/navBarAtomRed.png" alt="AdamBots Team 245" height="85"></div>
 				<?php dynamic_sidebar('Media Gallery Submenu') ?>
 			</div>
-            
-            <div style="padding:20px;background-color:#FFF;background-image:url('<?php bloginfo("template_directory"); ?>/res/img/noisy.png');margin-top:6px;">
-            <?php 
-                $edit_attr = array(
-                    'alt' => get_the_title(),
-                    'title' => '',
-                    'class' => 'floatright'
-                    );
-                $post_image = get_the_post_thumbnail($post->ID,'pristine-custom-image-medium1', $edit_attr);					
-            ?>
-            <?php
-                if(!empty($post_image)) {
-                    echo $post_image;
-                }
-            ?>
+			
+			<div style="padding:20px;background-color:#FFF;background-image:url('<?php bloginfo("template_directory"); ?>/res/img/noisy.png');margin-top:6px;">
+			<?php 
+				$edit_attr = array(
+					'alt' => get_the_title(),
+					'title' => '',
+					'class' => 'floatright'
+					);
+				$post_image = get_the_post_thumbnail($post->ID,'pristine-custom-image-medium1', $edit_attr);					
+			?>
+			<?php
+				if(!empty($post_image)) {
+					echo $post_image;
+				}
+			?>
 <h1>
 <?php the_title();?>
 </h1>
-            <?php the_content(); ?>
-            <?php endwhile; ?>
-                <!-- post navigation -->
-            <?php else: ?>
-                <!-- no posts found -->
-            <?php endif; ?>
-            </div>
-            <script type='text/javascript' src='http://adambots.com/FenLightbox/lightbox.js'></script>
+			<?php the_content(); ?>
+			<?php endwhile; ?>
+				<!-- post navigation -->
+			<?php else: ?>
+				<!-- no posts found -->
+			<?php endif; ?>
+			</div>
+			<script type='text/javascript' src='http://adambots.com/FenLightbox/lightbox.js'></script>
 		</div>
 	</div>
 <?php get_footer(); ?>

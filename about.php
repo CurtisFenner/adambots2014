@@ -22,7 +22,6 @@ $add_script = array();
 						<img style="margin:0" height="28" alt="AdamBots" src="<?php bloginfo("template_directory")?>/res/img/adambots_text_outlined.png"/>
 					</div>
 				</div>
-				<!-- #205A8C is FIRST blue -->
 				<div class="background"><img style="margin:-10px;margin-right:4px;" src="<?php bloginfo("template_directory")?>/res/img/navAtomThin.png" alt="AdamBots Team 245" height="85"></div>
 				<?php dynamic_sidebar('About Submenu') ?>
 			</div>
