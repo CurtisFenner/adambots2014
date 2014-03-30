@@ -59,6 +59,14 @@ text:"The 2014 AdamBots FRC Team<br>Our team of seventy students from Rochester 
     <div class="clear"></div>
 </div>
 
+<div id="robotinfo" class="pagewidth">
+    <div id="robotimg">
+        <img src="<?php bloginfo('template_directory'); ?>/res/img/robot-cropped.png">
+    </div>
+    <div id="robottext">some text about our wonderful robot</div>
+    <div class="clear"></div>
+</div>
+
 <div class="pagewidth" id="panelcontainer" style="position:relative;height:420px;top:0;">
     <div class="panel" style="width:314px;height:325px;left:0;top:0;text-align:center;">
         <a href="http://www.usfirst.org">
