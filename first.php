@@ -14,17 +14,12 @@ $add_script = array();
 ?>
 <?php get_header(); ?>
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		<div class="page_shadowline"></div>
 		<div class="pagewidth">
 			<div id="pagetype" style="background-color:#0166B3;">
-
 				<div style="font-size:1.5em;line-height:40px;">
 					<em>FIRST</em>
-				<span style="font-size:16px;"><em>For Inspiration and Recognition of Science and Technology</em></span>
-				</div><!--
-				<h2 style="padding:0;color:#FFF;height:40px;">
-					<em>FIRST</em> <span style="font-size:16px">For Inspiration and Recognition of Science and Technology</span>
-				</h2>-->
+					<span style="font-size:16px;"><em>For Inspiration and Recognition of Science and Technology</em></span>
+				</div>
 				<div class="background"><img src="http://adambots.com/logos/png/yellowBG_small.png" height="60" alt="AdamBots Team 245"></div>
 				<?php dynamic_sidebar('FIRST Submenu') ?>
 			</div>
