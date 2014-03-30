@@ -16,7 +16,7 @@ $add_script = array();
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<div class="pagewidth">
 			<div id="pagetype" style="background-color:#0166B3;">
-				<div style="font-size:1.5em;line-height:40px;">
+				<div style="font-size:1.5em;line-height:40px;color:white;">
 					<em>FIRST</em>
 					<span style="vertical-align:baseline;font-size:50%;line-height:50%;"><em>For Inspiration and Recognition of Science and Technology</em></span>
 				</div>
