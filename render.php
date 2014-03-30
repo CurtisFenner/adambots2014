@@ -54,7 +54,190 @@ $add_script = array();
 
 
 
-<script src="/render/pleasant.js"></script>
+
+<script>
+"use strict";
+
+function pleasantry(canvas) {
+	var r = {};
+	var gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+	if (!gl) {
+		canvas.style.background = "url('/render/webgl.png')";
+		return;
+	}
+	gl.enable(gl.DEPTH_TEST);
+	gl.depthFunc(gl.LESS);
+	r.context = gl;
+	var fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
+	var vertexShader = gl.createShader(gl.VERTEX_SHADER);
+r.fragmentShader = fragmentShader;
+r.vertexShader = vertexShader;
+	var program = gl.createProgram();
+r.program = program;
+	var fragmentGiven = false;
+	var vertexGiven = false;
+	var library = [];
+	r.import = function(name) {
+		var x = new XMLHttpRequest();
+		x.open("GET",name,false);
+		x.send();
+		var source = x.response;
+		library.push({name:name,source:source})
+	}
+	r.fragmentSource = function(src) {
+		for (var i = 0; i < library.length; i++) {
+			var name = library[i].name;
+			var libsrc = library[i].source.replace(/\n|\r/g," ");
+			src = src.replace(new RegExp("#include \"" + name + "\"","g"),libsrc);
+		}
+		if (fragmentGiven) {
+			throw "Already given fragment shader source.";
+		}
+		fragmentGiven = true;
+		gl.shaderSource(fragmentShader,src);
+console.log("Fragments",gl.getShaderInfoLog(fragmentShader));
+		gl.compileShader(fragmentShader);
+console.log("Fragmentc",gl.getShaderInfoLog(fragmentShader));
+
+		gl.attachShader(program,fragmentShader);
+console.log("Fragmenta",gl.getShaderInfoLog(fragmentShader));
+
+		if (vertexGiven) {
+console.log("Fragment",gl.getShaderInfoLog(fragmentShader));
+			console.log("Vertex",gl.getShaderInfoLog(vertexShader));
+			console.log(gl.getProgramInfoLog(program));
+			gl.linkProgram(program);
+console.log("Fragment",gl.getShaderInfoLog(fragmentShader));
+			console.log("Vertex",gl.getShaderInfoLog(vertexShader));
+			console.log(gl.getProgramInfoLog(program));
+			gl.useProgram(program);
+			
+		}
+	};
+	r.vertexSource = function(src) {
+		for (var i = 0; i < library.length; i++) {
+			var name = library[i].name;
+			var libsrc = library[i].source.replace(/\n|\r/g," ");
+			src = src.replace(new RegExp("#include \"" + name + "\"","g"),libsrc);
+		}
+		if (vertexGiven) {
+			throw "Already given vertex shader source.";
+		}
+		vertexGiven = true;
+		gl.shaderSource(vertexShader,src);
+		gl.compileShader(vertexShader);
+		gl.attachShader(program,vertexShader);
+		if (fragmentGiven) {
+			gl.linkProgram(program);
+			gl.useProgram(program);
+		}
+	};
+	var attributes = [];
+	var attributeHash = {};
+	r.attributes = function(ats) {
+		if (typeof ats != "object") {
+			throw "pleasantry().attributes must be passed array of attributes.";
+		}
+		for (var i = 0; i < ats.length; i++) {
+			attributes[i] = {buffer:gl.createBuffer(),name:ats[i],location:gl.getAttribLocation(program,ats[i])};
+			gl.enableVertexAttribArray(attributes[i].location);
+			attributeHash[ats[i]] = attributes[i];
+		}
+	};
+
+	r.staticAttribute = function(at,v) {
+		var qs = [];
+		var len = v[0].length;
+		for (var i = 0; i < v.length; i++) {
+			if (v[i].length != len) {
+				throw "Error in mixing.";
+			}
+			for (var j = 0; j < len; j++) {
+				qs[i*len+j] = v[i][j];
+			}
+		}
+		var x = attributeHash[at];
+		x.length = v.length;
+		gl.bindBuffer(gl.ARRAY_BUFFER,x.buffer);
+		gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(qs),gl.STATIC_DRAW);
+		gl.vertexAttribPointer(x.location,len,gl.FLOAT,false,0,0);
+	};
+	r.dynamicAttribute = function(at,v) {
+		var qs = [];
+		var len = v[0].length;
+		for (var i = 0; i < v.length; i++) {
+			if (v[i].length != len) {
+				throw "Error in mixing.";
+			}
+			for (var j = 0; j < len; j++) {
+				qs[i*len+j] = v[i][j];
+			}
+		}
+		var x = attributeHash[at];
+		x.length = v.length;
+		gl.bindBuffer(gl.ARRAY_BUFFER,x.buffer);
+		gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(qs),gl.DYNAMIC_DRAW);
+		gl.vertexAttribPointer(x.location,len,gl.FLOAT,false,0,0);
+	};
+	r.triangleStrip = function(name) {
+		gl.bindBuffer(gl.ARRAY_BUFFER,attributeHash[name].buffer);
+		gl.drawArrays(gl.TRIANGLE_STRIP,0,attributeHash[name].length);
+	};
+	r.triangleList = function(name) {
+		gl.bindBuffer(gl.ARRAY_BUFFER,attributeHash[name].buffer);
+		gl.drawArrays(gl.TRIANGLES,0,attributeHash[name].length);
+	};
+	r.uniformFloat = function(name,val) {
+		gl.uniform1f(gl.getUniformLocation(program,name), val);
+	};
+	r.uniformVec3 = function(name,val) {
+		gl.uniform3f(gl.getUniformLocation(program,name),val[0],val[1],val[2]);
+	}
+	r.uniformVec3s = function(name,val) {
+		gl.uniform3fv(gl.getUniformLocation(program,name), new Float32Array(val));
+	};
+	r.uniformVec4s = function(name,val) {
+		gl.uniform4fv(gl.getUniformLocation(program,name), new Float32Array(val));
+	};
+	r.uniformMat4 = function(name,mat) {
+		gl.uniformMatrix4fv(gl.getUniformLocation(program,name), gl.FALSE, new Float32Array(mat));
+	}
+	r.createTexture = function(img,pos,at) {
+		gl.activeTexture(gl["TEXTURE"+pos]);
+		var tex = gl.createTexture();
+		gl.bindTexture(gl.TEXTURE_2D, tex);
+		gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, img);
+		gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+		gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+		gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+		gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+		gl.uniform1i(gl.getUniformLocation(program, at), pos);
+		//gl.bindTexture(gl.TEXTURE_2D, null);
+		return tex;
+	};
+	r.clear = function() {
+		gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+	}
+	gl.viewport(0,0,canvas.width,canvas.height);
+	gl.clearColor(0.0,0.0,0.0,1.0);
+	gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+	return r;
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script type="text/shader" id="fragment">
 
 precision mediump float;
@@ -414,9 +597,7 @@ function generate() {
 	begin();
 }
 
-/*retrieveMesh("/render/aluminumMesh.obj",0);
-retrieveMesh("/render/shooterMesh.obj",1);
-retrieveMesh("/render/blackMesh.obj",2);*/
+
 retrieveMesh("/render/aluminum.boj",0);
 retrieveMesh("/render/yellow.boj",1);
 retrieveMesh("/render/black.boj",2);
