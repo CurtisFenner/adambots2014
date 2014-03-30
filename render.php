@@ -731,6 +731,7 @@ function loop() {
 	gl.uniformMat4("rotsi",matrix.invert4(r));
 	gl.uniformFloat("fog",fog);
 	gl.triangleList("pos");
+	requestAnimationFrame(loop,canvas);
 }
 
 var gtex;
@@ -750,7 +751,7 @@ function begin() {
 	gl.staticAttribute("matPos",matFinal);
 	gl.staticAttribute("textureProp",texs);
 	gtex = gl.createTexture(tex,0,"material");
-	setInterval(loop,20);
+	loop();
 }
     
 var retina = window.devicePixelRatio > 1;
