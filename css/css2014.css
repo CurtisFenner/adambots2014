@@ -413,8 +413,8 @@ The bar between the navbar and the page.
 ***************************************/
 
 #head {
-	height: 120px;
-	/*margin: 25px;
+	/*height: 120px;
+	margin: 25px;
 	margin-left: 50px;*/
 }
 
@@ -435,6 +435,24 @@ The bar between the navbar and the page.
 
 .button:active {
 	box-shadow:inset 0px 5px 30px 0px;
+}
+
+#adambotslogo {
+	float:left;
+	margin-top:55px;
+	margin-left:20px;
+	margin-bottom:20px;
+}
+
+#social {
+	height: inherit;
+	margin: 20px;
+	position: relative;
+	float: right;
+}
+#social a {
+	margin: 5px;
+	position:relative;
 }
 
 #social .button a {
@@ -462,16 +480,7 @@ The bar between the navbar and the page.
 	font-variant:small-caps;
 }
 
-#social {
-	height: inherit;
-	margin: 40px;
-	position: relative;
-	float: right;
-}
-#social a {
-	margin: 5px;
-	position:relative;
-}
+
 #social img {
 	height: 25px;
 	padding: 10px;

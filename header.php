@@ -58,16 +58,18 @@ display:none;
 	</div>
 	<script src='<?php bloginfo('template_directory'); ?>/js/gears.js'></script>
 	<div id="head" class="pagewidth">
-		<a href="<?php echo home_url(); ?>" style="float:left;">
-			<div style="float:left;margin-right:5px;">
-				<img src="<?php bloginfo('template_directory'); ?>/res/img/cleanatom.png" width="67" height="67" alt="AdamBots Logo" style="border-radius:3px;">
-			</div>
-			<div style="float:right;">
-				<img src="<?php bloginfo('template_directory'); ?>/res/img/adambotswhite.png" width="300" height="40" alt="AdamBots Logo"><br>
-				<img src="<?php bloginfo('template_directory'); ?>/res/img/adambotstag.png" width="300" alt="OCCRA and FRC Robotics Team 245">
-			</div>
-		</a>
-		<div id="social" style="float:right;">
+		<div id="adambotslogo">
+			<a href="<?php echo home_url(); ?>">
+				<div style="float:left;margin-right:5px;">
+					<img src="<?php bloginfo('template_directory'); ?>/res/img/cleanatom.png" width="80" height="80" alt="AdamBots Logo" style="border-radius:3px;">
+				</div>
+				<div style="float:right;">
+					<img src="<?php bloginfo('template_directory'); ?>/res/img/adambotswhite.png" width="360" alt="AdamBots Logo"><br>
+					<img src="<?php bloginfo('template_directory'); ?>/res/img/adambotstag.png" width="360" alt="OCCRA and FRC Robotics Team 245">
+				</div>
+			</a>
+		</div>
+		<div id="social">
 			<a href="https://www.facebook.com/AdamBots"><span data-hover="Facebook"><img src="<?php bloginfo('template_directory'); ?>/res/img/social/facebook.png" alt="Like us on Facebook"></span></a>
 			<a href="http://instagram.com/adambots245"><span data-hover="Instagram"><img src="<?php bloginfo('template_directory'); ?>/res/img/social/instagram.png" alt="Find us on Instagram"></span></a>
 			<a href="https://twitter.com/adambots"><span data-hover="Twitter"><img src="<?php bloginfo('template_directory'); ?>/res/img/social/twitter.png" alt="Follow us on Twitter"></span></a>
@@ -79,6 +81,7 @@ display:none;
 			<div class="button" style="background:#FFD802;color:#D2A900;"><a href="/team-member-section/">Team Calendar</a></div>
 			<div class="button" style="background:#5A6;color:#151;"><a href="/about/team-outreach/vikings-5183/">FTC 5381 Vikings</a></div>
 		</div>
+		<div class="clear"></div>
 	</div>
 	
 	<div id="content">
