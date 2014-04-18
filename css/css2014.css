@@ -341,7 +341,31 @@ The bar between the navbar and the page.
 	top:0;
 	bottom:0;
 	width:200px;
-	background:red;
+	background:#FFD802;
+}
+
+#gallerytabs .tab {
+	width:100%;
+	line-height:30px;
+	font-variant:small-caps;
+	height:30px;
+	border-bottom:1px solid #202020;
+	color:black;
+	font-weight:bold;
+}
+
+#gallerytabs .tab a {
+	display:block;
+	color:black;
+	height:100%;
+	padding-left:10px;
+	padding-right:-10px;
+	cursor:pointer;
+}
+
+#gallerytabs a.activetab{
+	color:white;
+	text-shadow:0px 0px 1px black;
 }
 
 /**************************************
