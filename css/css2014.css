@@ -43,7 +43,7 @@ body {
 			GENERIC ELEMENTS
 ***************************************/
 body {
-	min-width: 1200px;
+	min-width: 960px;
 	/* Was 494949, considered "bland" "too light" */
 	background-color: #252525;
 	font-family: "Roboto Condensed";

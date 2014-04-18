@@ -1,6 +1,7 @@
 		<div id="footer">
 			<div style="padding-top:30px;margin-left:auto;margin-right:auto;text-align:center; width:950px;">
-				<div style="line-height:25px">© Copyright 2005-2014 AdamBots. All Rights Reserved.</div>
+				<div style="line-height:25px">© Copyright 2005-2014 AdamBots. All Rights Reserved.
+					<a href="http://www.adambots.com/contact-us/">Have a question, comment, or concern? <strong>Contact us</strong>.</a></div>
 <div id="footerjustify">FIRST, FRC, FTC, FLL, JR.FLL, COOPERTITION, GRACIOUS&nbsp;PROFESSIONALISM, AERIAL&nbsp;ASSIST, ULTIMATE&nbsp;ASCENT, REBOUND&nbsp;RUMBLE, LOGOMOTION, BREAKAWAY, LUNACY, FIRST&nbsp;OVERDRIVE, RACK&nbsp;N&nbsp;ROLL, AIM&nbsp;HIGH, TRIPLE&nbsp;PLAY, FIRST&nbsp;FRENZY:&nbsp;RAISING&nbsp;THE&nbsp;BAR, STACK&nbsp;ATTACK, ZONE&nbsp;ZEAL, DIABOLICAL&nbsp;DYNAMICS, CO-OPERTITION&nbsp;FIRST, and DOUBLE&nbsp;TROUBLE are registered trademarks of United States Foundation for Inspiration and Recognition of Science and Technology AKA US FIRST&nbsp;CORPORATION NEW&nbsp;HAMPSHIRE 200&nbsp;Bedford Street Manchester NEW&nbsp;HAMPSHIRE 03101. USFIRST trademarks and logos used with permission as a USFIRST team.</div>
 			</div>
 			<div style="margin-bottom:5px;margin-top:12px;">The AdamBots' <em>FRC&nbsp;</em> Best Website Awards:</div>
