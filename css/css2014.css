@@ -447,7 +447,7 @@ The bar between the navbar and the page.
 
 #adambotslogo {
 	float:left;
-	margin-top:55px;
+	margin-top:31px;
 	margin-left:20px;
 	margin-bottom:20px;
 }
@@ -455,6 +455,7 @@ The bar between the navbar and the page.
 #social {
 	height: inherit;
 	margin: 20px;
+	margin-top:10px;
 	position: relative;
 	float: right;
 }
