@@ -281,6 +281,7 @@ The bar between the navbar and the page.
 	margin:0px;
 	z-index:-5;
 	top:0px;
+	left:-200px;
 	
 	animation: fadein .75s;
 	-moz-animation: fadein .75s;
