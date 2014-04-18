@@ -139,7 +139,7 @@ Creating a <em>FIRST</em>&nbsp; Team Site|resources/creating-a-first-team-websit
 			if ($ulopen) {
 				echo "</ul>";
 			}
-			echo "<ul><li><h3>" . substr($line,6) . "</h3>";
+			echo "<ul><li><div class=sectiontitle>" . substr($line,6) . "</div>";
 			$use = true;
 			$ulopen = true;
 		}
