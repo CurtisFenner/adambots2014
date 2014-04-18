@@ -52,10 +52,12 @@ display:none;
 </head>
 
 <body>
-	<div id="gearscontainer">
-		<canvas id="gears1" width="424" height="424"></canvas>
-		<canvas id="gears2" width="544" height="544"></canvas>
-	</div>
+	<div class="pagewidth">
+		<div id="gearscontainer">
+			<canvas id="gears1" width="424" height="424"></canvas>
+			<canvas id="gears2" width="544" height="544"></canvas>
+		</div>
+	<div>
 	<script src='<?php bloginfo('template_directory'); ?>/js/gears.js'></script>
 	<div id="head" class="pagewidth">
 		<div id="adambotslogo">
