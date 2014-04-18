@@ -4,11 +4,11 @@
 <div id="gallerholder" class="nosel">
 	<div id="gallerybox">
 		<div id="galleryleft">
-			<h3 class="gallerytitle">2013 Palmetto Regional Champions!</h3>
+			<div class="gallerytitle">2013 Palmetto Regional Champions!</div>
 			<div class="gallerytext"></div>
 		</div>
 		<div id="galleryright">
-			<h3 class="gallerytitle">2013 Palmetto Regional Champions!</h3>
+			<div class="gallerytitle">2013 Palmetto Regional Champions!</div>
 			<div class="gallerytext"></div>
 		</div>
 		<div id="gallerybuttonleft">
