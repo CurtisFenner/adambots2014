@@ -27,10 +27,10 @@ body {
 */
 
 .nosel {
-    -webkit-user-select: none; /* webkit (safari, chrome) browsers */
-    -moz-user-select: none; /* mozilla browsers */
-    -khtml-user-select: none; /* webkit (konqueror) browsers */
-    -ms-user-select: none; /* IE10+ */
+	-webkit-user-select: none; /* webkit (safari, chrome) browsers */
+	-moz-user-select: none; /* mozilla browsers */
+	-khtml-user-select: none; /* webkit (konqueror) browsers */
+	-ms-user-select: none; /* IE10+ */
 }
 
 #twitter {
@@ -53,7 +53,7 @@ body {
 	-moz-animation: fadein .75s;
 	-webkit-animation: fadein .75s;
 	-o-animation: fadein .75s;*/
-    /*background-image: url('../res/img/noise.png');*/
+	/*background-image: url('../res/img/noise.png');*/
 	background-image:url("../res/img/noisy.png");
 }
 
@@ -63,7 +63,7 @@ a {
 }
 
 .clear {
-    clear: both;
+	clear: both;
 }
 
 hr {
@@ -98,11 +98,11 @@ hr {
 }
 
 #homepage .pagewidth {
-    animation-timing-function:cubic-bezier(.30, 0, 0, 1);
-    animation: slidein .75s;
+	/*animation-timing-function:cubic-bezier(.30, 0, 0, 1);
+	animation: slidein .75s;
 	-moz-animation: slidein .75s;
 	-webkit-animation: slidein .75s;
-	-o-animation: slidein .75s;
+	-o-animation: slidein .75s;*/
 }
 
 .pagewidth p {
@@ -111,7 +111,7 @@ hr {
 }
 
 /**************************************
-		      PAGE LAYOUT
+			  PAGE LAYOUT
 ***************************************/
 
 img.alignright {
@@ -141,8 +141,8 @@ The bar between the navbar and the page.
 	font-weight:bold;
 	font-size:24px;
 
-    /*-webkit-text-stroke-width: 1px;*/
-    /*-webkit-text-stroke-color: black;*/
+	/*-webkit-text-stroke-width: 1px;*/
+	/*-webkit-text-stroke-color: black;*/
 }
 
 #pagetype .background {
@@ -159,8 +159,8 @@ The bar between the navbar and the page.
 	display:inline-block;
 	padding:0;
 	margin:0;
-    right:0 !important;
-    position:relative;
+	right:0 !important;
+	position:relative;
 }
 
 
@@ -261,7 +261,7 @@ The bar between the navbar and the page.
 }
 
 /**************************************
-		         GEARS
+				 GEARS
 ***************************************/
 
 #gearscontainer {
@@ -269,16 +269,16 @@ The bar between the navbar and the page.
 	margin:0px;
 	z-index:-5;
 	top:0px;
-    
-    animation: fadein .75s;
+	
+/*	animation: fadein .75s;
 	-moz-animation: fadein .75s;
 	-webkit-animation: fadein .75s;
 	-o-animation: fadein .75s;
-    
-    animation-delay: 1.5s;
-    -moz-animation-delay: 1.5s;
-    -webkit-animation-delay: 1.5s;
-    -o-animation-delay: 1.5s;
+	
+	animation-delay: 1.5s;
+	-moz-animation-delay: 1.5s;
+	-webkit-animation-delay: 1.5s;
+	-o-animation-delay: 1.5s;*/
 }
 
 #gearscontainer canvas {
@@ -298,31 +298,31 @@ The bar between the navbar and the page.
 ***************************************/
 
 #gallerholder {
-    position:relative;
+	position:relative;
 	top: 0;
 	left: 0;
 	bottom: 0;
 	right: 0;
-    
-    animation-timing-function:cubic-bezier(.30, 0, 0, 1);
-    animation: slidein 1s;
+	
+/*	animation-timing-function:cubic-bezier(.30, 0, 0, 1);
+	animation: slidein 1s;
 	-moz-animation: slidein 1s;
 	-webkit-animation: slidein 1s;
-	-o-animation: slidein 1s;
+	-o-animation: slidein 1s;*/
 }
 
 #gallerybox {
 	position:relative;
 	width:960px;
 	margin:auto;
-    overflow:hidden;
+	overflow:hidden;
 	/*box-shadow:0px 0px 1px 5px rgba(0,0,0,.5);*/
 	margin-top:20px;
-    box-shadow: 0 0 10px #000;
+	box-shadow: 0 0 10px #000;
 }
 
 #gallerybox:before{
-    content: "";
+	content: "";
 	display: block;
 	padding-top: 45%;
 }
@@ -340,9 +340,9 @@ The bar between the navbar and the page.
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-    -mox-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
+	-mox-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
 	cursor:pointer;
 
 	width:0px;
@@ -373,23 +373,23 @@ The bar between the navbar and the page.
 }
 
 .gallerytext {
-    position: absolute;
+	position: absolute;
 	font-size:20px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 25px;
-    padding-left: 100px;
-    padding-right: 100px;
-    background-color: rgba(34,34,34,.75);
-    text-align: right;
-    color: #eee;
-    text-shadow: 0 0 5px #000;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 25px;
+	padding-left: 100px;
+	padding-right: 100px;
+	background-color: rgba(34,34,34,.75);
+	text-align: right;
+	color: #eee;
+	text-shadow: 0 0 5px #000;
 }
 
 .gallerytext:first-line {
 	font-size:30px;
-    bottom: 75px;
+	bottom: 75px;
 }
 
 /**************************************
@@ -506,12 +506,12 @@ The bar between the navbar and the page.
 #footer {
 	margin-top:6px;
 	position:relative;
-    text-align:center;
-    width:100%;
-    height:300px;
-    background: url('../res/img/noisy.png'),url('../res/img/footerGrad.png');
-    font-size:12px;
-    color:#444;
+	text-align:center;
+	width:100%;
+	height:300px;
+	background: url('../res/img/noisy.png'),url('../res/img/footerGrad.png');
+	font-size:12px;
+	color:#444;
 }
 
 #footerjustify {
@@ -546,14 +546,14 @@ Bar containing menu items.
 	height: 50px;
 	padding-left: 20px;
 	line-height: 50px;
-    /* invalid CSS, doesn't appear to do anything?
+	/* invalid CSS, doesn't appear to do anything?
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-    */
+	*/
 }
 
 /*
@@ -618,7 +618,7 @@ Div containing #below for the purpose of resizing up and down.
 	background-color: #ffd802;
 	background-image:url("../res/img/noisy.png");
 	/*box-shadow: inset 0px 66px 10px -55px #333, inset 0px -30px 30px -15px #353535;*/
-    box-shadow: inset 0 -3px 0 #9a8000;
+	box-shadow: inset 0 -3px 0 #9a8000;
 }
 
 /*
@@ -684,8 +684,8 @@ Descriptions in navigation.
 	color: #111;
 	top: 0px;
 	font-weight: normal;
-    position: absolute;
-    right: 0;
+	position: absolute;
+	right: 0;
 }
 
 /*
@@ -708,23 +708,24 @@ Triple panel display above footer
 
 .panel {
 	position:absolute;
-    margin-top: 10px;
+	margin-top: 10px;
 	background:#EEE;
 	background-image:url("../res/img/noisy.png");
-    box-shadow: 0 0 10px #000;
-    padding-top: 15px;
+	box-shadow: 0 0 10px #000;
+	padding-top: 15px;
 }
 
 .panel a h3 {
-    font-size: 20px;
+	font-size: 20px;
 }
 
 #panelcontainer {
-    animation-timing-function:cubic-bezier(.30, 0, 0, 1);
-    animation: slidein 1.5s;
+	/*
+	animation-timing-function:cubic-bezier(.30, 0, 0, 1);
+	animation: slidein 1.5s;
 	-moz-animation: slidein 1.5s;
 	-webkit-animation: slidein 1.5s;
-	-o-animation: slidein 1.5s;
+	-o-animation: slidein 1.5s;*/
 }
 /**************************************
 		  NEXTGEN GALLERY MODS
@@ -736,156 +737,156 @@ Triple panel display above footer
 		  NEXTGEN GALLERY MODS
 ***************************************/
 #countdown {
-    max-width:930px;
-    margin-left:auto;
-    margin-right:auto;
-    font-weight:bold;
-    color:#eee;
-    height:60px;
-    line-height:60px;
-    font-size:18px;
-    
-    animation: fadein .75s;
+	max-width:930px;
+	margin-left:auto;
+	margin-right:auto;
+	font-weight:bold;
+	color:#eee;
+	height:60px;
+	line-height:60px;
+	font-size:18px;
+	
+	animation: fadein .75s;
 	-moz-animation: fadein .75s;
 	-webkit-animation: fadein .75s;
 	-o-animation: fadein .75s;
-    
-    animation-delay: 1.5s;
-    -moz-animation-delay: 1.5s;
-    -webkit-animation-delay: 1.5s;
-    -o-animation-delay: 1.5s;
+	
+	animation-delay: 1.5s;
+	-moz-animation-delay: 1.5s;
+	-webkit-animation-delay: 1.5s;
+	-o-animation-delay: 1.5s;
 }
 
 /**************************************
-		      BODY CARDS
+			  BODY CARDS
 ***************************************/
 #bodycards {
-    max-width: 960px;
-    height: 375px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0px;
-    position: relative;
-    
-    animation-timing-function:cubic-bezier(.30, 0, 0, 1);
-    animation: slidein 1.25s;
+	max-width: 960px;
+	height: 375px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0px;
+	position: relative;
+	
+	/*animation-timing-function:cubic-bezier(.30, 0, 0, 1);
+	animation: slidein 1.25s;
 	-moz-animation: slidein 1.25s;
 	-webkit-animation: slidein 1.25s;
-	-o-animation: slidein 1.25s;
+	-o-animation: slidein 1.25s;*/
 }
 
 #teaminfo {
-    width: 636px;
-    height: 375px;
-    background-color: #ffd802;
-    float: left;
-    background-image:url("../res/img/noisy.png");
-    box-shadow: 0 0 10px #000;
+	width: 636px;
+	height: 375px;
+	background-color: #ffd802;
+	float: left;
+	background-image:url("../res/img/noisy.png");
+	box-shadow: 0 0 10px #000;
 }
 
 #teaminfo p {
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    text-align:justify;
-    font-size:17px;
-    line-height: 25px;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	text-align:justify;
+	font-size:17px;
+	line-height: 25px;
 }
 
 #teaminfo p strong {
-    font-size: 18px;
+	font-size: 18px;
 }
 
 #teaminfo strong em a {
-    color: #494949;
+	color: #494949;
 }
 
 #teamatom {
-    padding-top: 25px;
-    width: 610px;
-    text-align:center;
+	padding-top: 25px;
+	width: 610px;
+	text-align:center;
 }
 
 #teaminfo img {
-    position: relative;
-    float: none;
-    margin-left: auto;
-    margin-right: auto;
-    height:80px;
+	position: relative;
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+	height:80px;
 }
 #twitter {
-    width: 270px;
-    height: 100%;
-    padding-left:22px;
-    padding-right:22px;
-    position:absolute;
-    float: right;
-    right:0;
-    background-color: #444;
+	width: 270px;
+	height: 100%;
+	padding-left:22px;
+	padding-right:22px;
+	position:absolute;
+	float: right;
+	right:0;
+	background-color: #444;
 	background-image:url("../res/img/noisy.png");
-    box-shadow: 0 0 10px #000;
+	box-shadow: 0 0 10px #000;
 }
 
 .twitter-timeline {
-    position: relative;
+	position: relative;
 }
 
 .display_current {
-    height:45px;
-    padding-left:50px;
-    font-weight:bold;
-    line-height:42px;
-    font-size:16px;
-    color: #eee;
-    background-color: #222;
-    bottom: 0;
+	height:45px;
+	padding-left:50px;
+	font-weight:bold;
+	line-height:42px;
+	font-size:16px;
+	color: #eee;
+	background-color: #222;
+	bottom: 0;
 }
 
 .display_current a {
-    padding-left: 5px;
-    padding-right: 5px;
-    color: #ffd802;
+	padding-left: 5px;
+	padding-right: 5px;
+	color: #ffd802;
 }
 
 #robotinfo {
-    margin-top: 10px;
-    
-    max-width: 960px;
-    height: 375px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0px;
-    position: relative;
-    
-    background-color: #eee;
+	margin-top: 10px;
+	
+	max-width: 960px;
+	height: 375px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0px;
+	position: relative;
+	
+	background-color: #eee;
 	background-image:url("../res/img/noisy.png");
-    box-shadow: 0 0 10px #000;
-    
-    animation-timing-function:cubic-bezier(.30, 0, 0, 1);
-    animation: slidein 1.25s;
+	box-shadow: 0 0 10px #000;
+	
+/*	animation-timing-function:cubic-bezier(.30, 0, 0, 1);
+	animation: slidein 1.25s;
 	-moz-animation: slidein 1.25s;
 	-webkit-animation: slidein 1.25s;
-	-o-animation: slidein 1.25s;
+	-o-animation: slidein 1.25s;*/
 }
 
 #robotimg {
-    height: 100%;
-    position:absolute;
-    float: left;
+	height: 100%;
+	position:absolute;
+	float: left;
 }
 
 #robotimg img {
-    height: 300px;
-    padding: 25px;
-    padding-left: 50px;
+	height: 300px;
+	padding: 25px;
+	padding-left: 50px;
 }
 
 #robottext {
-    width: 636px;
-    height: 375px;
-    right:0;
-    float: right;
+	width: 636px;
+	height: 375px;
+	right:0;
+	float: right;
 }
 
 /**************************************
@@ -902,7 +903,7 @@ Holds sliding descriptions
 
 
 /**************************************
-		     PAGE ANIMATION
+			 PAGE ANIMATION
 ***************************************/
 /* Define CSS fade-in */
 
@@ -913,21 +914,6 @@ Holds sliding descriptions
 		opacity: 1;
 	}
 }
-@keyframes slidein {
-    from{
-        left:-100%;
-    } to {
-        left:0;
-    }
-}
-@-webkit-keyframes slidein {
-    from {
-        left: -100%;
-    }
-    to {
-        left: 0;
-    }
-}
 @-webkit-keyframes fadein {
 	from {
 		opacity: 0;
@@ -935,3 +921,18 @@ Holds sliding descriptions
 		opacity: 1;
 	}
 }
+/*@keyframes slidein {
+	from{
+		left:-100%;
+	} to {
+		left:0;
+	}
+}
+@-webkit-keyframes slidein {
+	from {
+		left: -100%;
+	}
+	to {
+		left: 0;
+	}
+}*/
