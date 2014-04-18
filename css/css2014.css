@@ -414,8 +414,8 @@ The bar between the navbar and the page.
 
 #head {
 	height: 120px;
-	margin: 25px;
-	margin-left: 50px;
+	/*margin: 25px;
+	margin-left: 50px;*/
 }
 
 .button {
@@ -443,6 +443,24 @@ The bar between the navbar and the page.
 	position:absolute;
 	left:0;right:0;top:0;bottom:0;
 }
+#social a span {
+	position:relative;
+}
+#social a span:hover:after {
+	content:attr(data-hover);
+	position:absolute;
+	top:20px;
+	left:-18px;
+	text-align:center;
+	vertical-align:bottom;
+	background:url("../res/img/popup.png");
+	height:40px;
+	width:81px;
+	color:white;
+	line-height:55px;
+	z-index:1000;
+	font-variant:small-caps;
+}
 
 #social {
 	height: inherit;
@@ -452,6 +470,7 @@ The bar between the navbar and the page.
 }
 #social a {
 	margin: 5px;
+	position:relative;
 }
 #social img {
 	height: 25px;

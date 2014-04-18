@@ -61,7 +61,7 @@ text:"The 2014 AdamBots FRC Team<br>Our team of seventy students from Rochester 
 
 <div id="robotinfo" class="pagewidth" style="display:none;">
     <div id="robotimg">
-        <img src="<?php bloginfo('template_directory'); ?>/res/img/robot-cropped.png">
+        <img src="<?php bloginfo('template_directory'); ?>/res/img/robot-cropped.png" alt="Andromeda, 2014 FRC Robot">
     </div>
     <div id="robottext">some text about our wonderful robot</div>
     <div class="clear"></div>
