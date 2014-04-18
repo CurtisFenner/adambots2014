@@ -59,7 +59,7 @@ text:"The 2014 AdamBots FRC Team<br>Our team of seventy students from Rochester 
     <div class="clear"></div>
 </div>
 
-<div id="robotinfo" class="pagewidth">
+<div id="robotinfo" class="pagewidth" style="display:none;">
     <div id="robotimg">
         <img src="<?php bloginfo('template_directory'); ?>/res/img/robot-cropped.png">
     </div>
