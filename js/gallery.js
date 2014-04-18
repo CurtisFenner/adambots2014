@@ -16,9 +16,10 @@
 		var one = data[i+1];
 		var two = data[i+2];
 		if (now.indexOf("|") > 0 && appearsUrl(one) && appearsUrl(two)) {
-			if (slide && slide.length > 0);
+			if (slide && slide.length > 0) {
 				slides.push(slide);
-			slide = [now];
+			}
+			slide = [now.split("|")];
 		} else {
 			slide.push(now);
 		}
@@ -27,5 +28,23 @@
 		slide.push(data[i]);
 	}
 	slides.push(slide);
-	console.log(slides);
+
+	//Slides have been prepared.
+	//A slide is an array.
+	//slide[0] is an array in the form [Title,  Short Title].
+	//slide[1] is URL for image. slide[2] is URL for link.
+	//slide[n >= 2] are text to be concatenated together.
+	for (var i = 0; i < slides.length; i++) {
+		var div = document.createElement("div");
+		div.className = "tab";
+		var anchor = document.createElement("a");
+		anchor.innerHTML = slides[i][0][1];
+		if (i == 0) {
+			anchor.className = "activetab";
+		}
+		div.appendChild(anchor);
+		gallerytabs.appendChild(div);
+	}
+
+	
 })();

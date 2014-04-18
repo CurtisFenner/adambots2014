@@ -4,10 +4,10 @@
 
 
 <script type="text/data" id="gallerysource">
-2013 <em>OCCRA</em> Foundation Award Winners|<em>OCCRA</em>2013 Foundation Award
+2013 <em>OCCRA&nbsp;</em> Foundation Award Winners|<em>OCCRA&nbsp;</em>2013 Foundation Award
 http://www.adambots.com/wp-content/uploads/2014/04/occrafoundationslide.png
 http://www.adambots.com/occra/
-<em>OCCRA</em> is the Oakland County Competitive Robotics Association. In the latest season, the AdamBots won the Foundation Award, which is the highest award in <em>OCCRA</em>.
+<em>OCCRA&nbsp;</em> is the Oakland County Competitive Robotics Association. In the latest season, the AdamBots won the Foundation Award, which is the highest award in <em>OCCRA</em>.
 It recognizes the team with the most enthusiasm for robotics and STEM and the most raise awareness of robotics and technical career options.
 
 Thank you, Sponsors!|Our Sponsors
