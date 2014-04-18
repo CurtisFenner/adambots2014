@@ -1,8 +1,8 @@
 <?php
 ?>
 <!doctype html>
-<html>
-<head lang="en">
+<html lang="en">
+<head>
 	<meta charset="UTF-8">
 	<title>AdamBots FRC &amp; OCCRA Team 245</title>
 	<link rel="icon" href="<?php bloginfo('template_directory'); ?>/res/img/favicon.ico">
@@ -61,10 +61,10 @@ display:none;
 		<div id="adambotslogo">
 			<a href="<?php echo home_url(); ?>">
 				<div style="float:left;margin-right:5px;">
-					<img src="<?php bloginfo('template_directory'); ?>/res/img/cleanatom.png" width="80" height="80" alt="AdamBots Logo" style="border-radius:3px;">
+					<img src="<?php bloginfo('template_directory'); ?>/res/img/cleanatom.png" width="80" height="80" alt="AdamBots Atom Logo" style="border-radius:3px;">
 				</div>
 				<div style="float:right;">
-					<img src="<?php bloginfo('template_directory'); ?>/res/img/adambotswhite.png" width="360" alt="AdamBots Logo"><br>
+					<img src="<?php bloginfo('template_directory'); ?>/res/img/adambotswhite.png" width="360" alt="AdamBots Logo Text"><br>
 					<img src="<?php bloginfo('template_directory'); ?>/res/img/adambotstag.png" width="360" alt="OCCRA and FRC Robotics Team 245">
 				</div>
 			</a>
