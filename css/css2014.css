@@ -270,7 +270,7 @@ The bar between the navbar and the page.
 	z-index:-5;
 	top:0px;
 	
-/*	animation: fadein .75s;
+	animation: fadein .75s;
 	-moz-animation: fadein .75s;
 	-webkit-animation: fadein .75s;
 	-o-animation: fadein .75s;
@@ -278,7 +278,7 @@ The bar between the navbar and the page.
 	animation-delay: 1.5s;
 	-moz-animation-delay: 1.5s;
 	-webkit-animation-delay: 1.5s;
-	-o-animation-delay: 1.5s;*/
+	-o-animation-delay: 1.5s;
 }
 
 #gearscontainer canvas {
