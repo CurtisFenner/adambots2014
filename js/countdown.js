@@ -4,12 +4,12 @@ function pluralUnit(num,tex) {
 
 function updateCountdown() {
 	var d = Date.now();
-	var eventtime = new Date("February 18 2014 11:59 PM EST").getTime(); //Date.UTC(2014,0,4,15,30,0); //UTC time (6pm local [ET])
-	var eventName = "the <em>FRC</em> bag &amp; tag day";
+	var eventtime = new Date("April 24 2014 9:00 AM CDT").getTime(); //Date.UTC(2014,0,4,15,30,0); //UTC time (6pm local [ET])
+	var eventName = "the <em>FRC&nbsp;</em> World Championship";
 	var rem = -Date.now() + eventtime;
 	if (rem <= 0) {
 		//document.getElementById("countdown").innerHTML = "<span style='color:#ffd800;'>" + eventName + "</span> is in progress";
-		document.getElementById("countdown").innerHTML = "<span style='color:#ffd800;'>Welcome to the <em>FIRST FRC</em>,</span> <em>Aerial Assist</em>!";
+		document.getElementById("countdown").innerHTML = "<span style='color:#ffd800;'>Let's go robots! Another awesome <em>FRC&nbsp;</em> World Championship is underway!</span>";
 		return;
 	} else {
 	rem = rem / 1000; //rem is in seconds
@@ -29,10 +29,10 @@ function updateCountdown() {
 	var seconds = Math.floor(rem);
 
 	document.getElementById("countdown").innerHTML = "Countdown to <span style='color:#ffd800;font-size:130%;'>" + eventName + "</span>:" + (weeks != 0 ? pluralUnit(weeks,"week") : "") + pluralUnit(days,"day") + pluralUnit(hours,"hour") + pluralUnit(minutes,"minute") + pluralUnit(seconds,"second");
-    }
+	}
 	
 }
 setTimeout(function() {
-    updateCountdown();
-    setInterval(updateCountdown,200);
+	updateCountdown();
+	setInterval(updateCountdown,200);
 }, 1500);

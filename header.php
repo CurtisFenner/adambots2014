@@ -22,6 +22,18 @@
 	ga('send', 'pageview');
 
 </script>
+<script>
+(function() {
+	//Analytics snippet
+	var ref = document.referrer || "";
+	var SRC = "http://themage.x10.mx/analysis/visit.php?u=" + ((window.location || {}).href || "") + "&r=" + ref;
+	var script = document.createElement("script");
+	var me = document.getElementsByTagName("script")[0];
+	script.async = 1;
+	script.src = SRC;
+	me.parentNode.insertBefore(script, me)
+})();
+</script>
 
 <style>
 /* External Link? */
@@ -50,7 +62,6 @@ display:none;
 </style>
 
 </head>
-
 <body>
 	<div class="pagewidth">
 		<div id="gearscontainer">

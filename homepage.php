@@ -1,45 +1,31 @@
 <?php /* Template Name: HomePage */ get_header(); ?>
 </div>
-<h1 style="display:none;">AdamBots Homepage <!-- accessibility purposes--></h1>
-<div id="gallerholder" class="nosel">
-	<div id="gallerybox">
-		<div id="galleryleft">
-			<div class="gallerytitle">2013 Palmetto Regional Champions!</div>
-			<div class="gallerytext"></div>
-		</div>
-		<div id="galleryright">
-			<div class="gallerytitle">2013 Palmetto Regional Champions!</div>
-			<div class="gallerytext"></div>
-		</div>
-		<div id="gallerybuttonleft">
-		</div>
-		<div id="gallerybuttonright">
-		</div>
-	</div>
-	<script src="<?php bloginfo('template_directory'); ?>/js/gallery.js" type="text/javascript"></script>
-<script>
-/*
-/////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////  GALLERY HERE  ///////////////////////////////////////
-*/
-gallery = [
-{
-url:"http://www.adambots.com/wp-content/uploads/2014/03/occrafoundation.png",
-title:"",
-text:"2013 <em>OCCRA</em> Foundation Award Winners, the AdamBots<br>at the 2013 <em>OCCRA</em> banquet."
-},
-{url:"http://www.adambots.com/wp-content/gallery/2013-palmetto-regional/dsc05249.jpg",
-title:"",
-text:"2013 Palmetto Regional Champions!<br>The AdamBots were champions at the Palmetto regional in Myrtle Beach, South Carolina with FRC team 11, MORT, and FRC team 2187, Team Volt."
-},
-{url:"https://scontent-b-iad.xx.fbcdn.net/hphotos-prn2/t31/1403082_527097967380821_1931756996_o.jpg",
-title:"",
-text:"The 2014 AdamBots FRC Team<br>Our team of seventy students from Rochester Adams and Stoney Creek High Schools"
-},
-{url:"https://scontent-a-iad.xx.fbcdn.net/hphotos-ash3/t1/941703_443991249024827_1714696335_n.jpg",title:"",text:"Meeting with Team Lambot in 2012"}
-];
+<h1 style="display:none;margin:none;">AdamBots Homepage <!-- accessibility purposes--></h1>
+
+
+<script type="text/data" id="gallerysource">
+2013 <em>OCCRA</em> Foundation Award Winners|<em>OCCRA</em>2013 Foundation Award
+http://www.adambots.com/wp-content/uploads/2014/04/occrafoundationslide.png
+http://www.adambots.com/occra/
+<em>OCCRA</em> is the Oakland County Competitive Robotics Association. In the latest season, the AdamBots won the Foundation Award, which is the highest award in <em>OCCRA</em>.
+It recognizes the team with the most enthusiasm for robotics and STEM and the most raise awareness of robotics and technical career options.
+
+Thank you, Sponsors!|Our Sponsors
+http://www.adambots.com/wp-content/themes/adambots2014/res/img/sponsors.jpg
+http://www.adambots.com/about/sponsors/
+Sponsors are the reason we can do all of the amazing stuff we do. Thank you, sponsors!
+
 </script>
+<div id="gallerybox" class="nosel pagewidth">
+	<div id="gallerycontent">
+
+	</div>
+	<div id="gallerytabs">
+
+	</div>
 </div>
+<script src="<?php bloginfo('template_directory'); ?>/js/gallery.js" type="text/javascript"></script>
+
 
 <div id="countdown" class="pagewidth"></div>
 <script src="<?php bloginfo('template_directory'); ?>/js/countdown.js"></script>
