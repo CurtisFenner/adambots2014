@@ -30,8 +30,17 @@ Aerial Assist is a game requiring large excerise balls to be scored in goals. Ro
 Bonus points are available for tossing the ball over a truss and for catching it.
 Our robot, Andromeda, consistently scores, assists, and trusses well.
 
-Our Mexican Sister Team, Team LamBot 3478
+Our Mexican Sister Team, Team LamBot 3478|Team LamBot 3478
+http://www.adambots.com/wp-content/uploads/2014/04/lambotslide.png
+http://www.adambots.com/about/team-outreach/team-lambot-3478/
+General Motors approached us in 2010 about mentoring new teams in Mexico. We have been mentoring the LamBots since.
+Team 3478 has gone on to win <strong>Rookie All Stars</strong> their first year at the <em>FRC&nbsp;</em> World Championship, and <strong>Engineering Inspiration</strong> in 2013.
 
+Team Blog|Team Blog
+http://www.adambots.com/wp-content/uploads/2014/04/blogslide1.png
+http://www.adambots.com/team-blog/
+The AdamBots publish blog posts nearly weekly updating the world on everything AdamBots.
+These include competition and event summaries, interviews, and build updates.
 </script>
 <div id="gallerybox" class="nosel pagewidth">
 	<div id="gallerycontent">
