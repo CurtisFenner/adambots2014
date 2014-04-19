@@ -74,12 +74,13 @@ display:none;
 		<div id="adambotslogo">
 			<a href="<?php echo home_url(); ?>">
 				<div style="float:left;margin-right:5px;">
-					<img src="<?php bloginfo('template_directory'); ?>/res/img/cleanatom.png" width="94" height="94" alt="AdamBots Atom Logo" style="border-radius:3px;">
+					<img src="<?php bloginfo('template_directory'); ?>/res/img/cleanatom.png" width="94" height="94" alt="AdamBots Atom Logo" style="border-radius:4px;">
 				</div>
 				<div style="float:right;">
 					<img src="<?php bloginfo('template_directory'); ?>/res/img/adambotswhite.png" width="430" alt="AdamBots Logo Text"><br>
 					<img src="<?php bloginfo('template_directory'); ?>/res/img/adambotstag.png" width="430" alt="OCCRA and FRC Robotics Team 245">
 				</div>
+				<div class="clear"></div>
 			</a>
 		</div>
 		<div id="social">

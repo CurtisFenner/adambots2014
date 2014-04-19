@@ -11,14 +11,32 @@ http://www.adambots.com/occra/
 It recognizes the team with the most enthusiasm for robotics and STEM and the most raise awareness of robotics and technical career options.
 
 Thank you, Sponsors!|Our Sponsors
-http://www.adambots.com/wp-content/themes/adambots2014/res/img/sponsors.jpg
+http://www.adambots.com/wp-content/uploads/2014/04/sponsorslide.png
 http://www.adambots.com/about/sponsors/
 Sponsors are the reason we can do all of the amazing stuff we do. Thank you, sponsors!
+
+Resources from the AdamBots | Resources from Us
+http://www.adambots.com/wp-content/uploads/2014/04/resourcesslide.png
+http://www.adambots.com/resources/resources-overview/
+The AdamBots provide many resources for other <em>FIRST</em>ers!
+Our scouting tool gives OPR data for individual portions of the contribution and predicts match schedules and rankings.
+We also have information about safety, and our award submissions like our award winning Business Plan.
+
+Our 2014 <em>FRC&nbsp;</em> Robot, <em>Andromeda</em>!|Our <em>FRC&nbsp;</em> Robot
+http://www.adambots.com/wp-content/uploads/2014/04/andromedaslide.png
+http://www.adambots.com/first/2014-game-and-robot/
+Our robot for the 2014 <em>FRC&nbsp;</em> challenge, <em>Aerial Assist</em>!
+Aerial Assist is a game requiring large excerise balls to be scored in goals. Robots work together in an alliance, assisting each other to score.
+Bonus points are available for tossing the ball over a truss and for catching it.
+Our robot, Andromeda, consistently scores, assists, and trusses well.
+
+Our Mexican Sister Team, Team LamBot 3478
 
 </script>
 <div id="gallerybox" class="nosel pagewidth">
 	<div id="gallerycontent">
-
+		<div id="galleryimage"></div>
+		<div id="gallerytext"></div>
 	</div>
 	<div id="gallerytabs">
 

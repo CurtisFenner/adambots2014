@@ -1,5 +1,18 @@
 "use strict";
 (function() {
+	function click(slide) {
+		gallerytext.innerHTML = "<a href='" + slide[2] + "'><h2>" + slide[0][0] + "</h2><br>" + slide.slice(3).join(" ") + "</a>";
+		galleryimage.style.backgroundImage = "url(" + slide[1] + ")";
+		for (var i = 0; i < slides.length; i++) {
+			slides[i].anchor.className = "tab";
+		}
+		slide.anchor.className = "tab activetab";
+	}
+	function manage(anchor,slide) {
+		anchor.onclick = function() {
+			click(slide);
+		}
+	}
 	function appearsUrl(s) {
 		s = s.toLowerCase();
 		return s.indexOf("http") >= 0 || s.index(".png") > 0|| s.indexOf(".jpg") > 0 || s.indexOf(".jpeg") > 0 || s.indexOf("www") > 0;
@@ -39,12 +52,14 @@
 		div.className = "tab";
 		var anchor = document.createElement("a");
 		anchor.innerHTML = slides[i][0][1];
+		manage(anchor,slides[i]);
 		if (i == 0) {
 			anchor.className = "activetab";
 		}
+		slides[i].anchor = anchor;
 		div.appendChild(anchor);
 		gallerytabs.appendChild(div);
 	}
 
-	
+	click( slides[(Math.random() * slides.length) << 0] )
 })();
