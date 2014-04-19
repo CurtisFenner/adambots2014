@@ -3,7 +3,7 @@
 	var focus = 0;
 	function click(slide) {
 		focus = slides.indexOf(slide);
-		gallerytext.innerHTML = "<a href='" + slide[2] + "'><h2>" + slide[0][0] + "</h2><br>" + slide.slice(3).join(" ") + "</a>";
+		gallerytext.innerHTML = "<a href='" + slide[2] + "'><h2>" + slide[0][0] + "</h2><br>" + slide.slice(3).join(" ") + " <em style=\"color:#FFD802;\">Read More</em></a>";
 		galleryimage.style.backgroundImage = "url(" + slide[1] + ")";
 		for (var i = 0; i < slides.length; i++) {
 			slides[i].anchor.className = "tab";
