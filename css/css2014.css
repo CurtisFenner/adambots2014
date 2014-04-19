@@ -397,7 +397,6 @@ The bar between the navbar and the page.
 	color:black;
 	font-weight:bold;
 	font-size:16px;
-	padding-right:-35px;
 }
 
 #gallerytabs .tab a {
@@ -826,8 +825,9 @@ Triple panel display above footer
 	font-size: 18px;
 }
 
-#teaminfo strong em a {
+#teaminfo a {
 	color: #494949;
+	text-decoration:underline;
 }
 
 #teamatom {
@@ -843,6 +843,7 @@ Triple panel display above footer
 	margin-right: auto;
 	height:80px;
 }
+
 #twitter {
 	width: 270px;
 	height: 100%;
@@ -872,10 +873,11 @@ Triple panel display above footer
 	bottom: 0;
 }
 
-.display_current a {
+#teaminfo .display_current a {
 	padding-left: 5px;
 	padding-right: 5px;
 	color: #ffd802;
+	text-decoration:none;
 }
 
 #robotinfo {
