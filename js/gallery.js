@@ -1,6 +1,8 @@
 "use strict";
 (function() {
+	var focus = 0;
 	function click(slide) {
+		focus = slides.indexOf(slide);
 		gallerytext.innerHTML = "<a href='" + slide[2] + "'><h2>" + slide[0][0] + "</h2><br>" + slide.slice(3).join(" ") + "</a>";
 		galleryimage.style.backgroundImage = "url(" + slide[1] + ")";
 		for (var i = 0; i < slides.length; i++) {
@@ -8,6 +10,17 @@
 		}
 		slide.anchor.className = "tab activetab";
 	}
+	function clickLeft() {
+		focus--;
+		focus = (focus + slides.length) % slides.length;
+		click(slides[focus]);
+	}
+	function clickRight() {
+		focus++;
+		focus = (focus + slides.length) % slides.length;
+		click(slides[focus]);
+	}
+
 	function manage(anchor,slide) {
 		anchor.onclick = function() {
 			click(slide);
@@ -60,6 +73,9 @@
 		div.appendChild(anchor);
 		gallerytabs.appendChild(div);
 	}
+
+	galleryleft.onclick = clickLeft;
+	galleryright.onclick = clickRight;
 
 	click( slides[(Math.random() * slides.length) << 0] )
 })();

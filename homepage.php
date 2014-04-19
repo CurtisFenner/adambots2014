@@ -46,6 +46,8 @@ These include competition and event summaries, interviews, and build updates.
 	<div id="gallerycontent">
 		<div id="galleryimage"></div>
 		<div id="gallerytext"></div>
+		<div id="galleryright"></div>
+		<div id="galleryleft"></div>
 	</div>
 	<div id="gallerytabs">
 
