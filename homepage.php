@@ -1,6 +1,6 @@
 <?php /* Template Name: HomePage */ get_header(); ?>
 </div>
-<h1 style="display:none;margin:none;">AdamBots Homepage <!-- accessibility purposes--></h1>
+<h1 style="display:none;margin:0;">AdamBots Homepage <!-- accessibility purposes--></h1>
 
 
 <script type="text/data" id="gallerysource">
@@ -31,7 +31,7 @@ Bonus points are available for tossing the ball over a truss and for catching it
 Our robot, Andromeda, consistently scores, assists, and trusses well.
 
 Our Mexican Sister Team, Team LamBot 3478|Team LamBot 3478
-http://www.adambots.com/wp-content/uploads/2014/04/lambotslide.png
+http://www.adambots.com/wp-content/uploads/2014/04/lambotslide.jpg
 http://www.adambots.com/about/team-outreach/team-lambot-3478/
 General Motors approached us in 2010 about mentoring new teams in Mexico. We have been mentoring the LamBots since.
 Team 3478 has gone on to win <strong>Rookie All Stars</strong> their first year at the <em>FRC&nbsp;</em> World Championship, and <strong>Engineering Inspiration</strong> in 2013.
