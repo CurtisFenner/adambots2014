@@ -5,25 +5,25 @@
 
 <script type="text/data" id="gallerysource">
 2013 <em>OCCRA&nbsp;</em> Foundation Award Winners|<em>OCCRA&nbsp;</em>2013 Foundation Award
-http://www.adambots.com/wp-content/uploads/2014/04/occrafoundationslide.png
+http://www.adambots.com/wp-content/uploads/2014/04/occrafoundationslide.jpg
 http://www.adambots.com/occra/
 <em>OCCRA&nbsp;</em> is the Oakland County Competitive Robotics Association. In the latest season, the AdamBots won the Foundation Award, which is the highest award in <em>OCCRA</em>.
 It recognizes the team with the most enthusiasm for robotics and STEM and the most raise awareness of robotics and technical career options.
 
 Thank you, Sponsors!|Our Sponsors
-http://www.adambots.com/wp-content/uploads/2014/04/sponsorslide.png
+http://www.adambots.com/wp-content/uploads/2014/04/sponsorslide2.jpg
 http://www.adambots.com/about/sponsors/
 Sponsors are the reason we can do all of the amazing stuff we do. Thank you, sponsors!
 
 Resources from the AdamBots | Resources from Us
-http://www.adambots.com/wp-content/uploads/2014/04/resourcesslide.png
+http://www.adambots.com/wp-content/uploads/2014/04/resourcesslide.jpg
 http://www.adambots.com/resources/resources-overview/
 The AdamBots provide many resources for other <em>FIRST</em>ers!
 Our scouting tool gives OPR data for individual portions of the contribution and predicts match schedules and rankings.
 We also have information about safety, and our award submissions like our award winning Business Plan.
 
 Our 2014 <em>FRC&nbsp;</em> Robot, <em>Andromeda</em>!|Our <em>FRC&nbsp;</em> Robot
-http://www.adambots.com/wp-content/uploads/2014/04/andromedaslide.png
+http://www.adambots.com/wp-content/uploads/2014/04/andromedaslide.jpg
 http://www.adambots.com/first/2014-game-and-robot/
 Our robot for the 2014 <em>FRC&nbsp;</em> challenge, <em>Aerial Assist</em>!
 Aerial Assist is a game requiring large excerise balls to be scored in goals. Robots work together in an alliance, assisting each other to score.
@@ -37,7 +37,7 @@ General Motors approached us in 2010 about mentoring new teams in Mexico. We hav
 Team 3478 has gone on to win <strong>Rookie All Stars</strong> their first year at the <em>FRC&nbsp;</em> World Championship, and <strong>Engineering Inspiration</strong> in 2013.
 
 Team Blog|Team Blog
-http://www.adambots.com/wp-content/uploads/2014/04/blogslide1.png
+http://www.adambots.com/wp-content/uploads/2014/04/blogslide.jpg
 http://www.adambots.com/team-blog/
 The AdamBots publish blog posts nearly weekly updating the world on everything AdamBots.
 These include competition and event summaries, interviews, and build updates.
