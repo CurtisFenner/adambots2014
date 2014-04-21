@@ -44,8 +44,10 @@ These include competition and event summaries, interviews, and build updates.
 </script>
 <div id="gallerybox" class="nosel pagewidth">
 	<div id="gallerycontent">
-		<div id="galleryimage"></div>
-		<div id="gallerytext"></div>
+		<a id="gallerylink">
+			<div id="galleryimage"></div>
+			<div id="gallerytext"></div>
+		</a>
 		<div id="galleryright"></div>
 		<div id="galleryleft"></div>
 	</div>

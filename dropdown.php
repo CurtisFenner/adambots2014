@@ -1,6 +1,12 @@
 <?php
+
+if (!is_dir("data")) {
+	mkdir("data");
+	file_put_contents("data/dropsource.txt","Tab:No One set up the dropdown!|/");
+}
+
 /*
-Content on April 18th
+Content on April 21th
 
 
 Tab:The AdamBots|/about
@@ -66,12 +72,13 @@ Title:Animation
 Animation Page|media-gallery/animation|Resources and videos from our animation team
 
 Tab:Team Blog|/team-blog
-Title:Team Press
+Title:Team Blog
 AdamBots Blog|team-blog|Read news about build and competitions
+Title:Social Media
 Follow us on Twitter|http://twitter.com/adambots/|
 Like us on Facebook|http://www.facebook.com/AdamBots|
 Visit us on YouTube|http://www.youtube.com/user/Adambots/|Keep up with weekly build video updates
-
+Check out our Instagram|http://instagram.com/adambots245|
 Title:Contact Us
 Contact Us|contact-us|Have a question or comment? Leave it here
 
@@ -105,16 +112,17 @@ Creating a <em>FIRST</em>&nbsp; Team Site|resources/creating-a-first-team-websit
 
 	function startsWith($haystack, $needle)
 	{
-	    return $needle === "" || strpos($haystack, $needle) === 0;
+		return $needle === "" || strpos($haystack, $needle) === 0;
 	}
 
-	ob_start();
+	/*ob_start();
 	dynamic_sidebar('Dropdown Content');
 	$str = ob_get_contents();
 	ob_end_clean();
 	echo "<!--" . $str . "-->";
 	$str = str_replace('<div class="textwidget">','',$str);
-	$str = str_replace('</div>','',$str);
+	$str = str_replace('</div>','',$str);*/ //Widget source.
+	$str = file_get_contents("data/dropsource.txt");
 	$lines = explode("\n",$str);
 	$navopen = false;
 	$ulopen = false;

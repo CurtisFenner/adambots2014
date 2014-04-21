@@ -1,13 +1,19 @@
 "use strict";
 (function() {
 	var focus = 0;
+	var activeImage = null;
 	function click(slide) {
-		focus = slides.indexOf(slide);
-		gallerytext.innerHTML = "<a href='" + slide[2] + "'><h2>" + slide[0][0] + "</h2><br>" + slide.slice(3).join(" ") + " <em style=\"color:#FFD802;\">Read More</em></a>";
-		galleryimage.style.backgroundImage = "url(" + slide[1] + ")";
-		for (var i = 0; i < slides.length; i++) {
-			slides[i].anchor.className = "tab";
+		if (activeImage) {
+			activeImage.parentNode.removeChild(activeImage);
 		}
+		slides[focus].anchor.className = "tab";
+		focus = slides.indexOf(slide);
+		gallerylink.href = slide[2];
+		console.log(slide[2]);
+		gallerytext.innerHTML = "<h2>" + slide[0][0] + "</h2><br>" + slide.slice(3).join(" ") + " <em style=\"color:#FFD802;\">Read More</em>";
+		galleryimage.appendChild(slide.image);
+		activeImage = slide.image;
+		console.log(activeImage);
 		slide.anchor.className = "tab activetab";
 	}
 	function clickLeft() {
@@ -34,7 +40,6 @@
 	var data = document.getElementById("gallerysource").innerHTML.trim();
 	data = data.split(/\s*\n+\s*/g);
 	var pages = [];
-
 	var slides = [];
 	var slide = [];
 	for (var i = 0; i < data.length-2; i++) {
@@ -60,6 +65,22 @@
 	//slide[0] is an array in the form [Title,  Short Title].
 	//slide[1] is URL for image. slide[2] is URL for link.
 	//slide[n >= 2] are text to be concatenated together.
+
+	function size(image,width,height) {
+		image.onload = function() {
+			var scaleW = width / image.width;
+			var scaleH = height / image.height;
+			if (scaleW > scaleH) {
+				//Scale width to 720
+				image.width = 720;
+			} else {
+				image.height = 432;
+			}
+			image.style.display = "block";
+			//720x432
+		}
+	}
+
 	for (var i = 0; i < slides.length; i++) {
 		var div = document.createElement("div");
 		div.className = "tab";
@@ -70,6 +91,10 @@
 			anchor.className = "activetab";
 		}
 		slides[i].anchor = anchor;
+		slides[i].image = document.createElement("img");
+		slides[i].image.style.display = "none";
+		size(slides[i].image,720,432);
+		slides[i].image.src = slides[i][1];
 		div.appendChild(anchor);
 		gallerytabs.appendChild(div);
 	}
