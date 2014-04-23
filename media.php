@@ -48,7 +48,7 @@ $add_script = array();
 				<!-- no posts found -->
 			<?php endif; ?>
 			</div>
-			<script type='text/javascript' src='http://adambots.com/FenLightbox/lightbox.js'></script>
+			<script type='text/javascript' src='http://www.adambots.com/wp-content/themes/adambots2014/js/fenlightbox.js'></script>
 		</div>
 	</div>
 <?php get_footer(); ?>
