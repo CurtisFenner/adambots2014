@@ -40,8 +40,33 @@ for ($i = 0; $i < count($searchterms); $i++) {
 }
 //$str now has bolded search terms.
 //We want to cut out the space between them. We'll protect 50 characters and then delete.
-$str = preg_replace('/<\/b>([^<>]{40}\S*)[\s\S]*?(\S*[^<>]{50})<b>/','</B>$1 ... $2<B>',$str,10);
+$begin = strpos($str,"<b");
+if ($begin) {
+	$begin = max(0,$begin-50);
+	if ($begin > 0) {
+		$str = "&hellip;" . substr($str,$begin);
+	}
+}
+
+$strby = explode("</b>",$str,13); //Maximum of 12 bolded terms. We throw out the thirteenth.
+if (count($strby) == 1) {
+	$str = "&hellip;";
+} else {
+	$str = "";
+	for ($i = 0; $i < count($strby)-1; $i++) {
+		if ($i != 0) {
+			$str .= "</b>";
+		}
+		$str .= $strby[$i];
+		$str .= "</b>&hellip;";
+	}
+}
+
+$str = preg_replace('/<\/b>([^<>]{40}\S*)[\s\S]*?(\S*[^<>]{50})<b>/','</B>$1 &hellip; $2<B>',$str,10);
 $str = str_replace("\n","<br>",$str);
+$str = str_replace("FIRST","<em>FIRST</em>",$str);
+$str = str_replace("FRC","<em>FRC</em>",$str);
+$str = str_replace("OCCRA","<em>OCCRA</em>",$str);
 echo $str;
 //echo substr(strip_tags($str),0,100) + "&hellip;"
 ?>
