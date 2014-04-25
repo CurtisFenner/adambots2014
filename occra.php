@@ -4,7 +4,8 @@ Template Name: OCCRA
 */
 ?>
 
-<?php get_header();
+<?php
+get_header();
 ?>
 
 
