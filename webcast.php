@@ -2,59 +2,35 @@
 /*
 Template Name: Webcast
 */
-
-//Add stylesheets to this page
-global $add_style;
-$add_style = array();
-
-//Add scripts to this page
-global $add_script;
-$add_script = array();
-
+get_header();
 ?>
-<?php get_header(); ?>
-	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		<div class="page_shadowline"></div>
-		<div class="pagewidth">
-			<div id="pagetype" style="background-color:#E8342E;">
-				<h2 style="padding:0;color:#FFF;height:40px;">
-					Photo and Video
-				</h2>
-				<div class="background"><img src="http://adambots.com/logos/png/yellowBG_small.png" height="60"></div>
-				<?php dynamic_sidebar('Media Gallery Submenu') ?>
-			</div>
-            
-            <div style="padding:20px;background-color:#FFF;background-image:url('<?php bloginfo("template_directory"); ?>/res/img/noisy.png');margin-top:6px;">
-            <?php 
-                $edit_attr = array(
-                    'alt' => get_the_title(),
-                    'title' => '',
-                    'class' => 'floatright'
-                    );
-                $post_image = get_the_post_thumbnail($post->ID,'pristine-custom-image-medium1', $edit_attr);					
-            ?>
-            <?php
-                if(!empty($post_image)) {
-                    echo $post_image;
-                }
-            ?>
-<h1>
-<?php the_title();?>
-</h1>
-            <?php the_content(); ?>
-            <?php endwhile; ?>
-                <!-- post navigation -->
-            <?php else: ?>
-                <!-- no posts found -->
-            <?php endif; ?>
 
-<hr/>
-<h1>Webcast Chat</h1>
-<div id="webcastbox">
-Your Name:<input id="webcastname" value="Guest1"></input>
-<div id="webcastchat" style="font-size:20px;width:100%;height:450px;overflow-y:scroll;background:#EEE;margin-bottom:5px;"></div>
-<input id="webcastline" style="display:inline-block;margin-top:3px;left:0px;width:700px;font-size:20px;height:25px;line-height:25px;"></input>
-<button id="webcastsubmitbutton" style="position:relative;top:-3px;height:31px;line-height:25px;">Say</button>
+<div class="pagewidth">
+	<div id="pagetype" style="background-color:#E8342E;">
+		<h2 style="padding:0;color:#FFF;height:40px;">
+			Webcast
+		</h2>
+		<div class="background"><img alt="AdamBots" src="http://adambots.com/logos/png/yellowBG_small.png" height="60"></div>
+		<?php dynamic_sidebar('Media Gallery Submenu') ?>
+	</div>
+	<div style="padding:20px;background-color:#FFF;background-image:url('<?php bloginfo("template_directory"); ?>/res/img/noisy.png');margin-top:6px;">
+	</div>
+</div>
+<div id="content" class="pagewidth onecolumn">
+	<h1>
+		<?php the_title();?>
+	</h1>
+
+	<?php the_content(); ?>
+
+	<hr/>
+	<h1>Webcast Chat</h1>
+	<div id="webcastbox">
+	Your Name:<input id="webcastname" value="Guest1">
+	<div id="webcastchat" style="font-size:20px;width:100%;height:450px;overflow-y:scroll;background:#EEE;margin-bottom:5px;"></div>
+	<input id="webcastline" style="display:inline-block;margin-top:3px;left:0px;width:700px;font-size:20px;height:25px;line-height:25px;">
+	<button id="webcastsubmitbutton" style="position:relative;top:-3px;height:31px;line-height:25px;">Say</button>
+	</div>
 </div>
 
 <script>
@@ -124,11 +100,5 @@ var min = now.getMinutes();
 check();
 }
 };
-
 </script>
-
-            </div>
-
-		</div>
-	</div>
 <?php get_footer(); ?>
