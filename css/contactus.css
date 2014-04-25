@@ -1,0 +1,28 @@
+input,textarea {
+	background:#EEE;
+	outline:none;
+	border:1px solid #BBB;
+}
+input {
+	height:24px;
+}
+textarea {
+	width:100%;
+}
+
+
+#success {
+	background-color:#AAFFBB;
+	border:solid 1px #669988;
+}
+
+#bademail,#badserver {
+	background-color:#FFAAAA;
+	border:solid 1px #997777;
+}
+
+.message {
+	height:30px;
+	line-height:30px;
+	padding-left:5px;
+}
