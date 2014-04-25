@@ -16,6 +16,9 @@ if (strpos($body,'[left]') !== FALSE) {
 	}
 }
 the_content();
+if (isset($bottominclude) && $bottominclude) {
+	echo $bottominclude;
+}
 ?>
 </div>
 <?php

@@ -20,5 +20,6 @@ get_header();
 
 <?php
 $showtitle = true;
+$bottominclude = "<script type='text/javascript' src='http://www.adambots.com/wp-content/themes/adambots2014/js/fenlightbox.js'></script>";
 include "genericbottom.php";
 ?>
