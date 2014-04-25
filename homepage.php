@@ -1,5 +1,4 @@
 <?php /* Template Name: HomePage */ get_header(); ?>
-</div>
 <h1 style="display:none;margin:0;">AdamBots Homepage <!-- accessibility purposes--></h1>
 
 
