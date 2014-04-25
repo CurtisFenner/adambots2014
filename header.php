@@ -65,6 +65,7 @@ display:none;
 
 <?php
 if (isset($headinclude)) {
+	//Requires this to be INCLUDE'd rather than get'd.
 	echo $headinclude;
 }
 ?>

@@ -8,7 +8,7 @@ Template Name: Contact Us Page
 
 $headinclude = '<link rel="stylesheet" href="'. get_bloginfo('template_directory') . '/css/contactus.css">';
 
-get_header();
+include("header.php");
 ?>
 
 
