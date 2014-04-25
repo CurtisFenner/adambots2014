@@ -1,4 +1,6 @@
 <?php
+	//This page receives messages from Contact Us and mails them to a small list of people.
+	//This list should probably be drawn from somewhere more easily editable...
 	error_reporting(E_NOTICE);
 		function valid_email($str)
 		{
