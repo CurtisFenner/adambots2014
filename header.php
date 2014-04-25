@@ -97,8 +97,6 @@ display:none;
 		</div>
 		<div class="clear"></div>
 	</div>
-	
-	<div id="content">
 <?php
 include("dropdown.php");
 ?>

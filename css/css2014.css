@@ -248,13 +248,14 @@ The bar between the navbar and the page.
 	color:black;
 }
 
+
 .twocolumns {
 	position:relative;
 	width:960px;
 	margin:auto;
+	margin-top:6px;
 	background-image:url("../res/img/twocol.png");
 	color:black;
-	margin-top:6px;
 }
 
 .onecolumn {
@@ -267,6 +268,8 @@ The bar between the navbar and the page.
 	color:black;
 	padding:20px;
 }
+
+
 
 .spacer {
 	clear:both;
@@ -387,7 +390,7 @@ The bar between the navbar and the page.
 	top:0;
 	bottom:0;
 	width:240px;
-	background:#EEE url("../res/img/noisy.png");
+	background:white url("../res/img/noisy.png");
 }
 
 #gallerytabs .tab {
@@ -550,10 +553,7 @@ The bar between the navbar and the page.
 #content {
 	clear: both;
 	position: relative;
-	margin: auto;
-	width: auto;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
+	
 }
 
 /**************************************
@@ -735,7 +735,7 @@ Triple panel display above footer
 .panel {
 	position:absolute;
 	margin-top: 10px;
-	background:#EEE;
+	background:white;
 	background-image:url("../res/img/noisy.png");
 	color:black;
 	box-shadow: 0 0 10px #000;
@@ -755,20 +755,20 @@ Triple panel display above footer
 	-o-animation: slidein 1.5s;*/
 }
 /**************************************
-		  NEXTGEN GALLERY MODS
+		vNEXTGEN GALLERY MODSv
 ***************************************/
 
 
 
 /**************************************
-		  NEXTGEN GALLERY MODS
+		^NEXTGEN GALLERY MODS^
 ***************************************/
 #countdown {
 	max-width:930px;
 	margin-left:auto;
 	margin-right:auto;
 	font-weight:bold;
-	color:#eee;
+	color:white;
 	height:60px;
 	line-height:60px;
 	font-size:18px;
@@ -869,7 +869,7 @@ Triple panel display above footer
 	font-weight:bold;
 	line-height:42px;
 	font-size:16px;
-	color: #eee;
+	color: white;
 	background-color: #222;
 	bottom: 0;
 }
@@ -891,7 +891,7 @@ Triple panel display above footer
 	padding: 0px;
 	position: relative;
 	
-	background-color: #eee;
+	background-color: white;
 	background-image:url("../res/img/noisy.png");
 	color:black;
 	box-shadow: 0 0 10px #000;

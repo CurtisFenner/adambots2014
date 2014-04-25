@@ -25,7 +25,7 @@ $add_script = array();
 			<div class="onecolumn">
 
 		<div id="atomrightcontainer"><div id="onecolumnbackground"></div></div>
-<h1><?php the_title(); ?></h1>
+<h1><?php the_title();?></h1>
 <div class="dim">		
 			Written by <?php the_author_link(); ?> on <?php the_date(); ?> in <?php the_category(', '); ?>	
 		</div>

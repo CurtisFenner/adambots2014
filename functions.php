@@ -4,12 +4,12 @@
 
 
 function shortcode_left($atts, $content=null){
-   return '<div class="twocolumns"><div id="atomrightcontainer"><div id="twocolumnbackground"></div></div><div id="leftcol">' . do_shortcode($content) . '</div>';
+	return '<div class="twocolumns"><div id="atomrightcontainer"><div id="twocolumnbackground"></div></div><div id="leftcol">' . do_shortcode($content) . '</div>';
 }
 //add_shortcode('left','shortcode_left');
 
 function shortcode_right($atts, $content=null){
-   return '<div id="rightcol">' . do_shortcode($content) . '</div><div class="clear"></div></div>';
+	return '<div id="rightcol">' . do_shortcode($content) . '</div><div class="clear"></div></div>';
 }
 //add_shortcode('right','shortcode_right');
 
@@ -147,66 +147,6 @@ if ( function_exists('register_sidebar') ) {
 		'id'            => 'resources-submenu',
 		'before_widget' => '<div class="subnav">',
 		'after_widget'  => '</div>' );
-
-	register_sidebar($args);
-	
-	$args = array(
-		'name'          => 'Footer 1',
-		'id'            => 'footer-1',
-		'before_widget' => '<div class="footer_col">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<strong><em>',
-		'after_title'   => '</em></strong>' );
-
-	register_sidebar($args);
-
-	$args = array(
-		'name'          => 'Footer 2',
-		'id'            => 'footer-2',
-		'before_widget' => '<div class="footer_col">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<strong><em>',
-		'after_title'   => '</em></strong>' );
-
-	register_sidebar($args);
-
-	$args = array(
-		'name'          => 'Footer 3',
-		'id'            => 'footer-3',
-		'before_widget' => '<div class="footer_col">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<strong><em>',
-		'after_title'   => '</em></strong>' );
-		
-	register_sidebar($args);
-
-	$args = array(
-		'name'          => 'Footer 4',
-		'id'            => 'footer-4',
-		'before_widget' => '<div class="footer_col">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<strong><em>',
-		'after_title'   => '</em></strong>' );
-		
-	register_sidebar($args);
-
-	$args = array(
-		'name'          => 'Footer 5',
-		'id'            => 'footer-5',
-		'before_widget' => '<div class="footer_col">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<strong><em>',
-		'after_title'   => '</em></strong>' );
-		
-	register_sidebar($args);
-
-	$args = array(
-		'name'          => 'Footer 6',
-		'id'            => 'footer-6',
-		'before_widget' => '<div class="footer_col">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<strong><em>',
-		'after_title'   => '</em></strong>' );
 
 	register_sidebar($args);
 	
