@@ -1,3 +1,4 @@
+(function() {
 function getViewport() {
 	var viewPortWidth;
 	var viewPortHeight;
@@ -331,3 +332,4 @@ function loop() {
 setInterval(loop,20);
 
 */
+})();
