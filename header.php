@@ -1,4 +1,7 @@
 <?php
+/*
+Writes the contents of "$headinclude" at the bottom of the head.
+*/
 ?>
 <!doctype html>
 <html lang="en">
@@ -61,6 +64,11 @@ display:none;
 
 </style>
 
+<?php
+if (isset($headinclude)) {
+	echo $headinclude;
+}
+?>
 </head>
 <body>
 	<div class="pagewidth">

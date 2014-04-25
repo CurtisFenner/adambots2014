@@ -2,41 +2,16 @@
 /*
 Template Name: Contact Us Page
 */
-include "header.php";
 ?>
 
-<style>
-input,textarea {
-	background:#EEE;
-	outline:none;
-	border:1px solid #BBB;
-}
-input {
-	height:24px;
-}
-textarea {
-	width:100%;
-}
+<?php
+
+$headinclude = '<link rel="stylesheet" href="'. get_bloginfo('template_directory') . '/css/contactus.css">';
+
+get_header();
+?>
 
 
-#success {
-	background-color:#AAFFBB;
-	border:solid 1px #669988;
-}
-
-#bademail,#badserver {
-	background-color:#FFAAAA;
-	border:solid 1px #997777;
-}
-
-.message {
-	height:30px;
-	line-height:30px;
-	padding-left:5px;
-}
-
-
-</style>
 
 <div class="pagewidth">
 	<div id="pagetype" style="background-color:#111;color:white">
@@ -45,6 +20,8 @@ textarea {
 		</div>
 		Want to share something, ask something? Send us a message here.
 	</div>
+</div>
+<div id="content" class="pagewidth">
 	<div class="twocolumns">
 		<div id="leftcol">
 			<div class="message" id="success" style="display:none;">
@@ -66,62 +43,52 @@ textarea {
 					<button id="button" type="submit" name="qsubmit" value="Submit">Send Message</button>
 				</p>
 			</div>
-						<script>
-							var button = document.getElementById("button");
-							var email_in = document.getElementById("emailinput");
-							var name_in = document.getElementById("nameinput");
-							var msg_in = document.getElementById("messageinput");
-
-							var alert_success = document.getElementById("success");
-							var alert_bademail = document.getElementById("bademail");
-							var alert_badserver = document.getElementById("badserver");
-
-							var debounce = false;
-
-							function onclick()
-							{
-								var r = new XMLHttpRequest();
-								function onrespond()
-								{
-									if (r.readyState == 4 && r.status == 200)
-									{
-										alert_success.style.display = "none";
-										alert_badserver.style.display = "none";
-										alert_bademail.style.display = "none";
-										var t = r.responseText;
-										if (t == 1)
-										{
-											alert_success.style.display = "block";
-											button.onclick = null;
-										}
-										if (t == 2)
-										{
-											alert_badserver.style.display = "block";
-										}
-										if (t == 3)
-										{
-											alert_bademail.style.display = "block";
-										}
-									}
-								}
-								if (!debounce) {
-									r.onreadystatechange = onrespond;
-									//r.open("POST","http://www.adambots.com/wp-content/themes/adambots2014/send.php");
-									r.open("POST","/wp-content/themes/adambots2014/send.php");
-									r.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-									r.send("name=" + encodeURIComponent(name_in.value) + "&email=" + encodeURIComponent(email_in.value) +"&comment=" + encodeURIComponent(msg_in.value));
-									debounce = true;
-									setTimeout(function() {debounce = false;},1000);
-								}
+			<script>
+				var button = document.getElementById("button");
+				var email_in = document.getElementById("emailinput");
+				var name_in = document.getElementById("nameinput");
+				var msg_in = document.getElementById("messageinput");
+				var alert_success = document.getElementById("success");
+				var alert_bademail = document.getElementById("bademail");
+				var alert_badserver = document.getElementById("badserver");
+				var debounce = false;
+				function onclick() {
+					var r = new XMLHttpRequest();
+					function onrespond() {
+						if (r.readyState == 4 && r.status == 200) {
+							alert_success.style.display = "none";
+							alert_badserver.style.display = "none";
+							alert_bademail.style.display = "none";
+							var t = r.responseText;
+							if (t == 1) 
+								alert_success.style.display = "block";
+								button.onclick = null;
 							}
-							button.onclick = onclick;
-						</script>
-					</div>
-					<div id="rightcol">
-						<?php dynamic_sidebar('Contact Page Sidebar') ?>
-					</div>
-					<div class="clear">
-					</div>
-				</div>
-			</div>
-			<?php get_footer(); ?>
+							if (t == 2) {
+								alert_badserver.style.display = "block";
+							}
+							if (t == 3) 
+								alert_bademail.style.display = "block";
+							}
+						}
+					}
+					if (!debounce) {
+						r.onreadystatechange = onrespond;
+						//r.open("POST","http://www.adambots.com/wp-content/themes/adambots2014/send.php");
+						r.open("POST","/wp-content/themes/adambots2014/send.php");
+						r.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+						r.send("name=" + encodeURIComponent(name_in.value) + "&email=" + encodeURIComponent(email_in.value) +"&comment=" + encodeURIComponent(msg_in.value));
+						debounce = true;
+						setTimeout(function() {debounce = false;},1000);
+					}
+				}
+				button.onclick = onclick;
+			</script>
+		</div>
+		<div id="rightcol">
+			<?php dynamic_sidebar('Contact Page Sidebar') ?>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<?php get_footer(); ?>
