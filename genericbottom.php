@@ -9,9 +9,11 @@ if (strpos($body,'[left]') !== FALSE) {
 ?>
 <div id="content" class="pagewidth onecolumn">
 <?php
-}
-if (isset($showtitle) && $showtitle) {
-	?><h1><?php the_title(); ?></h1><?php
+	//Only do this on a onecolumn page.
+	//Two column pages do not render it correctly.
+	if (isset($showtitle) && $showtitle) {
+		?><h1><?php the_title(); ?></h1><?php
+	}
 }
 the_content();
 ?>
