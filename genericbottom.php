@@ -10,6 +10,9 @@ if (strpos($body,'[left]') !== FALSE) {
 <div id="content" class="pagewidth onecolumn">
 <?php
 }
+if (isset($showtitle) && $showtitle) {
+	?><h1><?php the_title(); ?></h1><?php
+}
 the_content();
 ?>
 </div>

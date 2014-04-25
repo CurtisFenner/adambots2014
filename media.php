@@ -19,5 +19,6 @@ get_header();
 </div>
 
 <?php
+$showtitle = true;
 include "genericbottom.php";
 ?>
