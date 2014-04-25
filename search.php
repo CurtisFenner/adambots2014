@@ -7,8 +7,8 @@ function lengthCompare($a,$b){
 usort($searchterms,'lengthCompare');
 ?>
 
-
 <?php get_header(); ?>
+
 <div class="pagewidth">
 	<div class="onecolumn">
 		<h1>Search results for &ldquo;<?php the_search_query();?>&rdquo;</h1>
@@ -76,7 +76,5 @@ echo $str;
 
 	</div>
 
-
-</div>
 </div>
 <?php get_footer(); ?>
