@@ -2,8 +2,7 @@
 /*
 Writes the contents of "$headinclude" at the bottom of the head.
 */
-?>
-<!doctype html>
+?><!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">

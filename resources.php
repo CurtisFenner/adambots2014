@@ -4,7 +4,9 @@ Template Name: Resources
 */
 ?>
 
-<?php get_header(); ?>
+<?php
+get_header();
+?>
 
 <div class="pagewidth">
 	<div id="pagetype" style="height:110px;background-color:#829F4C;">
