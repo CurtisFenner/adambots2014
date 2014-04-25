@@ -1,3 +1,4 @@
+(function() {
 var links = dropdown.getElementsByClassName("navtab");
 var active = null;
 
@@ -93,3 +94,4 @@ function dropper() {
 //} else {
 //	dropper();
 //}
+})();
