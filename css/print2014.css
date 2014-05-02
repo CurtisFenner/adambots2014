@@ -1,0 +1,75 @@
+* {
+	color: black !important;
+	background:white !important;
+	text-shadow:none !important;
+	border-color:black !important;
+	border-width:1pt !important;
+	box-shadow:none !important;
+}
+
+a {
+	text-decoration:underline !important;
+}
+
+#head *{
+	display:none !important;
+}
+
+#footer {
+	display:none !important;
+}
+
+#dropdown, #belowbox {
+	display:none !important;
+}
+
+#gearscontainer {
+	display:none !important;
+}
+
+.pagewidth {
+	width:auto !important;
+}
+
+#head:after {
+	display:block;
+	text-align:center;
+	font-weight:bold;
+	font-size:28px;
+	content:"www.AdamBots.com";
+	margin:0.125in;
+}
+
+/*a::after {
+	display:inline-block;
+	font-size:50%;
+	font-weight:normal;
+	text-decoration:none;
+	font-style:normal;
+	vertical-align:super;
+	content: attr(href);
+}*/ /*Doesn't fully work? */
+
+
+#pagetype {
+	display:none !important;
+}
+
+.twocolumns {
+	width:auto !important;
+}
+#leftcol {
+	width:auto !important;
+	float:none !important;
+}
+#rightcol {
+	border-top:1pt solid black;
+	width:auto !important;
+	float:none !important;
+}
+
+.printonly {
+	text-align:center;
+	display:block !important;
+	margin:.125in;
+}

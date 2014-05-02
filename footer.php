@@ -1,3 +1,6 @@
+		<div class="printonly" style="display:none;">
+			URL: <u><?php $str = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; echo str_replace(array('%','<'),'',$str); ?></u>
+		</div>
 		<div id="footer">
 			<div style="padding-top:30px;margin-left:auto;margin-right:auto;text-align:center; width:950px;">
 				<div style="line-height:25px">© Copyright 2005-2014 AdamBots. All Rights Reserved.
