@@ -152,7 +152,7 @@ if ( function_exists('register_sidebar') ) {
 	
 
 	$args = array(
-	'name' => 'Dropdown Content',
+	'name' => 'Footer',
 	'before_widget' => '',
 	'after_widget' => '',
 	'before_title' => '',

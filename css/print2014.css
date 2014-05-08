@@ -1,10 +1,14 @@
 * {
 	color: black !important;
-	background:white !important;
+	background:transparent !important;
 	text-shadow:none !important;
 	border-color:black !important;
 	border-width:1pt !important;
 	box-shadow:none !important;
+}
+
+body {
+	background:white !important;
 }
 
 a {
