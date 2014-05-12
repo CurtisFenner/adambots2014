@@ -10,15 +10,6 @@ Writes the contents of "$headinclude" at the bottom of the head.
 	<link rel="icon" href="<?php bloginfo('template_directory'); ?>/res/img/favicon.ico">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/main.css.php">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/print2014.css" media="print">
-	<style>
-	@font-face {
-		font-family: "Roboto Condensed", sans-serif;
-	}
-	@font-face {
-		font-family: "Roboto", sans-serif;
-	}
-	</style>
-	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700%7CRoboto:400,300,700' rel='stylesheet' type='text/css'>
 	<script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
