@@ -7,6 +7,7 @@ Writes the contents of "$headinclude" at the bottom of the head.
 <head>
 	<meta charset="UTF-8">
 	<title>AdamBots FRC &amp; OCCRA Team 245</title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
 	<link rel="icon" href="<?php bloginfo('template_directory'); ?>/res/img/favicon.ico">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/main.css.php">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/print2014.css" media="print">
@@ -19,18 +20,6 @@ Writes the contents of "$headinclude" at the bottom of the head.
 	ga('create', 'UA-852318-3', 'adambots.com');
 	ga('send', 'pageview');
 
-</script>
-<script>
-(function() {
-	//Analytics snippet
-	var ref = document.referrer || "";
-	var SRC = "http://themage.x10.mx/analysis/visit.php?u=" + ((window.location || {}).href || "") + "&r=" + ref;
-	var script = document.createElement("script");
-	var me = document.getElementsByTagName("script")[0];
-	script.async = 1;
-	script.src = SRC;
-	me.parentNode.insertBefore(script, me)
-})();
 </script>
 
 <style>
