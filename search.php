@@ -15,8 +15,8 @@ usort($searchterms,'lengthCompare');
 		<hr>
 		<!-- A pagetype here might be a good idea but would not contain subnav, like LamBot page -->
 		<?php while ( have_posts() ) : the_post(); ?>
-			<b><a href="<?php  the_permalink(); ?>" style="font-size:24px;text-decoration:underline;"><?php the_title(); ?></a></b><br>
-			<section style="font-size:16px;">
+		<b><a href="<?php  the_permalink(); ?>" style="font-size:24px;text-decoration:underline;"><?php the_title(); ?></a></b><br>
+		<section style="font-size:16px;">
 <?php //the_content();
 $str = get_the_content();
 /*$copy = "";
@@ -70,11 +70,11 @@ $str = str_replace("OCCRA","<em>OCCRA</em>",$str);
 echo $str;
 //echo substr(strip_tags($str),0,100) + "&hellip;"
 ?>
-		</section>
-		<hr>
-		<?php endwhile; ?>
+</section>
+<hr>
+<?php endwhile; ?>
 
-	</div>
+</div>
 
 </div>
 <?php get_footer(); ?>

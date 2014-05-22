@@ -74,17 +74,17 @@ These include competition and event summaries, interviews, and build updates.
 		<a style="color:white;" class="twitter-timeline" href="https://twitter.com/AdamBots" data-theme="dark" data-link-color="#e0bb00" data-tweet-limit="20" data-chrome="nofooter noborders transparent" data-widget-id="434172184005578752">
 			Our Twitter feed is loading
 			<!-- <script src='<?php bloginfo('template_directory'); ?>/js/twitter.js'></script> -->
-<script>!function (d, s, id) {
-	var js, fjs = d.getElementsByTagName(s)[0],
-		p = /^http:/.test(d.location) ? 'http' : 'https';
-	if (!d.getElementById(id)) {
-		js = d.createElement(s);
-		js.id = id;
-		js.src = p + "://platform.twitter.com/widgets.js";
-		fjs.parentNode.insertBefore(js, fjs);
-	}
-}(document, "script", "twitter-wjs");
-</script>
+			<script>!function (d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0],
+				p = /^http:/.test(d.location) ? 'http' : 'https';
+				if (!d.getElementById(id)) {
+					js = d.createElement(s);
+					js.id = id;
+					js.src = p + "://platform.twitter.com/widgets.js";
+					fjs.parentNode.insertBefore(js, fjs);
+				}
+			}(document, "script", "twitter-wjs");
+			</script>
 		</a>
 	</div>
 	<div class="clear"></div>
@@ -101,17 +101,17 @@ These include competition and event summaries, interviews, and build updates.
 <div class="pagewidth" id="panelcontainer" style="position:relative;height:420px;top:0;">
 	<div class="panel" style="width:314px;height:325px;left:0;top:0;text-align:center;">
 		<?php
-			dynamic_sidebar("Homepage 1");
+		dynamic_sidebar("Homepage 1");
 		?>
 	</div>
 	<div class="panel" style="width:314px;height:325px;left:323px;top:0;text-align:center;">
 		<?php
-			dynamic_sidebar("Homepage 2");
+		dynamic_sidebar("Homepage 2");
 		?>
 	</div>
 	<div class="panel" style="width:314px;height:325px;left:646px;top:0;text-align:center;">
 		<?php
-			dynamic_sidebar("Homepage 3");
+		dynamic_sidebar("Homepage 3");
 		?>
 	</div>
 </div>
