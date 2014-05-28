@@ -84,7 +84,7 @@ These include competition and event summaries, interviews, and build updates.
 					js.src = p + "://platform.twitter.com/widgets.js";
 					fjs.parentNode.insertBefore(js, fjs);
 				}
-			}(document, "script", "twitter-wjs")},10);
+			}(document, "script", "twitter-wjs")},100);
 			</script>
 		</a>
 	</div>

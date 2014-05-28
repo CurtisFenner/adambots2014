@@ -61,7 +61,7 @@ if (isset($headinclude)) {
 			<canvas id="gears2" width="544" height="544"></canvas>
 		</div>
 	</div>
-	<script src='<?php bloginfo('template_directory'); ?>/js/gears.js'></script>
+	<script src='<?php bloginfo('template_directory'); ?>/js/gears.js' async></script>
 	<div id="head" class="pagewidth">
 		<div id="adambotslogo">
 			<a href="<?php echo home_url(); ?>">
