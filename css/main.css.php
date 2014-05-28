@@ -12,21 +12,28 @@
  * <link rel="stylesheet" type="text/css" media="screen, print, projection" href="/css/compressed.css.php" />
  */
 
-header('Expires: '.gmdate('D, d M Y H:i:s \G\M\T', time() + 60*60*24*2)); // Two day expiration?
+header('Expires: '.gmdate('D, d M Y H:i:s \G\M\T', time() + 60*60*24*3)); // Two day expiration?
+
 
 $cssFiles = array(
-  "css2014.css",
-  "reset.css",
-  "roboto.css"
+	"css2014.css",
+	"reset.css",
+	"roboto.css"
 );
+
+$ts = '';
  
 /**
  * Ideally, you wouldn't need to change any code beyond this point.
  */
 $buffer = "";
 foreach ($cssFiles as $cssFile) {
-  $buffer .= file_get_contents($cssFile);
+	$buffer .= file_get_contents($cssFile);
+	$ts .= filemtime($cssFile);
 }
+
+$etag = md5($ts);
+header("ETag: \"{$etag}\"");
  
 // Remove comments
 $buffer = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $buffer);
