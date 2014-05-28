@@ -12,6 +12,8 @@
  * <link rel="stylesheet" type="text/css" media="screen, print, projection" href="/css/compressed.css.php" />
  */
 
+header('Expires: '.gmdate('D, d M Y H:i:s \G\M\T', time() + 60*60*24*2)); // Two day expiration?
+
 $cssFiles = array(
   "css2014.css",
   "reset.css",

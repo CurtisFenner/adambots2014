@@ -7,7 +7,6 @@ Writes the contents of "$headinclude" at the bottom of the head.
 <head>
 	<meta charset="UTF-8">
 	<title>AdamBots FRC &amp; OCCRA Team 245</title>
-	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
 	<link rel="icon" href="<?php bloginfo('template_directory'); ?>/res/img/favicon.ico">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/main.css.php">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/print2014.css" media="print">
