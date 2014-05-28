@@ -13,7 +13,7 @@
  */
 
 header('Expires: '.gmdate('D, d M Y H:i:s \G\M\T', time() + 60*60*24*3)); // Two day expiration?
-
+header('Cache-Control:  max-age=3600, must-revalidate');
 
 $cssFiles = array(
 	"css2014.css",
