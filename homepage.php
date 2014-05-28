@@ -73,7 +73,9 @@ These include competition and event summaries, interviews, and build updates.
 		<a style="color:white;" class="twitter-timeline" href="https://twitter.com/AdamBots" data-theme="dark" data-link-color="#e0bb00" data-tweet-limit="20" data-chrome="nofooter noborders transparent" data-widget-id="434172184005578752">
 			Our Twitter feed is loading
 			<!-- <script src='<?php bloginfo('template_directory'); ?>/js/twitter.js'></script> -->
-			<script>!function (d, s, id) {
+			<script>
+			setTimeout(function(){
+			!function (d, s, id) {
 				var js, fjs = d.getElementsByTagName(s)[0],
 				p = /^http:/.test(d.location) ? 'http' : 'https';
 				if (!d.getElementById(id)) {
@@ -82,7 +84,7 @@ These include competition and event summaries, interviews, and build updates.
 					js.src = p + "://platform.twitter.com/widgets.js";
 					fjs.parentNode.insertBefore(js, fjs);
 				}
-			}(document, "script", "twitter-wjs");
+			}(document, "script", "twitter-wjs")},10);
 			</script>
 		</a>
 	</div>
