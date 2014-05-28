@@ -33,7 +33,7 @@ Footer
 Homepage 1
 ##################################
 <a href="http://www.usfirst.org">
-<img style="width:250px;margin:7px;" src="http://www.adambots.com/wp-content/themes/adambots2014/res/img/first_logo.png" alt="FIRST Logo">
+<img style="width:250px;margin:7px;" src="http://www.adambots.com/wp-content/uploads/2014/05/first-logo-for-home.png" alt="FIRST Logo">
 <div style="border-bottom:8px solid #0066B3;padding-left:15px;padding-right:15px;padding-bottom:7px;padding-top:20px;">For Inspiration and Recognition of Science and Technology
 </div>
 </a>
@@ -42,7 +42,7 @@ Homepage 1
 Homepage 2
 ##################################
 <a href="http://www.adambots.com/first/2014-game-and-robot/">
-<img style="width:250px;margin:7px;margin-top:46px;margin-bottom:46px" src="http://www.adambots.com/wp-content/themes/adambots2014/res/img/aerial_assist.png" alt="Aerial Assist Logo">
+<img style="width:250px;margin:7px;margin-top:46px;margin-bottom:46px" src="http://www.adambots.com/wp-content/uploads/2014/05/aerial-assist-front.png" alt="Aerial Assist Logo">
 <div style="border-bottom:8px solid #0066B3;padding-left:15px;padding-right:15px;padding-bottom:7px;padding-top:20px;">
 Aerial Assist:<br>The 2014 <em>FRC&nbsp;</em> Challenge
 </div>
