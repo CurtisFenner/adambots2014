@@ -60,7 +60,7 @@ d.innerHTML=b[c][0][1],m(d,b[c]),0==c&&(d.className="activetab"),b[c].anchor=d,b
 
 
 <div id="countdown" class="pagewidth"></div>
-<script src="<?php bloginfo('template_directory'); ?>/js/countdown.js"></script>
+<script src="<?php bloginfo('template_directory');?>/js/countdown.js"></script>
 
 <div id="bodycards">
 	<div id="teaminfo">
