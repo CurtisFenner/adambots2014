@@ -83,15 +83,7 @@ function dropper() {
 		belowbox.style.height = newHeight + "px";
 		pheight = newHeight;
 	}
-
-	//if (window.requestAnimationFrame) {
-	//	requestAnimationFrame(dropper);
-	//}
 }
-
-//if (!!!window.requestAnimationFrame) {
 	setInterval(dropper,1000/30);
-//} else {
-//	dropper();
-//}
+
 })();

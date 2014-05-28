@@ -63,12 +63,11 @@ These include competition and event summaries, interviews, and build updates.
 <div id="bodycards">
 	<div id="teaminfo">
 		<div id="teamatom">
-			<img src="<?php bloginfo('template_directory'); ?>/res/img/dark_round_atom_w_text.png" alt="The AdamBots">
+			<img width="353" height="72" src="http://www.adambots.com/wp-content/uploads/2014/05/adambotslogoright-2.png" alt="The AdamBots">
 		</div>
 		<?php
 		dynamic_sidebar("Display Infotext");
 		?>
-		<!-- REMEMBER TO USE SEASON CARD INSTEAD IN WIDGET, DISPLAY INFOTEXT -->
 	</div>
 	<div id="twitter">
 		<a style="color:white;" class="twitter-timeline" href="https://twitter.com/AdamBots" data-theme="dark" data-link-color="#e0bb00" data-tweet-limit="20" data-chrome="nofooter noborders transparent" data-widget-id="434172184005578752">
