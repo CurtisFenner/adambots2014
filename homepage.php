@@ -79,10 +79,11 @@ d.innerHTML=b[c][0][1],m(d,b[c]),0==c&&(d.className="activetab"),b[c].anchor=d,b
 			setTimeout(function(){
 			!function (d, s, id) {
 				var js, fjs = d.getElementsByTagName(s)[0],
-				p = /^http:/.test(d.location) ? 'http' : 'https';
+				p = 'https';
 				if (!d.getElementById(id)) {
 					js = d.createElement(s);
 					js.id = id;
+					js.async = 1;
 					js.src = p + "://platform.twitter.com/widgets.js";
 					fjs.parentNode.insertBefore(js, fjs);
 				}
