@@ -206,4 +206,4 @@ Creating a <em>FIRST</em>&nbsp; Team Site|resources/creating-a-first-team-websit
 			</div>
 			<div id="belowpos"></div>
 		</div>
-		<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/dropdown.js"></script>
+		<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/dropdown.js" async></script>
