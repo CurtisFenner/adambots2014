@@ -376,7 +376,7 @@ The bar between the navbar and the page.
 	left:0;
 	right:0;
 	padding:20px;
-	height:120px;
+	height:auto;
 	background:rgba(0,0,0,0.75);
 	border-top:black 1px solid;
 	color:white;

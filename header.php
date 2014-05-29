@@ -69,8 +69,8 @@ if (isset($headinclude)) {
 					<img src="<?php bloginfo('template_directory'); ?>/res/img/cleanatom.png" width="94" height="94" alt="AdamBots Atom Logo" style="border-radius:4px;">
 				</div>
 				<div style="float:right;">
-					<img src="<?php bloginfo('template_directory'); ?>/res/img/adambotswhite.png" width="430" alt="AdamBots Logo Text"><br>
-					<img src="<?php bloginfo('template_directory'); ?>/res/img/adambotstag.png" width="430" alt="OCCRA and FRC Robotics Team 245">
+					<img src="<?php bloginfo('template_directory'); ?>/res/img/adambotswhite.png" width="430" height="57" alt="AdamBots Logo Text"><br>
+					<img src="<?php bloginfo('template_directory'); ?>/res/img/adambotstag.png" width="430" height="33" alt="OCCRA and FRC Robotics Team 245">
 				</div>
 				<div class="clear"></div>
 			</a>
