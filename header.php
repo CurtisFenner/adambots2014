@@ -66,7 +66,8 @@ if (isset($headinclude)) {
 		<div id="adambotslogo">
 			<a href="<?php echo home_url(); ?>">
 				<div style="float:left;margin-right:5px;">
-					<img src="<?php bloginfo('template_directory'); ?>/res/img/cleanatom.png" width="94" height="94" alt="AdamBots Atom Logo" style="border-radius:4px;">
+					<img src="<?php bloginfo('template_directory');?>/res/img/cleanatom.png"
+					width="94" height="94" alt="AdamBots Atom Logo" style="border-radius:4px;">
 				</div>
 				<div style="float:right;">
 					<img src="<?php bloginfo('template_directory'); ?>/res/img/adambotswhite.png" width="430" height="57" alt="AdamBots Logo Text"><br>
@@ -76,11 +77,11 @@ if (isset($headinclude)) {
 			</a>
 		</div>
 		<div id="social">
-			<a href="https://www.facebook.com/AdamBots"><span data-hover="Facebook"><img src="<?php bloginfo('template_directory'); ?>/res/img/social/facebook.png" alt="Like us on Facebook"></span></a>
-			<a href="http://instagram.com/adambots245"><span data-hover="Instagram"><img src="<?php bloginfo('template_directory'); ?>/res/img/social/instagram.png" alt="Find us on Instagram"></span></a>
-			<a href="https://twitter.com/adambots"><span data-hover="Twitter"><img src="<?php bloginfo('template_directory'); ?>/res/img/social/twitter.png" alt="Follow us on Twitter"></span></a>
-			<a href="http://www.youtube.com/user/Adambots"><span data-hover="YouTube"><img src="<?php bloginfo('template_directory'); ?>/res/img/social/youtube.png" alt="Subscribe to us on YouTube"></span></a>
-			<a href="http://www.adambots.com/contact-us"><span data-hover="Contact Us"><img src="<?php bloginfo('template_directory'); ?>/res/img/social/email.png" alt="Contact Us"></span></a>
+			<a href="https://www.facebook.com/AdamBots" class=slink><span class="ifacebook" title="Facebook"></span></a>
+			<a href="http://instagram.com/adambots245" class=slink><span class="iinstagram" title="Instagram"></span></a>
+			<a href="https://twitter.com/adambots" class=slink><span class="itwitter" title="Twitter"></span></a>
+			<a href="http://www.youtube.com/user/Adambots" class=slink><span class="iyoutube" title="YouTube"></span></a>
+			<a href="http://www.adambots.com/contact-us" class=slink><span class="iemail" title="Contact Us"></span></a>
 			<br>
 			<div class="button" style="background:#EFA0DF;color:#CE73BC;"><a href="/about/team-outreach/relay-for-life-2012/">Relay For Life</a></div>
 			<div class="button" style="background:#5780C2;color:#244C92;"><a href="/about/team-outreach/team-lambot-3478/">FRC 3478 LamBot</a></div> <br>

@@ -56,12 +56,6 @@ body {
 	font-family: "Roboto";
 	font-size:15px;
 	margin: 0px;
-	/*Optional page fadein*/
-	/*animation: fadein .75s;
-	-moz-animation: fadein .75s;
-	-webkit-animation: fadein .75s;
-	-o-animation: fadein .75s;*/
-	/*background-image: url('../res/img/noise.png');*/
 }
 
 a {
@@ -475,8 +469,9 @@ The bar between the navbar and the page.
 	position: relative;
 	float: right;
 }
+
 #social a {
-	margin: 5px;
+	margin:5px;
 	position:relative;
 }
 
@@ -486,49 +481,43 @@ The bar between the navbar and the page.
 	position:absolute;
 	left:0;right:0;top:0;bottom:0;
 }
+
 #social a span {
 	position:relative;
-}
-#social a span:hover:after {
-	content:attr(data-hover);
-	position:absolute;
-	top:20px;
-	left:-18px;
-	text-align:center;
-	vertical-align:bottom;
-	background:url("../res/img/popup.png");
-	height:40px;
-	width:81px;
-	color:white;
-	line-height:55px;
-	z-index:1000;
-	font-variant:small-caps;
+	display:inline-block;
+	height:25px;
+	background-image:url("../res/img/social/combined.png");
+	background-repeat:no-repeat;
+	min-width:25px;
+	margin:10px;
 }
 
-
-#social img {
-	height: 25px;
-	padding: 10px;
-	transition: 0.2s ease-in;
-	transition: 0.2s ease-out;
-	-webkit-transition: 0.15s ease-in;
-	-webkit-transition: 0.15s ease-out;
-	-moz-transition: 0.15s ease-in;
-	-moz-transition: 0.15s ease-out;
-	-o-transition: 0.15s ease-in;
-	-o-transition: 0.15s ease-out;
-	border:none;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
+#social .slink {
+	border-radius:5px;
+	display:inline-block;
 }
-#social img:hover {
-	/*background: #ffd802;*/
-	background: rgba(238, 238, 238, .064);
-	color:white;
-	-moz-border-radius: 10px;
-	border-radius: 5px;
+#social .slink:hover {
+	background:rgba(255,255,255,0.07);
 }
 
+.itwitter {
+	background-position:-70px 0;
+	width:31px;
+}
+.ifacebook {
+	background-position:-106px 0;
+}
+.iinstagram {
+	background-position:0 0;
+}
+.iemail {
+	background-position:-136px 0;
+	width:26px;
+}
+.iyoutube {
+	background-position:-30px 0;
+	width:36px;
+}
 
 /**************************************
 			  FOOTER CSS
