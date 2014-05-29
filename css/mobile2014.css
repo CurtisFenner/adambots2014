@@ -1,52 +1,6 @@
-/*
-Doge stuff. DO NOT UNCOMMENT.
-* {
-
-	font-family:"Comic Sans MS" !important;
-	color:orange !important;
-	text-shadow:none !important;
-	font-size:90%;
-	text-transform: lowercase !important;
-	text-align:center !important;
-	line-height:110%;
-}
-
-*:nth-of-type(3n):before {
-	content:"so ";
-}
-*:nth-of-type(3n+1):before {
-	content:"very ";
-}
-*:nth-of-type(3n+2):before {
-	content:"much ";
-}
-
-body {
-	font-size:40px !important;
-}
-*/
-
-.nosel {
-	-webkit-user-select: none; /* webkit (safari, chrome) browsers */
-	-moz-user-select: none; /* mozilla browsers */
-	-khtml-user-select: none; /* webkit (konqueror) browsers */
-	-ms-user-select: none; /* IE10+ */
-}
-
-#twitter {
-	overflow-y:scroll;
-	-webkit-overflow-scrolling: touch;
-}
-
-
 /**************************************
 			GENERIC ELEMENTS
 ***************************************/
-head,html {
-	color:black;
-	background:white;
-	/* This makes Cynthia Says happy for some reason*/
-}
 body {
 	min-width: 300px;
 	/* Was 494949, considered "bland" "too light" */
@@ -55,18 +9,7 @@ body {
 	color:black;
 	font-family: "Roboto";
 	font-size:15px;
-	margin: 0px;
 }
-
-a {
-	text-decoration:none;
-	color:#0070DD;
-}
-
-.clear {
-	clear: both;
-}
-
 hr {
 	height:1px;
 	opacity:0.5;
@@ -84,11 +27,6 @@ hr {
 	margin-bottom:20px;
 }
 
-.dim {
-	opacity:0.8;
-	font-size:80%;
-}
-
 /**************************************
 			  MAIN LAYOUT
 ***************************************/
@@ -100,21 +38,8 @@ hr {
 	position:relative;
 }
 .pagewidth > * > * {
-	max-width:320px;
+	/*max-width:320px;*/
 	margin:auto;
-}
-
-#homepage .pagewidth {
-	/*animation-timing-function:cubic-bezier(.30, 0, 0, 1);
-	animation: slidein .75s;
-	-moz-animation: slidein .75s;
-	-webkit-animation: slidein .75s;
-	-o-animation: slidein .75s;*/
-}
-
-.pagewidth p {
-	padding-top:8px;
-	padding-bottom:8px;
 }
 
 /**************************************
@@ -138,74 +63,29 @@ img.alignleft {
 The bar between the navbar and the page.
 */
 #pagetype {
-	padding-top:5px;
-	position:relative;
-	height:80px;
-	line-height:30px;
-	background-image:url("../res/img/noisy.png");
-	color:white;
-	padding-left:20px;
-	color:#111;
-	font-weight:bold;
-	font-size:24px;
-
-	/*-webkit-text-stroke-width: 1px;*/
-	/*-webkit-text-stroke-color: black;*/
+	font-size:16px;
+	text-align:center;
 }
 
 #pagetype .background {
-	position:absolute;
-	top:10px;
-	width:300px;
-	right:0px;
-	height:60px;
-	text-align:right;
-	margin-right:10px;
+	display:none;
 }
 
-#pagetype .subnav, #pagetype .subnav * {
-	display:inline-block;
-	padding:0;
-	margin:0;
-	right:0 !important;
-	position:relative;
+#pagetype .subnav li {
+	display:none;
 }
 
-
-#pagetype .subnav li a {
-	padding-left:3px;
-	padding-right:3px;
-	font-weight:normal;
-}
-
-#pagetype .subnav li:hover {
-	background:rgba(255,255,255,0.35);
-	border-radius:3px;
-	cursor:pointer;
-}
-
-#pagetype.blacktext a {
-	color:black !important;
-}
-
-#pagetype .subnav li.current-menu-item a {
-	font-weight:bold;
-}
-
-#pagetype .subnav a {
-	color:#FFF;
-	font-size:16px;
-}
-
-#pagetype h2 {
-	line-height:40px;
-	margin:0px;
+#pagetype .subnav li:nth-of-type(1) {
+	display:block;
 }
 
 #leftcol {
 	width:auto;
 	padding:20px;
 	float:none;
+
+	background-color:white;
+	background-image:url("../res/img/noisy.png");
 }
 
 #rightcol {
@@ -215,6 +95,10 @@ The bar between the navbar and the page.
 	width:auto;
 	padding:20px;
 	float:none;
+	margin-top:6px;
+
+	background-color:white;
+	background-image:url("../res/img/noisy.png");
 }
 
 #atomrightcontainer {
@@ -251,7 +135,7 @@ The bar between the navbar and the page.
 	width:auto;
 	margin:auto;
 	margin-top:6px;
-	background-color:white;
+	background-color:#222;
 	background-image:url("../res/img/noisy.png");
 	color:black;
 }
@@ -266,8 +150,6 @@ The bar between the navbar and the page.
 	color:black;
 	padding:20px;
 }
-
-
 
 .spacer {
 	clear:both;
@@ -434,29 +316,8 @@ The bar between the navbar and the page.
 			  HEADER CSS
 ***************************************/
 
-#head {
-	/*height: 120px;
-	margin: 25px;
-	margin-left: 50px;*/
-}
-
 .button {
 	display:none;
-	color:white;
-	font-weight:bold;
-	border-radius:2px;
-	height:30px;
-	line-height:30px;
-	text-align:center;
-	width:151px;
-	position:relative;
-	font-size:15px;
-	overflow:hidden;
-	box-shadow:inset 0px -5px 30px 0px;
-}
-
-.button:active {
-	box-shadow:inset 0px 5px 30px 0px;
 }
 
 #adambotslogo {
@@ -464,6 +325,18 @@ The bar between the navbar and the page.
 	margin-top:31px;
 	margin-left:20px;
 	margin-bottom:20px;
+}
+.logoatom {
+	width:47px;
+	height:47px;
+}
+.logoname {
+	width:215px;
+	height:28px;
+}
+.logotag {
+	width:215px;
+	height:16px;
 }
 
 #social {
@@ -475,8 +348,7 @@ The bar between the navbar and the page.
 }
 
 #social a {
-	margin:5px;
-	position:relative;
+	margin:0;
 }
 
 #social .button a {
@@ -493,52 +365,25 @@ The bar between the navbar and the page.
 	background-image:url("../res/img/social/combined.png");
 	background-repeat:no-repeat;
 	min-width:25px;
-	margin:10px;
+	margin:5px;
 }
 
 #social .slink {
 	border-radius:5px;
 	display:inline-block;
 }
+
 #social .slink:hover {
 	background:rgba(255,255,255,0.07);
-}
-
-.itwitter {
-	background-position:-70px 0;
-	width:31px;
-}
-.ifacebook {
-	background-position:-106px 0;
-}
-.iinstagram {
-	background-position:0 0;
-}
-.iemail {
-	background-position:-136px 0;
-	width:26px;
-}
-.iyoutube {
-	background-position:-30px 0;
-	width:36px;
 }
 
 /**************************************
 			  FOOTER CSS
 ***************************************/
-#footer {
-	margin-top:6px;
-	position:relative;
-	text-align:center;
-	width:100%;
-	height:300px;
-	background: url('../res/img/noisy.png'),url('../res/img/footerGrad.png');
-	font-size:12px;
-	color:#444;
-}
 
 #footerjustify {
-	padding:0;margin:0;text-align:justify;
+	padding:2em;
+	margin:0;text-align:justify;
 }
 
 /**************************************
@@ -560,18 +405,7 @@ Bar containing menu items.
 */
 
 #dropdown {
-	position: relative;
-	left: 0px;
-	right: 0px;
-	padding-left: 20px;
-	/* invalid CSS, doesn't appear to do anything?
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	*/
+	height:auto;
 }
 
 /*
@@ -600,79 +434,9 @@ Menu tabs in starting bar
 }
 
 /*
-Noscript fallback!
-*/
-#dropdown .navtab a {
-	color:white;
-}
-
-#dropdown .navtab:hover {
-	background: rgba(238, 238, 238, .064);
-}
-
-/*
-Element covering background of #dropdown.
-*/
-#dropdownbackground {
-	display:none;
-}
-
-/*
-Where the navigation elements are stored on the page.
-*/
-#dropdown .navtab ul {
-	display: none;
-}
-
-/*
-Div containing #below for the purpose of resizing up and down.
-*/
-#belowbox {
-	font-size:14px;
-	position: relative;
-	overflow: hidden;
-	background-color: #ffd802;
-	background-image:url("../res/img/noisy.png");
-	color:black;
-	margin-bottom:10px;
-}
-
-#belowbox .sectiontitle {
-	font-size:125%;
-}
-
-/*
-Div containing navigation links in two UL's, ul.left and ul.right.
-*/
-#below {
-	position: relative;
-	color: white;
-}
-
-/*
-All navigation maps
-*/
-#below ul {
-	width: 400px;
-	position: relative;
-	list-style-type: none;
-	animation: fadein .5s;
-	-moz-animation: fadein .5s;
-	-webkit-animation: fadein .5s;
-	-o-animation: fadein .5s;
-}
-
-/*
 Navigation map in the left side
 */
-#below ul.left {
-	float: none;
-}
-
-/*
-Navigation map on the right side
-*/
-#below ul.right {
+#below ul.left,#below ul.right {
 	float: none;
 }
 
@@ -686,16 +450,6 @@ The navigation headings in the dropdown box.
 	margin-bottom: 5px;
 }
 
-/*
-Lines in navigation.
-*/
-#below ul li {
-	color: #111;
-	position: relative;
-	line-height: 35px;
-	font-weight: bold;
-	overflow: hidden;
-}
 
 /*
 Descriptions in navigation.
@@ -703,17 +457,6 @@ Descriptions in navigation.
 #below ul li span {
 	display:none;
 }
-
-/*
-Anchors in navigation: things inside below box
-*/
-#below ul li a {
-	color: #111;
-	text-decoration: none;
-	-webkit-animation: fadein 0.5s;
-	animation: fadein 0.5s;
-}
-
 
 /**************************************
 			   PANEL CSS
@@ -793,13 +536,10 @@ Triple panel display above footer
 }
 
 #teaminfo {
-	width: 637px;
-	height: 375px;
-	background-color: #ffd802;
-	float: left;
-	background-image:url("../res/img/noisy.png");
-	color:black;
-	box-shadow: 0 0 10px #000;
+	width:auto;
+	height:auto;
+	float:none;
+	padding-bottom:25px;
 }
 
 #teaminfo p {
@@ -835,21 +575,7 @@ Triple panel display above footer
 }
 
 #twitter {
-	width: 270px;
-	height: 100%;
-	padding-left:22px;
-	padding-right:22px;
-	position:absolute;
-	float: right;
-	right:0;
-	background-color: #444;
-	background-image:url("../res/img/noisy.png");
-	color:white;
-	box-shadow: 0 0 10px #000;
-}
-
-.twitter-timeline {
-	position: relative;
+	display:none;
 }
 
 .display_current {
