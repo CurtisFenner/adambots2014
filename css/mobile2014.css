@@ -1,0 +1,960 @@
+/*
+Doge stuff. DO NOT UNCOMMENT.
+* {
+
+	font-family:"Comic Sans MS" !important;
+	color:orange !important;
+	text-shadow:none !important;
+	font-size:90%;
+	text-transform: lowercase !important;
+	text-align:center !important;
+	line-height:110%;
+}
+
+*:nth-of-type(3n):before {
+	content:"so ";
+}
+*:nth-of-type(3n+1):before {
+	content:"very ";
+}
+*:nth-of-type(3n+2):before {
+	content:"much ";
+}
+
+body {
+	font-size:40px !important;
+}
+*/
+
+.nosel {
+	-webkit-user-select: none; /* webkit (safari, chrome) browsers */
+	-moz-user-select: none; /* mozilla browsers */
+	-khtml-user-select: none; /* webkit (konqueror) browsers */
+	-ms-user-select: none; /* IE10+ */
+}
+
+#twitter {
+	overflow-y:scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
+
+/**************************************
+			GENERIC ELEMENTS
+***************************************/
+head,html {
+	color:black;
+	background:white;
+	/* This makes Cynthia Says happy for some reason*/
+}
+body {
+	min-width: 300px;
+	/* Was 494949, considered "bland" "too light" */
+	background-color: #252525;
+	background-image:url("../res/img/noisy.png");
+	color:black;
+	font-family: "Roboto";
+	font-size:15px;
+	margin: 0px;
+}
+
+a {
+	text-decoration:none;
+	color:#0070DD;
+}
+
+.clear {
+	clear: both;
+}
+
+hr {
+	height:1px;
+	opacity:0.5;
+	margin:0;
+	margin-left:-20px;
+	margin-right:-20px;
+	padding:0;
+	position:relative;
+	background:#F00;
+	background-color:#252525;
+	background-image:url("../res/img/noisy.png");
+	color:black;
+	border: none;
+	margin-top:30px;
+	margin-bottom:20px;
+}
+
+.dim {
+	opacity:0.8;
+	font-size:80%;
+}
+
+/**************************************
+			  MAIN LAYOUT
+***************************************/
+
+.pagewidth {
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+	position:relative;
+}
+.pagewidth > * > * {
+	max-width:320px;
+	margin:auto;
+}
+
+#homepage .pagewidth {
+	/*animation-timing-function:cubic-bezier(.30, 0, 0, 1);
+	animation: slidein .75s;
+	-moz-animation: slidein .75s;
+	-webkit-animation: slidein .75s;
+	-o-animation: slidein .75s;*/
+}
+
+.pagewidth p {
+	padding-top:8px;
+	padding-bottom:8px;
+}
+
+/**************************************
+			  PAGE LAYOUT
+***************************************/
+
+img.alignright {
+	margin:1em;
+	margin-right:0px;
+	float:right;
+}
+
+img.alignleft {
+	margin:1em;
+	margin-left:0px;
+	margin-top:6px;
+	float:left;
+}
+
+/*
+The bar between the navbar and the page.
+*/
+#pagetype {
+	padding-top:5px;
+	position:relative;
+	height:80px;
+	line-height:30px;
+	background-image:url("../res/img/noisy.png");
+	color:white;
+	padding-left:20px;
+	color:#111;
+	font-weight:bold;
+	font-size:24px;
+
+	/*-webkit-text-stroke-width: 1px;*/
+	/*-webkit-text-stroke-color: black;*/
+}
+
+#pagetype .background {
+	position:absolute;
+	top:10px;
+	width:300px;
+	right:0px;
+	height:60px;
+	text-align:right;
+	margin-right:10px;
+}
+
+#pagetype .subnav, #pagetype .subnav * {
+	display:inline-block;
+	padding:0;
+	margin:0;
+	right:0 !important;
+	position:relative;
+}
+
+
+#pagetype .subnav li a {
+	padding-left:3px;
+	padding-right:3px;
+	font-weight:normal;
+}
+
+#pagetype .subnav li:hover {
+	background:rgba(255,255,255,0.35);
+	border-radius:3px;
+	cursor:pointer;
+}
+
+#pagetype.blacktext a {
+	color:black !important;
+}
+
+#pagetype .subnav li.current-menu-item a {
+	font-weight:bold;
+}
+
+#pagetype .subnav a {
+	color:#FFF;
+	font-size:16px;
+}
+
+#pagetype h2 {
+	line-height:40px;
+	margin:0px;
+}
+
+#leftcol {
+	width:auto;
+	padding:20px;
+	float:none;
+}
+
+#rightcol {
+	right:0px;
+	top:0px;
+	height:100%;
+	width:auto;
+	padding:20px;
+	float:none;
+}
+
+#atomrightcontainer {
+	right:0;
+	top:0;
+	bottom:0;
+	left:0;
+	overflow:hidden;
+}
+
+#twocolumnbackground {
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	width:auto;
+	height:540px;
+	background-image:url("../res/img/atomright.png");
+	color:black;
+}
+
+#onecolumnbackground {
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	width:auto;
+	height:540px;
+	background-image:url("../res/img/atomleft.png");
+	color:black;
+}
+
+
+.twocolumns {
+	position:relative;
+	width:auto;
+	margin:auto;
+	margin-top:6px;
+	background-color:white;
+	background-image:url("../res/img/noisy.png");
+	color:black;
+}
+
+.onecolumn {
+	position:relative;
+	width:auto;
+	margin:auto;
+	margin-top:6px;
+	background-color:white;
+	background-image:url("../res/img/noisy.png");
+	color:black;
+	padding:20px;
+}
+
+
+
+.spacer {
+	clear:both;
+}
+
+/**************************************
+				 GEARS
+***************************************/
+
+#gearscontainer {
+	position:absolute;
+	margin:0px;
+	z-index:-5;
+	top:0px;
+	left:-200px;
+	
+	animation: fadein .75s;
+	-moz-animation: fadein .75s;
+	-webkit-animation: fadein .75s;
+	-o-animation: fadein .75s;
+	
+	animation-delay: 1.5s;
+	-moz-animation-delay: 1.5s;
+	-webkit-animation-delay: 1.5s;
+	-o-animation-delay: 1.5s;
+}
+
+#gearscontainer canvas {
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+#gears1 {
+	width:212px;
+	height:212px;
+}
+#gears2 {
+	width:272px;
+	height:272px;
+}
+
+/**************************************
+		   IMAGE GALLERY
+***************************************/
+
+#gallerybox {
+	box-shadow: 0 0 10px #000;
+	position:relative;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height:432px;
+	width:auto;
+	overflow:hidden;
+}
+
+#gallerycontent {
+	box-shadow: 0 0 10px #000;
+	position:absolute;
+	background:white;
+	top:0;
+	left:0;
+	bottom:0;
+	width:auto;
+}
+
+#galleryleft,#galleryright {
+	display:none;
+	opacity:0.25;
+	width:50px;
+	height:100px;
+	background:url("../res/img/leftright.png");
+	position:absolute;
+	top:85px;
+	cursor:pointer;
+}
+
+#galleryleft:hover,#galleryright:hover {
+	opacity:0.8;
+}
+
+#galleryleft {
+	left:30px;
+}
+#galleryright {
+	right:30px;
+	background-position:50px 0px;
+}
+
+#galleryimage {
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background-position:center;
+	background-size:cover;
+}
+
+#gallerytext {
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	padding:20px;
+	height:auto;
+	background:rgba(0,0,0,0.75);
+	border-top:black 1px solid;
+	color:white;
+}
+#gallerytext a {
+	color:white;
+}
+
+#gallerytabs {
+	box-shadow: 0 0 10px #000;
+	position:absolute;
+	right:0;
+	top:0;
+	bottom:0;
+	width:100px;
+	background:white url("../res/img/noisy.png");
+}
+
+#gallerytabs .tab {
+	width:100%;
+	line-height:40px;
+	height:40px;
+	border-bottom:1px solid #aaa;
+	color:black;
+	font-weight:bold;
+	font-size:16px;
+}
+
+#gallerytabs .tab a {
+	display:block;
+	color:black;
+	height:100%;
+	padding-left:35px;
+	cursor:pointer;
+	background-image:url("../res/img/box.png");
+	background-repeat:no-repeat;
+}
+
+#gallerytabs a.activetab{
+	background-color:#FFD802;
+	background-image:url("../res/img/boxfill.png");
+}
+
+/**************************************
+			  BACKGROUND
+***************************************/
+
+#gears {
+	width: 320px;
+	height: 320px;
+	left: 0;
+	top: 0;
+	position: absolute;
+	z-index: -5;
+}
+/**************************************
+			  HEADER CSS
+***************************************/
+
+#head {
+	/*height: 120px;
+	margin: 25px;
+	margin-left: 50px;*/
+}
+
+.button {
+	display:none;
+	color:white;
+	font-weight:bold;
+	border-radius:2px;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	width:151px;
+	position:relative;
+	font-size:15px;
+	overflow:hidden;
+	box-shadow:inset 0px -5px 30px 0px;
+}
+
+.button:active {
+	box-shadow:inset 0px 5px 30px 0px;
+}
+
+#adambotslogo {
+	float:left;
+	margin-top:31px;
+	margin-left:20px;
+	margin-bottom:20px;
+}
+
+#social {
+	height: inherit;
+	margin: 20px;
+	margin-top:10px;
+	position: relative;
+	float: right;
+}
+
+#social a {
+	margin:5px;
+	position:relative;
+}
+
+#social .button a {
+	margin:0px;
+	color:white;
+	position:absolute;
+	left:0;right:0;top:0;bottom:0;
+}
+
+#social a span {
+	position:relative;
+	display:inline-block;
+	height:25px;
+	background-image:url("../res/img/social/combined.png");
+	background-repeat:no-repeat;
+	min-width:25px;
+	margin:10px;
+}
+
+#social .slink {
+	border-radius:5px;
+	display:inline-block;
+}
+#social .slink:hover {
+	background:rgba(255,255,255,0.07);
+}
+
+.itwitter {
+	background-position:-70px 0;
+	width:31px;
+}
+.ifacebook {
+	background-position:-106px 0;
+}
+.iinstagram {
+	background-position:0 0;
+}
+.iemail {
+	background-position:-136px 0;
+	width:26px;
+}
+.iyoutube {
+	background-position:-30px 0;
+	width:36px;
+}
+
+/**************************************
+			  FOOTER CSS
+***************************************/
+#footer {
+	margin-top:6px;
+	position:relative;
+	text-align:center;
+	width:100%;
+	height:300px;
+	background: url('../res/img/noisy.png'),url('../res/img/footerGrad.png');
+	font-size:12px;
+	color:#444;
+}
+
+#footerjustify {
+	padding:0;margin:0;text-align:justify;
+}
+
+/**************************************
+			 CONTENT CSS
+***************************************/
+
+#content {
+	clear: both;
+	position: relative;
+	
+}
+
+/**************************************
+			 DROPDOWN CSS
+***************************************/
+
+/*
+Bar containing menu items.
+*/
+
+#dropdown {
+	position: relative;
+	left: 0px;
+	right: 0px;
+	padding-left: 20px;
+	/* invalid CSS, doesn't appear to do anything?
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	*/
+}
+
+/*
+Menu tabs in starting bar
+*/
+#dropdown .navtab {
+	line-height: 50px;
+	display: inline-block;
+	position: relative;
+	height: 50px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-weight: 700;
+	font-size: 22px;
+	color: #eee;
+	cursor: pointer;
+	transition: 0.2s ease-in;
+	transition: 0.2s ease-out;
+	-webkit-transition: 0.2s ease-in;
+	-webkit-transition: 0.2s ease-out;
+	-moz-transition: 0.2s ease-in;
+	-moz-transition: 0.2s ease-out;
+	-o-transition: 0.2s ease-in;
+	-o-transition: 0.2s ease-out;
+	text-shadow:1.5px 1.5px 0px black;
+}
+
+/*
+Noscript fallback!
+*/
+#dropdown .navtab a {
+	color:white;
+}
+
+#dropdown .navtab:hover {
+	background: rgba(238, 238, 238, .064);
+}
+
+/*
+Element covering background of #dropdown.
+*/
+#dropdownbackground {
+	display:none;
+}
+
+/*
+Where the navigation elements are stored on the page.
+*/
+#dropdown .navtab ul {
+	display: none;
+}
+
+/*
+Div containing #below for the purpose of resizing up and down.
+*/
+#belowbox {
+	font-size:14px;
+	position: relative;
+	overflow: hidden;
+	background-color: #ffd802;
+	background-image:url("../res/img/noisy.png");
+	color:black;
+	margin-bottom:10px;
+}
+
+#belowbox .sectiontitle {
+	font-size:125%;
+}
+
+/*
+Div containing navigation links in two UL's, ul.left and ul.right.
+*/
+#below {
+	position: relative;
+	color: white;
+}
+
+/*
+All navigation maps
+*/
+#below ul {
+	width: 400px;
+	position: relative;
+	list-style-type: none;
+	animation: fadein .5s;
+	-moz-animation: fadein .5s;
+	-webkit-animation: fadein .5s;
+	-o-animation: fadein .5s;
+}
+
+/*
+Navigation map in the left side
+*/
+#below ul.left {
+	float: none;
+}
+
+/*
+Navigation map on the right side
+*/
+#below ul.right {
+	float: none;
+}
+
+/*
+The navigation headings in the dropdown box.
+*/
+#below ul li .sectiontitle {
+	width: 100%;
+	border-bottom: 1px solid #111;
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+
+/*
+Lines in navigation.
+*/
+#below ul li {
+	color: #111;
+	position: relative;
+	line-height: 35px;
+	font-weight: bold;
+	overflow: hidden;
+}
+
+/*
+Descriptions in navigation.
+*/
+#below ul li span {
+	display:none;
+}
+
+/*
+Anchors in navigation: things inside below box
+*/
+#below ul li a {
+	color: #111;
+	text-decoration: none;
+	-webkit-animation: fadein 0.5s;
+	animation: fadein 0.5s;
+}
+
+
+/**************************************
+			   PANEL CSS
+***************************************/
+/*
+Triple panel display above footer
+*/
+
+.panel {
+	position:absolute;
+	margin-top: 10px;
+	background:white;
+	background-image:url("../res/img/noisy.png");
+	color:black;
+	box-shadow: 0 0 10px #000;
+	padding-top: 15px;
+}
+
+.panel a {
+	font-size: 20px;
+}
+
+#panelcontainer {
+	/*
+	animation-timing-function:cubic-bezier(.30, 0, 0, 1);
+	animation: slidein 1.5s;
+	-moz-animation: slidein 1.5s;
+	-webkit-animation: slidein 1.5s;
+	-o-animation: slidein 1.5s;*/
+}
+/**************************************
+		vNEXTGEN GALLERY MODSv
+***************************************/
+
+
+
+/**************************************
+		^NEXTGEN GALLERY MODS^
+***************************************/
+#countdown {
+	max-width:930px;
+	margin-left:auto;
+	margin-right:auto;
+	font-weight:bold;
+	color:white;
+	height:60px;
+	line-height:60px;
+	font-size:18px;
+	
+	animation: fadein .75s;
+	-moz-animation: fadein .75s;
+	-webkit-animation: fadein .75s;
+	-o-animation: fadein .75s;
+	
+	animation-delay: 1.5s;
+	-moz-animation-delay: 1.5s;
+	-webkit-animation-delay: 1.5s;
+	-o-animation-delay: 1.5s;
+}
+
+/**************************************
+			  BODY CARDS
+***************************************/
+#bodycards {
+	max-width: 960px;
+	height: 375px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0px;
+	position: relative;
+	
+	/*animation-timing-function:cubic-bezier(.30, 0, 0, 1);
+	animation: slidein 1.25s;
+	-moz-animation: slidein 1.25s;
+	-webkit-animation: slidein 1.25s;
+	-o-animation: slidein 1.25s;*/
+}
+
+#teaminfo {
+	width: 637px;
+	height: 375px;
+	background-color: #ffd802;
+	float: left;
+	background-image:url("../res/img/noisy.png");
+	color:black;
+	box-shadow: 0 0 10px #000;
+}
+
+#teaminfo p {
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	text-align:justify;
+	font-size:17px;
+	line-height: 25px;
+}
+
+#teaminfo p strong {
+	font-size: 18px;
+}
+
+#teaminfo a {
+	color: #494949;
+	text-decoration:underline;
+}
+
+#teamatom {
+	padding-top: 25px;
+	width: 610px;
+	text-align:center;
+}
+
+#teaminfo img {
+	position: relative;
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#twitter {
+	width: 270px;
+	height: 100%;
+	padding-left:22px;
+	padding-right:22px;
+	position:absolute;
+	float: right;
+	right:0;
+	background-color: #444;
+	background-image:url("../res/img/noisy.png");
+	color:white;
+	box-shadow: 0 0 10px #000;
+}
+
+.twitter-timeline {
+	position: relative;
+}
+
+.display_current {
+	height:45px;
+	padding-left:50px;
+	font-weight:bold;
+	line-height:42px;
+	font-size:16px;
+	color: white;
+	background-color: #222;
+	bottom: 0;
+}
+
+#teaminfo .display_current a {
+	padding-left: 5px;
+	padding-right: 5px;
+	color: #ffd802;
+	text-decoration:none;
+}
+
+#robotinfo {
+	margin-top: 10px;
+	
+	max-width: 960px;
+	height: 375px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0px;
+	position: relative;
+	
+	background-color: white;
+	background-image:url("../res/img/noisy.png");
+	color:black;
+	box-shadow: 0 0 10px #000;
+	
+/*	animation-timing-function:cubic-bezier(.30, 0, 0, 1);
+	animation: slidein 1.25s;
+	-moz-animation: slidein 1.25s;
+	-webkit-animation: slidein 1.25s;
+	-o-animation: slidein 1.25s;*/
+}
+
+#robotimg {
+	height: 100%;
+	position:absolute;
+	float: left;
+}
+
+#robotimg img {
+	height: 300px;
+	padding: 25px;
+	padding-left: 50px;
+}
+
+#robottext {
+	width: 636px;
+	height: 375px;
+	right:0;
+	float: right;
+}
+
+/**************************************
+		  SLIDING ANIMATION
+***************************************/
+/*
+Holds sliding descriptions
+*/
+
+.slide_container {
+	overflow: hidden;
+	width: inherit;
+}
+
+
+/**************************************
+			 PAGE ANIMATION
+***************************************/
+/* Define CSS fade-in */
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+	} to {
+		opacity: 1;
+	}
+}
+@-webkit-keyframes fadein {
+	from {
+		opacity: 0;
+	} to {
+		opacity: 1;
+	}
+}
+/*@keyframes slidein {
+	from{
+		left:-100%;
+	} to {
+		left:0;
+	}
+}
+@-webkit-keyframes slidein {
+	from {
+		left: -100%;
+	}
+	to {
+		left: 0;
+	}
+}*/
