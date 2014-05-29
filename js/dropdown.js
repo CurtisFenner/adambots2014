@@ -35,7 +35,7 @@ for (var i = 0; i < links.length; i++) {
 				var uls = el.getElementsByTagName("ul");
 				below.innerHTML = "";
 				for (var i = 0; i < uls.length; i++) {
-					var cname = (i >= uls.length / 2) ? "right" : "left";
+					var cname = (i % 2 == 1) ? "right" : "left";
 					below.innerHTML += "<ul class='" + cname + "'>" + uls[i].innerHTML + "</ul>";
 				}
 				below.innerHTML += "<div style='clear:both;'></div>";

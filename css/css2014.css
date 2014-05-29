@@ -669,13 +669,15 @@ Navigation map in the left side
 */
 #below ul.left {
 	float: left;
+	clear:left;
 }
 
 /*
 Navigation map on the right side
 */
 #below ul.right {
-	float: left;
+	float: right;
+	clear:right;
 }
 
 /*
