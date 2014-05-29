@@ -768,6 +768,7 @@ Triple panel display above footer
 	font-weight:bold;
 	color:white;
 	height:60px;
+	overflow:hidden;
 	line-height:60px;
 	font-size:18px;
 	
