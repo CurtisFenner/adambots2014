@@ -96,7 +96,7 @@ d.innerHTML=b[c][0][1],m(d,b[c]),0==c&&(d.className="activetab"),b[c].anchor=d,b
 
 <div id="robotinfo" class="pagewidth" style="display:none;">
 	<div id="robotimg">
-		<img src="<?php bloginfo('template_directory'); ?>/res/img/robot-cropped.png" alt="Andromeda, 2014 FRC Robot">
+		<!-- <img src="<?php bloginfo('template_directory'); ?>/res/img/robot-cropped.png" alt="Andromeda, 2014 FRC Robot"> -->
 	</div>
 	<div id="robottext">some text about our wonderful robot</div>
 	<div class="clear"></div>
