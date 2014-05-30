@@ -31,7 +31,6 @@ if (isset($headinclude)) {
 ?>
 </head>
 <body id="bodytag">
-<?php if (true) { ?>
 	<script>
 (function(){
 	var addEvent = function(elem, type, eventHandle) {
@@ -79,7 +78,6 @@ if (isset($headinclude)) {
 	flexible();
 })();
 	</script>
-<?php } ?>
 	<div class="pagewidth">
 		<div id="gearscontainer">
 			<canvas id="gears1" width="424" height="424"></canvas>
