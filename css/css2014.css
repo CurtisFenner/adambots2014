@@ -674,6 +674,7 @@ Navigation map in the left side
 #below ul.left {
 	float: left;
 	clear:left;
+	width:420px;
 }
 
 /*
@@ -682,6 +683,7 @@ Navigation map on the right side
 #below ul.right {
 	float: right;
 	clear:right;
+	width:420px;
 }
 
 /*
@@ -822,7 +824,7 @@ Triple panel display above footer
 	padding-left: 50px;
 	padding-right: 50px;
 	padding-top: 25px;
-	padding-bottom: 25px;
+	padding-bottom: 10px;
 	text-align:justify;
 	font-size:17px;
 	line-height: 25px;

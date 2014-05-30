@@ -47,7 +47,8 @@ display:none;
 }
 
 </style>
-
+<style id="mobiledynamicstyle">
+</style>
 <?php
 if (isset($headinclude)) {
 	//Requires this to be INCLUDE'd rather than get'd.
@@ -56,6 +57,7 @@ if (isset($headinclude)) {
 ?>
 </head>
 <body id="bodytag">
+<?php if (true) { ?>
 	<script>
 (function(){
 	var addEvent = function(elem, type, eventHandle) {
@@ -84,17 +86,24 @@ if (isset($headinclude)) {
 	function flexible() {
 		var wid = getWidth();
 		var bod = document.getElementById("bodytag");
+		var sty = document.getElementById("mobiledynamicstyle");
 		if (wid < 959) {
-			if (bod.className.indexOf("mobilewidth") < 0)
+			if (bod.className.indexOf("mobilewidth") < 0) {
 				bod.className += " mobilewidth";
+			}
+			if (wid < 500) {
+				sty.innerHTML = ".largecanvas {width:240px;height:240px;}";
+			}
 		} else {
 			bod.className = bod.className.replace(/\s*mobilewidth\s*/g," ").trim();
+			sty.innerHTML = "";
 		}
 	}
 	addEvent(window,"resize",flexible);
 	flexible();
 })();
 	</script>
+<?php } ?>
 	<div class="pagewidth">
 		<div id="gearscontainer">
 			<canvas id="gears1" width="424" height="424"></canvas>

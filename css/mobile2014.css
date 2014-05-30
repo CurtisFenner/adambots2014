@@ -3,7 +3,6 @@
 ***************************************/
 body.mobilewidth {
 	min-width: 320px;
-	/* Was 494949, considered "bland" "too light" */
 	background-color: #252525;
 	background-image:url("../res/img/noisy.png");
 	color:black;
@@ -25,6 +24,10 @@ body.mobilewidth {
 	border: none;
 	margin-top:30px;
 	margin-bottom:20px;
+}
+
+.mobilewidth canvas {
+	max-width:300px;
 }
 
 /**************************************
@@ -119,21 +122,21 @@ The bar between the navbar and the page.
 		   IMAGE GALLERY
 ***************************************/
 
-#gallerybox {
+.mobilewidth #gallerybox {
 	width:auto;
 	height:auto;
 	box-shadow:none;
 }
 
-#gallerystatic {
+.mobilewidth #gallerystatic {
 	display:block;
 }
 
-#gallerystatic ul {
+.mobilewidth #gallerystatic ul {
 	padding:0;
 }
 
-#gallerystatic li {
+.mobilewidth #gallerystatic li {
 	display:block;
 	background-color:white;
 	background-image:url(../res/img/noisy.png);
@@ -141,7 +144,7 @@ The bar between the navbar and the page.
 	border-bottom:1px solid #AAA;
 }
 
-#gallerystatic a {
+.mobilewidth #gallerystatic a {
 	display:block;
 	height:3em;
 	line-height:3em;
@@ -149,10 +152,10 @@ The bar between the navbar and the page.
 	font-weight:bold;
 }
 
-#gallerycontent {
+.mobilewidth #gallerycontent {
 	display:none;
 }
-#gallerytabs {
+.mobilewidth #gallerytabs {
 	display:none;
 }
 
@@ -277,7 +280,7 @@ Menu tabs in starting bar
 /*
 Navigation map in the left side
 */
-.mobilewidth #below ul.left,#below ul.right {
+.mobilewidth #below ul.left,.mobilewidth #below ul.right {
 	float: none;
 }
 
@@ -324,12 +327,6 @@ Triple panel display above footer
 
 .mobilewidth #panelcontainer {
 	height:auto;
-	/*
-	animation-timing-function:cubic-bezier(.30, 0, 0, 1);
-	animation: slidein 1.5s;
-	-moz-animation: slidein 1.5s;
-	-webkit-animation: slidein 1.5s;
-	-o-animation: slidein 1.5s;*/
 }
 /**************************************
 		vNEXTGEN GALLERY MODSv
@@ -349,6 +346,7 @@ Triple panel display above footer
 	height:60px;
 	line-height:60px;
 	font-size:18px;
+	text-align:center;
 }
 
 /**************************************

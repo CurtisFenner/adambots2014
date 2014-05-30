@@ -35,6 +35,9 @@
 	*/
 
 	function drawGears() {
+		if (document.getElementById("bodytag").className.indexOf("mobilewidth") >= 0) {
+			return false;
+		}
         if (retina) {
             gearContext1.clearRect(0,0,424,424);
             gearContext2.clearRect(0,0,544,544);
