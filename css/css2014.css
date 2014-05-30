@@ -26,6 +26,11 @@ body {
 }
 */
 
+* {
+	font-size-adjust:none;
+	-webkit-font-size-adjust:none;
+}
+
 .nosel {
 	-webkit-user-select: none; /* webkit (safari, chrome) browsers */
 	-moz-user-select: none; /* mozilla browsers */
@@ -796,7 +801,7 @@ Triple panel display above footer
 			  BODY CARDS
 ***************************************/
 #bodycards {
-	max-width: 960px;
+	width:960px;
 	height: 375px;
 	margin-left: auto;
 	margin-right: auto;
