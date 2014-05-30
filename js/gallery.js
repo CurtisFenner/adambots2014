@@ -1,5 +1,5 @@
-"use strict";
 (function() {
+	"use strict";
 	var focus = 0;
 	var activeImage = null;
 	function click(slide) {
@@ -9,11 +9,9 @@
 		slides[focus].anchor.className = "tab";
 		focus = slides.indexOf(slide);
 		gallerylink.href = slide[2];
-		console.log(slide[2]);
 		gallerytext.innerHTML = "<h2>" + slide[0][0] + "</h2><br>" + slide.slice(3).join(" ") + " <em style=\"color:#FFD802;\">Read More</em>";
 		galleryimage.appendChild(slide.image);
 		activeImage = slide.image;
-		console.log(activeImage);
 		slide.anchor.className = "tab activetab";
 	}
 	function clickLeft() {
@@ -87,8 +85,15 @@
 		var stat = document.createElement("a");
 		stat.innerHTML = slides[i][0][1];
 		stat.href = slides[i][2];
+		var desc = document.createElement("span");
+		desc.className = "dim";
+		desc.innerHTML = slides[i].slice(3).join(" ");
 		var stati = document.createElement("li");
+		stat.appendChild(desc);
 		stati.appendChild(stat);
+		var arr = document.createElement("div");
+		arr.className = "arr";
+		stati.appendChild(arr);
 		list.appendChild(stati);
 		var anchor = document.createElement("a");
 		anchor.innerHTML = slides[i][0][1];

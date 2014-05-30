@@ -1,6 +1,9 @@
 "use strict";
 
 (function() {
+
+	var drawnOnce = false;
+
 	var gearContext1 = gears1.getContext("2d");
 	var gearContext2 = gears2.getContext("2d");
 
@@ -37,9 +40,10 @@
 	*/
 
 	function drawGears() {
-		if (document.getElementById("bodytag").className.indexOf("mobilewidth") >= 0) {
+		if (document.getElementById("bodytag").className.indexOf("mobilewidth") >= 0 && drawnOnce) {
 			return false;
 		}
+		drawnOnce = true;
 		if (retina) {
 			gearContext1.clearRect(0,0,424,424);
 			gearContext2.clearRect(0,0,544,544);

@@ -53,7 +53,7 @@ These include competition and event summaries, interviews, and build updates.
 	<div id="gallerytabs">
 
 	</div>
-	<div id="gallerystatic">
+	<div id="gallerystatic" class="mobileonly">
 	</div>
 </div>
 
