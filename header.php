@@ -87,7 +87,7 @@ if (isset($headinclude)) {
 		var wid = getWidth();
 		var bod = document.getElementById("bodytag");
 		var sty = document.getElementById("mobiledynamicstyle");
-		if (wid < 959) {
+		if (wid < 970) {
 			if (bod.className.indexOf("mobilewidth") < 0) {
 				bod.className += " mobilewidth";
 			}

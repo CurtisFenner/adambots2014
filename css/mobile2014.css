@@ -339,7 +339,9 @@ Triple panel display above footer
 	margin-right:auto;
 	font-weight:bold;
 	color:white;
-	height:60px;
+	min-height:60px;
+	height:auto;
+	max-height:120px;
 	line-height:60px;
 	font-size:18px;
 	text-align:center;
@@ -372,12 +374,7 @@ Triple panel display above footer
 }
 
 .mobilewidth #teaminfo p strong {
-	font-size: 18px;
-}
-
-.mobilewidth #teaminfo a {
-	color: #494949;
-	text-decoration:underline;
+	font-size: 18px !important;
 }
 
 .mobilewidth #teamatom {
@@ -400,6 +397,11 @@ Triple panel display above footer
 
 .mobilewidth #twitter {
 	display:none;
+}
+
+.mobilewidth .display_current {
+	height:auto;
+	line-height:45px;
 }
 
 
