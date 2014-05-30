@@ -21,32 +21,6 @@ Writes the contents of "$headinclude" at the bottom of the head.
 	ga('send', 'pageview');
 
 </script>
-
-<style>
-/* External Link? */
-
-a[href^="http"] {
-line-height:100%;
-}
-
-/*a[href^="http"]:after {
-text-decoration:underline;
-content:"↗";
-}*/
-
-#social a:after {
-display:none;
-}
-
-a[href*="adambots.com"] {
-line-height:100%;
-}
-
-a[href*="adambots.com"]:after {
-display:none;
-}
-
-</style>
 <style id="mobiledynamicstyle">
 </style>
 <?php

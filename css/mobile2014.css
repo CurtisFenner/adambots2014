@@ -36,10 +36,6 @@ body.mobilewidth {
 	margin-right: auto;
 	position:relative;
 }
-.mobilewidth .pagewidth > * > * {
-	/*max-width:320px;*/
-	margin:auto;
-}
 
 /**************************************
 			  PAGE LAYOUT
