@@ -747,6 +747,7 @@ Triple panel display above footer
 }
 
 #panelcontainer {
+	position:relative;height:420px;top:0;
 	/*
 	animation-timing-function:cubic-bezier(.30, 0, 0, 1);
 	animation: slidein 1.5s;

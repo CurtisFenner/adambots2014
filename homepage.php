@@ -102,7 +102,7 @@ d.innerHTML=b[c][0][1],m(d,b[c]),0==c&&(d.className="activetab"),b[c].anchor=d,b
 	<div class="clear"></div>
 </div>
 
-<div class="pagewidth" id="panelcontainer" style="position:relative;height:420px;top:0;">
+<div class="pagewidth" id="panelcontainer">
 	<div class="panel" style="left:0;">
 		<?php
 		dynamic_sidebar("Homepage 1");

@@ -466,9 +466,10 @@ Triple panel display above footer
 */
 
 .panel {
-	position:relative !important;
+	position:static;
+	width:auto;
 	display:block !important;
-	margin-top: 10px;
+	margin-top: 6px;
 	background:white;
 	background-image:url("../res/img/noisy.png");
 	color:black;
@@ -481,6 +482,7 @@ Triple panel display above footer
 }
 
 #panelcontainer {
+	height:auto;
 	/*
 	animation-timing-function:cubic-bezier(.30, 0, 0, 1);
 	animation: slidein 1.5s;
