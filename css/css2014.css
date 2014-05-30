@@ -27,8 +27,8 @@ body {
 */
 
 * {
-	font-size-adjust:none;
-	-webkit-font-size-adjust:none;
+	font-size-adjust:none !important;
+	-webkit-font-size-adjust:none !important;
 }
 
 .nosel {
