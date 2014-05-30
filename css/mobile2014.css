@@ -466,7 +466,8 @@ Triple panel display above footer
 */
 
 .panel {
-	position:absolute;
+	position:relative !important;
+	display:block !important;
 	margin-top: 10px;
 	background:white;
 	background-image:url("../res/img/noisy.png");

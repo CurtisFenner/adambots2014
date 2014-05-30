@@ -103,17 +103,17 @@ d.innerHTML=b[c][0][1],m(d,b[c]),0==c&&(d.className="activetab"),b[c].anchor=d,b
 </div>
 
 <div class="pagewidth" id="panelcontainer" style="position:relative;height:420px;top:0;">
-	<div class="panel" style="width:314px;height:325px;left:0;top:0;text-align:center;">
+	<div class="panel" style="left:0;">
 		<?php
 		dynamic_sidebar("Homepage 1");
 		?>
 	</div>
-	<div class="panel" style="width:314px;height:325px;left:323px;top:0;text-align:center;">
+	<div class="panel" style="left:323px;">
 		<?php
 		dynamic_sidebar("Homepage 2");
 		?>
 	</div>
-	<div class="panel" style="width:314px;height:325px;left:646px;top:0;text-align:center;">
+	<div class="panel" style="left:646px;">
 		<?php
 		dynamic_sidebar("Homepage 3");
 		?>

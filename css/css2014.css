@@ -738,6 +738,8 @@ Triple panel display above footer
 	color:black;
 	box-shadow: 0 0 10px #000;
 	padding-top: 15px;
+	width:314px;height:325px;
+	top:0;text-align:center;
 }
 
 .panel a {
