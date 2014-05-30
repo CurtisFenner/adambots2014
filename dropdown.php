@@ -104,7 +104,7 @@ Creating a <em>FIRST</em>&nbsp; Team Site|resources/creating-a-first-team-websit
 			<div class="pagewidth">
 
 
-<div class="navtab" style="color: rgb(238, 238, 238); text-shadow: black 1px 1px 0px; width:50px;height:50px; position:relative;padding:0px;text-align:center;">
+<div class="navtab deskonly" style="color: rgb(238, 238, 238); text-shadow: black 1px 1px 0px; width:50px;height:50px; position:relative;padding:0px;text-align:center;">
 	<a href="http://www.adambots.com/" style="left:0px;top:0px;width:50px;height:50px;display:inline-block;margin:0px;padding:0px;">
 		<span><img style="position:relative;top:8px;" alt="Home" src="<?php bloginfo('template_directory'); ?>/res/img/roundhome.png" width=33 height=33><em></em></span>
 	</a>

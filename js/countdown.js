@@ -28,7 +28,7 @@ function updateCountdown() {
 		rem = rem % minSec;
 		var seconds = Math.floor(rem);
 
-		document.getElementById("countdown").innerHTML = "Countdown to the <span style='color:#ffd800;font-size:100%;'>" + eventName + "</span>:" + (weeks != 0 ? pluralUnit(weeks,"week") : "") + (days != 0 ? pluralUnit(days,"day") : "")+ pluralUnit(hours,"hour") + pluralUnit(minutes,"minute") + pluralUnit(seconds,"second");
+		document.getElementById("countdown").innerHTML = "Countdown to the <span style='color:#ffd800;font-size:100%;'>" + eventName + "</span>:<br class=mobileonly >" + (weeks != 0 ? pluralUnit(weeks,"week") : "") + (days != 0 ? pluralUnit(days,"day") : "")+ pluralUnit(hours,"hour") + pluralUnit(minutes,"minute") + pluralUnit(seconds,"second");
 	}
 	
 }

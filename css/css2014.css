@@ -26,9 +26,14 @@ body {
 }
 */
 
+.mobileonly {
+	display:none;
+}
+
 * {
 	font-size-adjust:none !important;
 	-webkit-font-size-adjust:none !important;
+	-webkit-font-size-delta:0 !important;
 }
 
 .nosel {
