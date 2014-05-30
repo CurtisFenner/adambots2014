@@ -6,6 +6,7 @@ Writes the contents of "$headinclude" at the bottom of the head.
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name=viewport content="width=device-width, initial-scale=1">
 	<title>AdamBots FRC &amp; OCCRA Team 245</title>
 	<link rel="icon" href="<?php bloginfo('template_directory'); ?>/res/img/favicon.ico">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/main.css.php">
@@ -54,7 +55,46 @@ if (isset($headinclude)) {
 }
 ?>
 </head>
-<body>
+<body id="bodytag">
+	<script>
+(function(){
+	var addEvent = function(elem, type, eventHandle) {
+		if (elem == null || typeof(elem) == 'undefined') return;
+		if ( elem.addEventListener ) {
+			elem.addEventListener( type, eventHandle, false );
+		} else if ( elem.attachEvent ) {
+			elem.attachEvent( "on" + type, eventHandle );
+		} else {
+			elem["on"+type]=eventHandle;
+		}
+	};
+	function getWidth(){
+		var x = 0;
+		if (self.innerHeight) {
+			x = self.innerWidth;
+		}
+		else if (document.documentElement && document.documentElement.clientHeight) {
+			x = document.documentElement.clientWidth;
+		}
+		else if (document.body) {
+			x = document.body.clientWidth;
+		}
+		return x;
+	}
+	function flexible() {
+		var wid = getWidth();
+		var bod = document.getElementById("bodytag");
+		if (wid < 959) {
+			if (bod.className.indexOf("mobilewidth") < 0)
+				bod.className += " mobilewidth";
+		} else {
+			bod.className = bod.className.replace(/\s*mobilewidth\s*/g," ").trim();
+		}
+	}
+	addEvent(window,"resize",flexible);
+	flexible();
+})();
+	</script>
 	<div class="pagewidth">
 		<div id="gearscontainer">
 			<canvas id="gears1" width="424" height="424"></canvas>

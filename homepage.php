@@ -53,11 +53,11 @@ These include competition and event summaries, interviews, and build updates.
 	<div id="gallerytabs">
 
 	</div>
+	<div id="gallerystatic">
+	</div>
 </div>
-<script> (function(){function h(a){g&&g.parentNode.removeChild(g);b[f].anchor.className="tab";f=b.indexOf(a);gallerylink.href=a[2];console.log(a[2]);gallerytext.innerHTML="<h2>"+a[0][0]+"</h2><br>"+a.slice(3).join(" ")+' <em style="color:#FFD802;">Read More</em>';galleryimage.appendChild(a.a);g=a.a;console.log(g);a.anchor.className="tab activetab"}function m(a,b){a.onclick=function(){h(b)}}function l(a){a=a.toLowerCase();return 0<=a.indexOf("http")||0<a.index(".png")||0<a.indexOf(".jpg")||0<a.indexOf(".jpeg")||
-0<a.indexOf("www")}function n(a){a.onload=function(){720/a.width>432/a.height?a.width=720:a.height=432;a.style.display="block"}}for(var f=0,g=null,e=document.getElementById("gallerysource").innerHTML.trim(),e=e.split(/\s*\n+\s*/g),b=[],d=[],c=0;c<e.length-2;c++){var k=e[c],p=e[c+1],q=e[c+2];0<k.indexOf("|")&&l(p)&&l(q)?(d&&0<d.length&&b.push(d),d=[k.split("|")]):d.push(k)}for(;c<e.length;c++)d.push(e[c]);b.push(d);for(c=0;c<b.length;c++)e=document.createElement("div"),e.className="tab",d=document.createElement("a"),
-d.innerHTML=b[c][0][1],m(d,b[c]),0==c&&(d.className="activetab"),b[c].anchor=d,b[c].a=document.createElement("img"),b[c].a.style.display="none",n(b[c].a),b[c].a.src=b[c][1],e.appendChild(d),gallerytabs.appendChild(e);galleryleft.onclick=function(){f--;f=(f+b.length)%b.length;h(b[f])};galleryright.onclick=function(){f++;f=(f+b.length)%b.length;h(b[f])};h(b[Math.random()*b.length<<0])})(); </script>
 
+<script src="<?php bloginfo('template_directory');?>/js/gallery.js"></script>
 
 <div id="countdown" class="pagewidth"></div>
 <script src="<?php bloginfo('template_directory');?>/js/countdown.js"></script>

@@ -320,6 +320,10 @@ The bar between the navbar and the page.
 	overflow:hidden;
 }
 
+#gallerystatic {
+	display:none;
+}
+
 #gallerycontent {
 	box-shadow: 0 0 10px #000;
 	position:absolute;

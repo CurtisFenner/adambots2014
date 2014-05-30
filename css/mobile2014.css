@@ -1,8 +1,8 @@
 /**************************************
 			GENERIC ELEMENTS
 ***************************************/
-body {
-	min-width: 300px;
+body.mobilewidth {
+	min-width: 320px;
 	/* Was 494949, considered "bland" "too light" */
 	background-color: #252525;
 	background-image:url("../res/img/noisy.png");
@@ -10,7 +10,7 @@ body {
 	font-family: "Roboto";
 	font-size:15px;
 }
-hr {
+.mobilewidth hr {
 	height:1px;
 	opacity:0.5;
 	margin:0;
@@ -31,13 +31,13 @@ hr {
 			  MAIN LAYOUT
 ***************************************/
 
-.pagewidth {
+.mobilewidth .pagewidth {
 	width: auto;
 	margin-left: auto;
 	margin-right: auto;
 	position:relative;
 }
-.pagewidth > * > * {
+.mobilewidth .pagewidth > * > * {
 	/*max-width:320px;*/
 	margin:auto;
 }
@@ -46,40 +46,27 @@ hr {
 			  PAGE LAYOUT
 ***************************************/
 
-img.alignright {
-	margin:1em;
-	margin-right:0px;
-	float:right;
-}
-
-img.alignleft {
-	margin:1em;
-	margin-left:0px;
-	margin-top:6px;
-	float:left;
-}
-
 /*
 The bar between the navbar and the page.
 */
-#pagetype {
+.mobilewidth #pagetype {
 	font-size:16px;
 	text-align:center;
 }
 
-#pagetype .background {
+.mobilewidth #pagetype .background {
 	display:none;
 }
 
-#pagetype .subnav li {
+.mobilewidth #pagetype .subnav li {
 	display:none;
 }
 
-#pagetype .subnav li:nth-of-type(1) {
+.mobilewidth #pagetype .subnav li:nth-of-type(1) {
 	display:block;
 }
 
-#leftcol {
+.mobilewidth #leftcol {
 	width:auto;
 	padding:20px;
 	float:none;
@@ -88,7 +75,7 @@ The bar between the navbar and the page.
 	background-image:url("../res/img/noisy.png");
 }
 
-#rightcol {
+.mobilewidth #rightcol {
 	right:0px;
 	top:0px;
 	height:100%;
@@ -101,36 +88,9 @@ The bar between the navbar and the page.
 	background-image:url("../res/img/noisy.png");
 }
 
-#atomrightcontainer {
-	right:0;
-	top:0;
-	bottom:0;
-	left:0;
-	overflow:hidden;
-}
-
-#twocolumnbackground {
-	position:absolute;
-	right:0px;
-	bottom:0px;
-	width:auto;
-	height:540px;
-	background-image:url("../res/img/atomright.png");
-	color:black;
-}
-
-#onecolumnbackground {
-	position:absolute;
-	right:0px;
-	bottom:0px;
-	width:auto;
-	height:540px;
-	background-image:url("../res/img/atomleft.png");
-	color:black;
-}
 
 
-.twocolumns {
+.mobilewidth .twocolumns {
 	position:relative;
 	width:auto;
 	margin:auto;
@@ -140,7 +100,7 @@ The bar between the navbar and the page.
 	color:black;
 }
 
-.onecolumn {
+.mobilewidth .onecolumn {
 	position:relative;
 	width:auto;
 	margin:auto;
@@ -151,214 +111,111 @@ The bar between the navbar and the page.
 	padding:20px;
 }
 
-.spacer {
-	clear:both;
-}
-
 /**************************************
 				 GEARS
 ***************************************/
-
-#gearscontainer {
-	position:absolute;
-	margin:0px;
-	z-index:-5;
-	top:0px;
-	left:-200px;
-	
-	animation: fadein .75s;
-	-moz-animation: fadein .75s;
-	-webkit-animation: fadein .75s;
-	-o-animation: fadein .75s;
-	
-	animation-delay: 1.5s;
-	-moz-animation-delay: 1.5s;
-	-webkit-animation-delay: 1.5s;
-	-o-animation-delay: 1.5s;
-}
-
-#gearscontainer canvas {
-	position:absolute;
-	top:0px;
-	left:0px;
-}
-#gears1 {
-	width:212px;
-	height:212px;
-}
-#gears2 {
-	width:272px;
-	height:272px;
-}
 
 /**************************************
 		   IMAGE GALLERY
 ***************************************/
 
 #gallerybox {
-	box-shadow: 0 0 10px #000;
-	position:relative;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	height:432px;
 	width:auto;
-	overflow:hidden;
+	height:auto;
+	box-shadow:none;
+}
+
+#gallerystatic {
+	display:block;
+}
+
+#gallerystatic ul {
+	padding:0;
+}
+
+#gallerystatic li {
+	display:block;
+	background-color:white;
+	background-image:url(../res/img/noisy.png);
+	line-height:2em;
+	border-bottom:1px solid #AAA;
+}
+
+#gallerystatic a {
+	display:block;
+	height:3em;
+	line-height:3em;
+	padding-left:.75em;
+	font-weight:bold;
 }
 
 #gallerycontent {
-	box-shadow: 0 0 10px #000;
-	position:absolute;
-	background:white;
-	top:0;
-	left:0;
-	bottom:0;
-	width:auto;
-}
-
-#galleryleft,#galleryright {
 	display:none;
-	opacity:0.25;
-	width:50px;
-	height:100px;
-	background:url("../res/img/leftright.png");
-	position:absolute;
-	top:85px;
-	cursor:pointer;
 }
-
-#galleryleft:hover,#galleryright:hover {
-	opacity:0.8;
-}
-
-#galleryleft {
-	left:30px;
-}
-#galleryright {
-	right:30px;
-	background-position:50px 0px;
-}
-
-#galleryimage {
-	position:absolute;
-	left:0;
-	top:0;
-	width:100%;
-	height:100%;
-	background-position:center;
-	background-size:cover;
-}
-
-#gallerytext {
-	position:absolute;
-	bottom:0;
-	left:0;
-	right:0;
-	padding:20px;
-	height:auto;
-	background:rgba(0,0,0,0.75);
-	border-top:black 1px solid;
-	color:white;
-}
-#gallerytext a {
-	color:white;
-}
-
 #gallerytabs {
-	box-shadow: 0 0 10px #000;
-	position:absolute;
-	right:0;
-	top:0;
-	bottom:0;
-	width:100px;
-	background:white url("../res/img/noisy.png");
-}
-
-#gallerytabs .tab {
-	width:100%;
-	line-height:40px;
-	height:40px;
-	border-bottom:1px solid #aaa;
-	color:black;
-	font-weight:bold;
-	font-size:16px;
-}
-
-#gallerytabs .tab a {
-	display:block;
-	color:black;
-	height:100%;
-	padding-left:35px;
-	cursor:pointer;
-	background-image:url("../res/img/box.png");
-	background-repeat:no-repeat;
-}
-
-#gallerytabs a.activetab{
-	background-color:#FFD802;
-	background-image:url("../res/img/boxfill.png");
+	display:none;
 }
 
 /**************************************
 			  BACKGROUND
 ***************************************/
 
-#gears {
-	width: 320px;
-	height: 320px;
-	left: 0;
-	top: 0;
-	position: absolute;
-	z-index: -5;
-}
 /**************************************
 			  HEADER CSS
 ***************************************/
 
-.button {
+.mobilewidth .button {
 	display:none;
 }
 
-#adambotslogo {
-	float:left;
-	margin-top:31px;
-	margin-left:20px;
-	margin-bottom:20px;
+.mobilewidth #head {
+	text-align:center;
+	margin-top:1em;
 }
-.logoatom {
+
+.mobilewidth #adambotslogo {
+	float:none;
+	display:inline-block;
+	margin:0;
+	margin-left:5px;
+	margin-right:5px;
+}
+
+.mobilewidth .logoatom {
 	width:47px;
 	height:47px;
 }
-.logoname {
+.mobilewidth .logoname {
 	width:215px;
 	height:28px;
 }
-.logotag {
+.mobilewidth .logotag {
 	width:215px;
 	height:16px;
 }
 
-#social {
-	height: inherit;
-	margin: 20px;
-	margin-top:10px;
+.mobilewidth #social {
+	height: auto;
+	margin:0;
 	position: relative;
-	float: right;
+	float: none;
+	display:inline-block;
+	margin-left:5px;
+	margin-right:5px;
 }
 
-#social a {
+.mobilewidth #social a {
 	margin:0;
 }
 
-#social .button a {
+.mobilewidth #social .button a {
 	margin:0px;
 	color:white;
 	position:absolute;
 	left:0;right:0;top:0;bottom:0;
 }
 
-#social a span {
+.mobilewidth #social a span {
 	position:relative;
 	display:inline-block;
 	height:25px;
@@ -368,12 +225,12 @@ The bar between the navbar and the page.
 	margin:5px;
 }
 
-#social .slink {
+.mobilewidth #social .slink {
 	border-radius:5px;
 	display:inline-block;
 }
 
-#social .slink:hover {
+.mobilewidth #social .slink:hover {
 	background:rgba(255,255,255,0.07);
 }
 
@@ -381,20 +238,19 @@ The bar between the navbar and the page.
 			  FOOTER CSS
 ***************************************/
 
-#footerjustify {
+.mobilewidth #footerjustify {
 	padding:2em;
 	margin:0;text-align:justify;
+}
+
+.mobilewidth #footer img {
+	width:231px;
+	height:34px;
 }
 
 /**************************************
 			 CONTENT CSS
 ***************************************/
-
-#content {
-	clear: both;
-	position: relative;
-	
-}
 
 /**************************************
 			 DROPDOWN CSS
@@ -404,46 +260,31 @@ The bar between the navbar and the page.
 Bar containing menu items.
 */
 
-#dropdown {
+.mobilewidth #dropdown {
 	height:auto;
 }
 
 /*
 Menu tabs in starting bar
 */
-#dropdown .navtab {
+.mobilewidth #dropdown .navtab {
 	line-height: 50px;
 	display: inline-block;
 	position: relative;
 	height: 50px;
-	padding-left: 10px;
-	padding-right: 10px;
-	font-weight: 700;
-	font-size: 22px;
-	color: #eee;
-	cursor: pointer;
-	transition: 0.2s ease-in;
-	transition: 0.2s ease-out;
-	-webkit-transition: 0.2s ease-in;
-	-webkit-transition: 0.2s ease-out;
-	-moz-transition: 0.2s ease-in;
-	-moz-transition: 0.2s ease-out;
-	-o-transition: 0.2s ease-in;
-	-o-transition: 0.2s ease-out;
-	text-shadow:1.5px 1.5px 0px black;
 }
 
 /*
 Navigation map in the left side
 */
-#below ul.left,#below ul.right {
+.mobilewidth #below ul.left,#below ul.right {
 	float: none;
 }
 
 /*
 The navigation headings in the dropdown box.
 */
-#below ul li .sectiontitle {
+.mobilewidth #below ul li .sectiontitle {
 	width: 100%;
 	border-bottom: 1px solid #111;
 	margin-top: 0px;
@@ -454,7 +295,7 @@ The navigation headings in the dropdown box.
 /*
 Descriptions in navigation.
 */
-#below ul li span {
+.mobilewidth #below ul li span {
 	display:none;
 }
 
@@ -465,7 +306,7 @@ Descriptions in navigation.
 Triple panel display above footer
 */
 
-.panel {
+.mobilewidth .panel {
 	position:static;
 	width:auto;
 	display:block !important;
@@ -477,11 +318,11 @@ Triple panel display above footer
 	padding-top: 15px;
 }
 
-.panel a {
+.mobilewidth .panel a {
 	font-size: 20px;
 }
 
-#panelcontainer {
+.mobilewidth #panelcontainer {
 	height:auto;
 	/*
 	animation-timing-function:cubic-bezier(.30, 0, 0, 1);
@@ -499,7 +340,7 @@ Triple panel display above footer
 /**************************************
 		^NEXTGEN GALLERY MODS^
 ***************************************/
-#countdown {
+.mobilewidth #countdown {
 	max-width:930px;
 	margin-left:auto;
 	margin-right:auto;
@@ -508,182 +349,70 @@ Triple panel display above footer
 	height:60px;
 	line-height:60px;
 	font-size:18px;
-	
-	animation: fadein .75s;
-	-moz-animation: fadein .75s;
-	-webkit-animation: fadein .75s;
-	-o-animation: fadein .75s;
-	
-	animation-delay: 1.5s;
-	-moz-animation-delay: 1.5s;
-	-webkit-animation-delay: 1.5s;
-	-o-animation-delay: 1.5s;
 }
 
 /**************************************
 			  BODY CARDS
 ***************************************/
-#bodycards {
-	max-width: 960px;
-	height: 375px;
-	margin-left: auto;
-	margin-right: auto;
+.mobilewidth #bodycards {
+	width:auto;
+	max-width:none;
+	height:auto;
+	margin-left: 0;
+	margin-right: 0;
 	padding: 0px;
 	position: relative;
-	
-	/*animation-timing-function:cubic-bezier(.30, 0, 0, 1);
-	animation: slidein 1.25s;
-	-moz-animation: slidein 1.25s;
-	-webkit-animation: slidein 1.25s;
-	-o-animation: slidein 1.25s;*/
 }
 
-#teaminfo {
+.mobilewidth #teaminfo {
 	width:auto;
 	height:auto;
 	float:none;
 	padding-bottom:25px;
 }
 
-#teaminfo p {
-	padding-left: 50px;
-	padding-right: 50px;
-	padding-top: 25px;
-	padding-bottom: 25px;
-	text-align:justify;
+.mobilewidth #teaminfo p {
+	padding:20px;
 	font-size:17px;
 	line-height: 25px;
 }
 
-#teaminfo p strong {
+.mobilewidth #teaminfo p strong {
 	font-size: 18px;
 }
 
-#teaminfo a {
+.mobilewidth #teaminfo a {
 	color: #494949;
 	text-decoration:underline;
 }
 
-#teamatom {
+.mobilewidth #teamatom {
 	padding-top: 25px;
-	width: 610px;
+	width: auto;
 	text-align:center;
 }
 
-#teaminfo img {
+.mobilewidth #teamatom img {
+	width:176px;
+	height:36px;
+}
+
+.mobilewidth #teaminfo img {
 	position: relative;
 	float: none;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-#twitter {
+.mobilewidth #twitter {
 	display:none;
 }
 
-.display_current {
-	height:45px;
-	padding-left:50px;
-	font-weight:bold;
-	line-height:42px;
-	font-size:16px;
-	color: white;
-	background-color: #222;
-	bottom: 0;
-}
-
-#teaminfo .display_current a {
-	padding-left: 5px;
-	padding-right: 5px;
-	color: #ffd802;
-	text-decoration:none;
-}
-
-#robotinfo {
-	margin-top: 10px;
-	
-	max-width: 960px;
-	height: 375px;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 0px;
-	position: relative;
-	
-	background-color: white;
-	background-image:url("../res/img/noisy.png");
-	color:black;
-	box-shadow: 0 0 10px #000;
-	
-/*	animation-timing-function:cubic-bezier(.30, 0, 0, 1);
-	animation: slidein 1.25s;
-	-moz-animation: slidein 1.25s;
-	-webkit-animation: slidein 1.25s;
-	-o-animation: slidein 1.25s;*/
-}
-
-#robotimg {
-	height: 100%;
-	position:absolute;
-	float: left;
-}
-
-#robotimg img {
-	height: 300px;
-	padding: 25px;
-	padding-left: 50px;
-}
-
-#robottext {
-	width: 636px;
-	height: 375px;
-	right:0;
-	float: right;
-}
 
 /**************************************
 		  SLIDING ANIMATION
 ***************************************/
-/*
-Holds sliding descriptions
-*/
-
-.slide_container {
-	overflow: hidden;
-	width: inherit;
-}
-
 
 /**************************************
 			 PAGE ANIMATION
 ***************************************/
-/* Define CSS fade-in */
-
-@keyframes fadein {
-	from {
-		opacity: 0;
-	} to {
-		opacity: 1;
-	}
-}
-@-webkit-keyframes fadein {
-	from {
-		opacity: 0;
-	} to {
-		opacity: 1;
-	}
-}
-/*@keyframes slidein {
-	from{
-		left:-100%;
-	} to {
-		left:0;
-	}
-}
-@-webkit-keyframes slidein {
-	from {
-		left: -100%;
-	}
-	to {
-		left: 0;
-	}
-}*/

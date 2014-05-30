@@ -80,10 +80,16 @@
 			//720x432
 		}
 	}
-
+	var list = document.createElement("ul");
 	for (var i = 0; i < slides.length; i++) {
 		var div = document.createElement("div");
 		div.className = "tab";
+		var stat = document.createElement("a");
+		stat.innerHTML = slides[i][0][1];
+		stat.href = slides[i][2];
+		var stati = document.createElement("li");
+		stati.appendChild(stat);
+		list.appendChild(stati);
 		var anchor = document.createElement("a");
 		anchor.innerHTML = slides[i][0][1];
 		manage(anchor,slides[i]);
@@ -98,7 +104,7 @@
 		div.appendChild(anchor);
 		gallerytabs.appendChild(div);
 	}
-
+	gallerystatic.appendChild(list);
 	galleryleft.onclick = clickLeft;
 	galleryright.onclick = clickRight;
 
