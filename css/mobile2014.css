@@ -26,10 +26,6 @@ body.mobilewidth {
 	margin-bottom:20px;
 }
 
-.mobilewidth canvas {
-	max-width:300px;
-}
-
 /**************************************
 			  MAIN LAYOUT
 ***************************************/

@@ -91,8 +91,10 @@ if (isset($headinclude)) {
 			if (bod.className.indexOf("mobilewidth") < 0) {
 				bod.className += " mobilewidth";
 			}
-			if (wid < 500) {
-				sty.innerHTML = ".largecanvas {width:240px;height:240px;}";
+			if (wid < 700) {
+				sty.innerHTML = ".largecanvas {max-width:240px;max-height:240px;}";
+			} else {
+				sty.innerHTML = "";
 			}
 		} else {
 			bod.className = bod.className.replace(/\s*mobilewidth\s*/g," ").trim();

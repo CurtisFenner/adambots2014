@@ -8,7 +8,9 @@
     
     if (!retina) {
             gears1.width = "212";
+            gears1.height = "212";
             gears2.width = "272";
+            gears2.height = "272";
     }
     
 	gears1.style.left = "43px";
