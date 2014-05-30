@@ -41,6 +41,15 @@ body.mobilewidth {
 	display:none !important;
 }
 
+.mobilewidth table.fourcol td {
+	font-size:10px;
+	width:auto;
+}
+
+.mobilewidth table {
+	table-layout:fixed;
+}
+
 /**************************************
 			  MAIN LAYOUT
 ***************************************/

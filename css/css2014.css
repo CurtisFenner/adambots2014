@@ -1,31 +1,3 @@
-/*
-Doge stuff. DO NOT UNCOMMENT.
-* {
-
-	font-family:"Comic Sans MS" !important;
-	color:orange !important;
-	text-shadow:none !important;
-	font-size:90%;
-	text-transform: lowercase !important;
-	text-align:center !important;
-	line-height:110%;
-}
-
-*:nth-of-type(3n):before {
-	content:"so ";
-}
-*:nth-of-type(3n+1):before {
-	content:"very ";
-}
-*:nth-of-type(3n+2):before {
-	content:"much ";
-}
-
-body {
-	font-size:40px !important;
-}
-*/
-
 .mobileonly {
 	display:none;
 }
@@ -70,6 +42,10 @@ body {
 a {
 	text-decoration:none;
 	color:#0070DD;
+}
+
+table.fourcol td {
+	width:158px;
 }
 
 .clear {
@@ -808,12 +784,6 @@ Triple panel display above footer
 	margin-right: auto;
 	padding: 0px;
 	position: relative;
-	
-	/*animation-timing-function:cubic-bezier(.30, 0, 0, 1);
-	animation: slidein 1.25s;
-	-moz-animation: slidein 1.25s;
-	-webkit-animation: slidein 1.25s;
-	-o-animation: slidein 1.25s;*/
 }
 
 #teaminfo {
@@ -967,18 +937,3 @@ Holds sliding descriptions
 		opacity: 1;
 	}
 }
-/*@keyframes slidein {
-	from{
-		left:-100%;
-	} to {
-		left:0;
-	}
-}
-@-webkit-keyframes slidein {
-	from {
-		left: -100%;
-	}
-	to {
-		left: 0;
-	}
-}*/
