@@ -356,10 +356,15 @@ The bar between the navbar and the page.
 	right:0;
 	padding:20px;
 	height:auto;
-	background:rgba(0,0,0,0.75);
+	background:black;
 	border-top:black 1px solid;
 	color:white;
 }
+#gallerytext {
+	/* IE7 fix */
+	background:rgba(0,0,0,0.75);;
+}
+
 #gallerytext a {
 	color:white;
 }
@@ -445,6 +450,7 @@ The bar between the navbar and the page.
 	margin-top:31px;
 	margin-left:20px;
 	margin-bottom:20px;
+	max-width:531px;
 }
 
 #social {

@@ -11,7 +11,14 @@ Writes the contents of "$headinclude" at the bottom of the head.
 	<style>
 	.navtab {
 		display:inline !important;
-		zoom:1 !important;
+		zoom:1;
+	}
+	#pagetype .subnav, #pagetype .subnav * {
+		display:inline !important;
+		zoom:1;
+	}
+	a * {
+		cursor:pointer;
 	}
 	</style>
 	<![endif]-->
