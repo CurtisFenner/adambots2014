@@ -1,5 +1,10 @@
+
+
+
+
 (function() {
-var links = dropdown.getElementsByClassName("navtab");
+	"use strict";
+var links = getArrayByClassNames("navtab",dropdown);//dropdown.getElementsByClassName("navtab");
 var active = null;
 
 
@@ -9,11 +14,15 @@ function clearBelow() {
 
 for (var i = 0; i < links.length; i++) {
 	(function(el) {
-		var atag = el.getElementsByTagName("a")[0].innerHTML;
+		/*var atag = el.getElementsByTagName("a")[0].innerHTML;
 		var remainder = el.innerHTML;
 		remainder = remainder.substring(remainder.indexOf("</a>")+4);
 		if (i != 0) {
 			el.innerHTML = atag + remainder;
+		}*/
+		var anchor = el.getElementsByTagName("a")[0];
+		if (anchor.getElementsByTagName("img").length === 0) {
+			anchor.parentNode.removeChild(anchor);
 		}
 		el.onclick = function() {
 			if (active != el) {

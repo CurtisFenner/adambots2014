@@ -43,11 +43,12 @@ body.mobilewidth {
 
 .mobilewidth table.fourcol td {
 	font-size:10px;
-	width:auto;
+	width:24%;
 }
 
-.mobilewidth table {
+.mobilewidth table.fourcol {
 	table-layout:fixed;
+	max-width:90%;
 }
 
 /**************************************

@@ -1,8 +1,11 @@
-"use strict";
 
 (function() {
-
+	"use strict";
 	var drawnOnce = false;
+
+	if (!gears1.getContext) {
+		return;
+	}
 
 	var gearContext1 = gears1.getContext("2d");
 	var gearContext2 = gears2.getContext("2d");

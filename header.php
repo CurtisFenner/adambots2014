@@ -7,6 +7,63 @@ Writes the contents of "$headinclude" at the bottom of the head.
 <head>
 	<meta charset="UTF-8">
 	<meta name=viewport content="width=device-width, initial-scale=1">
+	<!--[if IE 7]>
+	<style>
+	.navtab {
+		display:inline !important;
+		zoom:1 !important;
+	}
+	</style>
+	<![endif]-->
+	<script>
+function getArrayByClassNames(classes, pa){
+	if(!pa) pa= document;
+	var C= [], G;
+	if(pa.getElementsByClassName){
+		G= pa.getElementsByClassName(classes);
+		for(var i= 0, L= G.length; i<L; i++){
+			C[i]= G[i];
+		}
+	}
+	else{
+		classes= classes.split(/\s+/);
+		var who, cL= classes.length,
+		cn, G= pa.getElementsByTagName('*'), L= G.length;
+		for(var i= 0; i<cL; i++){
+			classes[i]= RegExp('\\b'+classes[i]+'\\b');
+		}
+		classnameLoop:
+		while(L){
+			who= G[--L];
+			cn= who.className;
+			if(cn){
+				for(var i= 0; i<cL; i++){
+					if(classes[i].test(cn)== false) {
+						continue classnameLoop;
+					}
+				}
+				C.push(who);
+			}
+		}
+	}
+	return C;
+}
+
+if(typeof String.prototype.trim !== 'function') {
+String.prototype.trim = function() {
+return this.replace(/^\s+|\s+$/g, ''); 
+}
+}
+
+if (!Array.prototype.indexOf) {
+	Array.prototype.indexOf = function(obj, start) {
+		for (var i = (start || 0), j = this.length; i < j; i++) {
+			if (this[i] === obj) { return i; }
+		}
+		return -1;
+	}
+}
+	</script>
 	<title>AdamBots FRC &amp; OCCRA Team 245</title>
 	<link rel="icon" href="<?php bloginfo('template_directory'); ?>/res/img/favicon.ico">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/main.css.php">
@@ -56,6 +113,13 @@ if (isset($headinclude)) {
 		}
 		return x;
 	}
+	function styleSet(s,t) {
+		try {
+			s.innerHTML = t;
+		} catch (e) {
+			s.cssText = t;
+		}
+	}
 	function flexible() {
 		var wid = getWidth();
 		var bod = document.getElementById("bodytag");
@@ -65,13 +129,14 @@ if (isset($headinclude)) {
 				bod.className += " mobilewidth";
 			}
 			if (wid < 700) {
-				sty.innerHTML = ".largecanvas {max-width:240px;height:auto;} img,canvas {max-width:" + Math.max(200,wid - 40) + "px;height:auto;}";
+				styleSet(sty,".largecanvas {max-width:240px;height:auto;} img,canvas {max-width:" + Math.max(200,wid - 40) + "px;height:auto;}");
 			} else {
-				sty.innerHTML = "img,canvas {max-width:" + Math.max(200,wid - 40) + "px;height:auto;}";
+				styleSet(sty,"img,canvas {max-width:" + Math.max(200,wid - 40) + "px;height:auto;}");
 			}
 		} else {
 			bod.className = bod.className.replace(/\s*mobilewidth\s*/g," ").trim();
-			sty.innerHTML = "";
+			//sty.innerHTML = "";
+			styleSet(sty,"");
 		}
 	}
 	addEvent(window,"resize",flexible);
