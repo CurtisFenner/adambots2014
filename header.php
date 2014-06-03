@@ -57,9 +57,9 @@ function getArrayByClassNames(classes, pa){
 }
 
 if(typeof String.prototype.trim !== 'function') {
-String.prototype.trim = function() {
-return this.replace(/^\s+|\s+$/g, ''); 
-}
+	String.prototype.trim = function() {
+		return this.replace(/^\s+|\s+$/g, ''); 
+	}
 }
 
 if (!Array.prototype.indexOf) {
@@ -95,6 +95,7 @@ if (isset($headinclude)) {
 ?>
 </head>
 <body id="bodytag">
+	<div id="fullwidth" style="position:absolute;left:0;top:0;right:0;height:0;background:blue;"></div>
 	<script>
 (function(){
 	var addEvent = function(elem, type, eventHandle) {
@@ -108,6 +109,10 @@ if (isset($headinclude)) {
 		}
 	};
 	function getWidth(){
+		var c = document.getElementById("fullwidth").offsetWidth;
+		if (c) {
+			return c;
+		}
 		var x = 0;
 		if (self.innerHeight) {
 			x = self.innerWidth;

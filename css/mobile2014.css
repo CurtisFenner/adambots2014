@@ -49,6 +49,8 @@ body.mobilewidth {
 .mobilewidth table.fourcol {
 	table-layout:fixed;
 	max-width:90%;
+	margin-left:auto;
+	margin-right:auto;
 }
 
 /**************************************
