@@ -140,7 +140,7 @@ Creating a <em>FIRST</em>&nbsp; Team Site|resources/creating-a-first-team-websit
 			$navopen = true;
 			$ulopen = false;
 			$place = explode("|",substr($line,4));
-			echo "<span><a href='" . $place[1] . "'>" . $place[0] . '</a>' . $place[0] . '<em></em></span>';
+			echo "<span><a href='" . $place[1] . "'>" . $place[0] . '</a><b class=noscripthide>' . $place[0] . '</b><em></em></span>';
 			$use = true;
 		}
 		if (startsWith($line,"Title:")) {

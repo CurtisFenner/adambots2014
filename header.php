@@ -5,6 +5,13 @@ Writes the contents of "$headinclude" at the bottom of the head.
 ?><!doctype html>
 <html lang="en">
 <head>
+	<noscript>
+		<style>
+			.noscripthide {
+				display:none;
+			}
+		</style>
+	</noscript>
 	<meta charset="UTF-8">
 	<meta name=viewport content="width=device-width, initial-scale=1">
 	<!--[if IE 7]>
