@@ -73,7 +73,7 @@ if (!Array.prototype.indexOf) {
 	</script>
 	<title>AdamBots FRC &amp; OCCRA Team 245</title>
 	<link rel="icon" href="<?php bloginfo('template_directory'); ?>/res/img/favicon.ico">
-	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/main.css.php">
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/main3Jun14.css.php">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/print2014.css" media="print">
 	<script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -95,7 +95,7 @@ if (isset($headinclude)) {
 ?>
 </head>
 <body id="bodytag">
-	<div id="fullwidth" style="position:absolute;left:0;top:0;right:0;height:0;background:blue;"></div>
+	<div id="fullwidthmeasure" style="position:absolute;left:0;top:0;right:0;height:0;background:blue;"></div>
 	<script>
 (function(){
 	var addEvent = function(elem, type, eventHandle) {
@@ -109,7 +109,7 @@ if (isset($headinclude)) {
 		}
 	};
 	function getWidth(){
-		var c = document.getElementById("fullwidth").offsetWidth;
+		var c = document.getElementById("fullwidthmeasure").offsetWidth;
 		if (c) {
 			return c;
 		}
