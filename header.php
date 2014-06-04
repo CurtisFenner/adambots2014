@@ -148,9 +148,9 @@ if (isset($headinclude)) {
 				bod.className += " mobilewidth";
 			}
 			if (wid < 700) {
-				styleSet(sty,".largecanvas {max-width:240px;height:auto;} img,canvas {max-width:" + Math.max(200,wid - 40) + "px;height:auto;}");
+				styleSet(sty,".largecanvas {max-width:240px;} img,canvas {max-width:" + Math.max(200,wid - 40) + "px;}");
 			} else {
-				styleSet(sty,"img,canvas {max-width:" + Math.max(200,wid - 40) + "px;height:auto;}");
+				styleSet(sty,"img,canvas {max-width:" + Math.max(200,wid - 40) + "px;}");
 			}
 		} else {
 			bod.className = bod.className.replace(/\s*mobilewidth\s*/g," ").trim();
