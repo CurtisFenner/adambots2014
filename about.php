@@ -7,7 +7,7 @@ get_header();
 
 <div class="pagewidth">
 	<div id="pagetype" style="background-color:#FFD802;" class="blacktext">
-		<div style="font-size:1.5em;line-height:1.667;">
+		<div style="font-size:1.5em;line-height:1.25;">
 			About the
 				<img style="margin:0;height:.75em;" height="28" alt="AdamBots" src="<?php bloginfo("template_directory")?>/res/img/adambots_text_outlined.png"/>
 		</div>
