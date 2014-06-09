@@ -642,6 +642,7 @@ Div containing navigation links in two UL's, ul.left and ul.right.
 #below {
 	position: relative;
 	color: white;
+	margin-top:-1em;
 }
 
 /*
@@ -681,8 +682,8 @@ The navigation headings in the dropdown box.
 #below ul li .sectiontitle {
 	width: 100%;
 	border-bottom: 1px solid #111;
-	margin-top: 0px;
-	margin-bottom: 5px;
+	margin-top: 1em;
+	margin-bottom: .5em;
 }
 
 /*
@@ -691,7 +692,7 @@ Lines in navigation.
 #below ul li {
 	color: #111;
 	position: relative;
-	line-height: 35px;
+	line-height: 2.5em;
 	font-weight: bold;
 	overflow: hidden;
 }
@@ -701,7 +702,7 @@ Descriptions in navigation.
 */
 #below ul li span {
 	color: #111;
-	top: 0px;
+	top: 0;
 	font-weight: normal;
 	position: absolute;
 	right: 0;
