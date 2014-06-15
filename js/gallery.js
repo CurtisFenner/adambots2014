@@ -30,10 +30,6 @@
 			click(slide);
 		}
 	}
-	function appearsUrl(s) {
-		s = s.toLowerCase();
-		return s.indexOf("http") >= 0 || s.index(".png") > 0|| s.indexOf(".jpg") > 0 || s.indexOf(".jpeg") > 0 || s.indexOf("www") > 0;
-	}
 	var gallery = document.getElementById("gallerybox");
 	var data = document.getElementById("gallerysource").innerHTML.trim();
 	data = data.split(/\s*\n+\s*/g);
@@ -41,14 +37,14 @@
 	var slides = [];
 	var slide = [];
 	for (var i = 0; i < data.length-2; i++) {
-		var now = data[i];
+		var now = data[i].trim();
 		var one = data[i+1];
 		var two = data[i+2];
-		if (now.indexOf("|") > 0 && appearsUrl(one) && appearsUrl(two)) {
+		if (now.indexOf("|") > 0 && now.indexOf("#SECTION#") == 0) {
 			if (slide && slide.length > 0) {
 				slides.push(slide);
 			}
-			slide = [now.split("|")];
+			slide = [now.substring(9).split("|")];
 		} else {
 			slide.push(now);
 		}
