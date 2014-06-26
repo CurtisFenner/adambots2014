@@ -4,10 +4,18 @@
 // Uses information gained from the_post()
 
 ?>
-		<b><a href="<?php  the_permalink(); ?>" style="font-size:24px;text-decoration:underline;"><?php the_title(); ?></a></b><br>
-		<section style="font-size:16px;">
 <?php
+$section = '<section style="font-size:16px;"><h2><a href="';
+$section .= get_permalink($post->ID) . '" style="font-size:24px;text-decoration:underline;">';
+$section .= get_the_title() . "</a></h2><br>";
 $str = get_the_content();
+
+$year = the_date("Y"," ","",FALSE);
+$counter = strtolower($str . str_repeat($year,3));
+$titlecounter = strtolower(get_the_title() . $year);
+$count = 0;
+
+
 $str = str_replace("\n",'',$str);
 $str = preg_replace('/<\/?(p|h1|h2|h3|h4|h5|div)[^>]*>/i' ,"\n",$str);
 $str = str_replace('<br />',"\n",$str);
@@ -22,6 +30,9 @@ $str = str_replace('[/left]','',$str);
 $str = trim(preg_replace("/\n\s*/","\n",$str));
 for ($i = 0; $i < count($searchterms); $i++) {
 	$str = preg_replace('/' . $searchterms[$i] . '/i','<b>$0</b>',$str);
+	$lowterm = strtolower($searchterms[$i]);
+	$count += substr_count($counter,$lowterm);
+	$count += substr_count($titlecounter,$lowterm) * 10;
 }
 //$str now has bolded search terms.
 
@@ -54,8 +65,7 @@ $str = str_replace("\n","<br>",$str);
 $str = str_replace("FIRST","<em>FIRST</em>",$str);
 $str = str_replace("FRC","<em>FRC</em>",$str);
 $str = str_replace("OCCRA","<em>OCCRA</em>",$str);
-echo $str;
-//echo substr(strip_tags($str),0,100) + "&hellip;"
+$section = $section . $str . "<br><br><p class=dim style=font-style:italic;>Relevance: <b>$count</b></p></section><hr>";
+
+
 ?>
-</section>
-<hr>
