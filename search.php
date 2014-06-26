@@ -21,7 +21,7 @@ function firstCompare($a,$b) {
 		$results = array();
 		$resultnum = 0;
 		//query_posts('showposts=999');
-		$query_string .= "&showposts=999";
+		query_posts($query_string . '&showposts=999');
 		while ( have_posts() ) {
 			the_post();
 			include("searchresult.php");
