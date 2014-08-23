@@ -80,8 +80,9 @@ if (!Array.prototype.indexOf) {
 	</script>
 	<title>AdamBots FRC &amp; OCCRA Team 245</title>
 	<link rel="icon" href="<?php bloginfo('template_directory'); ?>/res/img/favicon.ico">
-	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/main3Jun14.css.php">
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/main21Aug14.css.php">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/print2014.css" media="print">
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/mobile2014.css" media="screen and (max-width: 997px)">
 	<script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -93,6 +94,7 @@ if (!Array.prototype.indexOf) {
 
 </script>
 <style id="mobiledynamicstyle">
+
 </style>
 <?php
 if (isset($headinclude)) {
@@ -101,67 +103,8 @@ if (isset($headinclude)) {
 }
 ?>
 </head>
-<body id="bodytag">
-	<div id="fullwidthmeasure" style="position:absolute;left:0;top:0;right:0;height:0;background:blue;"></div>
-	<script>
-(function(){
-	var addEvent = function(elem, type, eventHandle) {
-		if (elem == null || typeof(elem) == 'undefined') return;
-		if ( elem.addEventListener ) {
-			elem.addEventListener( type, eventHandle, false );
-		} else if ( elem.attachEvent ) {
-			elem.attachEvent( "on" + type, eventHandle );
-		} else {
-			elem["on"+type]=eventHandle;
-		}
-	};
-	function getWidth(){
-		var c = document.getElementById("fullwidthmeasure").offsetWidth;
-		if (c) {
-			return c;
-		}
-		var x = 0;
-		if (self.innerHeight) {
-			x = self.innerWidth;
-		}
-		else if (document.documentElement && document.documentElement.clientHeight) {
-			x = document.documentElement.clientWidth;
-		}
-		else if (document.body) {
-			x = document.body.clientWidth;
-		}
-		return x;
-	}
-	function styleSet(s,t) {
-		try {
-			s.innerHTML = t;
-		} catch (e) {
-			s.cssText = t;
-		}
-	}
-	function flexible() {
-		var wid = getWidth();
-		var bod = document.getElementById("bodytag");
-		var sty = document.getElementById("mobiledynamicstyle");
-		if (wid < 970) {
-			if (bod.className.indexOf("mobilewidth") < 0) {
-				bod.className += " mobilewidth";
-			}
-			if (wid < 700) {
-				styleSet(sty,".largecanvas {max-width:240px;} img,canvas {max-width:" + Math.max(200,wid - 40) + "px;}");
-			} else {
-				styleSet(sty,"img,canvas {max-width:" + Math.max(200,wid - 40) + "px;}");
-			}
-		} else {
-			bod.className = bod.className.replace(/\s*mobilewidth\s*/g," ").trim();
-			//sty.innerHTML = "";
-			styleSet(sty,"");
-		}
-	}
-	addEvent(window,"resize",flexible);
-	flexible();
-})();
-	</script>
+<body id="bodytag" class=mobilewidth>
+	<div id="ismobile"></div>
 	<div class="pagewidth">
 		<div id="gearscontainer">
 			<canvas id="gears1" width="424" height="424"></canvas>

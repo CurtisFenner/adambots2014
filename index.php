@@ -22,18 +22,18 @@
 
 		<div id="leftcol">
 			<?php while ( have_posts() ) : the_post(); ?>
-			<h1><a href="<?php  the_permalink(); ?>"><?php the_title(); ?></a></h1>
-			<p>Written by <?php the_author_link(); ?> on <?php the_date(); ?></p>
-			<?php the_excerpt(); ?>
-			<hr>
-		<?php endwhile; ?>
-	</div>
+				<h1><a href="<?php  the_permalink(); ?>"><?php the_title(); ?></a></h1>
+				<p>Written by <?php the_author_link(); ?> on <?php the_date(); ?></p>
+				<?php the_excerpt(); ?>
+				<hr>
+			<?php endwhile; ?>
+		</div>
 
-	<div id="rightcol">
-		<?php get_sidebar(); ?>
+		<div id="rightcol">
+			<?php get_sidebar(); ?>
+		</div>
+		<div class="clear"></div>
 	</div>
-	<div class="clear"></div>
-</div>
 </div>
 <?php get_footer(); ?>
 

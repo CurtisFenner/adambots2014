@@ -25,10 +25,11 @@ echo @file_get_contents("data/carouseldata.txt");
 	</div>
 </div>
 
-<script src="<?php bloginfo('template_directory');?>/js/gallery.js"></script>
+<script src="<?php bloginfo('template_directory');?>/js/gallery.js" async="async"></script>
 
 <div id="countdown" class="pagewidth"></div>
-<script src="<?php bloginfo('template_directory');?>/js/countdown.js"></script>
+<?php countdown_setup("countdown_data","countdown"); /* countdown_data is a unique name for script used to transfer data */ ?>
+
 
 <div id="bodycards">
 	<div id="teaminfo">

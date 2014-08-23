@@ -39,6 +39,7 @@ get_header();
 		}
 	?>
 	<?php the_content(); ?>
+<div style=clear:both;></div>
 </div>
 
 <?php get_footer(); ?>
