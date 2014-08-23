@@ -1,4 +1,3 @@
-
 (function() {
 	"use strict";
 	var drawnOnce = false;
@@ -42,9 +41,18 @@
 		.515 offset
 	*/
 
+	function ismob() {
+		if (window.getComputedStyle) {
+			var el = document.getElementById("ismobile");
+			var vis = window.getComputedStyle(el).visibility;
+			return (vis.toLowerCase().indexOf("v") >= 0);
+		}
+		return true;
+	}
+
 	function drawGears() {
-		if (document.getElementById("bodytag").className.indexOf("mobilewidth") >= 0 && drawnOnce) {
-			return false;
+		if (ismob() && drawnOnce) {
+			return;
 		}
 		drawnOnce = true;
 		if (retina) {
