@@ -234,6 +234,7 @@ The bar between the navbar and the page.
 	width:960px;
 	margin:auto;
 	margin-top:6px;
+	background-color:white;
 	background-image:url("../res/img/twocol.png");
 	color:black;
 }

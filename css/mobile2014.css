@@ -1,6 +1,15 @@
 /**************************************
 			GENERIC ELEMENTS
 ***************************************/
+#ismobile{
+	display:none;
+	visibility:visible;
+}
+
+body.mobilewidth img, body.mobilewidth canvas {
+	max-width:86%;
+}
+
 body.mobilewidth {
 	min-width: 320px;
 	background-color: #252525;
@@ -8,6 +17,7 @@ body.mobilewidth {
 	color:black;
 	font-family: "Roboto";
 	font-size:15px;
+	overflow:hidden;
 }
 .mobilewidth hr {
 	height:1px;
