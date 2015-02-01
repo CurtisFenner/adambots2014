@@ -237,6 +237,7 @@ The bar between the navbar and the page.
 	background-color:white;
 	background-image:url("../res/img/twocol.png");
 	color:black;
+	overflow: hidden; /* Solves problem with atom on too short of pages */
 }
 
 .onecolumn {
