@@ -17,7 +17,7 @@ body.mobilewidth {
 	color:black;
 	font-family: "Roboto";
 	font-size:15px;
-	overflow:hidden;
+	overflow-x:hidden;
 }
 .mobilewidth hr {
 	height:1px;
