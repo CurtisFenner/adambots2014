@@ -60,14 +60,14 @@ include("header.php");
 							alert_badserver.style.display = "none";
 							alert_bademail.style.display = "none";
 							var t = r.responseText;
-							if (t == 1) 
+							if (t == 1) {
 								alert_success.style.display = "block";
 								button.onclick = null;
 							}
 							if (t == 2) {
 								alert_badserver.style.display = "block";
 							}
-							if (t == 3) 
+							if (t == 3) {
 								alert_bademail.style.display = "block";
 							}
 						}
