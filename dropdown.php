@@ -49,7 +49,7 @@ Tab:Media|/media-gallery
 Title:<em>FIRST</em>&nbsp; Photo and Video
 2014: Aerial Assist|media-gallery/first-pictures/2014-first-robotics-pictures/|Pictures from the 2014 season
 2013: Ultimate Ascent|media-gallery/first-pictures/2013-first-robotics-pictures/|Pictures from the 2013 season
-<em>FIRST&nbsp;</em> Videos|http://www.adambots.com/media-gallery/first-videos| Videos from our <em>FIRST&nbsp;</em> seasons 
+<em>FIRST&nbsp;</em> Videos|http://www.adambots.com/media-gallery/first-videos| Videos from our <em>FIRST&nbsp;</em> seasons
 <em>FIRST</em>&nbsp; Media Archive|media-gallery/first-pictures/|Pictures and videos from past seasons
 
 Title:Outreach Events
@@ -101,7 +101,7 @@ Creating a <em>FIRST</em>&nbsp; Team Site|resources/creating-a-first-team-websit
 
 		<div id="dropdown" class="nosel">
 			<span id="dropdownbackground"></span>
-			<div class="pagewidth">
+			<div class="pagewidth" id="dropdownnavtabs">
 
 
 <div style='vertical-align:top;padding:0;text-align:center;width:50px;height:50px; position:relative;' class="navtab deskonly">
