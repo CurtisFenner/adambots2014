@@ -17,49 +17,91 @@ for (var i = 0; i < dropdownChildren.length; ++i) {
 }
 
 var active = null;
+var open = false;
+
+function Update() {
+	if (open) {
+		belowbox.style.height = "auto";
+	} else {
+		belowbox.style.height = "0";
+	}
+	console.log(open);
+}
 
 function clearBelow() {
 	below.innerHTML = "";
 }
 
+// Visually highlight tab
+function highlight(tab) {
+	tab.style.backgroundColor = "#FFD802"; //Throws an error in IE8
+	tab.style.backgroundImage = 'url("/wp-content/themes/adambots2014/res/img/noisy.png")';
+	tab.style.color = "#111111"
+	tab.style.textShadow = "none";
+}
+
+// Remove visual highlight from tab
+function unhighlight(tab) {
+	tab.style.backgroundColor = "";
+	tab.style.backgroundImage = "";
+	tab.style.color = "#EEEEEE";
+}
+
+// Moves all of the children from one element to a different one
+function moveChildren(oldParent, newParent) {
+	while (oldParent.firstChild) {
+		newParent.appendChild(oldParent.firstChild);
+	}
+}
+
+// Converts a list (nodelist) to an array
+function listToArray(list) {
+	var r = [];
+	for (var i = 0; i < list.length; i++) {
+		r[i] = list[i];
+	}
+	return r;
+}
+
 function setupTab(tab) {
+	// Remove the link aspect of the tab (this is part of the 'graceful
+	// degradation' without javascript)
 	var anchor = tab.getElementsByTagName("a")[0];
 	if (anchor.getElementsByTagName("img").length === 0) {
 		anchor.parentNode.removeChild(anchor);
 	}
 	tab.onclick = function() {
+		// Start by dimming all the tabs:
+		for (var j = 0; j < links.length; j++) {
+			unhighlight(links[j]);
+		}
+		// Am I picking a new tab?
 		if (active != tab) {
-			//Open tab
+			// Yes. Close the old one:
+			if (active) {
+				moveChildren(below, active);
+			}
+			// Make me the active one:
+			active = tab;
+			open = true;
 			below.style.display = "block";
 			for (var j = 0; j < links.length; j++) {
-				links[j].style.backgroundColor = "";
-				links[j].style.backgroundImage = "";
-				links[j].style.color = "rgb(238,238,238)";
+				unhighlight(links[j]);
 			}
-			try {
-				tab.style.backgroundColor = "rgb(255,216,2)"; //Throws an error in IE8
-				tab.style.backgroundImage = 'url("/wp-content/themes/adambots2014/res/img/noisy.png")';
-				tab.style.color = "rgb(17,17,17)"
-				tab.style.textShadow = "none";
-			} catch (e) {}
-			active = tab;
-			clearBelow();
-			var uls = tab.getElementsByTagName("ul");
-			below.innerHTML = "";
+			var uls = listToArray(tab.getElementsByTagName("ul"));
 			for (var i = 0; i < uls.length; i++) {
 				var cname = (i % 2 == 1) ? "right" : "left";
-				below.innerHTML += "<ul class='" + cname + "'>" + uls[i].innerHTML + "</ul>";
+				uls[i].className = cname;
+				below.appendChild(uls[i]);
 			}
-			below.innerHTML += "<div style='clear:both;'></div>";
 		} else {
-			//Close tab
-			for (var j = 0; j < links.length; j++) {
-				links[j].style.background = "";
-				links[j].style.color = "rgb(238,238,238)";
-				links[j].style.textShadow = "1px 1px 0px black";
-			}
-			active = null;
+			// No. Toggle whether or not this tab is open.
+			open = !open;
 		}
+		if (open) {
+			highlight(tab);
+		}
+		Update();
 	}
 }
 
@@ -69,6 +111,7 @@ for (var i = 0; i < links.length; i++) {
 
 below.style.display = "none";
 
+/*
 var dstart = 0;
 var dend = 0;
 var dtime = 0;
@@ -99,5 +142,6 @@ function dropper() {
 	}
 }
 setInterval(dropper, 1000/30);
+*/
 
 })();

@@ -30,42 +30,9 @@ Writes the contents of "$headinclude" at the bottom of the head.
 	</style>
 	<![endif]-->
 	<script>
-function getArrayByClassNames(classes, pa){
-	if(!pa) pa= document;
-	var C= [], G;
-	if(pa.getElementsByClassName){
-		G= pa.getElementsByClassName(classes);
-		for(var i= 0, L= G.length; i<L; i++){
-			C[i]= G[i];
-		}
-	}
-	else{
-		classes= classes.split(/\s+/);
-		var who, cL= classes.length,
-		cn, G= pa.getElementsByTagName('*'), L= G.length;
-		for(var i= 0; i<cL; i++){
-			classes[i]= RegExp('\\b'+classes[i]+'\\b');
-		}
-		classnameLoop:
-		while(L){
-			who= G[--L];
-			cn= who.className;
-			if(cn){
-				for(var i= 0; i<cL; i++){
-					if(classes[i].test(cn)== false) {
-						continue classnameLoop;
-					}
-				}
-				C.push(who);
-			}
-		}
-	}
-	return C;
-}
-
 if(typeof String.prototype.trim !== 'function') {
 	String.prototype.trim = function() {
-		return this.replace(/^\s+|\s+$/g, ''); 
+		return this.replace(/^\s+|\s+$/g, '');
 	}
 }
 
