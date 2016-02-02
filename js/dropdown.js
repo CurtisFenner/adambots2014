@@ -6,45 +6,37 @@
 "use strict";
 ////////////////////////////////////////////////////////////////////////////////
 
-// links: a list of Divs corresponding to each navigation tab
-var links = [];
-var dropdown = document.getElementById("dropdownnavtabs");
-var dropdownChildren = dropdown.children;
-for (var i = 0; i < dropdownChildren.length; ++i) {
+var belowbox = document.getElementById("belowbox");
+var belowpos = document.getElementById("belowpos");
+
+// tabs: a list of Divs corresponding to each navigation tab
+var tabs = [];
+var dropdownChildren = document.getElementById("dropdownnavtabs").children;
+for (var i = 0; i < dropdownChildren.length; i++) {
 	if (dropdownChildren[i].className.indexOf("navtab") >= 0) {
-		links.push( dropdownChildren[i] );
+		tabs.push( dropdownChildren[i] );
 	}
 }
 
 var active = null;
 var open = false;
 
-function Update() {
-	if (open) {
-		belowbox.style.height = belowpos.offsetTop + "px";
-		console.log(belowpos.offsetTop, belowpos.offsetParent);
-	} else {
-		belowbox.style.height = "0";
-	}
-}
-
-function clearBelow() {
-	below.innerHTML = "";
-}
 
 // Visually highlight tab
 function highlight(tab) {
 	tab.style.backgroundColor = "#FFD802"; //Throws an error in IE8
 	tab.style.backgroundImage = 'url("/wp-content/themes/adambots2014/res/img/noisy.png")';
-	tab.style.color = "#111111"
+	tab.style.color = "#111111";
 	tab.style.textShadow = "none";
 }
 
 // Remove visual highlight from tab
 function unhighlight(tab) {
+	// Setting to empty string restores to CSS style
 	tab.style.backgroundColor = "";
 	tab.style.backgroundImage = "";
-	tab.style.color = "#EEEEEE";
+	tab.style.color = "";
+	tab.style.textShadow = "";
 }
 
 // Moves all of the children from one element to a different one
@@ -64,16 +56,18 @@ function listToArray(list) {
 }
 
 function setupTab(tab) {
-	// Remove the link aspect of the tab (this is part of the 'graceful
-	// degradation' without javascript)
+	// Remove the link aspect of the tab
+	// (this removes the "no script" fallback link)
 	var anchor = tab.getElementsByTagName("a")[0];
 	if (anchor.getElementsByTagName("img").length === 0) {
+		// Icons remain tabs
 		anchor.parentNode.removeChild(anchor);
 	}
+	// When this tab is clicked click...
 	tab.onclick = function() {
-		// Start by dimming all the tabs:
-		for (var j = 0; j < links.length; j++) {
-			unhighlight(links[j]);
+		// Start by dimming the previously active tab:
+		if (active) {
+			unhighlight(active);
 		}
 		// Am I picking a new tab?
 		if (active != tab) {
@@ -84,13 +78,9 @@ function setupTab(tab) {
 			// Make me the active one:
 			active = tab;
 			open = true;
-			below.style.display = "block";
-			for (var j = 0; j < links.length; j++) {
-				unhighlight(links[j]);
-			}
 			var uls = listToArray(tab.getElementsByTagName("ul"));
 			for (var i = 0; i < uls.length; i++) {
-				var cname = (i % 2 == 1) ? "right" : "left";
+				var cname = (i % 2 == 0) ? "left" : "right";
 				uls[i].className = cname;
 				below.appendChild(uls[i]);
 			}
@@ -98,50 +88,18 @@ function setupTab(tab) {
 			// No. Toggle whether or not this tab is open.
 			open = !open;
 		}
+		// Update the height of the yellow box where the dropdown
 		if (open) {
 			highlight(tab);
+			belowbox.style.height = Math.max(0, belowpos.offsetTop) + "px";
+		} else {
+			belowbox.style.height = "0";
 		}
-		Update();
 	}
 }
 
-for (var i = 0; i < links.length; i++) {
-	setupTab(links[i]);
+for (var i = 0; i < tabs.length; i++) {
+	setupTab(tabs[i]);
 }
-
-below.style.display = "none";
-
-/*
-var dstart = 0;
-var dend = 0;
-var dtime = 0;
-var droph = 0;
-
-var pheight = -1;
-
-function dropper() {
-	var t = belowpos.offsetTop;
-	if (!active) {
-		t = 0;
-	}
-	if (t != dend) {
-		dstart = droph;
-		dend = t;
-		dtime = (new Date()).getTime() / 1000.0;
-	}
-	var now = (new Date()).getTime() / 1000.0 - dtime;
-	now = now / (1/60);
-	droph = (dstart - dend) * Math.pow(0.8, now) + dend;
-	if (Math.abs(droph - dend) < 1.5) {
-			droph = dend;
-	}
-	var newHeight = Math.floor(droph);
-	if (pheight !== newHeight) {
-		belowbox.style.height = newHeight + "px";
-		pheight = newHeight;
-	}
-}
-setInterval(dropper, 1000/30);
-*/
 
 })();
