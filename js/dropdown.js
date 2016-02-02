@@ -21,11 +21,11 @@ var open = false;
 
 function Update() {
 	if (open) {
-		belowbox.style.height = "auto";
+		belowbox.style.height = belowpos.offsetTop + "px";
+		console.log(belowpos.offsetTop, belowpos.offsetParent);
 	} else {
 		belowbox.style.height = "0";
 	}
-	console.log(open);
 }
 
 function clearBelow() {

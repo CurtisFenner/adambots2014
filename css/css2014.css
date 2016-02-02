@@ -267,12 +267,12 @@ The bar between the navbar and the page.
 	z-index:-5;
 	top:0px;
 	left:-200px;
-	
+
 	animation: fadein .75s;
 	-moz-animation: fadein .75s;
 	-webkit-animation: fadein .75s;
 	-o-animation: fadein .75s;
-	
+
 	animation-delay: 1.5s;
 	-moz-animation-delay: 1.5s;
 	-webkit-animation-delay: 1.5s;
@@ -540,7 +540,7 @@ The bar between the navbar and the page.
 #content {
 	clear: both;
 	position: relative;
-	
+
 }
 
 /**************************************
@@ -632,6 +632,10 @@ Div containing #below for the purpose of resizing up and down.
 	background-image:url("../res/img/noisy.png");
 	color:black;
 	margin-bottom:6px;
+	transition: height 0.25s ease-out;
+	-o-transition: height 0.25s ease-out;
+	-moz-transition: height 0.25s ease-out;
+	-webkit-transition: height 0.25s ease-out;
 }
 
 #belowbox .sectiontitle {
@@ -772,12 +776,12 @@ Triple panel display above footer
 	overflow:hidden;
 	line-height:60px;
 	font-size:18px;
-	
+
 	animation: fadein .75s;
 	-moz-animation: fadein .75s;
 	-webkit-animation: fadein .75s;
 	-o-animation: fadein .75s;
-	
+
 	animation-delay: 1.5s;
 	-moz-animation-delay: 1.5s;
 	-webkit-animation-delay: 1.5s;
@@ -876,19 +880,19 @@ Triple panel display above footer
 
 #robotinfo {
 	margin-top: 10px;
-	
+
 	max-width: 960px;
 	height: 375px;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 0px;
 	position: relative;
-	
+
 	background-color: white;
 	background-image:url("../res/img/noisy.png");
 	color:black;
 	box-shadow: 0 0 10px #000;
-	
+
 /*	animation-timing-function:cubic-bezier(.30, 0, 0, 1);
 	animation: slidein 1.25s;
 	-moz-animation: slidein 1.25s;

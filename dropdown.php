@@ -199,11 +199,11 @@ Creating a <em>FIRST</em>&nbsp; Team Site|resources/creating-a-first-team-websit
 			<!-- <- .pagewidth -->
 
 		</div>
-		<div id="belowbox">
+		<div id="belowbox" style="height:0;">
 			<div class="pagewidth">
 				<div id="below">
 				</div>
 			</div>
-			<div id="belowpos"></div>
+			<div id="belowpos" style="clear:both;"></div>
 		</div>
 		<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/dropdown.js" async></script>
