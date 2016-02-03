@@ -101,9 +101,9 @@ if (isset($headinclude)) {
 			<a href="http://www.adambots.com/contact-us" class=slink><span class="iemail" title="Contact Us"></span></a>
 			<br>
 			<div class="button" style="background:#EFA0DF;color:#CE73BC;"><a href="/about/team-outreach/relay-for-life-2012/">Relay For Life</a></div>
-			<div class="button" style="background:#5780C2;color:#244C92;"><a href="/about/team-outreach/team-lambot-3478/">FRC 3478 LamBot</a></div> <br>
+			<div class="button" style="background:#5780C2;color:#244C92;"><a href="/about/team-outreach/">Team Outreach</a></div> <br>
 			<div class="button" style="background:#FFD802;color:#D2A900;"><a href="/team-member-section/">Team Calendar</a></div>
-			<div class="button" style="background:#5A6;color:#151;"><a href="/about/team-outreach/vikings-5183/">FTC 5381 Vikings</a></div>
+			<div class="button" style="background:#5A6;color:#151;"><a href="http://eepurl.com/bif5KD">Newsletter Signup</a></div>
 		</div>
 		<div class="clear"></div>
 	</div>
