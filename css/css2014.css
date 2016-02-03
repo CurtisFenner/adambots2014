@@ -34,7 +34,7 @@ body {
 	background-color: #252525;
 	background-image:url("../res/img/noisy.png");
 	color:black;
-	font-family: "Roboto";
+	font-family: "Roboto", "Helvita", "Arial", sans-serif;
 	font-size:15px;
 	margin: 0px;
 }
