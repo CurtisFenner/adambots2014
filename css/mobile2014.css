@@ -155,7 +155,7 @@ The bar between the navbar and the page.
 		   IMAGE GALLERY
 ***************************************/
 
-.mobilewidth #gallerycontent {
+.mobilewidth #gallerycontent, .mobilewidth #gallerybox {
 	width:100%;
 	box-shadow:none;
 }
