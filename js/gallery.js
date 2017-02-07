@@ -1,113 +1,127 @@
 (function() {
 	"use strict";
-	var focus = 0;
-	var activeImage = null;
-	function click(slide) {
-		if (activeImage) {
-			activeImage.parentNode.removeChild(activeImage);
-		}
-		slides[focus].anchor.className = "tab";
-		focus = slides.indexOf(slide);
-		gallerylink.href = slide[2];
-		gallerytext.innerHTML = "<h2>" + slide[0][0] + "</h2><br>" + slide.slice(3).join(" ") + " <em style=\"color:#FFD802;\">Read More</em>";
-		galleryimage.appendChild(slide.image);
-		activeImage = slide.image;
-		slide.anchor.className = "tab activetab";
-	}
-	function clickLeft() {
-		focus--;
-		focus = (focus + slides.length) % slides.length;
-		click(slides[focus]);
-	}
-	function clickRight() {
-		focus++;
-		focus = (focus + slides.length) % slides.length;
-		click(slides[focus]);
-	}
 
-	function manage(anchor,slide) {
-		anchor.onclick = function() {
-			click(slide);
-		}
-	}
-	var gallery = document.getElementById("gallerybox");
-	var data = document.getElementById("gallerysource").innerHTML.trim();
-	data = data.split(/\s*\n+\s*/g);
-	var pages = [];
+	var AUTO_TRANSITION_TIME = 10;
+////////////////////////////////////////////////////////////////////////////////
+
 	var slides = [];
-	var slide = [];
-	for (var i = 0; i < data.length-2; i++) {
-		var now = data[i].trim();
-		var one = data[i+1];
-		var two = data[i+2];
-		if (now.indexOf("|") > 0 && now.indexOf("#SECTION#") == 0) {
-			if (slide && slide.length > 0) {
+	// Parse slide descriptions
+	{
+		var SECTION = "#SECTION#";
+		var lines = document.getElementById("gallerysource").innerHTML.trim().split(/\s*[\n\r]+\s*/g);
+		var slide = null;
+		for (var i = 0; i < lines.length;) {
+			var line = lines[i];
+			if (line.indexOf(SECTION) == 0) {
+				var titletab = lines[i].substring(SECTION.length).split(" | ");
+				slide = {
+					index: slides.length,
+					title: titletab[0],
+					url: lines[i+2],
+					image: lines[i+1],
+					content: ""
+				};
 				slides.push(slide);
-			}
-			slide = [now.substring(9).split("|")];
-		} else {
-			slide.push(now);
-		}
-	}
-	for (;i < data.length; i++) {
-		slide.push(data[i]);
-	}
-	slides.push(slide);
 
-	//Slides have been prepared.
-	//A slide is an array.
-	//slide[0] is an array in the form [Title,  Short Title].
-	//slide[1] is URL for image. slide[2] is URL for link.
-	//slide[n >= 2] are text to be concatenated together.
+				// Create tab in right hand tray
+				var tab = document.createElement("div");
+				tab.className = "tab";
+				var tabA = document.createElement("a");
+				tab.appendChild(tabA);
+				tabA.innerHTML = titletab[1];
+				(function(slide){
+					tabA.addEventListener("click", function() {
+						selectSlide(slide);
+					});
+				})(slide);
+				document.getElementById("gallerytabs").appendChild(tab);
 
-	function size(image,width,height) {
-		image.onload = function() {
-			var scaleW = width / image.width;
-			var scaleH = height / image.height;
-			if (scaleW > scaleH) {
-				//Scale width to 720
-				image.width = 720;
+				slide.tab = tab;
+
+				// Move to content of this tab
+				i = i + 3;
 			} else {
-				image.height = 432;
+				slide.content += line + " ";
+				i++;
 			}
-			image.style.display = "block";
-			//720x432
 		}
 	}
-	var list = document.createElement("ul");
-	for (var i = 0; i < slides.length; i++) {
-		var div = document.createElement("div");
-		div.className = "tab";
-		var stat = document.createElement("a");
-		stat.innerHTML = slides[i][0][1];
-		stat.href = slides[i][2];
-		var desc = document.createElement("span");
-		desc.className = "dim";
-		desc.innerHTML = slides[i].slice(3).join(" ");
-		var stati = document.createElement("li");
-		stat.appendChild(desc);
-		stati.appendChild(stat);
-		var arr = document.createElement("div");
-		arr.className = "arr";
-		stati.appendChild(arr);
-		list.appendChild(stati);
-		var anchor = document.createElement("a");
-		anchor.innerHTML = slides[i][0][1];
-		manage(anchor,slides[i]);
-		if (i == 0) {
-			anchor.className = "activetab";
-		}
-		slides[i].anchor = anchor;
-		slides[i].image = document.createElement("img");
-		slides[i].image.style.display = "none";
-		size(slides[i].image,720,432);
-		slides[i].image.src = slides[i][1];
-		div.appendChild(anchor);
-		gallerytabs.appendChild(div);
-	}
-	gallerystatic.appendChild(list);
-	galleryleft.onclick = clickLeft;
-	galleryright.onclick = clickRight;
 
-	click( slides[(Math.random() * slides.length) << 0] )
+	var oldSlide = null;
+	var queuedSlide = null;
+	var movingSlide = null;
+	function switchTo(slide) {
+		if (movingSlide) {
+			throw new Error("a slide is already active; cannot switchTo new slide");
+		}
+		movingSlide = slide;
+		document.getElementById("galleryimagetop").style.backgroundImage = "url('" + slide.image + "')";
+		document.getElementById("galleryimagetop").style.transition = "transform 0.4s";
+		document.getElementById("galleryimagetop").style.transform = "translateX(0%)";
+	}
+
+	function settle() {
+		if (!movingSlide) {
+			return console.log("no moving slide. huh");
+		}
+		oldSlide = movingSlide;
+		document.getElementById("galleryimagetop").style.transform = "translateX(-100%)";
+		document.getElementById("galleryimagetop").style.transition = "";
+		document.getElementById("galleryimagebottom").style.backgroundImage = "url('" + movingSlide.image + "')";
+		movingSlide = null;
+
+		if (queuedSlide) {
+			// Do this in the next frame, to be sure that the animation happens
+			var next = queuedSlide;
+			setTimeout(function(){selectSlide(next);}, 1);
+			queuedSlide = null;
+		}
+	}
+	document.getElementById("galleryimagetop").addEventListener("transitionend", settle);
+
+	function selectSlide(slide, auto) {
+		if (!auto) {
+			document.getElementById("gallerymoveprogress").style.transition = "";
+			document.getElementById("gallerymoveprogress").style.transform = "";
+		}
+
+		for (var i = 0; i < slides.length; i++) {
+			slides[i].tab.className = "tab";
+		}
+		slide.tab.className = "tab activetab";
+		document.getElementById("gallerylink").href = slide.url;
+		document.getElementById("gallerytext").innerHTML =
+			"<h2>" + slide.title + "</h2><br>" + slide.content + " <em style=\"color:#FFD802;\">Read More</em>";
+
+		if (auto) {
+			document.getElementById("gallerymoveprogress").style.transform = "translateX(0)";
+			document.getElementById("gallerymoveprogress").style.transitionProperty = "transform";
+			document.getElementById("gallerymoveprogress").style.transitionDuration = AUTO_TRANSITION_TIME + "s";
+			if (!oldSlide) {
+				oldSlide = slide;
+				switchTo(slide);
+				return settle();
+			}
+		}
+
+		if (movingSlide) {
+			queuedSlide = slide;
+		} else if (slide != oldSlide) {
+			switchTo(slide);
+		}
+	}
+
+
+	document.getElementById("gallerymoveprogress").addEventListener("transitionend", function() {
+		if (!oldSlide) {
+			return console.log("unexpectedly, oldSlide is null when auto transition occurred");
+		}
+		document.getElementById("gallerymoveprogress").style.transitionDuration = "";
+		document.getElementById("gallerymoveprogress").style.transform = "translateX(-100%)";
+
+		var next = slides[(oldSlide.index+1)%slides.length];
+		setTimeout(function(){selectSlide(next, true);}, 1);
+	});
+
+	selectSlide(slides[Math.random() * slides.length << 0], true);
 })();

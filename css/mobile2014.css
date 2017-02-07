@@ -155,62 +155,11 @@ The bar between the navbar and the page.
 		   IMAGE GALLERY
 ***************************************/
 
-.mobilewidth #gallerybox {
-	width:auto;
-	height:auto;
-	margin:0;
-	padding:0;
+.mobilewidth #gallerycontent {
+	width:100%;
 	box-shadow:none;
 }
 
-.mobilewidth #gallerystatic ul {
-	padding:0;
-	margin:0;
-}
-
-.mobilewidth #gallerystatic li {
-	display:block;
-	background-color:white;
-	background-image:url(../res/img/noisy.png);
-	line-height:45px;
-	border-bottom:1px solid #AAA;
-	height:45px;
-	overflow:hidden;
-	position:relative;
-}
-
-.mobilewidth #gallerystatic a {
-	display:block;
-	height:3em;
-	line-height:3em;
-	text-align:left;
-	padding:0;
-	padding-left:1em;
-	font-weight:bold;
-	text-overflow: ellipsis;
-	overflow:hidden;
-}
-
-.mobilewidth #gallerystatic .arr {
-	display:block;
-	position:absolute;
-	width:40px;
-	height:45px;
-	top:0;
-	right:0;
-	background-image:url(http://www.adambots.com/wp-content/uploads/2014/05/rightgrad.png);
-	background-repeat:no-repeat;
-	background-position:99% 50%;
-}
-
-.mobilewidth #gallerystatic a span {
-	color:black;
-	padding-left:1em;
-}
-
-.mobilewidth #gallerycontent {
-	display:none;
-}
 .mobilewidth #gallerytabs {
 	display:none;
 }

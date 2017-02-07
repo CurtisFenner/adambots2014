@@ -1,7 +1,7 @@
 <?php /* Template Name: HomePage */ get_header(); ?>
 <h1 style="display:none;margin:0;">AdamBots Homepage <!-- accessibility purposes--></h1>
 
-
+<!-- photo slider begin -->
 <script type="text/data" id="gallerysource"><?php
 if (!is_dir("data")) {
 	mkdir("data");
@@ -12,18 +12,17 @@ echo @file_get_contents("data/carouseldata.txt");
 <div id="gallerybox" class="nosel pagewidth">
 	<div id="gallerycontent">
 		<a id="gallerylink">
-			<div id="galleryimage"></div>
+			<div id="galleryimagebottom" class="galleryimage"></div>
+			<div id="galleryimagetop" class="galleryimage"></div>
 			<div id="gallerytext"></div>
+			<div id="gallerymoveprogress"></div>
 		</a>
-		<div id="galleryright"></div>
-		<div id="galleryleft"></div>
 	</div>
 	<div id="gallerytabs">
 
 	</div>
-	<div id="gallerystatic" class="mobileonly">
-	</div>
 </div>
+<!-- photo slider end -->
 
 <script src="<?php bloginfo('template_directory');?>/js/gallery.js" async="async"></script>
 
